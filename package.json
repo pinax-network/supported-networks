@@ -3,5 +3,11 @@
   "version": "0.1.0",
   "description": "The Graph supported networks",
   "main": "index.json",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "1"
+  }
 }
