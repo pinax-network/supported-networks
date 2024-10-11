@@ -1,0 +1,7 @@
+{
+  "name": "supported-networks",
+  "version": "0.1.0",
+  "description": "The Graph supported networks",
+  "main": "index.json",
+  "license": "MIT"
+}

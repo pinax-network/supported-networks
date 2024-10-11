@@ -1,2 +1,1 @@
-# supported-networks
-The Graph supported networks
+# The Graph supported networks
