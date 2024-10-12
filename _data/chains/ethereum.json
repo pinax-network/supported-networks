@@ -4,5 +4,7 @@
     "icon": "ethereum",
     "block": "ethereum",
     "chainId": 1,
-    "networkId": 1
+    "networkId": 1,
+    "geckoId": "ethereum",
+    "cmcId": "ethereum"
 }

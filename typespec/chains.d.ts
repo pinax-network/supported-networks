@@ -1,6 +1,4 @@
-namespace TheGraph.Chains;
-
-model Chain {
+export interface Chain {
   // The Graph chain ID
   id: string;
 
