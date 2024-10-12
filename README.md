@@ -9,7 +9,25 @@ Data Structure of the repository:
 - `icons/`: Contains the icons of the chains.
 - `providers/`: Contains the provider definitions for The Graph services (ex: RPC, Firehose, Substreams, ...).
 
+## Make a pull request
+
+Once you've tested your chain, you can share it on The Graph supported networks.
+
+## Common mistakes
+
+- Review Typepspec definitions in `./typespec` to ensure that the chain is correctly defined.
+- Ensure that the chain is correctly defined in the `./_data/chains/` directory.
+- Ensure that the chain matches a valid block definition in the `./_data/blocks/` directory.
+- Ensure that the chain has a valid icon in the `./_data/icons/` directory.
+- Ensure that the chain has a valid provider in the `./_data/providers/` directory.
+
+## Running tests
+
+Test your changes by running `bun test` to ensure that your changes are correct.
+
 ## How to add a new chain?
+
+Add the chain definition to the `./_data/chains/` directory.
 
 ```json
 {
@@ -23,6 +41,8 @@ Data Structure of the repository:
 ```
 
 ## How to add a new provider?
+
+Add the provider definition to the `./_data/providers/` directory.
 
 ```json
 {
@@ -46,6 +66,8 @@ Data Structure of the repository:
 
 ## How to add a new block?
 
+Add the block definition to the `./_data/blocks/` directory.
+
 ```json
 {
   "type": "sf.solana.type.v1.Block",
@@ -54,6 +76,8 @@ Data Structure of the repository:
 ```
 
 ## How to add a new icon?
+
+Add the icon to the `./_data/icons/` directory.
 
 ```json
 [

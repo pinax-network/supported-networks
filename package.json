@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "test": "bun test",
     "generate": "bun run ./scripts/generate/index.ts"
