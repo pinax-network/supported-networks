@@ -1,0 +1,8 @@
+{
+    "id": "ethereum",
+    "name": "Ethereum Mainnet",
+    "icon": "ethereum",
+    "block": "ethereum",
+    "chainId": 1,
+    "networkId": 1
+}

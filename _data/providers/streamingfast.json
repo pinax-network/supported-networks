@@ -1,0 +1,15 @@
+{
+    "name": "StreamingFast",
+    "url": "https://www.streamingfast.io",
+    "rpc": [],
+    "firehose": [
+        {
+            "ethereum": "https://mainnet.eth.streamingfast.io:443"
+        }
+    ],
+    "substreams": [
+        {
+            "ethereum": "https://mainnet.eth.streamingfast.io:443"
+        }
+    ]
+}
