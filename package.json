@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "test": "bun test",
+    "download": "bun run ./scripts/download/index.ts",
     "generate": "bun run ./scripts/generate/index.ts"
   },
   "devDependencies": {
