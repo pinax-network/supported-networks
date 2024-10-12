@@ -2,6 +2,7 @@ import fs from 'fs';
 import { fetchChainIdNetwork } from "./chainid";
 import { fetchLlamaChains } from "./llama";
 import { fetchStudioDeploy } from "./studio";
+import { fetchCoinGeckoList } from './coingecko';
 
 
 fetchChainIdNetwork().then((chains) => {
@@ -12,4 +13,7 @@ fetchLlamaChains().then((chains) => {
 });
 fetchStudioDeploy().then((chains) => {
     fs.writeFileSync("_data/studio.json", JSON.stringify(chains, null, 2));
+});
+fetchCoinGeckoList().then((chains) => {
+    fs.writeFileSync("_data/coingecko.json", JSON.stringify(chains, null, 2));
 });

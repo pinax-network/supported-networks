@@ -1,3 +1,4 @@
+// https://github.com/DefiLlama/chainlist
 export async function fetchLlamaChains(): Promise<LLamaChains[]> {
     const response = await fetch("https://api.llama.fi/chains");
     return response.json();

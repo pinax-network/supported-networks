@@ -1,3 +1,4 @@
+// https://github.com/DefiLlama/chainlist
 export async function fetchChainIdNetwork(): Promise<ChainIdNetwork[]> {
     const response = await fetch("https://chainid.network/chains.json");
     return response.json();
