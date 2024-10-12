@@ -3,125 +3,164 @@
     "url": "https://pinax.network",
     "rpc": [
         {
-            "ethereum": "https://eth.rpc.pinax.network/v1/${API_KEY}/"
+            "id": "ethereum",
+            "url": "https://eth.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
-            "polygon": "https://polygon.rpc.pinax.network/v1/${API_KEY}/"
+            "id": "polygon",
+            "url": "https://polygon.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
-            "bsc": "https://bsc.rpc.pinax.network/v1/${API_KEY}/"
+            "id": "bsc",
+            "url": "https://bsc.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
-            "arbitrum-one": "https://arbone.rpc.pinax.network/v1/${API_KEY}/"
+            "id": "arbitrum-one",
+            "url": "https://arbone.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
-            "optimism-sepolia": "https://opsepolia.rpc.pinax.network/v1/${API_KEY}/"
+            "id": "optimism-sepolia",
+            "url": "https://opsepolia.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
-            "jungle4evm": "https://jungle4evm.rpc.pinax.network/v1/${API_KEY}/"
+            "id": "jungle4evm",
+            "url": "https://jungle4evm.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
-            "jungle4": "https://jungle4.rpc.pinax.network/v1/${API_KEY}/"
+            "id": "jungle4",
+            "url": "https://jungle4.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
-            "mode-mainnet": "https://mode.rpc.pinax.network/v1/${API_KEY}/"
+            "id": "mode-mainnet",
+            "url": "https://mode.rpc.pinax.network/v1/${API_KEY}/"
         }
     ],
     "firehose": [
         {
-            "ethereum": "https://eth.firehose.pinax.network:443"
+            "id": "ethereum",
+            "url": "https://eth.firehose.pinax.network:443"
         },
         {
-            "btc": "https://bitcoin.firehose.pinax.network:443"
+            "id": "btc",
+            "url": "https://bitcoin.firehose.pinax.network:443"
         },
         {
-            "polygon": "https://polygon.firehose.pinax.network:443"
+            "id": "polygon",
+            "url": "https://polygon.firehose.pinax.network:443"
         },
         {
-            "bsc": "https://bsc.firehose.pinax.network:443"
+            "id": "bsc",
+            "url": "https://bsc.firehose.pinax.network:443"
         },
         {
-            "arbitrum-one": "https://arbone.firehose.pinax.network:443"
+            "id": "arbitrum-one",
+            "url": "https://arbone.firehose.pinax.network:443"
         },
         {
-            "optimism": "https://optimism.firehose.pinax.network:443"
+            "id": "optimism",
+            "url": "https://optimism.firehose.pinax.network:443"
         },
         {
-            "base": "https://base.firehose.pinax.network:443"
+            "id": "base",
+            "url": "https://base.firehose.pinax.network:443"
         },
         {
-            "near": "https://near.firehose.pinax.network:443"
+            "id": "near",
+            "url": "https://near.firehose.pinax.network:443"
         },
         {
-            "gnosis-cl": "https://gnosis-cl.firehose.pinax.network:443"
+            "id": "gnosis-cl",
+            "url": "https://gnosis-cl.firehose.pinax.network:443"
         },
         {
-            "arweave": "https://arweave.firehose.pinax.network:443"
+            "id": "arweave",
+            "url": "https://arweave.firehose.pinax.network:443"
         },
         {
-            "cosmoshub": "https://cosmoshub.firehose.pinax.network:443"
+            "id": "cosmoshub",
+            "url": "https://cosmoshub.firehose.pinax.network:443"
         },
         {
-            "osmosis": "https://osmosis.firehose.pinax.network:443"
+            "id": "osmosis",
+            "url": "https://osmosis.firehose.pinax.network:443"
         },
         {
-            "eos": "https://eos.firehose.pinax.network:443"
+            "id": "eos",
+            "url": "https://eos.firehose.pinax.network:443"
         },
         {
-            "wax": "https://wax.firehose.pinax.network:443"
+            "id": "wax",
+            "url": "https://wax.firehose.pinax.network:443"
         },
         {
-            "telos": "https://telos.firehose.pinax.network:443"
+            "id": "telos",
+            "url": "https://telos.firehose.pinax.network:443"
         },
         {
-            "mode-mainnet": "https://mode.firehose.pinax.network:443"
+            "id": "mode-mainnet",
+            "url": "https://mode.firehose.pinax.network:443"
         }
     ],
     "substreams": [
         {
-            "ethereum": "https://eth.substreams.pinax.network:443"
+            "id": "ethereum",
+            "url": "https://eth.substreams.pinax.network:443"
         },
         {
-            "btc": "https://bitcoin.substreams.pinax.network:443"
+            "id": "btc",
+            "url": "https://bitcoin.substreams.pinax.network:443"
         },
         {
-            "polygon": "https://polygon.substreams.pinax.network:443"
+            "id": "polygon",
+            "url": "https://polygon.substreams.pinax.network:443"
         },
         {
-            "bsc": "https://bsc.substreams.pinax.network:443"
+            "id": "bsc",
+            "url": "https://bsc.substreams.pinax.network:443"
         },
         {
-            "arbitrum-one": "https://arbone.substreams.pinax.network:443"
+            "id": "arbitrum-one",
+            "url": "https://arbone.substreams.pinax.network:443"
         },
         {
-            "optimism": "https://optimism.substreams.pinax.network:443"
+            "id": "optimism",
+            "url": "https://optimism.substreams.pinax.network:443"
         },
         {
-            "base": "https://base.substreams.pinax.network:443"
+            "id": "base",
+            "url": "https://base.substreams.pinax.network:443"
         },
         {
-            "near": "https://near.substreams.pinax.network:443"
+            "id": "near",
+            "url": "https://near.substreams.pinax.network:443"
         },
         {
-            "gnosis-cl": "https://gnosis-cl.substreams.pinax.network:443"
+            "id": "gnosis-cl",
+            "url": "https://gnosis-cl.substreams.pinax.network:443"
         },
         {
-            "arweave": "https://arweave.substreams.pinax.network:443"
+            "id": "arweave",
+            "url": "https://arweave.substreams.pinax.network:443"
         },
         {
-            "tetha": "https://tetha.substreams.pinax.network:443"
+            "id": "tetha",
+            "url": "https://tetha.substreams.pinax.network:443"
         },
         {
-            "eos": "https://eos.substreams.pinax.network:443"
+            "id": "eos",
+            "url": "https://eos.substreams.pinax.network:443"
         },
         {
-            "wax": "https://wax.substreams.pinax.network:443"
+            "id": "wax",
+            "url": "https://wax.substreams.pinax.network:443"
         },
         {
-            "telos": "https://telos.substreams.pinax.network:443"
+            "id": "telos",
+            "url": "https://telos.substreams.pinax.network:443"
         },
         {
-            "mode-mainnet": "https://mode.substreams.pinax.network:443"
+            "id": "mode-mainnet",
+            "url": "https://mode.substreams.pinax.network:443"
         }
     ]
 }

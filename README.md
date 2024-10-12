@@ -31,12 +31,14 @@ Data Structure of the repository:
     "rpc": [],
     "firehose": [
         {
-            "ethereum": "https://mainnet.eth.streamingfast.io:443"
+            "id": "ethereum",
+            "url": "https://mainnet.eth.streamingfast.io:443"
         }
     ],
     "substreams": [
         {
-            "ethereum": "https://mainnet.eth.streamingfast.io:443"
+            "id": "ethereum",
+            "url": "https://mainnet.eth.streamingfast.io:443"
         }
     ]
 }
