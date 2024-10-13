@@ -77,18 +77,14 @@ Add the block definition to the `./_data/blocks/` directory.
 
 ## How to add a new icon?
 
-Add the icon to the `./_data/icons/` directory.
+Provide token SVG to <https://tokenicons.io> and add matching Graph ID to `_data/web3icons_id.json`.
 
 ```json
-[
-    {
-        "url": "ipfs://QmdwQDr6vmBtXmK2TmknkEuZNoaDqTasFdZdu3DRw8b2wt",
-        "width": 1000,
-        "height": 1628,
-        "format": "png"
-    }
-]
-```
+{
+  "mainnet": "ethereum",
+  "arbitrum-one": "arbitrum-one",
+  ...
+}
 
 ## References
 

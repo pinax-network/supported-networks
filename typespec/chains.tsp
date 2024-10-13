@@ -7,23 +7,24 @@ model Chain {
   // Chain name
   name: string;
 
-  // Icon for the chain
-  icon: string;
-
   // Firehose block type
   block: string;
 
   // Transaction signature process uses the chain ID
-  chainId: number;
+  chain_id?: int64;
 
   // Peer-to-peer communication between nodes uses the network ID,
-  networkId: number;
+  network_id?: int64;
 
   // CoinGecko ID
   // https://docs.coingecko.com/v3.0.1/reference/coins-list
-  geckoId: string | null;
+  gecko_id?: string;
 
   // CoinMarketCap ID
-  // URL: https://coinmarketcap.com/
-  cmcId: string | null;
+  // https://coinmarketcap.com/
+  cmc_id?: string;
+
+  // Web3 Icon name
+  // https://tokenicons.io
+  web3icons_id?: string;
 }

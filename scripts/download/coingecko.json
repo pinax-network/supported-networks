@@ -5755,6 +5755,11 @@
     "name": "Baby Dragon"
   },
   {
+    "id": "baby-dragonx",
+    "symbol": "bdx",
+    "name": "Baby DragonX"
+  },
+  {
     "id": "baby-elon",
     "symbol": "babyelon",
     "name": "Baby Elon"
@@ -11563,6 +11568,11 @@
     "id": "bulei",
     "symbol": "bulei",
     "name": "Bulei"
+  },
+  {
+    "id": "bulla",
+    "symbol": "bulla",
+    "name": "BULLA"
   },
   {
     "id": "bullbar",
@@ -26978,6 +26988,11 @@
     "id": "gaziantep-fk-fan-token",
     "symbol": "gfk",
     "name": "Gaziantep FK Fan Token"
+  },
+  {
+    "id": "gbtc6900",
+    "symbol": "gbtc",
+    "name": "GBTC6900"
   },
   {
     "id": "gccoin",
@@ -42700,6 +42715,11 @@
     "name": "Moonarch"
   },
   {
+    "id": "moonbag",
+    "symbol": "mbag",
+    "name": "MoonBag"
+  },
+  {
     "id": "moonbase-2",
     "symbol": "moon",
     "name": "MoonBase"
@@ -50555,6 +50575,11 @@
     "name": "Pochita"
   },
   {
+    "id": "pochita-2",
+    "symbol": "pochita",
+    "name": "Pochita"
+  },
+  {
     "id": "pochita-on-ethereum",
     "symbol": "pochita",
     "name": "Pochita on Ethereum"
@@ -54483,6 +54508,11 @@
     "id": "rikkei-finance",
     "symbol": "rifi",
     "name": "Rikkei Finance"
+  },
+  {
+    "id": "riko",
+    "symbol": "riko",
+    "name": "RIKO"
   },
   {
     "id": "riku",
@@ -68753,6 +68783,11 @@
     "id": "vivex",
     "symbol": "$vivx",
     "name": "Vivex"
+  },
+  {
+    "id": "vix777",
+    "symbol": "vix",
+    "name": "VIX777"
   },
   {
     "id": "vixco",

@@ -1,10 +1,5 @@
 {
-    "id": "arbitrum-one",
-    "name": "Arbitrum One",
-    "icon": "arbitrum-one",
-    "block": "ethereum",
-    "chainId": 42161,
-    "networkId": 42161,
-    "geckoId": "arbitrum",
-    "cmcId": "arbitrum"
+  "id": "arbitrum-one",
+  "name": "Arbitrum One",
+  "block": "ethereum"
 }
