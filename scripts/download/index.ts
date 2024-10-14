@@ -4,7 +4,7 @@ import { fetchChainIdNetwork } from "./chainid";
 import { fetchLlamaChains } from "./llama";
 import { fetchStudioDeploy } from "./edge-node-studio";
 import { fetchCoinGeckoList } from './coingecko';
-import { fetchWeb3Icons } from './web3icons';
+import { fetchWeb3IconsTokens, fetchWeb3IconsNetworks } from './web3icons';
 
 const base = path.join(__dirname);
 
@@ -20,6 +20,9 @@ fetchStudioDeploy().then((data) => {
 fetchCoinGeckoList().then((data) => {
     fs.writeFileSync(path.join(base, "coingecko.json"), JSON.stringify(data, null, 2));
 });
-fetchWeb3Icons().then((data) => {
-    fs.writeFileSync(path.join(base, "web3icons.json"), JSON.stringify(data, null, 2));
+fetchWeb3IconsNetworks().then((data) => {
+    fs.writeFileSync(path.join(base, "web3icons.networks.json"), JSON.stringify(data, null, 2));
+});
+fetchWeb3IconsTokens().then((data) => {
+    fs.writeFileSync(path.join(base, "web3icons.tokens.json"), JSON.stringify(data, null, 2));
 });
