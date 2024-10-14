@@ -1,0 +1,8 @@
+{
+  "id": "solana",
+  "name": "Solana",
+  "namespace": "solana",
+  "block": "solana",
+  "genesis_hash": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "chain_id": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+}
