@@ -1,0 +1,9 @@
+{
+  "id": "starknet",
+  "name": "Starknet",
+  "namespace": "starknet",
+  "block": "starknet",
+  "genesis_block_hash": "0x047c3637b57c2b079b93c61539950c17e868a28f46cdef28f88521067f21e943",
+  "genesis_block_number": 0,
+  "chain_id": "0x534e5f4d41494e"
+}
