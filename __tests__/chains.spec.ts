@@ -1,7 +1,7 @@
 import { expect, test, describe } from "bun:test";
 
-describe("typespec", async () => {
-    test("typespec does not match", async () => {
+describe("chains", async () => {
+    test("namespace does not match folder", async () => {
         expect(true).toBeTrue();
     });
 });
