@@ -86,6 +86,7 @@ Provide token SVG to <https://tokenicons.io> and add matching Graph ID to `_data
   "arbitrum-one": "arbitrum-one",
   ...
 }
+```
 
 ## References
 
@@ -97,11 +98,10 @@ Provide token SVG to <https://tokenicons.io> and add matching Graph ID to `_data
 
 ## CAIP-2
 
-- https://namespaces.chainagnostic.org/solana/caip2
-- https://namespaces.chainagnostic.org/bip122/caip2
-- https://namespaces.chainagnostic.org/antelope/caip2
-- https://namespaces.chainagnostic.org/eip155/caip2
-- https://namespaces.chainagnostic.org/cosmos/caip2
-- https://namespaces.chainagnostic.org/starknet/README
-- https://namespaces.chainagnostic.org/polkadot/caip2
-
+- <https://namespaces.chainagnostic.org/solana/caip2>
+- <https://namespaces.chainagnostic.org/bip122/caip2>
+- <https://namespaces.chainagnostic.org/antelope/caip2>
+- <https://namespaces.chainagnostic.org/eip155/caip2>
+- <https://namespaces.chainagnostic.org/cosmos/caip2>
+- <https://namespaces.chainagnostic.org/starknet/README>
+- <https://namespaces.chainagnostic.org/polkadot/caip2>

@@ -4,12 +4,12 @@
     "services": [
         {
             "service": "firehose",
-            "id": "ethereum",
+            "id": "mainnet",
             "url": "https://mainnet.eth.streamingfast.io:443"
         },
         {
             "service": "substreams",
-            "id": "ethereum",
+            "id": "mainnet",
             "url": "https://mainnet.eth.streamingfast.io:443"
         }
     ]
