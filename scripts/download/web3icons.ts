@@ -9,19 +9,32 @@ export async function fetchWeb3IconsTokens(): Promise<Web3IconsToken[]> {
     return response.json();
 }
 
+export async function fetchWeb3Icons(): Promise<Web3Icons[]> {
+    const tokens = await fetchWeb3IconsTokens() as any[];
+    const networks = await fetchWeb3IconsNetworks() as any[];
+    return [...tokens, ...networks];
+}
+
 type Variants = "branded" | "mono";
+
+export interface Web3Icons extends Web3IconsNetwork, Web3IconsToken {
+    id: string;
+    name: string;
+    variants: Variants[];
+}
 export interface Web3IconsNetwork {
     id: string;
     name: string;
     variants: Variants[];
-    nativeCoinId: string;
-    shortName: string;
+    nativeCoinId?: string;
+    shortName?: string;
+    chainId?: number;
 }
 export interface Web3IconsToken {
     id: string
-    symbol: string
     name: string
     variants: Variants[]
-    addresses: { [key: string]: string }
-    marketCapRank: number
+    symbol?: string
+    addresses?: { [key: string]: string }
+    marketCapRank?: number
 }
