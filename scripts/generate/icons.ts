@@ -6,15 +6,15 @@ import web3iconsTokens from '../download/web3icons.tokens.json';
 
 const base = path.join(__dirname, "..", "..", "_data");
 
-// read & parse chains
+// read & parse networks
 const ids: Set<string> = new Set();
 const chain_ids: Map<number, string> = new Map();
 const names: Map<string, string> = new Map();
-for (const filename of fs.readdirSync(path.join(base, "chains"), { recursive: true })) {
+for (const filename of fs.readdirSync(path.join(base, "networks"), { recursive: true })) {
     if (typeof filename !== 'string') continue;
     if (!filename.endsWith(".json")) continue;
     let id = path.parse(filename).name;
-    const json = JSON.parse(fs.readFileSync(path.join(base, "chains", filename), "utf-8"));
+    const json = JSON.parse(fs.readFileSync(path.join(base, "networks", filename), "utf-8"));
     if (json.web3icons_id) id = json.web3icons_id;
     chain_ids.set(json.chain_id, id);
     names.set(json.name, id);

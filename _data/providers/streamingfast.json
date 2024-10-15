@@ -1,15 +1,16 @@
 {
+    "id": "streamingfast",
     "name": "StreamingFast",
     "url": "https://www.streamingfast.io",
     "services": [
         {
-            "service": "firehose",
             "id": "mainnet",
+            "type": "firehose",
             "url": "https://mainnet.eth.streamingfast.io:443"
         },
         {
-            "service": "substreams",
             "id": "mainnet",
+            "type": "substreams",
             "url": "https://mainnet.eth.streamingfast.io:443"
         }
     ]
