@@ -1,7 +1,6 @@
 {
     "name": "StreamingFast",
     "url": "https://www.streamingfast.io",
-    "rpc": [],
     "services": [
         {
             "service": "firehose",
