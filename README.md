@@ -103,3 +103,5 @@ Provide token SVG to <https://tokenicons.io> and add matching Graph ID to `_data
 - https://namespaces.chainagnostic.org/eip155/caip2
 - https://namespaces.chainagnostic.org/cosmos/caip2
 - https://namespaces.chainagnostic.org/starknet/README
+- https://namespaces.chainagnostic.org/polkadot/caip2
+
