@@ -1,7 +1,16 @@
 {
     "name": "Edge & Node",
     "url": "https://edgeandnode.com",
-    "rpc": [],
-    "firehose": [],
-    "substreams": []
+    "services": [
+        {
+            "service": "gateway",
+            "id": "subgraphs",
+            "url": "https://edgeandnode.com"
+        },
+        {
+            "service": "studio",
+            "id": "mainnet",
+            "url": "https://thegraph.com/studio"
+        }
+    ]
 }

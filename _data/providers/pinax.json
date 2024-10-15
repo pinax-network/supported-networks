@@ -1,164 +1,199 @@
 {
     "name": "Pinax",
     "url": "https://pinax.network",
-    "rpc": [
+    "services": [
         {
+            "service": "rpc",
             "id": "ethereum",
             "url": "https://eth.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
+            "service": "rpc",
             "id": "polygon",
             "url": "https://polygon.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
+            "service": "rpc",
             "id": "bsc",
             "url": "https://bsc.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
+            "service": "rpc",
             "id": "arbitrum-one",
             "url": "https://arbone.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
+            "service": "rpc",
             "id": "optimism-sepolia",
             "url": "https://opsepolia.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
+            "service": "rpc",
             "id": "jungle4evm",
             "url": "https://jungle4evm.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
+            "service": "rpc",
             "id": "jungle4",
             "url": "https://jungle4.rpc.pinax.network/v1/${API_KEY}/"
         },
         {
+            "service": "rpc",
             "id": "mode-mainnet",
             "url": "https://mode.rpc.pinax.network/v1/${API_KEY}/"
-        }
-    ],
-    "firehose": [
+        },
         {
+            "service": "firehose",
             "id": "ethereum",
             "url": "https://eth.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "btc",
             "url": "https://bitcoin.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "polygon",
             "url": "https://polygon.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "bsc",
             "url": "https://bsc.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "arbitrum-one",
             "url": "https://arbone.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "optimism",
             "url": "https://optimism.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "base",
             "url": "https://base.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "near",
             "url": "https://near.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "gnosis-cl",
             "url": "https://gnosis-cl.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "arweave",
             "url": "https://arweave.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "cosmoshub",
             "url": "https://cosmoshub.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "osmosis",
             "url": "https://osmosis.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "eos",
             "url": "https://eos.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "wax",
             "url": "https://wax.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "telos",
             "url": "https://telos.firehose.pinax.network:443"
         },
         {
+            "service": "firehose",
             "id": "mode-mainnet",
             "url": "https://mode.firehose.pinax.network:443"
-        }
-    ],
-    "substreams": [
+        },
         {
+            "service": "substreams",
             "id": "ethereum",
             "url": "https://eth.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "btc",
             "url": "https://bitcoin.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "polygon",
             "url": "https://polygon.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "bsc",
             "url": "https://bsc.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "arbitrum-one",
             "url": "https://arbone.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "optimism",
             "url": "https://optimism.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "base",
             "url": "https://base.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "near",
             "url": "https://near.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "gnosis-cl",
             "url": "https://gnosis-cl.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "arweave",
             "url": "https://arweave.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "tetha",
             "url": "https://tetha.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "eos",
             "url": "https://eos.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "wax",
             "url": "https://wax.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "telos",
             "url": "https://telos.substreams.pinax.network:443"
         },
         {
+            "service": "substreams",
             "id": "mode-mainnet",
             "url": "https://mode.substreams.pinax.network:443"
         }

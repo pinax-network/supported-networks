@@ -2,14 +2,14 @@
     "name": "StreamingFast",
     "url": "https://www.streamingfast.io",
     "rpc": [],
-    "firehose": [
+    "services": [
         {
+            "service": "firehose",
             "id": "ethereum",
             "url": "https://mainnet.eth.streamingfast.io:443"
-        }
-    ],
-    "substreams": [
+        },
         {
+            "service": "substreams",
             "id": "ethereum",
             "url": "https://mainnet.eth.streamingfast.io:443"
         }

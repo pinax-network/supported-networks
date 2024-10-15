@@ -1,7 +1,11 @@
 {
     "name": "Graph Ops",
     "url": "https://graphops.xyz/",
-    "rpc": [],
-    "firehose": [],
-    "substreams": []
+    "services": [
+        {
+            "service": "gateway",
+            "id": "subgraphs",
+            "url": "https://graphops.xyz/"
+        }
+    ]
 }
