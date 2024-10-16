@@ -35,7 +35,12 @@ Add the chain definition to the `./_data/chains/` directory.
   "name": "Ethereum",
   "namespace": "eip155",
   "block": "ethereum",
-  "genesis_hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
+  "genesis": {
+    "block": {
+      "number": 0,
+      "hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3"
+    }
+  },
   "chain_id": 1,
   "network_id": 1
 }
@@ -47,46 +52,46 @@ Add the provider definition to the `./_data/providers/` directory.
 
 ```json
 {
-    "name": "StreamingFast",
-    "url": "https://www.streamingfast.io",
-    "rpc": [],
-    "firehose": [
-        {
-            "id": "mainnet",
-            "url": "https://mainnet.eth.streamingfast.io:443"
-        }
-    ],
-    "substreams": [
-        {
-            "id": "mainnet",
-            "url": "https://mainnet.eth.streamingfast.io:443"
-        }
-    ]
+  "id": "streamingfast",
+  "name": "StreamingFast",
+  "url": "https://www.streamingfast.io",
+  "services": [
+    {
+      "type": "firehose",
+      "id": "mainnet",
+      "url": "https://mainnet.eth.streamingfast.io:443"
+    },
+    {
+      "id": "mainnet",
+      "type": "substreams",
+      "url": "https://mainnet.eth.streamingfast.io:443"
+    }
+  ]
 }
 ```
 
 ## How to add a new block?
 
-Add the block definition to the `./_data/blocks/` directory.
+Add the block definition to the `./_data/blocks.json` file.
 
 ```json
-{
-  "type": "sf.solana.type.v1.Block",
-  "url": "buf.build/streamingfast/firehose-solana"
-}
+[
+  {
+    "type": "sf.solana.type.v1.Block",
+    "url": "buf.build/streamingfast/firehose-solana"
+  },
+  ...
+]
 ```
 
 ## How to add a new icon?
 
-Provide token SVG to <https://tokenicons.io> and add matching Graph ID to `_data/web3icons_id.json`.
+Provide SVG for network to <https://tokenicons.io> and add the icon to the `./_data/icons/` directory using the network id as the filename.
 
-```json
-{
-  "mainnet": "ethereum",
-  "arbitrum-one": "arbitrum-one",
-  ...
-}
-```
+- `/_data`
+  - `/icons`
+    - `/branded/mainnet.svg`
+    - `/mono/mainnet.svg`
 
 ## References
 
