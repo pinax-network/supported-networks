@@ -4,10 +4,11 @@ This repository contains a list of networks supported by The Graph. The list is 
 
 Data Structure of the repository:
 
-- `chains/`: Contains the chain definitions.
-- `blocks/`: Contains the Block protobuf defintions.
-- `icons/`: Contains the icons of the chains.
+- `networks/`: Contains the network definitions.
 - `providers/`: Contains the provider definitions for The Graph services (ex: RPC, Firehose, Substreams, ...).
+- `icons/`: Contains the icons of the networks.
+- `blocks.json`: Contains the Firehose block defintions.
+- `services.json`: Contains the available services.
 
 ## Make a pull request
 
@@ -16,7 +17,7 @@ Once you've tested your chain, you can share it on The Graph supported networks.
 ## Common mistakes
 
 - Review Typepspec definitions in `./typespec` to ensure that the chain is correctly defined.
-- Ensure that the chain is correctly defined in the `./_data/chains/` directory.
+- Ensure that the chain is correctly defined in the `./_data/networks/` directory.
 - Ensure that the chain matches a valid block definition in the `./_data/blocks/` directory.
 - Ensure that the chain has a valid icon in the `./_data/icons/` directory.
 - Ensure that the chain has a valid provider in the `./_data/providers/` directory.
@@ -25,9 +26,9 @@ Once you've tested your chain, you can share it on The Graph supported networks.
 
 Test your changes by running `bun test` to ensure that your changes are correct.
 
-## How to add a new chain?
+## How to add a new network?
 
-Add the chain definition to the `./_data/chains/` directory.
+Add the chain definition to the `./_data/networks/` directory.
 
 ```json
 {
@@ -41,8 +42,8 @@ Add the chain definition to the `./_data/chains/` directory.
       "hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3"
     }
   },
-  "chain_id": 1,
-  "network_id": 1
+  "chainId": 1,
+  "networkId": 1
 }
 ```
 
