@@ -1,3 +1,5 @@
+// https://www.npmjs.com/package/@edgeandnode/common?activeTab=code
+// ./dist/index.mjs
 var ChainProductStatus = /* @__PURE__ */ ((ChainProductStatus2) => {
   ChainProductStatus2["BLOCKED"] = "BLOCKED";
   ChainProductStatus2["ALLOWED"] = "ALLOWED";

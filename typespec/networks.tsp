@@ -1,20 +1,35 @@
 namespace TheGraph.Networks;
 
 model Network {
-  // The Graph CLI network ID
-  id: string;
+  // The Graph CLI ID
+  graphCliName: string;
 
   // Chain name
   name: string;
 
-  // Firehose block type
-  blockType: string;
+  // Chain known aliases
+  aliases: string[];
 
   // CAIP-2 Namespace
   `namespace`: string;
 
-  // Genesis information
-  genesis: Genesis;
+  // Firehose block type
+  blockType: string;
+
+  // Genesis Block ID
+  genesisBlockID: string;
+
+  // Genesis Block Number
+  genesisBlockNumber: int64;
+
+  // CAIP-2 Chain ID
+  chainId: string | int64;
+
+  // CAIP-2 ID
+  caip2: string;
+
+  // Web3Icons ID
+  web3icons: string;
 
   // Is Testnet?
   testnet?: boolean;
@@ -29,13 +44,4 @@ model NetworkEIP1155 extends Network {
 
   // Peer-to-peer communication between nodes uses the network ID,
   networkId: int64;
-}
-
-model Genesis {
-  block: {
-    number: int64;
-    hash: string;
-  };
-  chainId?: string;
-  hash?: string;
 }
