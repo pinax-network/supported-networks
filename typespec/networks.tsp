@@ -1,18 +1,34 @@
-namespace TheGraph.Chains;
+namespace TheGraph.Networks;
 
-model Chain {
-  // The Graph chain ID
+model Network {
+  // The Graph CLI network ID
   id: string;
 
   // Chain name
   name: string;
 
   // Firehose block type
-  block: string;
+  blockType: string;
 
+  // CAIP-2 Namespace
+  `namespace`: string;
+
+  // Genesis information
+  genesis: Genesis;
+}
+
+model NetworkEIP1155 extends Network {
   // Transaction signature process uses the chain ID
-  chain_id?: int64;
+  chainId: int64;
 
   // Peer-to-peer communication between nodes uses the network ID,
-  network_id?: int64;
+  networkId: int64;
+}
+
+model Genesis {
+  block: {
+    number: int64;
+    hash: string;
+  };
+  hash?: string;
 }

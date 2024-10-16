@@ -1,0 +1,22 @@
+[
+    {
+        "id": "firehose",
+        "url": "https://thegraph.com/docs/en/firehose/"
+    },
+    {
+        "id": "gateway",
+        "url": "https://thegraph.com/docs/en/tap/#gateway"
+    },
+    {
+        "id": "studio",
+        "url": "https://thegraph.com/docs/en/deploying/subgraph-studio/"
+    },
+    {
+        "id": "subgraphs",
+        "url": "https://thegraph.com/docs/en/quick-start/"
+    },
+    {
+        "id": "substreams",
+        "url": "https://thegraph.com/docs/en/substreams/"
+    }
+]
