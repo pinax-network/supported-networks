@@ -15,6 +15,12 @@ model Network {
 
   // Genesis information
   genesis: Genesis;
+
+  // Is Testnet?
+  testnet?: boolean;
+
+  // Is Beacon Chain?
+  beacon?: boolean;
 }
 
 model NetworkEIP1155 extends Network {
@@ -30,5 +36,6 @@ model Genesis {
     number: int64;
     hash: string;
   };
+  chainId?: string;
   hash?: string;
 }
