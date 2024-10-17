@@ -5,10 +5,7 @@ This repository contains a list of networks supported by The Graph. The list is 
 Data Structure of the repository:
 
 - `networks/`: Contains the network definitions.
-- `providers/`: Contains the provider definitions for The Graph services (ex: RPC, Firehose, Substreams, ...).
-- `icons/`: Contains the icons of the networks.
 - `blocks.json`: Contains the Firehose block defintions.
-- `services.json`: Contains the available services.
 
 ## Make a pull request
 
@@ -16,11 +13,9 @@ Once you've tested your chain, you can share it on The Graph supported networks.
 
 ## Common mistakes
 
-- Review Typepspec definitions in `./typespec` to ensure that the chain is correctly defined.
-- Ensure that the chain is correctly defined in the `./_data/networks/` directory.
-- Ensure that the chain matches a valid block definition in the `./_data/blocks/` directory.
-- Ensure that the chain has a valid icon in the `./_data/icons/` directory.
-- Ensure that the chain has a valid provider in the `./_data/providers/` directory.
+- Review Typepspec definitions in `./typespec` to ensure that the network is correctly defined.
+- Ensure that the network is correctly defined in the `./_data/networks/` directory.
+- Ensure that the network matches a valid block definition in the `./_data/blocks.json` file.
 
 ## Running tests
 
@@ -32,42 +27,19 @@ Add the chain definition to the `./_data/networks/` directory.
 
 ```json
 {
-  "id": "mainnet",
+  "graphCliName": "mainnet",
   "name": "Ethereum",
+  "aliases": [
+    "ethereum"
+  ],
   "namespace": "eip155",
-  "block": "ethereum",
-  "genesis": {
-    "block": {
-      "number": 0,
-      "hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3"
-    }
-  },
+  "blockType": "ethereum",
+  "genesisBlockID": "d4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
+  "genesisBlockNumber": 0,
   "chainId": 1,
-  "networkId": 1
-}
-```
-
-## How to add a new provider?
-
-Add the provider definition to the `./_data/providers/` directory.
-
-```json
-{
-  "id": "streamingfast",
-  "name": "StreamingFast",
-  "url": "https://www.streamingfast.io",
-  "services": [
-    {
-      "type": "firehose",
-      "id": "mainnet",
-      "url": "https://mainnet.eth.streamingfast.io:443"
-    },
-    {
-      "id": "mainnet",
-      "type": "substreams",
-      "url": "https://mainnet.eth.streamingfast.io:443"
-    }
-  ]
+  "networkId": 1,
+  "caip2": "eip155:1",
+  "web3icons": "ethereum"
 }
 ```
 
@@ -87,12 +59,7 @@ Add the block definition to the `./_data/blocks.json` file.
 
 ## How to add a new icon?
 
-Provide SVG for network to <https://tokenicons.io> and add the icon to the `./_data/icons/` directory using the network id as the filename.
-
-- `/_data`
-  - `/icons`
-    - `/branded/mainnet.svg`
-    - `/mono/mainnet.svg`
+Provide SVG for missing networks to <https://tokenicons.io>.
 
 ## References
 
