@@ -43,7 +43,7 @@ const untypedDefChain = {
   environmentStatus: "all"
 };
 
-const untypedSupportedNetworkMap = /* @__PURE__ */ new Map([
+export const untypedSupportedNetworkMap = /* @__PURE__ */ new Map([
   [
     "evm",
     {
