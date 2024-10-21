@@ -1,0 +1,26 @@
+{
+  "name": "injective-mainnet",
+  "displayName": "Injective",
+  "aliases": ["injective", "injective-1"],
+  "caip2ChainId": "cosmos:injective-1",
+  "blockExplorerUrls": [
+    "https://explorer.injective.network/"
+  ],
+  "publicRpcUrls": [],
+  "publicApiUrls": [],
+  "isTestnet": false,
+  "studioSupport": [],
+  "issuanceRewards": false,
+  "nativeToken": "INJ",
+  "docsUrl": "https://docs.injective.network/",
+  "web3Icon": "injective",
+  "genesisBlock": {
+    "hash": "24c9714291a999b952859ee02ec9b233394fe743b07ea3578d432a4a2707b6af",
+    "height": 1
+  },
+  "firehoseBlock": {
+    "type": "sf.cosmos.type.v2.Block",
+    "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
+    "bytesEncoding": "hex"
+  }
+}

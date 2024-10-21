@@ -1,0 +1,28 @@
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+name: Validate PR
+
+jobs:
+  validate-json:
+    name: Validate JSON files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Validate schema
+        run: bun validate-schema
+
+      - name: Validate logic
+        run: bun validate
+
+      - name: Attempt to generate registry
+        run: bun generate

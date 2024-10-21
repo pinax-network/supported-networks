@@ -1,0 +1,17 @@
+{
+  "$id": "https://thegraph.com/schemas/v1/registry.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "The Graph networks registry",
+  "type": "object",
+  "schemaVersion": "1.0.0",
+  "properties": {
+    "networks": {
+      "type": "array",
+      "items": {
+        "$ref": "./network.schema.json"
+      }
+    }
+  },
+  "required": ["networks"],
+  "additionalProperties": false
+}
