@@ -151,6 +151,7 @@
   "if": {
     "properties": {
       "caip2ChainId": {
+        "type": "string",
         "pattern": "^eip155:"
       }
     }
@@ -158,6 +159,14 @@
   "then": {
     "properties": {
       "firehoseBlock": {
+        "type": "object",
+        "properties": {
+          "evmModel": {
+            "type": "string",
+            "enum": ["base", "extended"],
+            "description": "Block model if EVM chain, required for eip155 chains"
+          }
+        },
         "required": ["evmModel"]
       }
     }
@@ -165,6 +174,7 @@
   "else": {
     "properties": {
       "firehoseBlock": {
+        "type": "object",
         "properties": {
           "evmModel": false
         }
