@@ -1,0 +1,13 @@
+{
+  "id": "solana",
+  "name": "Solana",
+  "namespace": "solana",
+  "block": "solana",
+  "genesis": {
+    "block": {
+      "number": 0,
+      "hash": "4sGjMW1sUnHzSxGspuhpqLDx6wiyjNtZAMdL4VZHirAn"
+    },
+    "hash": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+  }
+}

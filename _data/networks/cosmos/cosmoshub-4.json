@@ -1,0 +1,9 @@
+{
+  "id": "cosmoshub-4",
+  "name": "Cosmos Hub",
+  "namespace": "cosmos",
+  "block": "cosmos",
+  "genesis_block_hash": "7307AF7F400F3D9BC5113FA2E8FC3851713140F9037F21FFF64973DA5A5256B1",
+  "genesis_block_number": 1,
+  "chain_id": "cosmoshub-4"
+}

@@ -1,0 +1,15 @@
+{
+  "graphCliName": "mainnet",
+  "name": "Ethereum",
+  "aliases": [
+    "ethereum"
+  ],
+  "namespace": "eip155",
+  "blockType": "ethereum",
+  "genesisBlockID": "d4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
+  "genesisBlockNumber": 0,
+  "chainId": 1,
+  "networkId": 1,
+  "caip2": "eip155:1",
+  "web3icons": "ethereum"
+}
