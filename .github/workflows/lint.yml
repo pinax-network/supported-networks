@@ -1,0 +1,22 @@
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+name: Lint PR
+
+jobs:
+  lint-json:
+    name: Lint JSON files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Lint JSON files
+        run: bun lint eslint ./
