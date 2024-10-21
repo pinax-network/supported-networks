@@ -18,6 +18,7 @@ This repository contains a registry of networks supported by The Graph.
 ## Adding a chain
 
 If you want to add a chain, i.e. to CLI or the docs
+
 - add a chain JSON in `registry/networks`
 - validate it with `bun validate`, make sure there are no errors
 - generate combined registry with `bun generate`

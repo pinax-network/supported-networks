@@ -85,7 +85,11 @@ export interface HttpsThegraphComSchemasV1NetworkSchemaJson {
   /**
    * Chain support in Edge&Node Studio
    */
-  studioSupport: ("subgraph-rpc" | "subgraph-firehose" | "subgraph-substreams")[];
+  studioSupport: (
+    | "subgraph-rpc"
+    | "subgraph-firehose"
+    | "subgraph-substreams"
+  )[];
   /**
    * Issuance rewards on the Graph Network for this chain
    */

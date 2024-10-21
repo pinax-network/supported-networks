@@ -3,11 +3,10 @@
   "type": "module",
   "scripts": {
     "test": "bun test",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "format": "prettier \"./**/*.+(ts|json|md)\" --write",
+    "format:check": "prettier \"./**/*.+(ts|json|md)\" --check",
     "validate-schema": "ajv validate -s schemas/network.schema.json -d 'registry/networks/**/*.json' --strict=true -c ajv-formats",
     "gen-types": "json2ts --input schemas/registry.schema.json --output src/types/registry.d.ts --cwd=schemas",
-    "download": "bun run ./src/_research/download/index.ts",
     "generate": "bun run ./src/generate.ts",
     "validate": "bun run ./src/validate.ts"
   },
@@ -16,7 +15,7 @@
     "ajv-cli": "^5.0.0",
     "ajv-formats": "^3.0.1",
     "json-schema-to-typescript": "^15.0.2",
-    "eslint": "^9.13.0",
-    "eslint-plugin-json": "^4.0.0"
+    "prettier": "^3.3.3",
+    "prettier-plugin-multiline-arrays": "^3.0.6"
   }
 }
