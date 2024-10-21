@@ -10,7 +10,7 @@
     "https://bitcoin-mainnet.gateway.tatum.io"
   ],
   "publicApiUrls": [],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "BTC",

@@ -10,7 +10,7 @@
     "https://kylin.api.eosnation.io/"
   ],
   "publicApiUrls": [],
-  "isTestnet": true,
+  "networkType": "testnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "EOS",

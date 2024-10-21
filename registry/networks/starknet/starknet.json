@@ -11,7 +11,7 @@
     "https://starknet-mainnet.public.blastapi.io"
   ],
   "publicApiUrls": [],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "ETH",

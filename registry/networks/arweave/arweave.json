@@ -6,7 +6,7 @@
   "blockExplorerUrls": ["https://arscan.io/"],
   "publicRpcUrls": [],
   "publicApiUrls": [],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
   "issuanceRewards": false,
   "nativeToken": "AR",

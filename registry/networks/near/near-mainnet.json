@@ -10,7 +10,7 @@
     "https://rpc.mainnet.near.org"
   ],
   "publicApiUrls": [],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "NEAR",

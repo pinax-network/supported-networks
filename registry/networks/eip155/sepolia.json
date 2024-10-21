@@ -14,7 +14,7 @@
   "publicApiUrls": [
     "https://rpc.ankr.com/eth_sepolia"
   ],
-  "isTestnet": true,
+  "networkType": "testnet",
   "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
   "issuanceRewards": false,
   "nativeToken": "ETH",

@@ -11,7 +11,7 @@
     "https://api.mainnet-beta.solana.com"
   ],
   "publicApiUrls": [],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "SOL",

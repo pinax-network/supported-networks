@@ -10,7 +10,7 @@
     "https://rpc.testnet.near.org"
   ],
   "publicApiUrls": [],
-  "isTestnet": true,
+  "networkType": "testnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "NEAR",

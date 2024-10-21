@@ -92,9 +92,10 @@
       },
       "description": "URLs for the block explorers"
     },
-    "isTestnet": {
-      "type": "boolean",
-      "description": "Whether the chain is a testnet"
+    "networkType": {
+      "type": "string",
+      "enum": ["mainnet", "testnet", "devnet"],
+      "description": "Whether the chain is a mainnet/testnet/devnet"
     },
     "studioSupport": {
       "type": "array",
@@ -140,7 +141,7 @@
     "displayName",
     "blockExplorerUrls",
     "publicApiUrls",
-    "isTestnet",
+    "networkType",
     "studioSupport",
     "issuanceRewards",
     "nativeToken",

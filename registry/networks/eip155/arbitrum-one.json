@@ -14,7 +14,7 @@
   "publicApiUrls": [
     "https://arbitrum-one.abi.pinax.network/api"
   ],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
   "issuanceRewards": true,
   "nativeToken": "ARB",

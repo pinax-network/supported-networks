@@ -8,7 +8,7 @@
   ],
   "publicRpcUrls": [],
   "publicApiUrls": [],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "INJ",

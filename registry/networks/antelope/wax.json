@@ -10,7 +10,7 @@
     "https://wax.api.eosnation.io/"
   ],
   "publicApiUrls": [],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "WAX",

@@ -12,7 +12,7 @@
       ],
       "publicRpcUrls": [],
       "publicApiUrls": [],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [
         "subgraph-rpc",
         "subgraph-firehose",
@@ -46,7 +46,7 @@
         "https://wax.api.eosnation.io/"
       ],
       "publicApiUrls": [],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "WAX",
@@ -76,7 +76,7 @@
         "https://kylin.api.eosnation.io/"
       ],
       "publicApiUrls": [],
-      "isTestnet": true,
+      "networkType": "testnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "EOS",
@@ -106,7 +106,7 @@
         "https://eos.api.eosnation.io/"
       ],
       "publicApiUrls": [],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "EOS",
@@ -136,7 +136,7 @@
         "https://bitcoin-mainnet.gateway.tatum.io"
       ],
       "publicApiUrls": [],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "BTC",
@@ -171,7 +171,7 @@
       "publicApiUrls": [
         "https://arbitrum-one.abi.pinax.network/api"
       ],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [
         "subgraph-rpc",
         "subgraph-firehose",
@@ -210,7 +210,7 @@
       "publicApiUrls": [
         "https://rpc.ankr.com/eth_sepolia"
       ],
-      "isTestnet": true,
+      "networkType": "testnet",
       "studioSupport": [
         "subgraph-rpc",
         "subgraph-firehose",
@@ -250,7 +250,7 @@
       "publicApiUrls": [
         "https://api.etherscan.io/api"
       ],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [
         "subgraph-rpc",
         "subgraph-firehose",
@@ -284,7 +284,7 @@
       ],
       "publicRpcUrls": [],
       "publicApiUrls": [],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "INJ",
@@ -312,7 +312,7 @@
       ],
       "publicRpcUrls": [],
       "publicApiUrls": [],
-      "isTestnet": true,
+      "networkType": "testnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "INJ",
@@ -344,7 +344,7 @@
         "https://api.mainnet-beta.solana.com"
       ],
       "publicApiUrls": [],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "SOL",
@@ -372,12 +372,12 @@
         "https://rpc.testnet.near.org"
       ],
       "publicApiUrls": [],
-      "isTestnet": true,
+      "networkType": "testnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "NEAR",
       "docsUrl": "https://docs.near.org/",
-      "web3Icon": "near",
+      "web3Icon": "near-protocol",
       "genesisBlock": {
         "hash": "09d69c8ba4f319f8e78d0b701f0c1f763cc0d920551bfbd00072d5f56016d853",
         "height": 42376923
@@ -402,12 +402,12 @@
         "https://rpc.mainnet.near.org"
       ],
       "publicApiUrls": [],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "NEAR",
       "docsUrl": "https://docs.near.org/",
-      "web3Icon": "near",
+      "web3Icon": "near-protocol",
       "genesisBlock": {
         "hash": "a7110b9052e1be68f7fa8bb4065bf54e731205801878e708db7464ec4b9b8014",
         "height": 9820214
@@ -433,7 +433,7 @@
         "https://starknet-mainnet.public.blastapi.io"
       ],
       "publicApiUrls": [],
-      "isTestnet": false,
+      "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "ETH",

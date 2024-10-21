@@ -13,7 +13,7 @@
   "publicApiUrls": [
     "https://api.etherscan.io/api"
   ],
-  "isTestnet": false,
+  "networkType": "mainnet",
   "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
   "issuanceRewards": true,
   "nativeToken": "ETH",
