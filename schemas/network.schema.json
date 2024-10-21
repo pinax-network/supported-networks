@@ -97,6 +97,11 @@
       "enum": ["mainnet", "testnet", "devnet"],
       "description": "Whether the chain is a mainnet/testnet/devnet"
     },
+    "testnetOf": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Name of the related mainnet network, i.e. near-mainnet"
+    },
     "studioSupport": {
       "type": "array",
       "items": {
@@ -149,37 +154,65 @@
   ],
   "additionalProperties": false,
 
-  "if": {
-    "properties": {
-      "caip2ChainId": {
-        "type": "string",
-        "pattern": "^eip155:"
-      }
-    }
-  },
-  "then": {
-    "properties": {
-      "firehoseBlock": {
-        "type": "object",
+  "allOf": [
+    {
+      "if": {
         "properties": {
-          "evmModel": {
+          "networkType": {
+            "enum": ["testnet", "devnet"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "testnetOf": {
             "type": "string",
-            "enum": ["base", "extended"],
-            "description": "Block model if EVM chain, required for eip155 chains"
+            "pattern": "^[a-z0-9-]+$",
+            "description": "Name of the related mainnet network, i.e. near-mainnet"
           }
         },
-        "required": ["evmModel"]
-      }
-    }
-  },
-  "else": {
-    "properties": {
-      "firehoseBlock": {
-        "type": "object",
+        "required": ["testnetOf"]
+      },
+      "else": {
         "properties": {
-          "evmModel": false
+          "testnetOf": false
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "caip2ChainId": {
+            "type": "string",
+            "pattern": "^eip155:"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "firehoseBlock": {
+            "type": "object",
+            "properties": {
+              "evmModel": {
+                "type": "string",
+                "enum": ["base", "extended"],
+                "description": "Block model if EVM chain, required for eip155 chains"
+              }
+            },
+            "required": ["evmModel"]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "firehoseBlock": {
+            "type": "object",
+            "properties": {
+              "evmModel": false
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

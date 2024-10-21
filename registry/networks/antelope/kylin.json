@@ -11,6 +11,7 @@
   ],
   "publicApiUrls": [],
   "networkType": "testnet",
+  "testnetOf": "eos",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "EOS",

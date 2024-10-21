@@ -11,6 +11,7 @@
   ],
   "publicApiUrls": [],
   "networkType": "testnet",
+  "testnetOf": "near-mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "NEAR",

@@ -15,6 +15,7 @@
     "https://rpc.ankr.com/eth_sepolia"
   ],
   "networkType": "testnet",
+  "testnetOf": "mainnet",
   "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
   "issuanceRewards": false,
   "nativeToken": "ETH",

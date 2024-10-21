@@ -6,15 +6,11 @@
  */
 
 /**
- * The Graph networks registry
- */
-export interface HttpsThegraphComSchemasV1RegistrySchemaJson {
-  networks: HttpsThegraphComSchemasV1NetworkSchemaJson[];
-}
-/**
  * The Graph networks registry entry
  */
-export interface HttpsThegraphComSchemasV1NetworkSchemaJson {
+export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
+  [k: string]: unknown;
+} & {
   /**
    * Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet
    */
@@ -79,9 +75,13 @@ export interface HttpsThegraphComSchemasV1NetworkSchemaJson {
    */
   blockExplorerUrls: string[];
   /**
-   * Whether the chain is a testnet
+   * Whether the chain is a mainnet/testnet/devnet
    */
-  isTestnet: boolean;
+  networkType: "mainnet" | "testnet" | "devnet";
+  /**
+   * Name of the related mainnet network, i.e. near-mainnet
+   */
+  testnetOf?: string;
   /**
    * Chain support in Edge&Node Studio
    */
@@ -107,4 +107,11 @@ export interface HttpsThegraphComSchemasV1NetworkSchemaJson {
    * URL to the chain documentation
    */
   docsUrl?: string;
+};
+
+/**
+ * The Graph networks registry
+ */
+export interface HttpsThegraphComSchemasV1RegistrySchemaJson {
+  networks: HttpsThegraphComSchemasV1NetworkSchemaJson[];
 }

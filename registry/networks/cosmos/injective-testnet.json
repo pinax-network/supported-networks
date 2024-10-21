@@ -9,6 +9,7 @@
   "publicRpcUrls": [],
   "publicApiUrls": [],
   "networkType": "testnet",
+  "testnetOf": "injective-mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "INJ",
