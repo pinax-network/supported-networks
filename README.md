@@ -1,107 +1,29 @@
 # The Graph supported networks
 
-This repository contains a list of networks supported by The Graph. The list is used by The Graph to determine which networks are supported by the service.
+This repository contains a registry of networks supported by The Graph.
 
-Data Structure of the repository:
+## Structure of the repository
 
-- `chains/`: Contains the chain definitions.
-- `blocks/`: Contains the Block protobuf defintions.
-- `icons/`: Contains the icons of the chains.
-- `providers/`: Contains the provider definitions for The Graph services (ex: RPC, Firehose, Substreams, ...).
+- `schemas/`: Contains the schemas for the registry and network entries.
+- `registry/`: Contains the networks jsons
+- `src/`: Contains Typescript scripts to validate networks JSONs and generate the combined registry JSON
 
-## Make a pull request
+## Scripts usage
 
-Once you've tested your chain, you can share it on The Graph supported networks.
+- `bun gen-types` - generate types from schema if schema has changed
+- `bun validate-schema` - validate networks JSONs against the schema
+- `bun validate` - additional logical validation of networks JSONs
+- `bun generate` - generate combined registry JSON (default: `registry/registry.json`)
 
-## Common mistakes
+## Adding a chain
 
-- Review Typepspec definitions in `./typespec` to ensure that the chain is correctly defined.
-- Ensure that the chain is correctly defined in the `./_data/chains/` directory.
-- Ensure that the chain matches a valid block definition in the `./_data/blocks/` directory.
-- Ensure that the chain has a valid icon in the `./_data/icons/` directory.
-- Ensure that the chain has a valid provider in the `./_data/providers/` directory.
-
-## Running tests
-
-Test your changes by running `bun test` to ensure that your changes are correct.
-
-## How to add a new chain?
-
-Add the chain definition to the `./_data/chains/` directory.
-
-```json
-{
-  "id": "mainnet",
-  "name": "Ethereum",
-  "namespace": "eip155",
-  "block": "ethereum",
-  "genesis_hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
-  "chain_id": 1,
-  "network_id": 1
-}
-```
-
-## How to add a new provider?
-
-Add the provider definition to the `./_data/providers/` directory.
-
-```json
-{
-    "name": "StreamingFast",
-    "url": "https://www.streamingfast.io",
-    "rpc": [],
-    "firehose": [
-        {
-            "id": "mainnet",
-            "url": "https://mainnet.eth.streamingfast.io:443"
-        }
-    ],
-    "substreams": [
-        {
-            "id": "mainnet",
-            "url": "https://mainnet.eth.streamingfast.io:443"
-        }
-    ]
-}
-```
-
-## How to add a new block?
-
-Add the block definition to the `./_data/blocks/` directory.
-
-```json
-{
-  "type": "sf.solana.type.v1.Block",
-  "url": "buf.build/streamingfast/firehose-solana"
-}
-```
-
-## How to add a new icon?
-
-Provide token SVG to <https://tokenicons.io> and add matching Graph ID to `_data/web3icons_id.json`.
-
-```json
-{
-  "mainnet": "ethereum",
-  "arbitrum-one": "arbitrum-one",
-  ...
-}
-```
+If you want to add a chain, i.e. to CLI or the docs
+- add a chain JSON in `registry/networks`
+- validate it with `bun validate`, make sure there are no errors
+- generate combined registry with `bun generate`
+- open a PR
 
 ## References
 
-- [Chain Requirements (Edge & Node)](https://thegraphfoundation.notion.site/Chain-Requirements-Edge-Node-1d7e961a7235459e852a647dcf55c6b9)
-- [Chain Requirements (StreamingFast)](https://thegraphfoundation.notion.site/Chain-Requirements-StreamingFast-1c9b85883f1d4c33b62042376d24ea67)
-- [Pinax Chains](https://github.com/pinax-network/chains)
-- [Ethereum ChainID](https://github.com/ethereum-lists/chains) (<https://chainid.network/>)
-- [DefiLlama ChainList](https://github.com/DefiLlama/chainlist/tree/main) (<https://chainlist.org/>)
-
-## CAIP-2
-
-- <https://namespaces.chainagnostic.org/solana/caip2>
-- <https://namespaces.chainagnostic.org/bip122/caip2>
-- <https://namespaces.chainagnostic.org/antelope/caip2>
-- <https://namespaces.chainagnostic.org/eip155/caip2>
-- <https://namespaces.chainagnostic.org/cosmos/caip2>
-- <https://namespaces.chainagnostic.org/starknet/README>
-- <https://namespaces.chainagnostic.org/polkadot/caip2>
+- [CAIP-2 chain ids](https://chainagnostic.org/CAIPs/caip-2)
+- [Web3Icons](https://github.com/0xa3k5/web3icons/tree/main/raw-svgs/networks/branded)
