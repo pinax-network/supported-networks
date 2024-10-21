@@ -1,0 +1,28 @@
+{
+  "name": "near-mainnet",
+  "displayName": "Near",
+  "aliases": ["near"],
+  "caip2ChainId": "near:mainnet",
+  "blockExplorerUrls": [
+    "https://nearblocks.io/"
+  ],
+  "publicRpcUrls": [
+    "https://rpc.mainnet.near.org"
+  ],
+  "publicApiUrls": [],
+  "isTestnet": false,
+  "studioSupport": [],
+  "issuanceRewards": false,
+  "nativeToken": "NEAR",
+  "docsUrl": "https://docs.near.org/",
+  "web3Icon": "near",
+  "genesisBlock": {
+    "hash": "a7110b9052e1be68f7fa8bb4065bf54e731205801878e708db7464ec4b9b8014",
+    "height": 9820214
+  },
+  "firehoseBlock": {
+    "type": "sf.near.type.v1.Block",
+    "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
+    "bytesEncoding": "hex"
+  }
+}

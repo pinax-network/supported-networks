@@ -1,0 +1,28 @@
+{
+  "name": "near-testnet",
+  "displayName": "Near Testnet",
+  "aliases": [],
+  "caip2ChainId": "near:testnet",
+  "blockExplorerUrls": [
+    "https://testnet.nearblocks.io/"
+  ],
+  "publicRpcUrls": [
+    "https://rpc.testnet.near.org"
+  ],
+  "publicApiUrls": [],
+  "isTestnet": true,
+  "studioSupport": [],
+  "issuanceRewards": false,
+  "nativeToken": "NEAR",
+  "docsUrl": "https://docs.near.org/",
+  "web3Icon": "near",
+  "genesisBlock": {
+    "hash": "09d69c8ba4f319f8e78d0b701f0c1f763cc0d920551bfbd00072d5f56016d853",
+    "height": 42376923
+  },
+  "firehoseBlock": {
+    "type": "sf.near.type.v1.Block",
+    "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
+    "bytesEncoding": "hex"
+  }
+}

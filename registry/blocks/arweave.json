@@ -1,0 +1,5 @@
+{
+  "type": "sf.arweave.type.v1.Block",
+  "bufBuildUrl": "https://buf.build/pinax/firehose-arweave",
+  "bytesEncoding": "hex"
+}

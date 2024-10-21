@@ -1,0 +1,28 @@
+{
+  "name": "btc",
+  "displayName": "Bitcoin",
+  "aliases": ["bitcoin"],
+  "caip2ChainId": "bip122:000000000019d6689c085ae165831e93",
+  "blockExplorerUrls": [
+    "https://btcscan.org"
+  ],
+  "publicRpcUrls": [
+    "https://bitcoin-mainnet.gateway.tatum.io"
+  ],
+  "publicApiUrls": [],
+  "isTestnet": false,
+  "studioSupport": [],
+  "issuanceRewards": false,
+  "nativeToken": "BTC",
+  "docsUrl": "https://developer.bitcoin.org/",
+  "web3Icon": "bitcoin",
+  "genesisBlock": {
+    "hash": "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+    "height": 0
+  },
+  "firehoseBlock": {
+    "type": "sf.bitcoin.type.v1.Block",
+    "bufBuildUrl": "https://buf.build/streamingfast/firehose-bitcoin",
+    "bytesEncoding": "hex"
+  }
+}

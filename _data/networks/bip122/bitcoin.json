@@ -1,9 +1,0 @@
-{
-  "id": "bitcoin",
-  "name": "Bitcoin",
-  "namespace": "bip122",
-  "block": "bitcoin",
-  "genesis_block_hash": "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
-  "genesis_block_number": 0,
-  "chain_id": "000000000019d6689c085ae165831e93"
-}

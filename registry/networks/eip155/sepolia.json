@@ -1,0 +1,32 @@
+{
+  "name": "sepolia",
+  "displayName": "Ethereum Sepolia",
+  "aliases": ["evm-11155111"],
+  "caip2ChainId": "eip155:11155111",
+  "graphNodeProtocol": "ethereum",
+  "blockExplorerUrls": [
+    "https://sepolia.etherscan.io/",
+    "https://sepolia.otterscan.io"
+  ],
+  "publicRpcUrls": [
+    "https://rpc.sepolia.dev"
+  ],
+  "publicApiUrls": [
+    "https://rpc.ankr.com/eth_sepolia"
+  ],
+  "isTestnet": true,
+  "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
+  "issuanceRewards": false,
+  "nativeToken": "ETH",
+  "docsUrl": "https://sepolia.dev/",
+  "genesisBlock": {
+    "hash": "0x25a5cc106eea7138acab33231d7160d69cb777ee0c2c553fcddf5138993e6dd9",
+    "height": 0
+  },
+  "firehoseBlock": {
+    "type": "sf.ethereum.type.v2.Block",
+    "evmModel": "extended",
+    "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+    "bytesEncoding": "hex"
+  }
+}

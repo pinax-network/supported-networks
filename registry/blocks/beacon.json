@@ -1,0 +1,5 @@
+{
+  "type": "sf.beacon.type.v1.Block",
+  "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
+  "bytesEncoding": "0xhex"
+}

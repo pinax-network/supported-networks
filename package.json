@@ -3,10 +3,16 @@
   "type": "module",
   "scripts": {
     "test": "bun test",
+    "validate-schema": "ajv validate -s schemas/network.schema.json -d 'registry/networks/**/*.json' --strict=true -c ajv-formats",
+    "gen-types": "json2ts -i schemas/network.schema.json -o scripts/network.d.ts",
     "download": "bun run ./scripts/download/index.ts",
-    "generate": "bun run ./scripts/generate/index.ts"
+    "generate": "bun run ./scripts/generate.ts",
+    "validate": "bun run ./scripts/validate.ts"
   },
   "devDependencies": {
-    "@types/bun": "1"
+    "@types/bun": "1",
+    "ajv-cli": "^5.0.0",
+    "ajv-formats": "^3.0.1",
+    "json-schema-to-typescript": "^15.0.2"
   }
 }

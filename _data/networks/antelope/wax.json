@@ -1,9 +1,0 @@
-{
-  "id": "eos",
-  "name": "EOS",
-  "namespace": "antelope",
-  "block": "antelope",
-  "genesis_block_hash": "0000000149663a5af9c331180240ae45c85578f0a1f821225424974459f69b98",
-  "genesis_block_number": 1,
-  "chain_id": "1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4"
-}

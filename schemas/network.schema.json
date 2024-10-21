@@ -1,0 +1,139 @@
+{
+    "$id": "https://thegraph.com/network.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "The Graph network registry entry",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet"
+        },
+        "displayName": {
+            "type": "string",
+            "description": "Display name of the network, i.e. Ethereum Mainnet, Bitcoin Testnet"
+        },
+        "caip2ChainId": {
+            "type": "string",
+            "pattern": "^[-a-z0-9]{3,8}:[-_a-zA-Z0-9]{1,32}$",
+            "description": "CAIP-2 Chain ID, i.e. eip155:1, bip122:000000000019d6689c085ae165831e93"
+        },
+        "aliases": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$"
+            },
+            "description": "[optional] List of possible aliases for the chain, i.e. ethereum, eth, mainnet, eth-mainnet"
+        },
+        "childOf": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "[optional] Name of the related L1 chain, i.e. mainnet"
+        },
+        "firehoseBlock": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9.]+$",
+                    "description": "Block type, i.e. sf.ethereum.type.v2.Block"
+                },
+                "bytesEncoding": {
+                    "type": "string",
+                    "enum": ["hex", "0xhex", "base58"],
+                    "description": "Bytes encoding, i.e. hex, 0xhex, base58"
+                },
+                "bufBuildUrl": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Protobuf definitions on buf.build, i.e. https://buf.build/streamingfast/firehose-ethereum"
+                },
+                "evmModel": {
+                    "type": "string",
+                    "enum": ["base", "extended"],
+                    "description": "[optional] Block model if EVM chain, i.e. base or extended"
+                }
+            },
+            "required": ["type", "bytesEncoding", "bufBuildUrl"],
+            "additionalProperties": false,
+            "description": "Firehose block information"
+        },
+        "genesisBlock": {
+            "type": "object",
+            "properties": {
+                "hash": {
+                    "type": "string",
+                    "description": "Hash of the genesis block"
+                },
+                "height": {
+                    "type": "integer",
+                    "description": "Block height of the genesis block"
+                }
+            },
+            "required": ["hash", "height"],
+            "additionalProperties": false
+        },
+        "nativeToken": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]+$",
+            "description": "Symbol of the native token"
+        },
+        "graphNodeProtocol": {
+            "type": "string",
+            "enum": ["ethereum", "near", "arweave", "cosmos", "starknet"],
+            "description": "[optional] Protocol name in graph-node, i.e. ethereum, near, arweave"
+        },
+        "blockExplorerUrls": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "uri"
+            },
+            "description": "URLs for the block explorers"
+        },
+        "isTestnet": {
+            "type": "boolean",
+            "description": "Whether the chain is a testnet"
+        },
+        "studioSupport": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"]
+            },
+            "description": "Chain support in Edge&Node Studio"
+        },
+        "issuanceRewards": {
+            "type": "boolean",
+            "description": "Issuance rewards on the Graph Network for this chain"
+        },
+        "web3Icon": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+        },
+        "publicRpcUrls": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "uri"
+            },
+            "description": "List of public RPC URLs for the chain"
+        },
+        "publicApiUrls": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "format": "uri"
+            },
+            "description": "List of public API URLs for the chain, i.e. https://api.etherscan.io/api"
+        },
+        "docsUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the chain documentation"
+        }
+    },
+    "required": ["name", "caip2ChainId", "displayName", "blockExplorerUrls", "publicApiUrls", "isTestnet", "studioSupport", "issuanceRewards", "nativeToken", "publicRpcUrls"],
+    "additionalProperties": false
+}

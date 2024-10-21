@@ -1,9 +1,0 @@
-{
-  "id": "osmosis-1",
-  "name": "Osmosis",
-  "namespace": "cosmos",
-  "block": "cosmos",
-  "genesis_block_hash": "C8DC787FAAE0941EF05C75C3AECCF04B85DFB1D4A8D054A463F323B0D9459719",
-  "genesis_block_number": 1,
-  "chain_id": "osmosis-1"
-}
