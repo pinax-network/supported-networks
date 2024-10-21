@@ -1,5 +1,0 @@
-{
-  "type": "sf.gear.type.v1.Block",
-  "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
-  "bytesEncoding": "hex"
-}

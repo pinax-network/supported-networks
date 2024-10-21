@@ -1,7 +1,7 @@
 {
-    "$id": "https://thegraph.com/network.schema.json",
+    "$id": "https://thegraph.com/schemas/v1/network.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema",
-    "description": "The Graph network registry entry",
+    "description": "The Graph networks registry entry",
     "type": "object",
     "properties": {
         "name": {
@@ -135,5 +135,29 @@
         }
     },
     "required": ["name", "caip2ChainId", "displayName", "blockExplorerUrls", "publicApiUrls", "isTestnet", "studioSupport", "issuanceRewards", "nativeToken", "publicRpcUrls"],
-    "additionalProperties": false
+    "additionalProperties": false,
+
+    "if": {
+        "properties": {
+            "caip2ChainId": {
+                "pattern": "^eip155:"
+            }
+        }
+    },
+    "then": {
+        "properties": {
+            "firehoseBlock": {
+                "required": ["evmModel"]
+            }
+        }
+    },
+    "else": {
+        "properties": {
+            "firehoseBlock": {
+                "properties": {
+                    "evmModel": false
+                }
+            }
+        }
+    }
 }

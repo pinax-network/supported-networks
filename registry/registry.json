@@ -1,0 +1,453 @@
+{
+  "networks": [
+    {
+      "name": "arweave-mainnet",
+      "displayName": "Arweave",
+      "aliases": [
+        "arweave"
+      ],
+      "caip2ChainId": "arweave:7wIU",
+      "blockExplorerUrls": [
+        "https://arscan.io/"
+      ],
+      "publicRpcUrls": [],
+      "publicApiUrls": [],
+      "isTestnet": false,
+      "studioSupport": [
+        "subgraph-rpc",
+        "subgraph-firehose",
+        "subgraph-substreams"
+      ],
+      "issuanceRewards": false,
+      "nativeToken": "AR",
+      "docsUrl": "https://docs.arweave.org/developers",
+      "web3Icon": "arweave",
+      "genesisBlock": {
+        "hash": "ef0214ecaa252020230a5325719dfc2d9cec86123bc46926dad0c2251ed6be17b7112528dbe678fb2d31d6e6a0951244",
+        "height": 0
+      },
+      "firehoseBlock": {
+        "type": "sf.arweave.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/pinax/firehose-arweave",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "wax",
+      "displayName": "WAX",
+      "aliases": [
+        "wax-mainnet"
+      ],
+      "caip2ChainId": "antelope:1064487b3cd1a897ce03ae5b6a865651",
+      "blockExplorerUrls": [
+        "https://wax.bloks.io/"
+      ],
+      "publicRpcUrls": [
+        "https://wax.api.eosnation.io/"
+      ],
+      "publicApiUrls": [],
+      "isTestnet": false,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "WAX",
+      "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
+      "web3Icon": "wax",
+      "genesisBlock": {
+        "hash": "00000002c9a8761a546eeae2d5a0df4586d8d53d5e8c74da1b2f9ee44587f37d",
+        "height": 2
+      },
+      "firehoseBlock": {
+        "type": "sf.antelope.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "kylin",
+      "displayName": "Kylin",
+      "aliases": [
+        "kylin"
+      ],
+      "caip2ChainId": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
+      "blockExplorerUrls": [
+        "https://kylin.bloks.io/"
+      ],
+      "publicRpcUrls": [
+        "https://kylin.api.eosnation.io/"
+      ],
+      "publicApiUrls": [],
+      "isTestnet": true,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "EOS",
+      "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
+      "web3Icon": "eos",
+      "genesisBlock": {
+        "hash": "00000002a1ec7ae214b9e43a904b6c010fb1260c9e8a12e5967bdbe451152a07",
+        "height": 2
+      },
+      "firehoseBlock": {
+        "type": "sf.antelope.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "eos",
+      "displayName": "EOS",
+      "aliases": [
+        "eos-mainnet"
+      ],
+      "caip2ChainId": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
+      "blockExplorerUrls": [
+        "https://bloks.io/"
+      ],
+      "publicRpcUrls": [
+        "https://eos.api.eosnation.io/"
+      ],
+      "publicApiUrls": [],
+      "isTestnet": false,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "EOS",
+      "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
+      "web3Icon": "eos",
+      "genesisBlock": {
+        "hash": "0000000267f3e2284b482f3afc2e724be1d6cbc1804532ec62d4e7af47c30693",
+        "height": 2
+      },
+      "firehoseBlock": {
+        "type": "sf.antelope.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "btc",
+      "displayName": "Bitcoin",
+      "aliases": [
+        "bitcoin"
+      ],
+      "caip2ChainId": "bip122:000000000019d6689c085ae165831e93",
+      "blockExplorerUrls": [
+        "https://btcscan.org"
+      ],
+      "publicRpcUrls": [
+        "https://bitcoin-mainnet.gateway.tatum.io"
+      ],
+      "publicApiUrls": [],
+      "isTestnet": false,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "BTC",
+      "docsUrl": "https://developer.bitcoin.org/",
+      "web3Icon": "bitcoin",
+      "genesisBlock": {
+        "hash": "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+        "height": 0
+      },
+      "firehoseBlock": {
+        "type": "sf.bitcoin.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-bitcoin",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "arbitrum-one",
+      "displayName": "Arbitrum One",
+      "aliases": [
+        "arbone",
+        "evm-42161"
+      ],
+      "childOf": "mainnet",
+      "caip2ChainId": "eip155:42161",
+      "graphNodeProtocol": "ethereum",
+      "blockExplorerUrls": [
+        "https://arbiscan.io"
+      ],
+      "publicRpcUrls": [
+        "https://arb1.arbitrum.io/rpc"
+      ],
+      "publicApiUrls": [
+        "https://arbitrum-one.abi.pinax.network/api"
+      ],
+      "isTestnet": false,
+      "studioSupport": [
+        "subgraph-rpc",
+        "subgraph-firehose",
+        "subgraph-substreams"
+      ],
+      "issuanceRewards": true,
+      "nativeToken": "ARB",
+      "docsUrl": "https://docs.arbitrum.io",
+      "web3Icon": "arbitrum-one",
+      "genesisBlock": {
+        "hash": "0x7ee576b35482195fc49205cec9af72ce14f003b9ae69f6ba0faef4514be8b442",
+        "height": 0
+      },
+      "firehoseBlock": {
+        "type": "sf.ethereum.type.v2.Block",
+        "evmModel": "extended",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "sepolia",
+      "displayName": "Ethereum Sepolia",
+      "aliases": [
+        "evm-11155111"
+      ],
+      "caip2ChainId": "eip155:11155111",
+      "graphNodeProtocol": "ethereum",
+      "blockExplorerUrls": [
+        "https://sepolia.etherscan.io/",
+        "https://sepolia.otterscan.io"
+      ],
+      "publicRpcUrls": [
+        "https://rpc.sepolia.dev"
+      ],
+      "publicApiUrls": [
+        "https://rpc.ankr.com/eth_sepolia"
+      ],
+      "isTestnet": true,
+      "studioSupport": [
+        "subgraph-rpc",
+        "subgraph-firehose",
+        "subgraph-substreams"
+      ],
+      "issuanceRewards": false,
+      "nativeToken": "ETH",
+      "docsUrl": "https://sepolia.dev/",
+      "genesisBlock": {
+        "hash": "0x25a5cc106eea7138acab33231d7160d69cb777ee0c2c553fcddf5138993e6dd9",
+        "height": 0
+      },
+      "firehoseBlock": {
+        "type": "sf.ethereum.type.v2.Block",
+        "evmModel": "extended",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "mainnet",
+      "displayName": "Ethereum Mainnet",
+      "aliases": [
+        "ethereum",
+        "eth",
+        "eth-mainnet",
+        "evm-1"
+      ],
+      "caip2ChainId": "eip155:1",
+      "graphNodeProtocol": "ethereum",
+      "blockExplorerUrls": [
+        "https://etherscan.io"
+      ],
+      "publicRpcUrls": [
+        "https://rpc.ankr.com/eth"
+      ],
+      "publicApiUrls": [
+        "https://api.etherscan.io/api"
+      ],
+      "isTestnet": false,
+      "studioSupport": [
+        "subgraph-rpc",
+        "subgraph-firehose",
+        "subgraph-substreams"
+      ],
+      "issuanceRewards": true,
+      "nativeToken": "ETH",
+      "docsUrl": "https://ethereum.org/en/developers/docs/",
+      "web3Icon": "ethereum",
+      "genesisBlock": {
+        "hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
+        "height": 0
+      },
+      "firehoseBlock": {
+        "type": "sf.ethereum.type.v2.Block",
+        "evmModel": "extended",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "injective-mainnet",
+      "displayName": "Injective",
+      "aliases": [
+        "injective",
+        "injective-1"
+      ],
+      "caip2ChainId": "cosmos:injective-1",
+      "blockExplorerUrls": [
+        "https://explorer.injective.network/"
+      ],
+      "publicRpcUrls": [],
+      "publicApiUrls": [],
+      "isTestnet": false,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "INJ",
+      "docsUrl": "https://docs.injective.network/",
+      "web3Icon": "injective",
+      "genesisBlock": {
+        "hash": "24c9714291a999b952859ee02ec9b233394fe743b07ea3578d432a4a2707b6af",
+        "height": 1
+      },
+      "firehoseBlock": {
+        "type": "sf.cosmos.type.v2.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "injective-testnet",
+      "displayName": "Injective Testnet",
+      "aliases": [
+        "injective-2"
+      ],
+      "caip2ChainId": "cosmos:injective-2",
+      "blockExplorerUrls": [
+        "https://testnet.explorer.injective.network/"
+      ],
+      "publicRpcUrls": [],
+      "publicApiUrls": [],
+      "isTestnet": true,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "INJ",
+      "docsUrl": "https://docs.injective.network/",
+      "web3Icon": "injective",
+      "genesisBlock": {
+        "hash": "a9effb99c7bc3ba8c18a487ffffd800c137bc2b2f47f73c350f3ca27077044a1",
+        "height": 37368800
+      },
+      "firehoseBlock": {
+        "type": "sf.cosmos.type.v2.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "solana-mainnet-beta",
+      "displayName": "Solana",
+      "aliases": [
+        "solana-mainnet",
+        "solana"
+      ],
+      "caip2ChainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+      "blockExplorerUrls": [
+        "http://explorer.solana.com/",
+        "http://solana.fm/"
+      ],
+      "publicRpcUrls": [
+        "https://api.mainnet-beta.solana.com"
+      ],
+      "publicApiUrls": [],
+      "isTestnet": false,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "SOL",
+      "docsUrl": "https://solana.com/docs/",
+      "web3Icon": "solana",
+      "genesisBlock": {
+        "hash": "4sGjMW1sUnHzSxGspuhpqLDx6wiyjNtZAMdL4VZHirAn",
+        "height": 0
+      },
+      "firehoseBlock": {
+        "type": "sf.solana.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-solana",
+        "bytesEncoding": "base58"
+      }
+    },
+    {
+      "name": "near-testnet",
+      "displayName": "Near Testnet",
+      "aliases": [],
+      "caip2ChainId": "near:testnet",
+      "blockExplorerUrls": [
+        "https://testnet.nearblocks.io/"
+      ],
+      "publicRpcUrls": [
+        "https://rpc.testnet.near.org"
+      ],
+      "publicApiUrls": [],
+      "isTestnet": true,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "NEAR",
+      "docsUrl": "https://docs.near.org/",
+      "web3Icon": "near",
+      "genesisBlock": {
+        "hash": "09d69c8ba4f319f8e78d0b701f0c1f763cc0d920551bfbd00072d5f56016d853",
+        "height": 42376923
+      },
+      "firehoseBlock": {
+        "type": "sf.near.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "near-mainnet",
+      "displayName": "Near",
+      "aliases": [
+        "near"
+      ],
+      "caip2ChainId": "near:mainnet",
+      "blockExplorerUrls": [
+        "https://nearblocks.io/"
+      ],
+      "publicRpcUrls": [
+        "https://rpc.mainnet.near.org"
+      ],
+      "publicApiUrls": [],
+      "isTestnet": false,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "NEAR",
+      "docsUrl": "https://docs.near.org/",
+      "web3Icon": "near",
+      "genesisBlock": {
+        "hash": "a7110b9052e1be68f7fa8bb4065bf54e731205801878e708db7464ec4b9b8014",
+        "height": 9820214
+      },
+      "firehoseBlock": {
+        "type": "sf.near.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "name": "staknet",
+      "displayName": "Starknet",
+      "aliases": [
+        "starknet-mainnet"
+      ],
+      "caip2ChainId": "starknet:SN_MAIN",
+      "graphNodeProtocol": "starknet",
+      "blockExplorerUrls": [
+        "https://starkscan.co/"
+      ],
+      "publicRpcUrls": [
+        "https://starknet-mainnet.public.blastapi.io"
+      ],
+      "publicApiUrls": [],
+      "isTestnet": false,
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "ETH",
+      "docsUrl": "https://docs.starknet.io/",
+      "web3Icon": "starknet",
+      "genesisBlock": {
+        "hash": "0x47c3637b57c2b079b93c61539950c17e868a28f46cdef28f88521067f21e943",
+        "height": 0
+      },
+      "firehoseBlock": {
+        "type": "sf.starknet.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-starknet",
+        "bytesEncoding": "0xhex"
+      }
+    }
+  ]
+}

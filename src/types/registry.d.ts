@@ -6,9 +6,15 @@
  */
 
 /**
- * The Graph network registry entry
+ * The Graph networks registry
  */
-export interface HttpsThegraphComNetworkSchemaJson {
+export interface HttpsThegraphComSchemasV1RegistrySchemaJson {
+  networks: HttpsThegraphComSchemasV1NetworkSchemaJson[];
+}
+/**
+ * The Graph networks registry entry
+ */
+export interface HttpsThegraphComSchemasV1NetworkSchemaJson {
   /**
    * Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet
    */

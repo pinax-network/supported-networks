@@ -4,10 +4,10 @@
   "scripts": {
     "test": "bun test",
     "validate-schema": "ajv validate -s schemas/network.schema.json -d 'registry/networks/**/*.json' --strict=true -c ajv-formats",
-    "gen-types": "json2ts -i schemas/network.schema.json -o scripts/network.d.ts",
-    "download": "bun run ./scripts/download/index.ts",
-    "generate": "bun run ./scripts/generate.ts",
-    "validate": "bun run ./scripts/validate.ts"
+    "gen-types": "json2ts --input schemas/registry.schema.json --output src/types/registry.d.ts --cwd=schemas",
+    "download": "bun run ./src/_research/download/index.ts",
+    "generate": "bun run ./src/generate.ts",
+    "validate": "bun run ./src/validate.ts"
   },
   "devDependencies": {
     "@types/bun": "1",

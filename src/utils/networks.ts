@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { HttpsThegraphComNetworkSchemaJson as NetworkSchema} from '../types/network';
+import { HttpsThegraphComSchemasV1NetworkSchemaJson as NetworkSchema} from '../types/registry';
 
 export function getAllJsonFiles(dir: string): string[] {
     let files: string[] = [];

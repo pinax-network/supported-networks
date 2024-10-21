@@ -1,5 +1,0 @@
-{
-  "type": "sf.antelope.type.v1.Block",
-  "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
-  "bytesEncoding": "hex"
-}
