@@ -3,9 +3,19 @@
   "type": "module",
   "scripts": {
     "test": "bun test",
-    "generate": "bun run ./scripts/generate/index.ts"
+    "format": "prettier \"./**/*.+(ts|json|md)\" --write",
+    "format:check": "prettier \"./**/*.+(ts|json|md)\" --check",
+    "validate-schema": "ajv validate -s schemas/network.schema.json -d 'registry/networks/**/*.json' --strict=true -c ajv-formats",
+    "gen-types": "json2ts --input schemas/registry.schema.json --output src/types/registry.d.ts --cwd=schemas",
+    "generate": "bun run ./src/generate.ts",
+    "validate": "bun run ./src/validate.ts"
   },
   "devDependencies": {
-    "@types/bun": "1"
+    "@types/bun": "1",
+    "ajv-cli": "^5.0.0",
+    "ajv-formats": "^3.0.1",
+    "json-schema-to-typescript": "^15.0.2",
+    "prettier": "^3.3.3",
+    "prettier-plugin-multiline-arrays": "^3.0.6"
   }
 }

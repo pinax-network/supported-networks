@@ -1,9 +1,0 @@
-{
-  "id": "injective-mainnet",
-  "name": "Injective",
-  "namespace": "cosmos",
-  "block": "cosmos",
-  "genesis_block_hash": "24C9714291A999B952859EE02EC9B233394FE743B07EA3578D432A4A2707B6AF",
-  "genesis_block_number": 1,
-  "chain_id": "injective-1"
-}
