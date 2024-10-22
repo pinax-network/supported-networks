@@ -18,11 +18,20 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Install dependencies
+        run: bun install
+
       - name: Validate schema
-        run: bun validate-schema
+        run: bun validate:schema
 
       - name: Validate logic
-        run: bun validate
+        run: bun validate:networks
 
-      - name: Attempt to generate registry
-        run: bun generate
+      - name: Generate registry types
+        run: bun generate:types
+
+      - name: Generate registry
+        run: bun generate:registry
+
+      - name: Validate registry
+        run: bun validate:registry

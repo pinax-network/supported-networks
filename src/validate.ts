@@ -24,14 +24,23 @@ function validateUniqueness() {
 
 function validateTestnets() {
   process.stdout.write("Validating testnets ... ");
-  for (const testnet of NETWORKS.filter((n) => ["testnet", "devnet"].includes(n.networkType))) {
+  for (const testnet of NETWORKS.filter((n) =>
+    ["testnet", "devnet"].includes(n.networkType),
+  )) {
     const mainnet = NETWORKS.find((n) => n.name === testnet.testnetOf!);
     if (!mainnet) {
-      ERRORS.push(`Testnet ${testnet.name} has non-existing mainnet parent: ${testnet.testnetOf}`);
+      ERRORS.push(
+        `Testnet ${testnet.name} has non-existing mainnet parent: ${testnet.testnetOf}`,
+      );
       continue;
     }
-    if (JSON.stringify(mainnet.firehoseBlock) !== JSON.stringify(testnet.firehoseBlock)) {
-      ERRORS.push(`Testnet ${testnet.name} has different firehose block type than mainnet ${mainnet.name}`);
+    if (
+      JSON.stringify(mainnet.firehoseBlock) !==
+      JSON.stringify(testnet.firehoseBlock)
+    ) {
+      ERRORS.push(
+        `Testnet ${testnet.name} has different firehose block type than mainnet ${mainnet.name}`,
+      );
     }
   }
   process.stdout.write("done\n");

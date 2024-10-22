@@ -5,10 +5,12 @@
     "test": "bun test",
     "format": "prettier \"./**/*.+(ts|json|md)\" --write",
     "format:check": "prettier \"./**/*.+(ts|json|md)\" --check",
-    "validate-schema": "ajv validate -s schemas/network.schema.json -d 'registry/networks/**/*.json' --strict=true -c ajv-formats",
-    "gen-types": "json2ts --input schemas/registry.schema.json --output src/types/registry.d.ts --cwd=schemas",
-    "generate": "bun run ./src/generate.ts",
-    "validate": "bun run ./src/validate.ts"
+    "validate:schema": "ajv validate -s schemas/network.schema.json -d 'registry/networks/**/*.json' --strict=true -c ajv-formats",
+    "validate:networks": "bun run ./src/validate.ts",
+    "validate:registry": "ajv validate -s schemas/registry.schema.json -r schemas/network.schema.json -d 'registry/*.json' --strict=true -c ajv-formats",
+    "validate": "bun validate:schema && bun validate:networks",
+    "generate:types": "json2ts --input schemas/registry.schema.json --output src/types/registry.d.ts --cwd=schemas",
+    "generate:registry": "bun run ./src/generate.ts"
   },
   "devDependencies": {
     "@types/bun": "1",
