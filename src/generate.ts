@@ -7,10 +7,15 @@ function main() {
     ,
     ,
     networksPath = "registry/networks",
-    outputPath = "registry/registry.json",
+    outputPath = "registry/registry.generated.json",
   ] = process.argv;
 
   const registry: RegistrySchema = {
+    $schema: "https://thegraph.com/schemas/registry.schema.json",
+    version: "1.0.0",
+    description:
+      "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
+    updatedAt: new Date().toISOString(),
     networks: loadNetworks(networksPath),
   };
 

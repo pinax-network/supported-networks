@@ -11,6 +11,7 @@
 export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
   [k: string]: unknown;
 } & {
+  $schema?: string;
   /**
    * Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet
    */
@@ -113,5 +114,24 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
  * The Graph networks registry
  */
 export interface HttpsThegraphComSchemasV1RegistrySchemaJson {
+  /**
+   * Reference to this schema file
+   */
+  $schema: string;
+  /**
+   * Description of the registry
+   */
+  description: string;
+  /**
+   * Version of the registry
+   */
+  version: string;
+  /**
+   * Date and time of the last update
+   */
+  updatedAt: string;
+  /**
+   * List of networks
+   */
   networks: HttpsThegraphComSchemasV1NetworkSchemaJson[];
 }
