@@ -154,7 +154,8 @@
   ],
   "additionalProperties": false,
 
-  "allOf": [{
+  "allOf": [
+    {
       "if": {
         "properties": {
           "networkType": {
