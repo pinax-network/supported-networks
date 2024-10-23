@@ -11,7 +11,10 @@
     "https://arb1.arbitrum.io/rpc"
   ],
   "publicApiUrls": [
-    "https://arbitrum-one.abi.pinax.network/api"
+    {
+      "url": "https://arbitrum-one.abi.pinax.network/api",
+      "type": "etherscan"
+    }
   ],
   "networkType": "mainnet",
   "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],

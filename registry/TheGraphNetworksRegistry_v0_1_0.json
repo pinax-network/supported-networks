@@ -177,7 +177,10 @@
         "https://arb1.arbitrum.io/rpc"
       ],
       "publicApiUrls": [
-        "https://arbitrum-one.abi.pinax.network/api"
+        {
+          "url": "https://arbitrum-one.abi.pinax.network/api",
+          "type": "etherscan"
+        }
       ],
       "networkType": "mainnet",
       "studioSupport": [
@@ -260,7 +263,10 @@
         "https://rpc.ankr.com/eth"
       ],
       "publicApiUrls": [
-        "https://api.etherscan.io/api"
+        {
+          "url": "https://api.etherscan.io/api",
+          "type": "etherscan"
+        }
       ],
       "networkType": "mainnet",
       "studioSupport": [

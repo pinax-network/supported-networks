@@ -1,18 +1,19 @@
 {
-  "id": "mainnet",
-  "displayName": "Ethereum Mainnet",
-  "aliases": ["ethereum", "eth", "eth-mainnet", "evm-1"],
-  "caip2ChainId": "eip155:1",
+  "id": "bsc",
+  "displayName": "BNB Smart Chain Mainnet",
+  "aliases": ["bnb", "bnb-mainnet", "bsc-mainnet", "evm-56"],
+  "caip2ChainId": "eip155:56",
   "graphNodeProtocol": "ethereum",
   "blockExplorerUrls": [
-    "https://etherscan.io"
+    "https://bscscan.com/"
   ],
   "publicRpcUrls": [
-    "https://rpc.ankr.com/eth"
+    "https://bsc-dataseed1.binance.org/",
+    "https://bsc-dataseed1.defibit.io/"
   ],
   "publicApiUrls": [
     {
-      "url": "https://api.etherscan.io/api",
+      "url": "https://api.bscscan.com/api",
       "type": "etherscan"
     }
   ],
@@ -20,10 +21,10 @@
   "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
   "issuanceRewards": true,
   "nativeToken": "ETH",
-  "docsUrl": "https://ethereum.org/en/developers/docs/",
-  "web3Icon": "ethereum",
+  "docsUrl": "https://docs.bnbchain.org/",
+  "web3Icon": "binance-smart-chain",
   "genesis": {
-    "hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
+    "hash": "0d21840abff46b96c84b2ac9e10e4f5cdaeb5693cb665db62a2f3b02d2d57b5b",
     "height": 0
   },
   "firehose": {

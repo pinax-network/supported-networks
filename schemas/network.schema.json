@@ -139,8 +139,19 @@
     "publicApiUrls": {
       "type": "array",
       "items": {
-        "type": "string",
-        "format": "uri"
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["etherscan", "blockscout", "ethplorer", "other"]
+          }
+        },
+        "required": ["url", "type"],
+        "additionalProperties": false
       },
       "description": "List of public API URLs for the chain, i.e. https://api.etherscan.io/api"
     },

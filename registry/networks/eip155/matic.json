@@ -1,29 +1,29 @@
 {
-  "id": "mainnet",
-  "displayName": "Ethereum Mainnet",
-  "aliases": ["ethereum", "eth", "eth-mainnet", "evm-1"],
-  "caip2ChainId": "eip155:1",
+  "id": "matic",
+  "displayName": "Polygon Mainnet",
+  "aliases": ["polygon", "matic-mainnet"],
+  "caip2ChainId": "eip155:137",
   "graphNodeProtocol": "ethereum",
   "blockExplorerUrls": [
-    "https://etherscan.io"
+    "https://polygonscan.com/"
   ],
   "publicRpcUrls": [
-    "https://rpc.ankr.com/eth"
+    "https://rpc.ankr.com/polygon"
   ],
   "publicApiUrls": [
     {
-      "url": "https://api.etherscan.io/api",
+      "url": "https://api.polygonscan.com/api",
       "type": "etherscan"
     }
   ],
   "networkType": "mainnet",
   "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
-  "issuanceRewards": true,
-  "nativeToken": "ETH",
-  "docsUrl": "https://ethereum.org/en/developers/docs/",
-  "web3Icon": "ethereum",
+  "issuanceRewards": false,
+  "nativeToken": "POL",
+  "docsUrl": "https://docs.polygon.technology/",
+  "web3Icon": "polygon-pos",
   "genesis": {
-    "hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
+    "hash": "a9c28ce2141b56c474f1dc504bee9b01eb1bd7d1a507580d5519d4437a97de1b",
     "height": 0
   },
   "firehose": {
