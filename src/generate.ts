@@ -1,7 +1,7 @@
 import fs from "fs";
 import { HttpsThegraphComSchemasV1RegistrySchemaJson as RegistrySchema } from "./types/registry";
 import { loadNetworks } from "./utils/networks";
-import packageInfo from '../package.json';
+import packageInfo from "../package.json";
 import { getVersionFilenames } from "./utils/versions";
 
 function main() {
@@ -12,7 +12,12 @@ function main() {
     outputDir = "registry",
   ] = process.argv;
 
-  const { filenameLatest, filenameLatestMinor, filenameLatestMajor, filenameRegistrySchema } = getVersionFilenames(packageInfo.version);
+  const {
+    filenameLatest,
+    filenameLatestMinor,
+    filenameLatestMajor,
+    filenameRegistrySchema,
+  } = getVersionFilenames(packageInfo.version);
 
   const registry: RegistrySchema = {
     $schema: `https://thegraph.com/schemas/${filenameRegistrySchema}`,

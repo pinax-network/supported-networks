@@ -1,6 +1,9 @@
-
-function extractVersion(version: string): { major: number; minor: number; patch: number } {
-  const [major, minor, patch] = version.split('.').map(Number);
+function extractVersion(version: string): {
+  major: number;
+  minor: number;
+  patch: number;
+} {
+  const [major, minor, patch] = version.split(".").map(Number);
   return { major, minor, patch };
 }
 
@@ -11,5 +14,10 @@ export function getVersionFilenames(version: string) {
   const filenameLatestMajor = `TheGraphNetworksRegistry_v${major}_x_x.json`;
   const filenameRegistrySchema = `TheGraphNetworksRegistrySchema_v${major}_${minor}.json`;
 
-  return { filenameLatest, filenameLatestMinor, filenameLatestMajor, filenameRegistrySchema };
+  return {
+    filenameLatest,
+    filenameLatestMinor,
+    filenameLatestMajor,
+    filenameRegistrySchema,
+  };
 }
