@@ -1,29 +1,32 @@
 {
-  "id": "arbitrum-one",
-  "displayName": "Arbitrum One",
-  "aliases": ["arbone", "arbitrum", "arb-sepolia", "evm-42161"],
-  "caip2ChainId": "eip155:42161",
+  "id": "arbitrum-sepolia",
+  "displayName": "Arbitrum Sepolia",
+  "aliases": ["evm-421614"],
+  "caip2ChainId": "eip155:421614",
+  "networkType": "testnet",
+  "relations": [
+    {
+      "type": "testnetOf",
+      "network": "arbitrum-one"
+    }
+  ],
   "graphNodeProtocol": "ethereum",
   "blockExplorerUrls": [
-    "https://arbiscan.io"
+    "https://sepolia.arbiscan.io"
   ],
-  "publicRpcUrls": [
-    "https://arb1.arbitrum.io/rpc"
-  ],
+  "publicRpcUrls": [],
   "publicApiUrls": [
     {
-      "url": "https://arbitrum-one.abi.pinax.network/api",
+      "url": "https://arbitrum-sepolia.abi.pinax.network/api",
       "type": "etherscan"
     }
   ],
-  "networkType": "mainnet",
   "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
   "issuanceRewards": true,
   "nativeToken": "ARB",
   "docsUrl": "https://docs.arbitrum.io",
-  "web3Icon": "arbitrum-one",
   "genesis": {
-    "hash": "0x7ee576b35482195fc49205cec9af72ce14f003b9ae69f6ba0faef4514be8b442",
+    "hash": "0x77194da4010e549a7028a9c3c51c3e277823be6ac7d138d0bb8a70197b5c004c",
     "height": 0
   },
   "firehose": {
