@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from 'path';
 import { HttpsThegraphComSchemasV1RegistrySchemaJson as RegistrySchema } from "./types/registry";
 import { loadNetworks } from "./utils/networks";
 import packageInfo from "../package.json";
@@ -29,9 +30,10 @@ function main() {
   };
 
   const content = JSON.stringify(registry, null, 2);
-  fs.writeFileSync(`${outputDir}/${filenameLatest}`, content);
-  // fs.writeFileSync(`${outputDir}/${filenameLatestMinor}`, content);
-  // fs.writeFileSync(`${outputDir}/${filenameLatestMajor}`, content);
+  fs.mkdirSync(outputDir, { recursive: true });
+  fs.writeFileSync(path.join(outputDir, filenameLatest), content);
+  fs.writeFileSync(`${outputDir}/${filenameLatestMinor}`, content);
+  fs.writeFileSync(`${outputDir}/${filenameLatestMajor}`, content);
   process.stdout.write(
     `Generated ${filenameLatest} with ${registry.networks.length} networks`,
   );

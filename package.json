@@ -11,7 +11,9 @@
     "validate:registry": "ajv validate -s schemas/registry.schema.json -r schemas/network.schema.json -d 'registry/*.json' --strict=true -c ajv-formats",
     "validate": "bun validate:schema && bun validate:networks",
     "generate:types": "json2ts --input schemas/registry.schema.json --output src/types/registry.d.ts --cwd=schemas",
-    "generate:registry": "bun run ./src/generate.ts"
+    "generate:registry": "bun run ./src/generate.ts",
+    "generate:upload": "bun run ./src/generate.ts registry/networks upload",
+    "validate:upload": "ajv validate -s schemas/registry.schema.json -r schemas/network.schema.json -d 'upload/*.json' --strict=true -c ajv-formats"
   },
   "devDependencies": {
     "@types/bun": "1",
