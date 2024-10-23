@@ -19,7 +19,7 @@
     "https://holesky.drpc.org"
   ],
   "publicApiUrls": [],
-  "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
+  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://holesky.dev/",

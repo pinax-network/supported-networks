@@ -17,7 +17,7 @@
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
+  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
   "issuanceRewards": false,
   "nativeToken": "POL",
   "docsUrl": "https://docs.polygon.technology/",

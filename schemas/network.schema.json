@@ -115,10 +115,36 @@
     "studioSupport": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"]
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "e&n",
+              "pinax",
+              "graphops",
+              "streamingfast",
+              "messari",
+              "semiotic"
+            ]
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "subgraph",
+                "sps",
+                "substreams",
+                "firehose",
+                "token",
+                "dataset"
+              ]
+            }
+          }
+        }
       },
-      "description": "Chain support in Edge&Node Studio"
+      "description": "Providers studio support for the chain"
     },
     "issuanceRewards": {
       "type": "boolean",

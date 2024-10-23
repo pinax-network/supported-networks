@@ -19,7 +19,7 @@
     "https://rpc.sepolia.dev"
   ],
   "publicApiUrls": [],
-  "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
+  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://sepolia.dev/",

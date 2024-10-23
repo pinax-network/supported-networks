@@ -18,7 +18,7 @@
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": ["subgraph-rpc", "subgraph-firehose", "subgraph-substreams"],
+  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
   "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.bnbchain.org/",

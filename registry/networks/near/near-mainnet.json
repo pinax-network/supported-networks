@@ -11,7 +11,7 @@
   ],
   "publicApiUrls": [],
   "networkType": "mainnet",
-  "studioSupport": [],
+  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
   "issuanceRewards": false,
   "nativeToken": "NEAR",
   "docsUrl": "https://docs.near.org/",
