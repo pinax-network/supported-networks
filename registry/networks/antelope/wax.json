@@ -15,7 +15,6 @@
   "issuanceRewards": false,
   "nativeToken": "WAX",
   "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
-  "web3Icon": "wax",
   "genesisBlock": {
     "hash": "00000002c9a8761a546eeae2d5a0df4586d8d53d5e8c74da1b2f9ee44587f37d",
     "height": 2

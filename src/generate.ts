@@ -1,28 +1,34 @@
 import fs from "fs";
 import { HttpsThegraphComSchemasV1RegistrySchemaJson as RegistrySchema } from "./types/registry";
 import { loadNetworks } from "./utils/networks";
+import packageInfo from '../package.json';
+import { getVersionFilenames } from "./utils/versions";
 
 function main() {
   const [
     ,
     ,
-    networksPath = "registry/networks",
-    outputPath = "registry/registry.generated.json",
+    networksDir = "registry/networks",
+    outputDir = "registry",
   ] = process.argv;
 
+  const { filenameLatest, filenameLatestMinor, filenameLatestMajor, filenameRegistrySchema } = getVersionFilenames(packageInfo.version);
+
   const registry: RegistrySchema = {
-    $schema: "https://thegraph.com/schemas/registry.schema.json",
-    version: "1.0.0",
+    $schema: `https://thegraph.com/schemas/${filenameRegistrySchema}`,
+    version: `${packageInfo.version}`,
     description:
       "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
     updatedAt: new Date().toISOString(),
-    networks: loadNetworks(networksPath),
+    networks: loadNetworks(networksDir),
   };
 
   const content = JSON.stringify(registry, null, 2);
-  fs.writeFileSync(outputPath, content);
+  fs.writeFileSync(`${outputDir}/${filenameLatest}`, content);
+  // fs.writeFileSync(`${outputDir}/${filenameLatestMinor}`, content);
+  // fs.writeFileSync(`${outputDir}/${filenameLatestMajor}`, content);
   process.stdout.write(
-    `Generated ${outputPath} with ${registry.networks.length} networks`,
+    `Generated ${filenameLatest} with ${registry.networks.length} networks`,
   );
 }
 

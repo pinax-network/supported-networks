@@ -1,8 +1,8 @@
 {
-  "$schema": "https://thegraph.com/schemas/registry.schema.json",
-  "version": "1.0.0",
+  "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
+  "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-10-22T04:29:46.648Z",
+  "updatedAt": "2024-10-23T00:16:57.862Z",
   "networks": [
     {
       "name": "arweave-mainnet",
@@ -55,7 +55,6 @@
       "issuanceRewards": false,
       "nativeToken": "WAX",
       "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
-      "web3Icon": "wax",
       "genesisBlock": {
         "hash": "00000002c9a8761a546eeae2d5a0df4586d8d53d5e8c74da1b2f9ee44587f37d",
         "height": 2
