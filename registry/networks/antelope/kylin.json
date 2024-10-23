@@ -1,5 +1,5 @@
 {
-  "name": "kylin",
+  "id": "kylin",
   "displayName": "Kylin",
   "aliases": ["kylin"],
   "caip2ChainId": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
@@ -11,17 +11,22 @@
   ],
   "publicApiUrls": [],
   "networkType": "testnet",
-  "testnetOf": "eos",
+  "relations": [
+    {
+      "type": "testnetOf",
+      "network": "eos"
+    }
+  ],
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "EOS",
   "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
   "web3Icon": "eos",
-  "genesisBlock": {
+  "genesis": {
     "hash": "00000002a1ec7ae214b9e43a904b6c010fb1260c9e8a12e5967bdbe451152a07",
     "height": 2
   },
-  "firehoseBlock": {
+  "firehose": {
     "type": "sf.antelope.type.v1.Block",
     "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
     "bytesEncoding": "hex"

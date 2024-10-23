@@ -1,5 +1,5 @@
 {
-  "name": "eos",
+  "id": "eos",
   "displayName": "EOS",
   "aliases": ["eos-mainnet"],
   "caip2ChainId": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
@@ -16,11 +16,11 @@
   "nativeToken": "EOS",
   "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
   "web3Icon": "eos",
-  "genesisBlock": {
+  "genesis": {
     "hash": "0000000267f3e2284b482f3afc2e724be1d6cbc1804532ec62d4e7af47c30693",
     "height": 2
   },
-  "firehoseBlock": {
+  "firehose": {
     "type": "sf.antelope.type.v1.Block",
     "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
     "bytesEncoding": "hex"

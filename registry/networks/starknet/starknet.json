@@ -1,5 +1,5 @@
 {
-  "name": "staknet",
+  "id": "staknet",
   "displayName": "Starknet",
   "aliases": ["starknet-mainnet"],
   "caip2ChainId": "starknet:SN_MAIN",
@@ -17,11 +17,11 @@
   "nativeToken": "ETH",
   "docsUrl": "https://docs.starknet.io/",
   "web3Icon": "starknet",
-  "genesisBlock": {
+  "genesis": {
     "hash": "0x47c3637b57c2b079b93c61539950c17e868a28f46cdef28f88521067f21e943",
     "height": 0
   },
-  "firehoseBlock": {
+  "firehose": {
     "type": "sf.starknet.type.v1.Block",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-starknet",
     "bytesEncoding": "0xhex"

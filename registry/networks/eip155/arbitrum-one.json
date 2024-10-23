@@ -1,8 +1,7 @@
 {
-  "name": "arbitrum-one",
+  "id": "arbitrum-one",
   "displayName": "Arbitrum One",
   "aliases": ["arbone", "evm-42161"],
-  "childOf": "mainnet",
   "caip2ChainId": "eip155:42161",
   "graphNodeProtocol": "ethereum",
   "blockExplorerUrls": [
@@ -20,11 +19,11 @@
   "nativeToken": "ARB",
   "docsUrl": "https://docs.arbitrum.io",
   "web3Icon": "arbitrum-one",
-  "genesisBlock": {
+  "genesis": {
     "hash": "0x7ee576b35482195fc49205cec9af72ce14f003b9ae69f6ba0faef4514be8b442",
     "height": 0
   },
-  "firehoseBlock": {
+  "firehose": {
     "type": "sf.ethereum.type.v2.Block",
     "evmModel": "extended",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",

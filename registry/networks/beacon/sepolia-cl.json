@@ -1,0 +1,34 @@
+{
+  "id": "sepolia-cl",
+  "displayName": "Sepolia Consensus Layer",
+  "aliases": ["sepolia-beacon"],
+  "caip2ChainId": "beacon:11155111",
+  "blockExplorerUrls": [],
+  "publicRpcUrls": [],
+  "publicApiUrls": [],
+  "networkType": "testnet",
+  "relations": [
+    {
+      "type": "testnetOf",
+      "network": "mainnet-cl"
+    },
+    {
+      "type": "beaconOf",
+      "network": "sepolia"
+    }
+  ],
+  "studioSupport": [],
+  "issuanceRewards": false,
+  "nativeToken": "ETH",
+  "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
+  "web3Icon": "ethereum",
+  "genesis": {
+    "hash": "0xfb9b64fe445f76696407e1e3cc390371edff147bf712db86db6197d4b31ede43",
+    "height": 0
+  },
+  "firehose": {
+    "type": "sf.beacon.type.v1.Block",
+    "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
+    "bytesEncoding": "0xhex"
+  }
+}

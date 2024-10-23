@@ -1,0 +1,34 @@
+{
+  "id": "holesky-cl",
+  "displayName": "Holesky Consensus Layer",
+  "aliases": ["holesky-beacon"],
+  "caip2ChainId": "beacon:17000",
+  "blockExplorerUrls": [],
+  "publicRpcUrls": [],
+  "publicApiUrls": [],
+  "networkType": "testnet",
+  "relations": [
+    {
+      "type": "testnetOf",
+      "network": "mainnet-cl"
+    },
+    {
+      "type": "beaconOf",
+      "network": "holesky"
+    }
+  ],
+  "studioSupport": [],
+  "issuanceRewards": false,
+  "nativeToken": "ETH",
+  "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
+  "web3Icon": "ethereum",
+  "genesis": {
+    "hash": "0xab09edd9380f8451c3ff5c809821174a36dce606fea8b5ea35ea936915dbf889",
+    "height": 0
+  },
+  "firehose": {
+    "type": "sf.beacon.type.v1.Block",
+    "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
+    "bytesEncoding": "0xhex"
+  }
+}

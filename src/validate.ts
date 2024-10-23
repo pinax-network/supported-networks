@@ -7,10 +7,21 @@ const ERRORS: string[] = [];
 
 function validateUniqueness() {
   process.stdout.write("Validating uniqueness ... ");
-  for (const field of ["name", "displayName", "caip2ChainId", "aliases"]) {
-    const values = NETWORKS.flatMap((n) =>
-      Array.isArray(n[field]) ? n[field] : [n[field]],
-    );
+  for (const field of [
+    "id",
+    "displayName",
+    "caip2ChainId",
+    "aliases",
+    "genesis.hash",
+  ]) {
+    const values = NETWORKS.flatMap((n) => {
+      if (Array.isArray(n[field])) return n[field];
+      if (field.includes(".")) {
+        const [obj, fi] = field.split(".");
+        return n[obj]?.[fi] ? [n[obj][fi]] : [];
+      }
+      return n[field] ? [n[field]] : [];
+    });
     const uniqueValues = new Set(values);
     if (uniqueValues.size !== values.length) {
       const value = values.find(
@@ -22,41 +33,54 @@ function validateUniqueness() {
   process.stdout.write("done\n");
 }
 
-function validateTestnets() {
-  process.stdout.write("Validating testnets ... ");
-  for (const testnet of NETWORKS.filter((n) =>
-    ["testnet", "devnet"].includes(n.networkType),
-  )) {
-    const mainnet = NETWORKS.find((n) => n.name === testnet.testnetOf!);
-    if (!mainnet) {
-      ERRORS.push(
-        `Testnet ${testnet.name} has non-existing mainnet parent: ${testnet.testnetOf}`,
-      );
-      continue;
-    }
-    if (
-      JSON.stringify(mainnet.firehoseBlock) !==
-      JSON.stringify(testnet.firehoseBlock)
-    ) {
-      ERRORS.push(
-        `Testnet ${testnet.name} has different firehose block type than mainnet ${mainnet.name}`,
-      );
+function validateRelations() {
+  process.stdout.write("Validating relations ... ");
+  for (const network of NETWORKS) {
+    if (network.relations) {
+      for (const relation of network.relations) {
+        if (!NETWORKS.find((n) => n.id === relation.network)) {
+          ERRORS.push(
+            `Network ${network.id} has unknown related network: ${relation.network}`,
+          );
+        }
+      }
     }
   }
+
   process.stdout.write("done\n");
 }
 
-function validateChildren() {
-  process.stdout.write("Validating children ... ");
+function validateTestnets() {
+  process.stdout.write("Validating testnets ... ");
   for (const network of NETWORKS) {
-    if (network.childOf) {
-      if (!NETWORKS.find((n) => n.name === network.childOf)) {
+    if (["testnet", "devnet"].includes(network.networkType)) {
+      const mainnetId = network.relations?.find((n) => n.type === "testnetOf");
+      if (!mainnetId) {
+        ERRORS.push(`Testnet ${network.id} has no mainnet relation`);
+        continue;
+      }
+      const mainnet = NETWORKS.find((n) => n.id === mainnetId.network);
+      if (!mainnet) {
+        ERRORS.push(`Testnet ${network.id} has unknown mainnet: ${mainnetId}`);
+        continue;
+      }
+      if (
+        JSON.stringify(mainnet.firehose) !== JSON.stringify(network.firehose)
+      ) {
         ERRORS.push(
-          `Network ${network.name} has unknown parent: ${network.childOf}`,
+          `Testnet ${network.id} has different firehose block type than mainnet ${mainnet.id}`,
+        );
+      }
+    }
+    if (network.networkType === "mainnet") {
+      if (network.relations?.find((n) => n.type === "testnetOf")) {
+        ERRORS.push(
+          `Mainnet network ${network.id} can't have testnetOf relation`,
         );
       }
     }
   }
+
   process.stdout.write("done\n");
 }
 
@@ -67,13 +91,13 @@ async function validateWeb3Icons() {
     if (network.web3Icon) {
       if (!icons.find((i) => i.id === network.web3Icon)) {
         ERRORS.push(
-          `Network ${network.name} web3icon id does not exist: ${network.web3Icon}`,
+          `Network ${network.id} web3icon id does not exist: ${network.web3Icon}`,
         );
       }
     } else {
-      if (icons.find((i) => i.id === network.name)) {
+      if (icons.find((i) => i.id === network.id)) {
         ERRORS.push(
-          `Network ${network.name} does not have a web3icon but there exists an icon with the same id. Consider adding it.`,
+          `Network ${network.id} does not have a web3icon but there exists an icon with the same id. Consider adding it.`,
         );
       }
     }
@@ -85,8 +109,8 @@ async function validateFirehoseBlockType() {
   process.stdout.write("Validating firehose block type ... ");
   const bufUrls = [
     ...new Set(
-      NETWORKS.filter((n) => n.firehoseBlock?.bufBuildUrl).map(
-        (n) => n.firehoseBlock!.bufBuildUrl,
+      NETWORKS.filter((n) => n.firehose?.bufBuildUrl).map(
+        (n) => n.firehose!.bufBuildUrl,
       ),
     ),
   ];
@@ -130,7 +154,7 @@ async function main() {
   }
 
   validateUniqueness();
-  validateChildren();
+  validateRelations();
   validateTestnets();
   await validateWeb3Icons();
   await validateFirehoseBlockType();

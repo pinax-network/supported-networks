@@ -1,5 +1,5 @@
 {
-  "name": "wax",
+  "id": "wax",
   "displayName": "WAX",
   "aliases": ["wax-mainnet"],
   "caip2ChainId": "antelope:1064487b3cd1a897ce03ae5b6a865651",
@@ -15,11 +15,11 @@
   "issuanceRewards": false,
   "nativeToken": "WAX",
   "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
-  "genesisBlock": {
+  "genesis": {
     "hash": "00000002c9a8761a546eeae2d5a0df4586d8d53d5e8c74da1b2f9ee44587f37d",
     "height": 2
   },
-  "firehoseBlock": {
+  "firehose": {
     "type": "sf.antelope.type.v1.Block",
     "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
     "bytesEncoding": "hex"

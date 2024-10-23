@@ -4,7 +4,7 @@
   "description": "The Graph networks registry entry",
   "type": "object",
   "properties": {
-    "name": {
+    "id": {
       "type": "string",
       "pattern": "^[a-z0-9-]+$",
       "description": "Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet"
@@ -26,12 +26,32 @@
       },
       "description": "[optional] List of possible aliases for the chain, i.e. ethereum, eth, mainnet, eth-mainnet"
     },
-    "childOf": {
+    "networkType": {
       "type": "string",
-      "pattern": "^[a-z0-9-]+$",
-      "description": "[optional] Name of the related L1 chain, i.e. mainnet"
+      "enum": ["mainnet", "testnet", "devnet"],
+      "description": "Whether the chain is a mainnet/testnet/devnet"
     },
-    "firehoseBlock": {
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["testnetOf", "beaconOf", "forkedFrom", "l2Of"],
+            "description": "Type of relation"
+          },
+          "network": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "Id of the related network, i.e. mainnet, near-mainnet"
+          }
+        },
+        "required": ["type", "network"],
+        "additionalProperties": false
+      }
+    },
+    "firehose": {
       "type": "object",
       "properties": {
         "type": {
@@ -59,7 +79,7 @@
       "additionalProperties": false,
       "description": "Firehose block information"
     },
-    "genesisBlock": {
+    "genesis": {
       "type": "object",
       "properties": {
         "hash": {
@@ -91,16 +111,6 @@
         "format": "uri"
       },
       "description": "URLs for the block explorers"
-    },
-    "networkType": {
-      "type": "string",
-      "enum": ["mainnet", "testnet", "devnet"],
-      "description": "Whether the chain is a mainnet/testnet/devnet"
-    },
-    "testnetOf": {
-      "type": "string",
-      "pattern": "^[a-z0-9-]+$",
-      "description": "Name of the related mainnet network, i.e. near-mainnet"
     },
     "studioSupport": {
       "type": "array",
@@ -141,44 +151,16 @@
     }
   },
   "required": [
-    "name",
+    "id",
     "caip2ChainId",
     "displayName",
-    "blockExplorerUrls",
-    "publicApiUrls",
     "networkType",
     "studioSupport",
-    "issuanceRewards",
-    "nativeToken",
-    "publicRpcUrls"
+    "issuanceRewards"
   ],
   "additionalProperties": false,
 
   "allOf": [
-    {
-      "if": {
-        "properties": {
-          "networkType": {
-            "enum": ["testnet", "devnet"]
-          }
-        }
-      },
-      "then": {
-        "properties": {
-          "testnetOf": {
-            "type": "string",
-            "pattern": "^[a-z0-9-]+$",
-            "description": "Name of the related mainnet network, i.e. near-mainnet"
-          }
-        },
-        "required": ["testnetOf"]
-      },
-      "else": {
-        "properties": {
-          "testnetOf": false
-        }
-      }
-    },
     {
       "if": {
         "properties": {
@@ -190,7 +172,7 @@
       },
       "then": {
         "properties": {
-          "firehoseBlock": {
+          "firehose": {
             "type": "object",
             "properties": {
               "evmModel": {
@@ -205,7 +187,7 @@
       },
       "else": {
         "properties": {
-          "firehoseBlock": {
+          "firehose": {
             "type": "object",
             "properties": {
               "evmModel": false

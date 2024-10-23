@@ -1,5 +1,5 @@
 import fs from "fs";
-import path from 'path';
+import path from "path";
 import { HttpsThegraphComSchemasV1RegistrySchemaJson as RegistrySchema } from "./types/registry";
 import { loadNetworks } from "./utils/networks";
 import packageInfo from "../package.json";
