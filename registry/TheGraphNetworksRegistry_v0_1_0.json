@@ -2,7 +2,7 @@
   "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
   "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-10-23T23:39:42.009Z",
+  "updatedAt": "2024-10-24T01:36:38.596Z",
   "networks": [
     {
       "id": "arweave-mainnet",
@@ -17,6 +17,7 @@
       "publicRpcUrls": [],
       "publicApiUrls": [],
       "networkType": "mainnet",
+      "graphNodeProtocol": "arweave",
       "studioSupport": [
         {
           "provider": "e&n",
@@ -377,6 +378,10 @@
         {
           "url": "https://api.etherscan.io/api",
           "type": "etherscan"
+        },
+        {
+          "url": "https://eth.blockscout.com/api",
+          "type": "blockscout"
         }
       ],
       "networkType": "mainnet",
@@ -510,6 +515,7 @@
       "publicRpcUrls": [],
       "publicApiUrls": [],
       "networkType": "mainnet",
+      "graphNodeProtocol": "cosmos",
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "INJ",
@@ -538,6 +544,7 @@
       "publicRpcUrls": [],
       "publicApiUrls": [],
       "networkType": "testnet",
+      "graphNodeProtocol": "ethereum",
       "relations": [
         {
           "type": "testnetOf",
@@ -604,6 +611,7 @@
       ],
       "publicApiUrls": [],
       "networkType": "testnet",
+      "graphNodeProtocol": "near",
       "relations": [
         {
           "type": "testnetOf",
@@ -640,6 +648,7 @@
       ],
       "publicApiUrls": [],
       "networkType": "mainnet",
+      "graphNodeProtocol": "near",
       "studioSupport": [
         {
           "provider": "e&n",

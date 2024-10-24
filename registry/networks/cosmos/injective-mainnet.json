@@ -9,6 +9,7 @@
   "publicRpcUrls": [],
   "publicApiUrls": [],
   "networkType": "mainnet",
+  "graphNodeProtocol": "cosmos",
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "INJ",

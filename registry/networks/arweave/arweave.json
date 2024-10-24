@@ -7,6 +7,7 @@
   "publicRpcUrls": [],
   "publicApiUrls": [],
   "networkType": "mainnet",
+  "graphNodeProtocol": "arweave",
   "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
   "issuanceRewards": false,
   "nativeToken": "AR",

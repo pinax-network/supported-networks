@@ -11,6 +11,7 @@
   ],
   "publicApiUrls": [],
   "networkType": "mainnet",
+  "graphNodeProtocol": "near",
   "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
   "issuanceRewards": false,
   "nativeToken": "NEAR",
