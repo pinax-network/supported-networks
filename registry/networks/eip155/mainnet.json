@@ -10,6 +10,12 @@
   "publicRpcUrls": [
     "https://rpc.ankr.com/eth"
   ],
+  "privateRpcUrls": [
+    {
+      "provider": "infura",
+      "url": "https://mainnet.infura.io/v3/{api_key}"
+    }
+  ],
   "publicApiUrls": [
     {
       "url": "https://api.etherscan.io/api",
@@ -21,7 +27,12 @@
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": ["subgraph", "sps"]
+    }
+  ],
   "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://ethereum.org/en/developers/docs/",

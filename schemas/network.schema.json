@@ -162,6 +162,33 @@
       },
       "description": "List of public RPC URLs for the chain"
     },
+    "privateRpcUrls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "pattern": "^https?://[a-zA-Z0-9.-]+(?:/[^{}]*)*(?:\\{[a-zA-Z0-9_]+\\})(?:/[^{}]*)*$"
+          },
+          "provider": {
+            "type": "string",
+            "enum": [
+              "infura",
+              "alchemy",
+              "drpc",
+              "ankr",
+              "pinax",
+              "quiknode",
+              "other"
+            ]
+          }
+        },
+        "required": ["url", "provider"],
+        "additionalProperties": false
+      },
+      "description": "List of private RPC URLs for the chain with {api_key} as a placeholder, i.e. https://mainnet.infura.io/v3/{api_key}"
+    },
     "publicApiUrls": {
       "type": "array",
       "items": {
