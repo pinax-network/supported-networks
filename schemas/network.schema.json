@@ -207,7 +207,7 @@
           },
           "type": {
             "type": "string",
-            "enum": ["etherscan", "blockscout", "ethplorer", "other"]
+            "enum": ["etherscan", "blockscout", "ethplorer", "subscan", "other"]
           }
         },
         "required": ["url", "type"],

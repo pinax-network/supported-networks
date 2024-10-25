@@ -1,0 +1,31 @@
+{
+    "id": "vara-mainnet",
+    "displayName": "Vara",
+    "aliases": ["vara"],
+    "caip2ChainId": "gear:vara-mainnet",
+    "blockExplorerUrls": [
+      "https://vara.subscan.io/"
+    ],
+    "publicRpcUrls": [
+    ],
+    "publicApiUrls": [
+      {
+        "url": "https://vara.api.subscan.io/api",
+        "type": "subscan"
+      }
+    ],
+    "networkType": "mainnet",
+    "studioSupport": [],
+    "issuanceRewards": false,
+    "nativeToken": "VARA",
+    "docsUrl": "https://wiki.vara.network/",
+    "genesis": {
+      "hash": "fe1b4c55fd4d668101126434206571a7838a8b6b93a6d1b95d607e78e6c53763",
+      "height": 0
+    },
+    "firehose": {
+      "type": "sf.gear.type.v1.Block",
+      "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
+      "bytesEncoding": "hex"
+    }
+  }
