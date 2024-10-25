@@ -1,6 +1,7 @@
 import { HttpsThegraphComSchemasV1NetworkSchemaJson as NetworkSchema } from "./types/registry";
 import { loadNetworks } from "./utils/networks";
 import { fetchWeb3NetworkIcons } from "./utils/web3icons";
+import { getActiveNetworks } from "./utils/graphnetwork";
 
 const NETWORKS: NetworkSchema[] = [];
 const ERRORS: string[] = [];
@@ -143,6 +144,31 @@ async function validateFirehoseBlockType() {
   process.stdout.write("done\n");
 }
 
+async function validateGraphNetworks() {
+  process.stdout.write("Validating graph networks ... ");
+  const activeGraphNetworks = await getActiveNetworks();
+  const activeRegistryNetworks = NETWORKS.filter((n) => n.issuanceRewards);
+  for (const network of activeRegistryNetworks) {
+    const graphNetwork = activeGraphNetworks.find(
+      (n) => n.alias === network.id,
+    );
+    if (!graphNetwork) {
+      ERRORS.push(`Network ${network.id} is not active on the graph`);
+    }
+    if (graphNetwork?.id !== network.caip2ChainId) {
+      ERRORS.push(
+        `Network ${network.id} has non-matching chain id on the graph network: ${graphNetwork?.id} vs ${network.caip2ChainId}`,
+      );
+    }
+  }
+  if (activeGraphNetworks.length !== activeRegistryNetworks.length) {
+    // ERRORS.push(
+    //   `Active networks count mismatch: graph=${activeGraphNetworks.length} registry=${activeRegistryNetworks.length}`,
+    // );
+  }
+  process.stdout.write("done\n");
+}
+
 async function main() {
   const [, , networksPath = "registry/networks"] = process.argv;
 
@@ -158,6 +184,7 @@ async function main() {
   validateTestnets();
   await validateWeb3Icons();
   await validateFirehoseBlockType();
+  await validateGraphNetworks();
 
   if (ERRORS.length > 0) {
     process.stderr.write("Validation errors:\n");

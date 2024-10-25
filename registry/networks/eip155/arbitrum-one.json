@@ -18,7 +18,7 @@
   ],
   "networkType": "mainnet",
   "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
-  "issuanceRewards": true,
+  "issuanceRewards": false,
   "nativeToken": "ARB",
   "docsUrl": "https://docs.arbitrum.io",
   "web3Icon": "arbitrum-one",

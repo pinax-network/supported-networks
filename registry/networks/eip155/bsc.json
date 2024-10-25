@@ -19,7 +19,7 @@
   ],
   "networkType": "mainnet",
   "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
-  "issuanceRewards": true,
+  "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.bnbchain.org/",
   "web3Icon": "binance-smart-chain",

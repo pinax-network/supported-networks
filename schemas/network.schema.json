@@ -38,7 +38,14 @@
         "properties": {
           "type": {
             "type": "string",
-            "enum": ["testnetOf", "beaconOf", "forkedFrom", "l2Of"],
+            "enum": [
+              "testnetOf",
+              "beaconOf",
+              "forkedFrom",
+              "rollupOf",
+              "evmOf",
+              "other"
+            ],
             "description": "Type of relation"
           },
           "network": {
