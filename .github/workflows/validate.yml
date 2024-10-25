@@ -35,3 +35,6 @@ jobs:
 
       - name: Validate registry
         run: bun validate:registry
+
+    env:
+      THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
