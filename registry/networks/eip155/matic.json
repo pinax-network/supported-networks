@@ -1,9 +1,16 @@
 {
   "id": "matic",
-  "displayName": "Polygon Mainnet",
+  "shortName": "Polygon",
+  "fullName": "Polygon Mainnet",
   "aliases": ["polygon", "matic-mainnet"],
   "caip2ChainId": "eip155:137",
   "graphNodeProtocol": "ethereum",
+  "relations": [
+    {
+      "type": "settlesTo",
+      "network": "mainnet"
+    }
+  ],
   "blockExplorerUrls": [
     "https://polygonscan.com/"
   ],

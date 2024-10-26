@@ -1,9 +1,16 @@
 {
   "id": "arbitrum-one",
-  "displayName": "Arbitrum One",
+  "shortName": "Arbitrum One",
+  "fullName": "Arbitrum One Mainnet",
   "aliases": ["arbone", "arbitrum", "arb-sepolia", "evm-42161"],
   "caip2ChainId": "eip155:42161",
   "graphNodeProtocol": "ethereum",
+  "relations": [
+    {
+      "type": "settlesTo",
+      "network": "mainnet"
+    }
+  ],
   "blockExplorerUrls": [
     "https://arbiscan.io"
   ],

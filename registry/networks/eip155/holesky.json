@@ -1,6 +1,7 @@
 {
   "id": "holesky",
-  "displayName": "Ethereum Holesky",
+  "shortName": "Holesky",
+  "fullName": "Ethereum Holesky Testnet",
   "aliases": ["evm-17000"],
   "caip2ChainId": "eip155:17000",
   "networkType": "testnet",

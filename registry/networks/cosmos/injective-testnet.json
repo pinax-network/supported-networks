@@ -1,6 +1,7 @@
 {
   "id": "injective-testnet",
-  "displayName": "Injective Testnet",
+  "shortName": "Injective",
+  "fullName": "Injective Testnet",
   "aliases": ["injective-2"],
   "caip2ChainId": "cosmos:injective-2",
   "blockExplorerUrls": [

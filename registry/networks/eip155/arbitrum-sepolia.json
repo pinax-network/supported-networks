@@ -1,6 +1,7 @@
 {
   "id": "arbitrum-sepolia",
-  "displayName": "Arbitrum Sepolia",
+  "shortName": "Arbitrum Sepolia",
+  "fullName": "Arbitrum Sepolia Testnet",
   "aliases": ["evm-421614"],
   "caip2ChainId": "eip155:421614",
   "networkType": "testnet",
@@ -8,6 +9,10 @@
     {
       "type": "testnetOf",
       "network": "arbitrum-one"
+    },
+    {
+      "type": "settlesTo",
+      "network": "sepolia"
     }
   ],
   "graphNodeProtocol": "ethereum",

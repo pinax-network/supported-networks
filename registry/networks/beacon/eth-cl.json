@@ -1,6 +1,7 @@
 {
   "id": "mainnet-cl",
-  "displayName": "Ethereum Mainnet Consensus Layer",
+  "shortName": "Ethereum Beacon",
+  "fullName": "Ethereum Consensus Layer Chain",
   "aliases": ["mainnet-beacon", "eth-cl", "eth-beacon"],
   "caip2ChainId": "beacon:1",
   "blockExplorerUrls": [],

@@ -2,11 +2,12 @@
   "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
   "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-10-25T19:58:47.791Z",
+  "updatedAt": "2024-10-26T03:48:18.979Z",
   "networks": [
     {
       "id": "arweave-mainnet",
-      "displayName": "Arweave",
+      "shortName": "Arweave",
+      "fullName": "Arweave",
       "aliases": [
         "arweave"
       ],
@@ -43,7 +44,8 @@
     },
     {
       "id": "wax",
-      "displayName": "WAX",
+      "shortName": "WAX",
+      "fullName": "WAX Testnet",
       "aliases": [
         "wax-mainnet"
       ],
@@ -72,7 +74,8 @@
     },
     {
       "id": "kylin",
-      "displayName": "Kylin",
+      "shortName": "Kylin",
+      "fullName": "Kylin Testnet",
       "aliases": [
         "kylin"
       ],
@@ -108,7 +111,8 @@
     },
     {
       "id": "eos",
-      "displayName": "EOS",
+      "shortName": "EOS",
+      "fullName": "EOS Mainnet",
       "aliases": [
         "eos-mainnet"
       ],
@@ -138,7 +142,8 @@
     },
     {
       "id": "btc",
-      "displayName": "Bitcoin",
+      "shortName": "Bitcoin",
+      "fullName": "Bitcoin Mainnet",
       "aliases": [
         "bitcoin"
       ],
@@ -168,7 +173,8 @@
     },
     {
       "id": "arbitrum-one",
-      "displayName": "Arbitrum One",
+      "shortName": "Arbitrum One",
+      "fullName": "Arbitrum One Mainnet",
       "aliases": [
         "arbone",
         "arbitrum",
@@ -177,6 +183,12 @@
       ],
       "caip2ChainId": "eip155:42161",
       "graphNodeProtocol": "ethereum",
+      "relations": [
+        {
+          "type": "settlesTo",
+          "network": "mainnet"
+        }
+      ],
       "blockExplorerUrls": [
         "https://arbiscan.io"
       ],
@@ -216,7 +228,8 @@
     },
     {
       "id": "arbitrum-sepolia",
-      "displayName": "Arbitrum Sepolia",
+      "shortName": "Arbitrum Sepolia",
+      "fullName": "Arbitrum Sepolia Testnet",
       "aliases": [
         "evm-421614"
       ],
@@ -226,6 +239,10 @@
         {
           "type": "testnetOf",
           "network": "arbitrum-one"
+        },
+        {
+          "type": "settlesTo",
+          "network": "sepolia"
         }
       ],
       "graphNodeProtocol": "ethereum",
@@ -264,7 +281,8 @@
     },
     {
       "id": "bsc",
-      "displayName": "BNB Smart Chain Mainnet",
+      "shortName": "BNB",
+      "fullName": "BNB Smart Chain Mainnet",
       "aliases": [
         "bnb",
         "bnb-mainnet",
@@ -313,7 +331,8 @@
     },
     {
       "id": "sepolia",
-      "displayName": "Ethereum Sepolia",
+      "shortName": "Ethereum Sepolia",
+      "fullName": "Ethereum Sepolia Testnet",
       "aliases": [
         "evm-11155111"
       ],
@@ -359,7 +378,8 @@
     },
     {
       "id": "mainnet",
-      "displayName": "Ethereum Mainnet",
+      "shortName": "Ethereum",
+      "fullName": "Ethereum Mainnet",
       "aliases": [
         "ethereum",
         "eth",
@@ -417,7 +437,8 @@
     },
     {
       "id": "holesky",
-      "displayName": "Ethereum Holesky",
+      "shortName": "Holesky",
+      "fullName": "Ethereum Holesky Testnet",
       "aliases": [
         "evm-17000"
       ],
@@ -463,13 +484,20 @@
     },
     {
       "id": "matic",
-      "displayName": "Polygon Mainnet",
+      "shortName": "Polygon",
+      "fullName": "Polygon Mainnet",
       "aliases": [
         "polygon",
         "matic-mainnet"
       ],
       "caip2ChainId": "eip155:137",
       "graphNodeProtocol": "ethereum",
+      "relations": [
+        {
+          "type": "settlesTo",
+          "network": "mainnet"
+        }
+      ],
       "blockExplorerUrls": [
         "https://polygonscan.com/"
       ],
@@ -509,7 +537,8 @@
     },
     {
       "id": "injective-mainnet",
-      "displayName": "Injective",
+      "shortName": "Injective",
+      "fullName": "Injective Mainnet",
       "aliases": [
         "injective",
         "injective-1"
@@ -539,7 +568,8 @@
     },
     {
       "id": "injective-testnet",
-      "displayName": "Injective Testnet",
+      "shortName": "Injective",
+      "fullName": "Injective Testnet",
       "aliases": [
         "injective-2"
       ],
@@ -573,8 +603,72 @@
       }
     },
     {
+      "id": "vara-testnet",
+      "shortName": "Vara",
+      "fullName": "Vara Testnet",
+      "aliases": [],
+      "caip2ChainId": "gear:vara-testnet",
+      "relations": [
+        {
+          "type": "testnetOf",
+          "network": "vara-mainnet"
+        }
+      ],
+      "blockExplorerUrls": [],
+      "publicRpcUrls": [],
+      "publicApiUrls": [],
+      "networkType": "testnet",
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "VARA",
+      "docsUrl": "https://wiki.vara.network/",
+      "genesis": {
+        "hash": "525639f713f397dcf839bd022cd821f367ebcf179de7b9253531f8adbe5436d6",
+        "height": 0
+      },
+      "firehose": {
+        "type": "sf.gear.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "vara-mainnet",
+      "shortName": "Vara",
+      "fullName": "Vara Mainnet",
+      "aliases": [
+        "vara"
+      ],
+      "caip2ChainId": "gear:vara-mainnet",
+      "blockExplorerUrls": [
+        "https://vara.subscan.io/"
+      ],
+      "publicRpcUrls": [],
+      "publicApiUrls": [
+        {
+          "url": "https://vara.api.subscan.io/api",
+          "type": "subscan"
+        }
+      ],
+      "networkType": "mainnet",
+      "studioSupport": [],
+      "issuanceRewards": false,
+      "nativeToken": "VARA",
+      "docsUrl": "https://wiki.vara.network/",
+      "genesis": {
+        "hash": "fe1b4c55fd4d668101126434206571a7838a8b6b93a6d1b95d607e78e6c53763",
+        "height": 0
+      },
+      "firehose": {
+        "type": "sf.gear.type.v1.Block",
+        "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
       "id": "solana-mainnet-beta",
-      "displayName": "Solana",
+      "shortName": "Solana",
+      "fullName": "Solana Mainnet",
       "aliases": [
         "solana-mainnet",
         "solana"
@@ -606,7 +700,8 @@
     },
     {
       "id": "near-testnet",
-      "displayName": "Near Testnet",
+      "shortName": "Near",
+      "fullName": "Near Testnet",
       "aliases": [],
       "caip2ChainId": "near:testnet",
       "blockExplorerUrls": [
@@ -641,7 +736,8 @@
     },
     {
       "id": "near-mainnet",
-      "displayName": "Near",
+      "shortName": "Near",
+      "fullName": "Near Mainnet",
       "aliases": [
         "near"
       ],
@@ -680,12 +776,19 @@
     },
     {
       "id": "staknet",
-      "displayName": "Starknet",
+      "shortName": "Starknet",
+      "fullName": "Starknet Mainnet",
       "aliases": [
         "starknet-mainnet"
       ],
       "caip2ChainId": "starknet:SN_MAIN",
       "graphNodeProtocol": "starknet",
+      "relations": [
+        {
+          "type": "settlesTo",
+          "network": "mainnet"
+        }
+      ],
       "blockExplorerUrls": [
         "https://starkscan.co/"
       ],
@@ -711,7 +814,8 @@
     },
     {
       "id": "mainnet-cl",
-      "displayName": "Ethereum Mainnet Consensus Layer",
+      "shortName": "Ethereum Beacon",
+      "fullName": "Ethereum Consensus Layer Chain",
       "aliases": [
         "mainnet-beacon",
         "eth-cl",
@@ -745,7 +849,8 @@
     },
     {
       "id": "sepolia-cl",
-      "displayName": "Sepolia Consensus Layer",
+      "shortName": "Sepolia Beacon",
+      "fullName": "Ethereum Sepolia Consensus Layer Chain",
       "aliases": [
         "sepolia-beacon"
       ],
@@ -781,7 +886,8 @@
     },
     {
       "id": "holesky-cl",
-      "displayName": "Holesky Consensus Layer",
+      "shortName": "Holesky Beacon",
+      "fullName": "Ethereum Holesky Consensus Layer Chain",
       "aliases": [
         "holesky-beacon"
       ],

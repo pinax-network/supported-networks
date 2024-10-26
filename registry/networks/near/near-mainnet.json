@@ -1,6 +1,7 @@
 {
   "id": "near-mainnet",
-  "displayName": "Near",
+  "shortName": "Near",
+  "fullName": "Near Mainnet",
   "aliases": ["near"],
   "caip2ChainId": "near:mainnet",
   "blockExplorerUrls": [

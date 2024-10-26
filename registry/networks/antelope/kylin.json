@@ -1,6 +1,7 @@
 {
   "id": "kylin",
-  "displayName": "Kylin",
+  "shortName": "Kylin",
+  "fullName": "Kylin Testnet",
   "aliases": ["kylin"],
   "caip2ChainId": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
   "blockExplorerUrls": [

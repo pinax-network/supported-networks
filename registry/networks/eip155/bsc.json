@@ -1,6 +1,7 @@
 {
   "id": "bsc",
-  "displayName": "BNB Smart Chain Mainnet",
+  "shortName": "BNB",
+  "fullName": "BNB Smart Chain Mainnet",
   "aliases": ["bnb", "bnb-mainnet", "bsc-mainnet", "evm-56"],
   "caip2ChainId": "eip155:56",
   "graphNodeProtocol": "ethereum",

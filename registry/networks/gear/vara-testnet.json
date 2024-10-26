@@ -1,32 +1,30 @@
 {
-    "id": "vara-testnet",
-    "displayName": "Vara Testnet",
-    "aliases": [],
-    "caip2ChainId": "gear:vara-testnet",
-    "relations": [
-      {
-        "type": "testnetOf",
-        "network": "vara-mainnet"
-      }
-    ],
-    "blockExplorerUrls": [
-    ],
-    "publicRpcUrls": [
-    ],
-    "publicApiUrls": [
-    ],
-    "networkType": "testnet",
-    "studioSupport": [],
-    "issuanceRewards": false,
-    "nativeToken": "VARA",
-    "docsUrl": "https://wiki.vara.network/",
-    "genesis": {
-      "hash": "525639f713f397dcf839bd022cd821f367ebcf179de7b9253531f8adbe5436d6",
-      "height": 0
-    },
-    "firehose": {
-      "type": "sf.gear.type.v1.Block",
-      "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
-      "bytesEncoding": "hex"
+  "id": "vara-testnet",
+  "shortName": "Vara",
+  "fullName": "Vara Testnet",
+  "aliases": [],
+  "caip2ChainId": "gear:vara-testnet",
+  "relations": [
+    {
+      "type": "testnetOf",
+      "network": "vara-mainnet"
     }
+  ],
+  "blockExplorerUrls": [],
+  "publicRpcUrls": [],
+  "publicApiUrls": [],
+  "networkType": "testnet",
+  "studioSupport": [],
+  "issuanceRewards": false,
+  "nativeToken": "VARA",
+  "docsUrl": "https://wiki.vara.network/",
+  "genesis": {
+    "hash": "525639f713f397dcf839bd022cd821f367ebcf179de7b9253531f8adbe5436d6",
+    "height": 0
+  },
+  "firehose": {
+    "type": "sf.gear.type.v1.Block",
+    "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
+    "bytesEncoding": "hex"
   }
+}

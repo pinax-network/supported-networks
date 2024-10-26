@@ -1,6 +1,7 @@
 {
   "id": "sepolia",
-  "displayName": "Ethereum Sepolia",
+  "shortName": "Ethereum Sepolia",
+  "fullName": "Ethereum Sepolia Testnet",
   "aliases": ["evm-11155111"],
   "caip2ChainId": "eip155:11155111",
   "networkType": "testnet",

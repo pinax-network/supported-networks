@@ -9,7 +9,11 @@
       "pattern": "^[a-z0-9-]+$",
       "description": "Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet"
     },
-    "displayName": {
+    "shortName": {
+      "type": "string",
+      "description": "Short display name of the network, i.e. Ethereum, BNB"
+    },
+    "fullName": {
       "type": "string",
       "description": "Display name of the network, i.e. Ethereum Mainnet, Bitcoin Testnet"
     },
@@ -42,7 +46,7 @@
               "testnetOf",
               "beaconOf",
               "forkedFrom",
-              "rollupOf",
+              "settlesTo",
               "evmOf",
               "other"
             ],
@@ -224,7 +228,8 @@
   "required": [
     "id",
     "caip2ChainId",
-    "displayName",
+    "shortName",
+    "fullName",
     "networkType",
     "studioSupport",
     "issuanceRewards"

@@ -1,6 +1,7 @@
 {
   "id": "mainnet",
-  "displayName": "Ethereum Mainnet",
+  "shortName": "Ethereum",
+  "fullName": "Ethereum Mainnet",
   "aliases": ["ethereum", "eth", "eth-mainnet", "evm-1"],
   "caip2ChainId": "eip155:1",
   "graphNodeProtocol": "ethereum",

@@ -1,6 +1,7 @@
 {
   "id": "eos",
-  "displayName": "EOS",
+  "shortName": "EOS",
+  "fullName": "EOS Mainnet",
   "aliases": ["eos-mainnet"],
   "caip2ChainId": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
   "blockExplorerUrls": [

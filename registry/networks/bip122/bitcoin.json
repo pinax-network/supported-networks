@@ -1,6 +1,7 @@
 {
   "id": "btc",
-  "displayName": "Bitcoin",
+  "shortName": "Bitcoin",
+  "fullName": "Bitcoin Mainnet",
   "aliases": ["bitcoin"],
   "caip2ChainId": "bip122:000000000019d6689c085ae165831e93",
   "blockExplorerUrls": [

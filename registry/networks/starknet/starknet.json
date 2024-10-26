@@ -1,9 +1,16 @@
 {
   "id": "staknet",
-  "displayName": "Starknet",
+  "shortName": "Starknet",
+  "fullName": "Starknet Mainnet",
   "aliases": ["starknet-mainnet"],
   "caip2ChainId": "starknet:SN_MAIN",
   "graphNodeProtocol": "starknet",
+  "relations": [
+    {
+      "type": "settlesTo",
+      "network": "mainnet"
+    }
+  ],
   "blockExplorerUrls": [
     "https://starkscan.co/"
   ],

@@ -1,6 +1,7 @@
 {
   "id": "solana-mainnet-beta",
-  "displayName": "Solana",
+  "shortName": "Solana",
+  "fullName": "Solana Mainnet",
   "aliases": ["solana-mainnet", "solana"],
   "caip2ChainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
   "blockExplorerUrls": [

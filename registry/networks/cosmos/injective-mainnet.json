@@ -1,6 +1,7 @@
 {
   "id": "injective-mainnet",
-  "displayName": "Injective",
+  "shortName": "Injective",
+  "fullName": "Injective Mainnet",
   "aliases": ["injective", "injective-1"],
   "caip2ChainId": "cosmos:injective-1",
   "blockExplorerUrls": [

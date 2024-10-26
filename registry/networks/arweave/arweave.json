@@ -1,6 +1,7 @@
 {
   "id": "arweave-mainnet",
-  "displayName": "Arweave",
+  "shortName": "Arweave",
+  "fullName": "Arweave",
   "aliases": ["arweave"],
   "caip2ChainId": "arweave:7wIU",
   "blockExplorerUrls": ["https://arscan.io/"],

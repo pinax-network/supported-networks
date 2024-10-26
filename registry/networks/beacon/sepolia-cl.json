@@ -1,6 +1,7 @@
 {
   "id": "sepolia-cl",
-  "displayName": "Sepolia Consensus Layer",
+  "shortName": "Sepolia Beacon",
+  "fullName": "Ethereum Sepolia Consensus Layer Chain",
   "aliases": ["sepolia-beacon"],
   "caip2ChainId": "beacon:11155111",
   "blockExplorerUrls": [],
