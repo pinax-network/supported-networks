@@ -2,13 +2,15 @@
   "id": "vara-mainnet",
   "shortName": "Vara",
   "fullName": "Vara Mainnet",
-  "aliases": ["vara"],
+  "aliases": [
+    "vara"
+  ],
   "caip2ChainId": "gear:vara-mainnet",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://vara.subscan.io/"
   ],
-  "publicRpcUrls": [],
-  "publicApiUrls": [
+  "rpcUrls": [],
+  "apiUrls": [
     {
       "url": "https://vara.api.subscan.io/api",
       "type": "subscan"

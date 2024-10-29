@@ -2,7 +2,9 @@
   "id": "holesky",
   "shortName": "Holesky",
   "fullName": "Ethereum Holesky Testnet",
-  "aliases": ["evm-17000"],
+  "aliases": [
+    "evm-17000"
+  ],
   "caip2ChainId": "eip155:17000",
   "networkType": "testnet",
   "relations": [
@@ -12,15 +14,23 @@
     }
   ],
   "graphNodeProtocol": "ethereum",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://holesky.etherscan.io/",
     "https://holesky.otterscan.io"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://holesky.drpc.org"
   ],
-  "publicApiUrls": [],
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "apiUrls": [],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": [
+        "subgraph",
+        "sps"
+      ]
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://holesky.dev/",

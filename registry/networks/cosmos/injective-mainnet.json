@@ -2,13 +2,16 @@
   "id": "injective-mainnet",
   "shortName": "Injective",
   "fullName": "Injective Mainnet",
-  "aliases": ["injective", "injective-1"],
+  "aliases": [
+    "injective",
+    "injective-1"
+  ],
   "caip2ChainId": "cosmos:injective-1",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://explorer.injective.network/"
   ],
-  "publicRpcUrls": [],
-  "publicApiUrls": [],
+  "rpcUrls": [],
+  "apiUrls": [],
   "networkType": "mainnet",
   "graphNodeProtocol": "cosmos",
   "studioSupport": [],

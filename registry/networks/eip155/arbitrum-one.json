@@ -2,7 +2,12 @@
   "id": "arbitrum-one",
   "shortName": "Arbitrum One",
   "fullName": "Arbitrum One Mainnet",
-  "aliases": ["arbone", "arbitrum", "arb-sepolia", "evm-42161"],
+  "aliases": [
+    "arbone",
+    "arbitrum",
+    "arb-sepolia",
+    "evm-42161"
+  ],
   "caip2ChainId": "eip155:42161",
   "graphNodeProtocol": "ethereum",
   "relations": [
@@ -11,20 +16,28 @@
       "network": "mainnet"
     }
   ],
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://arbiscan.io"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://arb1.arbitrum.io/rpc"
   ],
-  "publicApiUrls": [
+  "apiUrls": [
     {
       "url": "https://arbitrum-one.abi.pinax.network/api",
       "type": "etherscan"
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": [
+        "subgraph",
+        "sps"
+      ]
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "ARB",
   "docsUrl": "https://docs.arbitrum.io",

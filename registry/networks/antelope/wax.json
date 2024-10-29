@@ -2,15 +2,17 @@
   "id": "wax",
   "shortName": "WAX",
   "fullName": "WAX Testnet",
-  "aliases": ["wax-mainnet"],
+  "aliases": [
+    "wax-mainnet"
+  ],
   "caip2ChainId": "antelope:1064487b3cd1a897ce03ae5b6a865651",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://wax.bloks.io/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://wax.api.eosnation.io/"
   ],
-  "publicApiUrls": [],
+  "apiUrls": [],
   "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,

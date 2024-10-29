@@ -2,14 +2,26 @@
   "id": "arweave-mainnet",
   "shortName": "Arweave",
   "fullName": "Arweave",
-  "aliases": ["arweave"],
+  "aliases": [
+    "arweave"
+  ],
   "caip2ChainId": "arweave:7wIU",
-  "blockExplorerUrls": ["https://arscan.io/"],
-  "publicRpcUrls": [],
-  "publicApiUrls": [],
+  "explorerUrls": [
+    "https://arscan.io/"
+  ],
+  "rpcUrls": ["https://asdf.com/"],
+  "apiUrls": [],
   "networkType": "mainnet",
   "graphNodeProtocol": "arweave",
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": [
+        "subgraph",
+        "sps"
+      ]
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "AR",
   "docsUrl": "https://docs.arweave.org/developers",

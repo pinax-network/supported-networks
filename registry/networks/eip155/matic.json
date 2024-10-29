@@ -2,7 +2,10 @@
   "id": "matic",
   "shortName": "Polygon",
   "fullName": "Polygon Mainnet",
-  "aliases": ["polygon", "matic-mainnet"],
+  "aliases": [
+    "polygon",
+    "matic-mainnet"
+  ],
   "caip2ChainId": "eip155:137",
   "graphNodeProtocol": "ethereum",
   "relations": [
@@ -11,20 +14,28 @@
       "network": "mainnet"
     }
   ],
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://polygonscan.com/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://rpc.ankr.com/polygon"
   ],
-  "publicApiUrls": [
+  "apiUrls": [
     {
       "url": "https://api.polygonscan.com/api",
       "type": "etherscan"
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": [
+        "subgraph",
+        "sps"
+      ]
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "POL",
   "docsUrl": "https://docs.polygon.technology/",

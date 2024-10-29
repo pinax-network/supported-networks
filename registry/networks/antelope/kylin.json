@@ -2,15 +2,17 @@
   "id": "kylin",
   "shortName": "Kylin",
   "fullName": "Kylin Testnet",
-  "aliases": ["kylin"],
+  "aliases": [
+    "kylin"
+  ],
   "caip2ChainId": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://kylin.bloks.io/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://kylin.api.eosnation.io/"
   ],
-  "publicApiUrls": [],
+  "apiUrls": [],
   "networkType": "testnet",
   "relations": [
     {

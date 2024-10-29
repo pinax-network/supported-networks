@@ -2,13 +2,15 @@
   "id": "injective-testnet",
   "shortName": "Injective",
   "fullName": "Injective Testnet",
-  "aliases": ["injective-2"],
+  "aliases": [
+    "injective-2"
+  ],
   "caip2ChainId": "cosmos:injective-2",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://testnet.explorer.injective.network/"
   ],
-  "publicRpcUrls": [],
-  "publicApiUrls": [],
+  "rpcUrls": [],
+  "apiUrls": [],
   "networkType": "testnet",
   "graphNodeProtocol": "ethereum",
   "relations": [

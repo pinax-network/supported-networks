@@ -2,7 +2,7 @@
   "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
   "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-10-26T03:48:18.979Z",
+  "updatedAt": "2024-10-26T04:27:12.239Z",
   "networks": [
     {
       "id": "arweave-mainnet",
@@ -12,11 +12,13 @@
         "arweave"
       ],
       "caip2ChainId": "arweave:7wIU",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://arscan.io/"
       ],
-      "publicRpcUrls": [],
-      "publicApiUrls": [],
+      "rpcUrls": [
+        "https://asdf.com/"
+      ],
+      "apiUrls": [],
       "networkType": "mainnet",
       "graphNodeProtocol": "arweave",
       "studioSupport": [
@@ -50,13 +52,13 @@
         "wax-mainnet"
       ],
       "caip2ChainId": "antelope:1064487b3cd1a897ce03ae5b6a865651",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://wax.bloks.io/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://wax.api.eosnation.io/"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
@@ -80,13 +82,13 @@
         "kylin"
       ],
       "caip2ChainId": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://kylin.bloks.io/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://kylin.api.eosnation.io/"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "networkType": "testnet",
       "relations": [
         {
@@ -117,13 +119,13 @@
         "eos-mainnet"
       ],
       "caip2ChainId": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://bloks.io/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://eos.api.eosnation.io/"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
@@ -148,13 +150,13 @@
         "bitcoin"
       ],
       "caip2ChainId": "bip122:000000000019d6689c085ae165831e93",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://btcscan.org"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://bitcoin-mainnet.gateway.tatum.io"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
@@ -189,13 +191,13 @@
           "network": "mainnet"
         }
       ],
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://arbiscan.io"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://arb1.arbitrum.io/rpc"
       ],
-      "publicApiUrls": [
+      "apiUrls": [
         {
           "url": "https://arbitrum-one.abi.pinax.network/api",
           "type": "etherscan"
@@ -246,11 +248,11 @@
         }
       ],
       "graphNodeProtocol": "ethereum",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://sepolia.arbiscan.io"
       ],
-      "publicRpcUrls": [],
-      "publicApiUrls": [
+      "rpcUrls": [],
+      "apiUrls": [
         {
           "url": "https://arbitrum-sepolia.abi.pinax.network/api",
           "type": "etherscan"
@@ -291,14 +293,14 @@
       ],
       "caip2ChainId": "eip155:56",
       "graphNodeProtocol": "ethereum",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://bscscan.com/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://bsc-dataseed1.binance.org/",
         "https://bsc-dataseed1.defibit.io/"
       ],
-      "publicApiUrls": [
+      "apiUrls": [
         {
           "url": "https://api.bscscan.com/api",
           "type": "etherscan"
@@ -345,14 +347,14 @@
         }
       ],
       "graphNodeProtocol": "ethereum",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://sepolia.etherscan.io/",
         "https://sepolia.otterscan.io"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://rpc.sepolia.dev"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "studioSupport": [
         {
           "provider": "e&n",
@@ -388,19 +390,14 @@
       ],
       "caip2ChainId": "eip155:1",
       "graphNodeProtocol": "ethereum",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://etherscan.io"
       ],
-      "publicRpcUrls": [
-        "https://rpc.ankr.com/eth"
+      "rpcUrls": [
+        "https://rpc.ankr.com/eth",
+        "https://mainnet.infura.io/v3/{INFURA_API_KEY}"
       ],
-      "privateRpcUrls": [
-        {
-          "provider": "infura",
-          "url": "https://mainnet.infura.io/v3/{api_key}"
-        }
-      ],
-      "publicApiUrls": [
+      "apiUrls": [
         {
           "url": "https://api.etherscan.io/api",
           "type": "etherscan"
@@ -451,14 +448,14 @@
         }
       ],
       "graphNodeProtocol": "ethereum",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://holesky.etherscan.io/",
         "https://holesky.otterscan.io"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://holesky.drpc.org"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "studioSupport": [
         {
           "provider": "e&n",
@@ -498,13 +495,13 @@
           "network": "mainnet"
         }
       ],
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://polygonscan.com/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://rpc.ankr.com/polygon"
       ],
-      "publicApiUrls": [
+      "apiUrls": [
         {
           "url": "https://api.polygonscan.com/api",
           "type": "etherscan"
@@ -544,11 +541,11 @@
         "injective-1"
       ],
       "caip2ChainId": "cosmos:injective-1",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://explorer.injective.network/"
       ],
-      "publicRpcUrls": [],
-      "publicApiUrls": [],
+      "rpcUrls": [],
+      "apiUrls": [],
       "networkType": "mainnet",
       "graphNodeProtocol": "cosmos",
       "studioSupport": [],
@@ -574,11 +571,11 @@
         "injective-2"
       ],
       "caip2ChainId": "cosmos:injective-2",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://testnet.explorer.injective.network/"
       ],
-      "publicRpcUrls": [],
-      "publicApiUrls": [],
+      "rpcUrls": [],
+      "apiUrls": [],
       "networkType": "testnet",
       "graphNodeProtocol": "ethereum",
       "relations": [
@@ -614,9 +611,9 @@
           "network": "vara-mainnet"
         }
       ],
-      "blockExplorerUrls": [],
-      "publicRpcUrls": [],
-      "publicApiUrls": [],
+      "explorerUrls": [],
+      "rpcUrls": [],
+      "apiUrls": [],
       "networkType": "testnet",
       "studioSupport": [],
       "issuanceRewards": false,
@@ -640,11 +637,11 @@
         "vara"
       ],
       "caip2ChainId": "gear:vara-mainnet",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://vara.subscan.io/"
       ],
-      "publicRpcUrls": [],
-      "publicApiUrls": [
+      "rpcUrls": [],
+      "apiUrls": [
         {
           "url": "https://vara.api.subscan.io/api",
           "type": "subscan"
@@ -674,14 +671,14 @@
         "solana"
       ],
       "caip2ChainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "http://explorer.solana.com/",
         "http://solana.fm/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://api.mainnet-beta.solana.com"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
@@ -704,13 +701,13 @@
       "fullName": "Near Testnet",
       "aliases": [],
       "caip2ChainId": "near:testnet",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://testnet.nearblocks.io/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://rpc.testnet.near.org"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "networkType": "testnet",
       "graphNodeProtocol": "near",
       "relations": [
@@ -742,13 +739,13 @@
         "near"
       ],
       "caip2ChainId": "near:mainnet",
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://nearblocks.io/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://rpc.mainnet.near.org"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "networkType": "mainnet",
       "graphNodeProtocol": "near",
       "studioSupport": [
@@ -789,13 +786,13 @@
           "network": "mainnet"
         }
       ],
-      "blockExplorerUrls": [
+      "explorerUrls": [
         "https://starkscan.co/"
       ],
-      "publicRpcUrls": [
+      "rpcUrls": [
         "https://starknet-mainnet.public.blastapi.io"
       ],
-      "publicApiUrls": [],
+      "apiUrls": [],
       "networkType": "mainnet",
       "studioSupport": [],
       "issuanceRewards": false,
@@ -822,9 +819,9 @@
         "eth-beacon"
       ],
       "caip2ChainId": "beacon:1",
-      "blockExplorerUrls": [],
-      "publicRpcUrls": [],
-      "publicApiUrls": [],
+      "explorerUrls": [],
+      "rpcUrls": [],
+      "apiUrls": [],
       "networkType": "mainnet",
       "relations": [
         {
@@ -855,9 +852,9 @@
         "sepolia-beacon"
       ],
       "caip2ChainId": "beacon:11155111",
-      "blockExplorerUrls": [],
-      "publicRpcUrls": [],
-      "publicApiUrls": [],
+      "explorerUrls": [],
+      "rpcUrls": [],
+      "apiUrls": [],
       "networkType": "testnet",
       "relations": [
         {
@@ -892,9 +889,9 @@
         "holesky-beacon"
       ],
       "caip2ChainId": "beacon:17000",
-      "blockExplorerUrls": [],
-      "publicRpcUrls": [],
-      "publicApiUrls": [],
+      "explorerUrls": [],
+      "rpcUrls": [],
+      "apiUrls": [],
       "networkType": "testnet",
       "relations": [
         {

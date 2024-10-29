@@ -10,9 +10,9 @@
       "network": "vara-mainnet"
     }
   ],
-  "blockExplorerUrls": [],
-  "publicRpcUrls": [],
-  "publicApiUrls": [],
+  "explorerUrls": [],
+  "rpcUrls": [],
+  "apiUrls": [],
   "networkType": "testnet",
   "studioSupport": [],
   "issuanceRewards": false,

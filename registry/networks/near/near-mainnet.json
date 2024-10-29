@@ -2,18 +2,28 @@
   "id": "near-mainnet",
   "shortName": "Near",
   "fullName": "Near Mainnet",
-  "aliases": ["near"],
+  "aliases": [
+    "near"
+  ],
   "caip2ChainId": "near:mainnet",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://nearblocks.io/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://rpc.mainnet.near.org"
   ],
-  "publicApiUrls": [],
+  "apiUrls": [],
   "networkType": "mainnet",
   "graphNodeProtocol": "near",
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": [
+        "subgraph",
+        "sps"
+      ]
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "NEAR",
   "docsUrl": "https://docs.near.org/",

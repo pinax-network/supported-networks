@@ -2,11 +2,15 @@
   "id": "mainnet-cl",
   "shortName": "Ethereum Beacon",
   "fullName": "Ethereum Consensus Layer Chain",
-  "aliases": ["mainnet-beacon", "eth-cl", "eth-beacon"],
+  "aliases": [
+    "mainnet-beacon",
+    "eth-cl",
+    "eth-beacon"
+  ],
   "caip2ChainId": "beacon:1",
-  "blockExplorerUrls": [],
-  "publicRpcUrls": [],
-  "publicApiUrls": [],
+  "explorerUrls": [],
+  "rpcUrls": [],
+  "apiUrls": [],
   "networkType": "mainnet",
   "relations": [
     {

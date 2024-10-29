@@ -2,11 +2,13 @@
   "id": "sepolia-cl",
   "shortName": "Sepolia Beacon",
   "fullName": "Ethereum Sepolia Consensus Layer Chain",
-  "aliases": ["sepolia-beacon"],
+  "aliases": [
+    "sepolia-beacon"
+  ],
   "caip2ChainId": "beacon:11155111",
-  "blockExplorerUrls": [],
-  "publicRpcUrls": [],
-  "publicApiUrls": [],
+  "explorerUrls": [],
+  "rpcUrls": [],
+  "apiUrls": [],
   "networkType": "testnet",
   "relations": [
     {

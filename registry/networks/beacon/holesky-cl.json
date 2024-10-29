@@ -2,11 +2,13 @@
   "id": "holesky-cl",
   "shortName": "Holesky Beacon",
   "fullName": "Ethereum Holesky Consensus Layer Chain",
-  "aliases": ["holesky-beacon"],
+  "aliases": [
+    "holesky-beacon"
+  ],
   "caip2ChainId": "beacon:17000",
-  "blockExplorerUrls": [],
-  "publicRpcUrls": [],
-  "publicApiUrls": [],
+  "explorerUrls": [],
+  "rpcUrls": [],
+  "apiUrls": [],
   "networkType": "testnet",
   "relations": [
     {

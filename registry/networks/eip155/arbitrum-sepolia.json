@@ -2,7 +2,9 @@
   "id": "arbitrum-sepolia",
   "shortName": "Arbitrum Sepolia",
   "fullName": "Arbitrum Sepolia Testnet",
-  "aliases": ["evm-421614"],
+  "aliases": [
+    "evm-421614"
+  ],
   "caip2ChainId": "eip155:421614",
   "networkType": "testnet",
   "relations": [
@@ -16,17 +18,25 @@
     }
   ],
   "graphNodeProtocol": "ethereum",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://sepolia.arbiscan.io"
   ],
-  "publicRpcUrls": [],
-  "publicApiUrls": [
+  "rpcUrls": [],
+  "apiUrls": [
     {
       "url": "https://arbitrum-sepolia.abi.pinax.network/api",
       "type": "etherscan"
     }
   ],
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": [
+        "subgraph",
+        "sps"
+      ]
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "ARB",
   "docsUrl": "https://docs.arbitrum.io",

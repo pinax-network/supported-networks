@@ -6,42 +6,23 @@
  */
 
 /**
- * The Graph networks registry
- */
-export interface HttpsThegraphComSchemasV1RegistrySchemaJson {
-  /**
-   * Reference to this schema file
-   */
-  $schema: string;
-  /**
-   * Description of the registry
-   */
-  description: string;
-  /**
-   * Version of the registry
-   */
-  version: string;
-  /**
-   * Date and time of the last update
-   */
-  updatedAt: string;
-  /**
-   * List of networks
-   */
-  networks: HttpsThegraphComSchemasV1NetworkSchemaJson[];
-}
-/**
  * The Graph networks registry entry
  */
-export interface HttpsThegraphComSchemasV1NetworkSchemaJson {
+export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
+  [k: string]: unknown;
+} & {
   /**
    * Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet
    */
   id: string;
   /**
+   * Short display name of the network, i.e. Ethereum, BNB
+   */
+  shortName: string;
+  /**
    * Display name of the network, i.e. Ethereum Mainnet, Bitcoin Testnet
    */
-  displayName: string;
+  fullName: string;
   /**
    * CAIP-2 Chain ID, i.e. eip155:1, bip122:000000000019d6689c085ae165831e93
    */
@@ -58,7 +39,13 @@ export interface HttpsThegraphComSchemasV1NetworkSchemaJson {
     /**
      * Type of relation
      */
-    type: "testnetOf" | "beaconOf" | "forkedFrom" | "l2Of";
+    type:
+      | "testnetOf"
+      | "beaconOf"
+      | "forkedFrom"
+      | "settlesTo"
+      | "evmOf"
+      | "other";
     /**
      * Id of the related network, i.e. mainnet, near-mainnet
      */
@@ -106,30 +93,72 @@ export interface HttpsThegraphComSchemasV1NetworkSchemaJson {
   /**
    * URLs for the block explorers
    */
-  blockExplorerUrls?: string[];
+  explorerUrls?: string[];
   /**
-   * Chain support in Edge&Node Studio
+   * Providers studio support for the chain
    */
-  studioSupport: (
-    | "subgraph-rpc"
-    | "subgraph-firehose"
-    | "subgraph-substreams"
-  )[];
+  studioSupport: {
+    provider?:
+      | "e&n"
+      | "pinax"
+      | "graphops"
+      | "streamingfast"
+      | "messari"
+      | "semiotic";
+    services?: (
+      | "subgraph"
+      | "sps"
+      | "substreams"
+      | "firehose"
+      | "token"
+      | "dataset"
+    )[];
+    [k: string]: unknown;
+  }[];
   /**
    * Issuance rewards on the Graph Network for this chain
    */
   issuanceRewards: boolean;
   web3Icon?: string;
   /**
-   * List of public RPC URLs for the chain
+   * List of RPC URLs for the chain. Use {CUSTOM_API_KEY} as a placeholder for a private API key
    */
-  publicRpcUrls?: string[];
+  rpcUrls?: string[];
   /**
-   * List of public API URLs for the chain, i.e. https://api.etherscan.io/api
+   * List of API URLs for the chain, i.e. https://api.etherscan.io/api. Use {CUSTOM_API_KEY} as a placeholder for a private API key
    */
-  publicApiUrls?: string[];
+  apiUrls?: {
+    url: string;
+    type: "etherscan" | "blockscout" | "ethplorer" | "subscan" | "other";
+  }[];
   /**
    * URL to the chain documentation
    */
   docsUrl?: string;
+};
+
+/**
+ * The Graph networks registry
+ */
+export interface HttpsThegraphComSchemasV1RegistrySchemaJson {
+  /**
+   * Reference to this schema file
+   */
+  $schema: string;
+  /**
+   * Description of the registry
+   */
+  description: string;
+  /**
+   * Version of the registry
+   */
+  version: string;
+  /**
+   * Date and time of the last update
+   */
+  updatedAt: string;
+  /**
+   * List of networks
+   */
+  networks: HttpsThegraphComSchemasV1NetworkSchemaJson[];
 }

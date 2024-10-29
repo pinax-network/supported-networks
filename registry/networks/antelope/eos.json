@@ -2,15 +2,17 @@
   "id": "eos",
   "shortName": "EOS",
   "fullName": "EOS Mainnet",
-  "aliases": ["eos-mainnet"],
+  "aliases": [
+    "eos-mainnet"
+  ],
   "caip2ChainId": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://bloks.io/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://eos.api.eosnation.io/"
   ],
-  "publicApiUrls": [],
+  "apiUrls": [],
   "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,

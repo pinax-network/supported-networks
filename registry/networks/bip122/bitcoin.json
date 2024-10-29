@@ -2,15 +2,17 @@
   "id": "btc",
   "shortName": "Bitcoin",
   "fullName": "Bitcoin Mainnet",
-  "aliases": ["bitcoin"],
+  "aliases": [
+    "bitcoin"
+  ],
   "caip2ChainId": "bip122:000000000019d6689c085ae165831e93",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://btcscan.org"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://bitcoin-mainnet.gateway.tatum.io"
   ],
-  "publicApiUrls": [],
+  "apiUrls": [],
   "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,

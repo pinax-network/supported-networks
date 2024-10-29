@@ -5,19 +5,14 @@
   "aliases": ["ethereum", "eth", "eth-mainnet", "evm-1"],
   "caip2ChainId": "eip155:1",
   "graphNodeProtocol": "ethereum",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://etherscan.io"
   ],
-  "publicRpcUrls": [
-    "https://rpc.ankr.com/eth"
+  "rpcUrls": [
+    "https://rpc.ankr.com/eth",
+    "https://mainnet.infura.io/v3/{INFURA_API_KEY}"
   ],
-  "privateRpcUrls": [
-    {
-      "provider": "infura",
-      "url": "https://mainnet.infura.io/v3/{api_key}"
-    }
-  ],
-  "publicApiUrls": [
+  "apiUrls": [
     {
       "url": "https://api.etherscan.io/api",
       "type": "etherscan"

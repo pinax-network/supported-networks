@@ -2,7 +2,9 @@
   "id": "sepolia",
   "shortName": "Ethereum Sepolia",
   "fullName": "Ethereum Sepolia Testnet",
-  "aliases": ["evm-11155111"],
+  "aliases": [
+    "evm-11155111"
+  ],
   "caip2ChainId": "eip155:11155111",
   "networkType": "testnet",
   "relations": [
@@ -12,15 +14,23 @@
     }
   ],
   "graphNodeProtocol": "ethereum",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://sepolia.etherscan.io/",
     "https://sepolia.otterscan.io"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://rpc.sepolia.dev"
   ],
-  "publicApiUrls": [],
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "apiUrls": [],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": [
+        "subgraph",
+        "sps"
+      ]
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://sepolia.dev/",

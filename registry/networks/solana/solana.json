@@ -2,16 +2,19 @@
   "id": "solana-mainnet-beta",
   "shortName": "Solana",
   "fullName": "Solana Mainnet",
-  "aliases": ["solana-mainnet", "solana"],
+  "aliases": [
+    "solana-mainnet",
+    "solana"
+  ],
   "caip2ChainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "http://explorer.solana.com/",
     "http://solana.fm/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://api.mainnet-beta.solana.com"
   ],
-  "publicApiUrls": [],
+  "apiUrls": [],
   "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,

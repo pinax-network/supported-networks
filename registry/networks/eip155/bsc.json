@@ -2,24 +2,37 @@
   "id": "bsc",
   "shortName": "BNB",
   "fullName": "BNB Smart Chain Mainnet",
-  "aliases": ["bnb", "bnb-mainnet", "bsc-mainnet", "evm-56"],
+  "aliases": [
+    "bnb",
+    "bnb-mainnet",
+    "bsc-mainnet",
+    "evm-56"
+  ],
   "caip2ChainId": "eip155:56",
   "graphNodeProtocol": "ethereum",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://bscscan.com/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://bsc-dataseed1.binance.org/",
     "https://bsc-dataseed1.defibit.io/"
   ],
-  "publicApiUrls": [
+  "apiUrls": [
     {
       "url": "https://api.bscscan.com/api",
       "type": "etherscan"
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": [{ "provider": "e&n", "services": ["subgraph", "sps"] }],
+  "studioSupport": [
+    {
+      "provider": "e&n",
+      "services": [
+        "subgraph",
+        "sps"
+      ]
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.bnbchain.org/",

@@ -4,13 +4,13 @@
   "fullName": "Near Testnet",
   "aliases": [],
   "caip2ChainId": "near:testnet",
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://testnet.nearblocks.io/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://rpc.testnet.near.org"
   ],
-  "publicApiUrls": [],
+  "apiUrls": [],
   "networkType": "testnet",
   "graphNodeProtocol": "near",
   "relations": [

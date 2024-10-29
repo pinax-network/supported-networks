@@ -85,6 +85,26 @@ function validateTestnets() {
   process.stdout.write("done\n");
 }
 
+function validateUrls() {
+  process.stdout.write("Validating URLs ... ");
+  const urls = [
+    ...new Set(
+      NETWORKS.flatMap((n) => [
+        n.rpcUrls ?? [],
+        n.explorerUrls ?? [],
+        (n.apiUrls ?? []).map((u) => u.url),
+      ]).flat(),
+    ),
+  ];
+  for (const url of urls) {
+    const match = /\{([^}]+)\}/g.exec(url); // Matches any {..}
+    if (match && !/^[A-Z_]+$/.test(match[1])) {
+      ERRORS.push(`Only upper-case variables allowed in URL: ${url}`);
+    }
+  }
+  process.stdout.write("done\n");
+}
+
 async function validateWeb3Icons() {
   process.stdout.write("Validating web3 icons ... ");
   const icons = await fetchWeb3NetworkIcons();
@@ -182,6 +202,7 @@ async function main() {
   validateUniqueness();
   validateRelations();
   validateTestnets();
+  validateUrls();
   await validateWeb3Icons();
   await validateFirehoseBlockType();
   await validateGraphNetworks();

@@ -2,7 +2,9 @@
   "id": "staknet",
   "shortName": "Starknet",
   "fullName": "Starknet Mainnet",
-  "aliases": ["starknet-mainnet"],
+  "aliases": [
+    "starknet-mainnet"
+  ],
   "caip2ChainId": "starknet:SN_MAIN",
   "graphNodeProtocol": "starknet",
   "relations": [
@@ -11,13 +13,13 @@
       "network": "mainnet"
     }
   ],
-  "blockExplorerUrls": [
+  "explorerUrls": [
     "https://starkscan.co/"
   ],
-  "publicRpcUrls": [
+  "rpcUrls": [
     "https://starknet-mainnet.public.blastapi.io"
   ],
-  "publicApiUrls": [],
+  "apiUrls": [],
   "networkType": "mainnet",
   "studioSupport": [],
   "issuanceRewards": false,
