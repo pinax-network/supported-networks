@@ -3,7 +3,7 @@
   "shortName": "Near",
   "fullName": "Near Testnet",
   "aliases": [],
-  "caip2ChainId": "near:testnet",
+  "caip2Id": "near:testnet",
   "explorerUrls": [
     "https://testnet.nearblocks.io/"
   ],
@@ -12,10 +12,12 @@
   ],
   "apiUrls": [],
   "networkType": "testnet",
-  "graphNodeProtocol": "near",
+  "graphNode": {
+    "protocol": "near"
+  },
   "relations": [
     {
-      "type": "testnetOf",
+      "kind": "testnetOf",
       "network": "near-mainnet"
     }
   ],
@@ -29,7 +31,7 @@
     "height": 42376923
   },
   "firehose": {
-    "type": "sf.near.type.v1.Block",
+    "blockType": "sf.near.type.v1.Block",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
     "bytesEncoding": "hex"
   }

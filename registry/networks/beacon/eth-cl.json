@@ -7,14 +7,14 @@
     "eth-cl",
     "eth-beacon"
   ],
-  "caip2ChainId": "beacon:1",
+  "caip2Id": "beacon:1",
   "explorerUrls": [],
   "rpcUrls": [],
   "apiUrls": [],
   "networkType": "mainnet",
   "relations": [
     {
-      "type": "beaconOf",
+      "kind": "beaconOf",
       "network": "mainnet"
     }
   ],
@@ -28,7 +28,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.beacon.type.v1.Block",
+    "blockType": "sf.beacon.type.v1.Block",
     "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
     "bytesEncoding": "0xhex"
   }

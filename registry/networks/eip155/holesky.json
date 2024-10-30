@@ -5,15 +5,17 @@
   "aliases": [
     "evm-17000"
   ],
-  "caip2ChainId": "eip155:17000",
+  "caip2Id": "eip155:17000",
   "networkType": "testnet",
   "relations": [
     {
-      "type": "testnetOf",
+      "kind": "testnetOf",
       "network": "mainnet"
     }
   ],
-  "graphNodeProtocol": "ethereum",
+  "graphNode": {
+    "protocol": "ethereum"
+  },
   "explorerUrls": [
     "https://holesky.etherscan.io/",
     "https://holesky.otterscan.io"
@@ -39,7 +41,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.ethereum.type.v2.Block",
+    "blockType": "sf.ethereum.type.v2.Block",
     "evmModel": "extended",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"

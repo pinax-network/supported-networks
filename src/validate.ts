@@ -11,7 +11,7 @@ function validateUniqueness() {
   for (const field of [
     "id",
     "displayName",
-    "caip2ChainId",
+    "caip2Id",
     "aliases",
     "genesis.hash",
   ]) {
@@ -55,7 +55,7 @@ function validateTestnets() {
   process.stdout.write("Validating testnets ... ");
   for (const network of NETWORKS) {
     if (["testnet", "devnet"].includes(network.networkType)) {
-      const mainnetId = network.relations?.find((n) => n.type === "testnetOf");
+      const mainnetId = network.relations?.find((n) => n.kind === "testnetOf");
       if (!mainnetId) {
         ERRORS.push(`Testnet ${network.id} has no mainnet relation`);
         continue;
@@ -74,7 +74,7 @@ function validateTestnets() {
       }
     }
     if (network.networkType === "mainnet") {
-      if (network.relations?.find((n) => n.type === "testnetOf")) {
+      if (network.relations?.find((n) => n.kind === "testnetOf")) {
         ERRORS.push(
           `Mainnet network ${network.id} can't have testnetOf relation`,
         );
@@ -175,9 +175,9 @@ async function validateGraphNetworks() {
     if (!graphNetwork) {
       ERRORS.push(`Network ${network.id} is not active on the graph`);
     }
-    if (graphNetwork?.id !== network.caip2ChainId) {
+    if (graphNetwork?.id !== network.caip2Id) {
       ERRORS.push(
-        `Network ${network.id} has non-matching chain id on the graph network: ${graphNetwork?.id} vs ${network.caip2ChainId}`,
+        `Network ${network.id} has non-matching chain id on the graph network: ${graphNetwork?.id} vs ${network.caip2Id}`,
       );
     }
   }

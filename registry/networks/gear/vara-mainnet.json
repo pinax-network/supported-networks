@@ -5,7 +5,7 @@
   "aliases": [
     "vara"
   ],
-  "caip2ChainId": "gear:vara-mainnet",
+  "caip2Id": "gear:vara-mainnet",
   "explorerUrls": [
     "https://vara.subscan.io/"
   ],
@@ -13,7 +13,7 @@
   "apiUrls": [
     {
       "url": "https://vara.api.subscan.io/api",
-      "type": "subscan"
+      "kind": "subscan"
     }
   ],
   "networkType": "mainnet",
@@ -26,7 +26,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.gear.type.v1.Block",
+    "blockType": "sf.gear.type.v1.Block",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
     "bytesEncoding": "hex"
   }

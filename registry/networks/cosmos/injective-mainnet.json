@@ -6,14 +6,16 @@
     "injective",
     "injective-1"
   ],
-  "caip2ChainId": "cosmos:injective-1",
+  "caip2Id": "cosmos:injective-1",
   "explorerUrls": [
     "https://explorer.injective.network/"
   ],
   "rpcUrls": [],
   "apiUrls": [],
   "networkType": "mainnet",
-  "graphNodeProtocol": "cosmos",
+  "graphNode": {
+    "protocol": "cosmos"
+  },
   "studioSupport": [],
   "issuanceRewards": false,
   "nativeToken": "INJ",
@@ -24,7 +26,7 @@
     "height": 1
   },
   "firehose": {
-    "type": "sf.cosmos.type.v2.Block",
+    "blockType": "sf.cosmos.type.v2.Block",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
     "bytesEncoding": "hex"
   }

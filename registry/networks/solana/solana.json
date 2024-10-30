@@ -6,7 +6,7 @@
     "solana-mainnet",
     "solana"
   ],
-  "caip2ChainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+  "caip2Id": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
   "explorerUrls": [
     "http://explorer.solana.com/",
     "http://solana.fm/"
@@ -26,7 +26,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.solana.type.v1.Block",
+    "blockType": "sf.solana.type.v1.Block",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-solana",
     "bytesEncoding": "base58"
   }

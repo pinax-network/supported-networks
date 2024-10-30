@@ -5,11 +5,13 @@
   "aliases": [
     "starknet-mainnet"
   ],
-  "caip2ChainId": "starknet:SN_MAIN",
-  "graphNodeProtocol": "starknet",
+  "caip2Id": "starknet:SN_MAIN",
+  "graphNode": {
+    "protocol": "starknet"
+  },
   "relations": [
     {
-      "type": "settlesTo",
+      "kind": "settlesTo",
       "network": "mainnet"
     }
   ],
@@ -31,7 +33,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.starknet.type.v1.Block",
+    "blockType": "sf.starknet.type.v1.Block",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-starknet",
     "bytesEncoding": "0xhex"
   }

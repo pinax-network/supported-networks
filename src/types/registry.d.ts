@@ -26,7 +26,7 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
   /**
    * CAIP-2 Chain ID, i.e. eip155:1, bip122:000000000019d6689c085ae165831e93
    */
-  caip2ChainId: string;
+  caip2Id: string;
   /**
    * [optional] List of possible aliases for the chain, i.e. ethereum, eth, mainnet, eth-mainnet
    */
@@ -37,9 +37,9 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
   networkType: "mainnet" | "testnet" | "devnet";
   relations?: {
     /**
-     * Type of relation
+     * Kind of relation
      */
-    type:
+    kind:
       | "testnetOf"
       | "beaconOf"
       | "forkedFrom"
@@ -58,7 +58,7 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
     /**
      * Block type, i.e. sf.ethereum.type.v2.Block
      */
-    type: string;
+    blockType: string;
     /**
      * Bytes encoding, i.e. hex, 0xhex, base58
      */
@@ -86,10 +86,13 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
    * Symbol of the native token
    */
   nativeToken?: string;
-  /**
-   * [optional] Protocol name in graph-node, i.e. ethereum, near, arweave
-   */
-  graphNodeProtocol?: "ethereum" | "near" | "arweave" | "cosmos" | "starknet";
+  graphNode?: {
+    /**
+     * [optional] Protocol name in graph-node, i.e. ethereum, near, arweave
+     */
+    protocol?: "ethereum" | "near" | "arweave" | "cosmos" | "starknet";
+    [k: string]: unknown;
+  };
   /**
    * URLs for the block explorers
    */
@@ -129,7 +132,7 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
    */
   apiUrls?: {
     url: string;
-    type: "etherscan" | "blockscout" | "ethplorer" | "subscan" | "other";
+    kind: "etherscan" | "blockscout" | "ethplorer" | "subscan" | "other";
   }[];
   /**
    * URL to the chain documentation

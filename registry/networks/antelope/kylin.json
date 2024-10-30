@@ -5,7 +5,7 @@
   "aliases": [
     "kylin"
   ],
-  "caip2ChainId": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
+  "caip2Id": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
   "explorerUrls": [
     "https://kylin.bloks.io/"
   ],
@@ -16,7 +16,7 @@
   "networkType": "testnet",
   "relations": [
     {
-      "type": "testnetOf",
+      "kind": "testnetOf",
       "network": "eos"
     }
   ],
@@ -30,7 +30,7 @@
     "height": 2
   },
   "firehose": {
-    "type": "sf.antelope.type.v1.Block",
+    "blockType": "sf.antelope.type.v1.Block",
     "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
     "bytesEncoding": "hex"
   }

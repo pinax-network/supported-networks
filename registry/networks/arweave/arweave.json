@@ -5,14 +5,16 @@
   "aliases": [
     "arweave"
   ],
-  "caip2ChainId": "arweave:7wIU",
+  "caip2Id": "arweave:7wIU",
   "explorerUrls": [
     "https://arscan.io/"
   ],
   "rpcUrls": ["https://asdf.com/"],
   "apiUrls": [],
   "networkType": "mainnet",
-  "graphNodeProtocol": "arweave",
+  "graphNode": {
+    "protocol": "arweave"
+  },
   "studioSupport": [
     {
       "provider": "e&n",
@@ -31,7 +33,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.arweave.type.v1.Block",
+    "blockType": "sf.arweave.type.v1.Block",
     "bufBuildUrl": "https://buf.build/pinax/firehose-arweave",
     "bytesEncoding": "hex"
   }

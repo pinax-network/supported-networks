@@ -5,7 +5,7 @@
   "aliases": [
     "wax-mainnet"
   ],
-  "caip2ChainId": "antelope:1064487b3cd1a897ce03ae5b6a865651",
+  "caip2Id": "antelope:1064487b3cd1a897ce03ae5b6a865651",
   "explorerUrls": [
     "https://wax.bloks.io/"
   ],
@@ -23,7 +23,7 @@
     "height": 2
   },
   "firehose": {
-    "type": "sf.antelope.type.v1.Block",
+    "blockType": "sf.antelope.type.v1.Block",
     "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
     "bytesEncoding": "hex"
   }

@@ -3,8 +3,10 @@
   "shortName": "Ethereum",
   "fullName": "Ethereum Mainnet",
   "aliases": ["ethereum", "eth", "eth-mainnet", "evm-1"],
-  "caip2ChainId": "eip155:1",
-  "graphNodeProtocol": "ethereum",
+  "caip2Id": "eip155:1",
+  "graphNode": {
+    "protocol": "ethereum"
+  },
   "explorerUrls": [
     "https://etherscan.io"
   ],
@@ -15,11 +17,11 @@
   "apiUrls": [
     {
       "url": "https://api.etherscan.io/api",
-      "type": "etherscan"
+      "kind": "etherscan"
     },
     {
       "url": "https://eth.blockscout.com/api",
-      "type": "blockscout"
+      "kind": "blockscout"
     }
   ],
   "networkType": "mainnet",
@@ -38,7 +40,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.ethereum.type.v2.Block",
+    "blockType": "sf.ethereum.type.v2.Block",
     "evmModel": "extended",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"

@@ -5,7 +5,7 @@
   "aliases": [
     "bitcoin"
   ],
-  "caip2ChainId": "bip122:000000000019d6689c085ae165831e93",
+  "caip2Id": "bip122:000000000019d6689c085ae165831e93",
   "explorerUrls": [
     "https://btcscan.org"
   ],
@@ -24,7 +24,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.bitcoin.type.v1.Block",
+    "blockType": "sf.bitcoin.type.v1.Block",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-bitcoin",
     "bytesEncoding": "hex"
   }

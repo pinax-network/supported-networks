@@ -8,8 +8,10 @@
     "bsc-mainnet",
     "evm-56"
   ],
-  "caip2ChainId": "eip155:56",
-  "graphNodeProtocol": "ethereum",
+  "caip2Id": "eip155:56",
+  "graphNode": {
+    "protocol": "ethereum"
+  },
   "explorerUrls": [
     "https://bscscan.com/"
   ],
@@ -20,7 +22,7 @@
   "apiUrls": [
     {
       "url": "https://api.bscscan.com/api",
-      "type": "etherscan"
+      "kind": "etherscan"
     }
   ],
   "networkType": "mainnet",
@@ -42,7 +44,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.ethereum.type.v2.Block",
+    "blockType": "sf.ethereum.type.v2.Block",
     "evmModel": "extended",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"

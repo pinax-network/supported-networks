@@ -5,18 +5,18 @@
   "aliases": [
     "holesky-beacon"
   ],
-  "caip2ChainId": "beacon:17000",
+  "caip2Id": "beacon:17000",
   "explorerUrls": [],
   "rpcUrls": [],
   "apiUrls": [],
   "networkType": "testnet",
   "relations": [
     {
-      "type": "testnetOf",
+      "kind": "testnetOf",
       "network": "mainnet-cl"
     },
     {
-      "type": "beaconOf",
+      "kind": "beaconOf",
       "network": "holesky"
     }
   ],
@@ -30,7 +30,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.beacon.type.v1.Block",
+    "blockType": "sf.beacon.type.v1.Block",
     "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
     "bytesEncoding": "0xhex"
   }

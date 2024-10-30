@@ -17,7 +17,7 @@
       "type": "string",
       "description": "Display name of the network, i.e. Ethereum Mainnet, Bitcoin Testnet"
     },
-    "caip2ChainId": {
+    "caip2Id": {
       "type": "string",
       "pattern": "^[-a-z0-9]{3,8}:[-_a-zA-Z0-9]{1,32}$",
       "description": "CAIP-2 Chain ID, i.e. eip155:1, bip122:000000000019d6689c085ae165831e93"
@@ -44,7 +44,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "type": {
+          "kind": {
             "type": "string",
             "enum": [
               "testnetOf",
@@ -54,7 +54,7 @@
               "evmOf",
               "other"
             ],
-            "description": "Type of relation"
+            "description": "Kind of relation"
           },
           "network": {
             "type": "string",
@@ -63,7 +63,7 @@
           }
         },
         "required": [
-          "type",
+          "kind",
           "network"
         ],
         "additionalProperties": false
@@ -72,7 +72,7 @@
     "firehose": {
       "type": "object",
       "properties": {
-        "type": {
+        "blockType": {
           "type": "string",
           "pattern": "^[a-zA-Z0-9.]+$",
           "description": "Block type, i.e. sf.ethereum.type.v2.Block"
@@ -101,7 +101,7 @@
         }
       },
       "required": [
-        "type",
+        "blockType",
         "bytesEncoding",
         "bufBuildUrl"
       ],
@@ -131,16 +131,21 @@
       "pattern": "^[a-zA-Z0-9]+$",
       "description": "Symbol of the native token"
     },
-    "graphNodeProtocol": {
-      "type": "string",
-      "enum": [
-        "ethereum",
-        "near",
-        "arweave",
-        "cosmos",
-        "starknet"
-      ],
-      "description": "[optional] Protocol name in graph-node, i.e. ethereum, near, arweave"
+    "graphNode": {
+      "type": "object",
+      "properties": {
+        "protocol": {
+          "type": "string",
+          "enum": [
+            "ethereum",
+            "near",
+            "arweave",
+            "cosmos",
+            "starknet"
+          ],
+          "description": "[optional] Protocol name in graph-node, i.e. ethereum, near, arweave"
+        }
+      }
     },
     "explorerUrls": {
       "type": "array",
@@ -209,7 +214,7 @@
             "type": "string",
             "format": "uri-template"
           },
-          "type": {
+          "kind": {
             "type": "string",
             "enum": [
               "etherscan",
@@ -222,7 +227,7 @@
         },
         "required": [
           "url",
-          "type"
+          "kind"
         ],
         "additionalProperties": false
       },
@@ -236,7 +241,7 @@
   },
   "required": [
     "id",
-    "caip2ChainId",
+    "caip2Id",
     "shortName",
     "fullName",
     "networkType",
@@ -248,7 +253,7 @@
     {
       "if": {
         "properties": {
-          "caip2ChainId": {
+          "caip2Id": {
             "type": "string",
             "pattern": "^eip155:"
           }

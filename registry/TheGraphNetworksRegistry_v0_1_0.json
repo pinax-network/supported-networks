@@ -2,7 +2,7 @@
   "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
   "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-10-26T04:27:12.239Z",
+  "updatedAt": "2024-10-30T23:52:07.382Z",
   "networks": [
     {
       "id": "arweave-mainnet",
@@ -11,7 +11,7 @@
       "aliases": [
         "arweave"
       ],
-      "caip2ChainId": "arweave:7wIU",
+      "caip2Id": "arweave:7wIU",
       "explorerUrls": [
         "https://arscan.io/"
       ],
@@ -20,7 +20,9 @@
       ],
       "apiUrls": [],
       "networkType": "mainnet",
-      "graphNodeProtocol": "arweave",
+      "graphNode": {
+        "protocol": "arweave"
+      },
       "studioSupport": [
         {
           "provider": "e&n",
@@ -39,7 +41,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.arweave.type.v1.Block",
+        "blockType": "sf.arweave.type.v1.Block",
         "bufBuildUrl": "https://buf.build/pinax/firehose-arweave",
         "bytesEncoding": "hex"
       }
@@ -51,7 +53,7 @@
       "aliases": [
         "wax-mainnet"
       ],
-      "caip2ChainId": "antelope:1064487b3cd1a897ce03ae5b6a865651",
+      "caip2Id": "antelope:1064487b3cd1a897ce03ae5b6a865651",
       "explorerUrls": [
         "https://wax.bloks.io/"
       ],
@@ -69,7 +71,7 @@
         "height": 2
       },
       "firehose": {
-        "type": "sf.antelope.type.v1.Block",
+        "blockType": "sf.antelope.type.v1.Block",
         "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
         "bytesEncoding": "hex"
       }
@@ -81,7 +83,7 @@
       "aliases": [
         "kylin"
       ],
-      "caip2ChainId": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
+      "caip2Id": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
       "explorerUrls": [
         "https://kylin.bloks.io/"
       ],
@@ -92,7 +94,7 @@
       "networkType": "testnet",
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "eos"
         }
       ],
@@ -106,7 +108,7 @@
         "height": 2
       },
       "firehose": {
-        "type": "sf.antelope.type.v1.Block",
+        "blockType": "sf.antelope.type.v1.Block",
         "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
         "bytesEncoding": "hex"
       }
@@ -118,7 +120,7 @@
       "aliases": [
         "eos-mainnet"
       ],
-      "caip2ChainId": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
+      "caip2Id": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
       "explorerUrls": [
         "https://bloks.io/"
       ],
@@ -137,7 +139,7 @@
         "height": 2
       },
       "firehose": {
-        "type": "sf.antelope.type.v1.Block",
+        "blockType": "sf.antelope.type.v1.Block",
         "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
         "bytesEncoding": "hex"
       }
@@ -149,7 +151,7 @@
       "aliases": [
         "bitcoin"
       ],
-      "caip2ChainId": "bip122:000000000019d6689c085ae165831e93",
+      "caip2Id": "bip122:000000000019d6689c085ae165831e93",
       "explorerUrls": [
         "https://btcscan.org"
       ],
@@ -168,7 +170,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.bitcoin.type.v1.Block",
+        "blockType": "sf.bitcoin.type.v1.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-bitcoin",
         "bytesEncoding": "hex"
       }
@@ -183,11 +185,13 @@
         "arb-sepolia",
         "evm-42161"
       ],
-      "caip2ChainId": "eip155:42161",
-      "graphNodeProtocol": "ethereum",
+      "caip2Id": "eip155:42161",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
       "relations": [
         {
-          "type": "settlesTo",
+          "kind": "settlesTo",
           "network": "mainnet"
         }
       ],
@@ -200,7 +204,7 @@
       "apiUrls": [
         {
           "url": "https://arbitrum-one.abi.pinax.network/api",
-          "type": "etherscan"
+          "kind": "etherscan"
         }
       ],
       "networkType": "mainnet",
@@ -222,7 +226,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.ethereum.type.v2.Block",
+        "blockType": "sf.ethereum.type.v2.Block",
         "evmModel": "extended",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
@@ -235,19 +239,21 @@
       "aliases": [
         "evm-421614"
       ],
-      "caip2ChainId": "eip155:421614",
+      "caip2Id": "eip155:421614",
       "networkType": "testnet",
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "arbitrum-one"
         },
         {
-          "type": "settlesTo",
+          "kind": "settlesTo",
           "network": "sepolia"
         }
       ],
-      "graphNodeProtocol": "ethereum",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
       "explorerUrls": [
         "https://sepolia.arbiscan.io"
       ],
@@ -255,7 +261,7 @@
       "apiUrls": [
         {
           "url": "https://arbitrum-sepolia.abi.pinax.network/api",
-          "type": "etherscan"
+          "kind": "etherscan"
         }
       ],
       "studioSupport": [
@@ -275,7 +281,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.ethereum.type.v2.Block",
+        "blockType": "sf.ethereum.type.v2.Block",
         "evmModel": "extended",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
@@ -291,8 +297,10 @@
         "bsc-mainnet",
         "evm-56"
       ],
-      "caip2ChainId": "eip155:56",
-      "graphNodeProtocol": "ethereum",
+      "caip2Id": "eip155:56",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
       "explorerUrls": [
         "https://bscscan.com/"
       ],
@@ -303,7 +311,7 @@
       "apiUrls": [
         {
           "url": "https://api.bscscan.com/api",
-          "type": "etherscan"
+          "kind": "etherscan"
         }
       ],
       "networkType": "mainnet",
@@ -325,7 +333,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.ethereum.type.v2.Block",
+        "blockType": "sf.ethereum.type.v2.Block",
         "evmModel": "extended",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
@@ -338,15 +346,17 @@
       "aliases": [
         "evm-11155111"
       ],
-      "caip2ChainId": "eip155:11155111",
+      "caip2Id": "eip155:11155111",
       "networkType": "testnet",
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "mainnet"
         }
       ],
-      "graphNodeProtocol": "ethereum",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
       "explorerUrls": [
         "https://sepolia.etherscan.io/",
         "https://sepolia.otterscan.io"
@@ -372,7 +382,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.ethereum.type.v2.Block",
+        "blockType": "sf.ethereum.type.v2.Block",
         "evmModel": "extended",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
@@ -388,8 +398,10 @@
         "eth-mainnet",
         "evm-1"
       ],
-      "caip2ChainId": "eip155:1",
-      "graphNodeProtocol": "ethereum",
+      "caip2Id": "eip155:1",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
       "explorerUrls": [
         "https://etherscan.io"
       ],
@@ -400,11 +412,11 @@
       "apiUrls": [
         {
           "url": "https://api.etherscan.io/api",
-          "type": "etherscan"
+          "kind": "etherscan"
         },
         {
           "url": "https://eth.blockscout.com/api",
-          "type": "blockscout"
+          "kind": "blockscout"
         }
       ],
       "networkType": "mainnet",
@@ -426,7 +438,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.ethereum.type.v2.Block",
+        "blockType": "sf.ethereum.type.v2.Block",
         "evmModel": "extended",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
@@ -439,15 +451,17 @@
       "aliases": [
         "evm-17000"
       ],
-      "caip2ChainId": "eip155:17000",
+      "caip2Id": "eip155:17000",
       "networkType": "testnet",
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "mainnet"
         }
       ],
-      "graphNodeProtocol": "ethereum",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
       "explorerUrls": [
         "https://holesky.etherscan.io/",
         "https://holesky.otterscan.io"
@@ -473,7 +487,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.ethereum.type.v2.Block",
+        "blockType": "sf.ethereum.type.v2.Block",
         "evmModel": "extended",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
@@ -487,11 +501,13 @@
         "polygon",
         "matic-mainnet"
       ],
-      "caip2ChainId": "eip155:137",
-      "graphNodeProtocol": "ethereum",
+      "caip2Id": "eip155:137",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
       "relations": [
         {
-          "type": "settlesTo",
+          "kind": "settlesTo",
           "network": "mainnet"
         }
       ],
@@ -504,7 +520,7 @@
       "apiUrls": [
         {
           "url": "https://api.polygonscan.com/api",
-          "type": "etherscan"
+          "kind": "etherscan"
         }
       ],
       "networkType": "mainnet",
@@ -526,7 +542,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.ethereum.type.v2.Block",
+        "blockType": "sf.ethereum.type.v2.Block",
         "evmModel": "extended",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
@@ -540,14 +556,16 @@
         "injective",
         "injective-1"
       ],
-      "caip2ChainId": "cosmos:injective-1",
+      "caip2Id": "cosmos:injective-1",
       "explorerUrls": [
         "https://explorer.injective.network/"
       ],
       "rpcUrls": [],
       "apiUrls": [],
       "networkType": "mainnet",
-      "graphNodeProtocol": "cosmos",
+      "graphNode": {
+        "protocol": "cosmos"
+      },
       "studioSupport": [],
       "issuanceRewards": false,
       "nativeToken": "INJ",
@@ -558,7 +576,7 @@
         "height": 1
       },
       "firehose": {
-        "type": "sf.cosmos.type.v2.Block",
+        "blockType": "sf.cosmos.type.v2.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
         "bytesEncoding": "hex"
       }
@@ -570,17 +588,19 @@
       "aliases": [
         "injective-2"
       ],
-      "caip2ChainId": "cosmos:injective-2",
+      "caip2Id": "cosmos:injective-2",
       "explorerUrls": [
         "https://testnet.explorer.injective.network/"
       ],
       "rpcUrls": [],
       "apiUrls": [],
       "networkType": "testnet",
-      "graphNodeProtocol": "ethereum",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "injective-mainnet"
         }
       ],
@@ -594,7 +614,7 @@
         "height": 37368800
       },
       "firehose": {
-        "type": "sf.cosmos.type.v2.Block",
+        "blockType": "sf.cosmos.type.v2.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
         "bytesEncoding": "hex"
       }
@@ -604,10 +624,10 @@
       "shortName": "Vara",
       "fullName": "Vara Testnet",
       "aliases": [],
-      "caip2ChainId": "gear:vara-testnet",
+      "caip2Id": "gear:vara-testnet",
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "vara-mainnet"
         }
       ],
@@ -624,7 +644,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.gear.type.v1.Block",
+        "blockType": "sf.gear.type.v1.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
         "bytesEncoding": "hex"
       }
@@ -636,7 +656,7 @@
       "aliases": [
         "vara"
       ],
-      "caip2ChainId": "gear:vara-mainnet",
+      "caip2Id": "gear:vara-mainnet",
       "explorerUrls": [
         "https://vara.subscan.io/"
       ],
@@ -644,7 +664,7 @@
       "apiUrls": [
         {
           "url": "https://vara.api.subscan.io/api",
-          "type": "subscan"
+          "kind": "subscan"
         }
       ],
       "networkType": "mainnet",
@@ -657,7 +677,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.gear.type.v1.Block",
+        "blockType": "sf.gear.type.v1.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
         "bytesEncoding": "hex"
       }
@@ -670,7 +690,7 @@
         "solana-mainnet",
         "solana"
       ],
-      "caip2ChainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+      "caip2Id": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
       "explorerUrls": [
         "http://explorer.solana.com/",
         "http://solana.fm/"
@@ -690,7 +710,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.solana.type.v1.Block",
+        "blockType": "sf.solana.type.v1.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-solana",
         "bytesEncoding": "base58"
       }
@@ -700,7 +720,7 @@
       "shortName": "Near",
       "fullName": "Near Testnet",
       "aliases": [],
-      "caip2ChainId": "near:testnet",
+      "caip2Id": "near:testnet",
       "explorerUrls": [
         "https://testnet.nearblocks.io/"
       ],
@@ -709,10 +729,12 @@
       ],
       "apiUrls": [],
       "networkType": "testnet",
-      "graphNodeProtocol": "near",
+      "graphNode": {
+        "protocol": "near"
+      },
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "near-mainnet"
         }
       ],
@@ -726,7 +748,7 @@
         "height": 42376923
       },
       "firehose": {
-        "type": "sf.near.type.v1.Block",
+        "blockType": "sf.near.type.v1.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
         "bytesEncoding": "hex"
       }
@@ -738,7 +760,7 @@
       "aliases": [
         "near"
       ],
-      "caip2ChainId": "near:mainnet",
+      "caip2Id": "near:mainnet",
       "explorerUrls": [
         "https://nearblocks.io/"
       ],
@@ -747,7 +769,9 @@
       ],
       "apiUrls": [],
       "networkType": "mainnet",
-      "graphNodeProtocol": "near",
+      "graphNode": {
+        "protocol": "near"
+      },
       "studioSupport": [
         {
           "provider": "e&n",
@@ -766,7 +790,7 @@
         "height": 9820214
       },
       "firehose": {
-        "type": "sf.near.type.v1.Block",
+        "blockType": "sf.near.type.v1.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
         "bytesEncoding": "hex"
       }
@@ -778,11 +802,13 @@
       "aliases": [
         "starknet-mainnet"
       ],
-      "caip2ChainId": "starknet:SN_MAIN",
-      "graphNodeProtocol": "starknet",
+      "caip2Id": "starknet:SN_MAIN",
+      "graphNode": {
+        "protocol": "starknet"
+      },
       "relations": [
         {
-          "type": "settlesTo",
+          "kind": "settlesTo",
           "network": "mainnet"
         }
       ],
@@ -804,7 +830,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.starknet.type.v1.Block",
+        "blockType": "sf.starknet.type.v1.Block",
         "bufBuildUrl": "https://buf.build/streamingfast/firehose-starknet",
         "bytesEncoding": "0xhex"
       }
@@ -818,14 +844,14 @@
         "eth-cl",
         "eth-beacon"
       ],
-      "caip2ChainId": "beacon:1",
+      "caip2Id": "beacon:1",
       "explorerUrls": [],
       "rpcUrls": [],
       "apiUrls": [],
       "networkType": "mainnet",
       "relations": [
         {
-          "type": "beaconOf",
+          "kind": "beaconOf",
           "network": "mainnet"
         }
       ],
@@ -839,7 +865,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.beacon.type.v1.Block",
+        "blockType": "sf.beacon.type.v1.Block",
         "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
         "bytesEncoding": "0xhex"
       }
@@ -851,18 +877,18 @@
       "aliases": [
         "sepolia-beacon"
       ],
-      "caip2ChainId": "beacon:11155111",
+      "caip2Id": "beacon:11155111",
       "explorerUrls": [],
       "rpcUrls": [],
       "apiUrls": [],
       "networkType": "testnet",
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "mainnet-cl"
         },
         {
-          "type": "beaconOf",
+          "kind": "beaconOf",
           "network": "sepolia"
         }
       ],
@@ -876,7 +902,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.beacon.type.v1.Block",
+        "blockType": "sf.beacon.type.v1.Block",
         "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
         "bytesEncoding": "0xhex"
       }
@@ -888,18 +914,18 @@
       "aliases": [
         "holesky-beacon"
       ],
-      "caip2ChainId": "beacon:17000",
+      "caip2Id": "beacon:17000",
       "explorerUrls": [],
       "rpcUrls": [],
       "apiUrls": [],
       "networkType": "testnet",
       "relations": [
         {
-          "type": "testnetOf",
+          "kind": "testnetOf",
           "network": "mainnet-cl"
         },
         {
-          "type": "beaconOf",
+          "kind": "beaconOf",
           "network": "holesky"
         }
       ],
@@ -913,7 +939,7 @@
         "height": 0
       },
       "firehose": {
-        "type": "sf.beacon.type.v1.Block",
+        "blockType": "sf.beacon.type.v1.Block",
         "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
         "bytesEncoding": "0xhex"
       }

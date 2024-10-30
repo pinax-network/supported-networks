@@ -5,19 +5,21 @@
   "aliases": [
     "evm-421614"
   ],
-  "caip2ChainId": "eip155:421614",
+  "caip2Id": "eip155:421614",
   "networkType": "testnet",
   "relations": [
     {
-      "type": "testnetOf",
+      "kind": "testnetOf",
       "network": "arbitrum-one"
     },
     {
-      "type": "settlesTo",
+      "kind": "settlesTo",
       "network": "sepolia"
     }
   ],
-  "graphNodeProtocol": "ethereum",
+  "graphNode": {
+    "protocol": "ethereum"
+  },
   "explorerUrls": [
     "https://sepolia.arbiscan.io"
   ],
@@ -25,7 +27,7 @@
   "apiUrls": [
     {
       "url": "https://arbitrum-sepolia.abi.pinax.network/api",
-      "type": "etherscan"
+      "kind": "etherscan"
     }
   ],
   "studioSupport": [
@@ -45,7 +47,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.ethereum.type.v2.Block",
+    "blockType": "sf.ethereum.type.v2.Block",
     "evmModel": "extended",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"

@@ -6,11 +6,13 @@
     "polygon",
     "matic-mainnet"
   ],
-  "caip2ChainId": "eip155:137",
-  "graphNodeProtocol": "ethereum",
+  "caip2Id": "eip155:137",
+  "graphNode": {
+    "protocol": "ethereum"
+  },
   "relations": [
     {
-      "type": "settlesTo",
+      "kind": "settlesTo",
       "network": "mainnet"
     }
   ],
@@ -23,7 +25,7 @@
   "apiUrls": [
     {
       "url": "https://api.polygonscan.com/api",
-      "type": "etherscan"
+      "kind": "etherscan"
     }
   ],
   "networkType": "mainnet",
@@ -45,7 +47,7 @@
     "height": 0
   },
   "firehose": {
-    "type": "sf.ethereum.type.v2.Block",
+    "blockType": "sf.ethereum.type.v2.Block",
     "evmModel": "extended",
     "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"
