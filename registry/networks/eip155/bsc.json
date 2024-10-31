@@ -26,16 +26,39 @@
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": [
-    {
-      "provider": "e&n",
-      "services": [
-        "subgraph",
-        "sps"
-      ]
-    }
-  ],
-  "issuanceRewards": false,
+  "support": {
+    "subgraphs": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "sps": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "bsc.firehose.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "bnb.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "bsc.substreams.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "bnb.streamingfast.io:443"
+      }
+    ]
+  },
+  "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.bnbchain.org/",
   "indexerDocsUrls": [
@@ -51,8 +74,8 @@
   },
   "firehose": {
     "blockType": "sf.ethereum.type.v2.Block",
-    "evmModel": "extended",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+    "evmExtendedModel": true,
+    "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"
   }
 }

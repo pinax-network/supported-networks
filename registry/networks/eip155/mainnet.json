@@ -25,12 +25,38 @@
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": [
-    {
-      "provider": "e&n",
-      "services": ["subgraph", "sps"]
-    }
-  ],
+  "support": {
+    "subgraphs": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "sps": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "eth.firehose.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.eth.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "eth.substreams.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.eth.streamingfast.io:443"
+      }
+    ]
+  },
   "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://ethereum.org/en/developers/docs/",
@@ -41,8 +67,8 @@
   },
   "firehose": {
     "blockType": "sf.ethereum.type.v2.Block",
-    "evmModel": "extended",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+    "evmExtendedModel": true,
+    "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"
   }
 }

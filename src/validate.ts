@@ -130,9 +130,7 @@ async function validateFirehoseBlockType() {
   process.stdout.write("Validating firehose block type ... ");
   const bufUrls = [
     ...new Set(
-      NETWORKS.filter((n) => n.firehose?.bufBuildUrl).map(
-        (n) => n.firehose!.bufBuildUrl,
-      ),
+      NETWORKS.filter((n) => n.firehose?.bufUrl).map((n) => n.firehose!.bufUrl),
     ),
   ];
   await Promise.all(
@@ -173,15 +171,19 @@ async function validateGraphNetworks() {
       (n) => n.alias === network.id,
     );
     if (!graphNetwork) {
-      ERRORS.push(`Network ${network.id} is not active on the graph`);
+      ERRORS.push(
+        `Network ${network.id} is active in registry but not on the graph network`,
+      );
+      continue;
     }
-    if (graphNetwork?.id !== network.caip2Id) {
+    if (graphNetwork.id !== network.caip2Id) {
       ERRORS.push(
         `Network ${network.id} has non-matching chain id on the graph network: ${graphNetwork?.id} vs ${network.caip2Id}`,
       );
     }
   }
   if (activeGraphNetworks.length !== activeRegistryNetworks.length) {
+    // TODO: uncomment when all networks are added to the registry
     // ERRORS.push(
     //   `Active networks count mismatch: graph=${activeGraphNetworks.length} registry=${activeRegistryNetworks.length}`,
     // );

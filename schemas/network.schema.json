@@ -28,7 +28,7 @@
         "type": "string",
         "pattern": "^[a-z0-9-]+$"
       },
-      "description": "[optional] List of possible aliases for the chain, i.e. ethereum, eth, mainnet, eth-mainnet"
+      "description": "[optional] List of possible aliases for the chain id, i.e. ethereum, eth, mainnet, eth-mainnet"
     },
     "networkType": {
       "type": "string",
@@ -86,24 +86,20 @@
           ],
           "description": "Bytes encoding, i.e. hex, 0xhex, base58"
         },
-        "bufBuildUrl": {
+        "bufUrl": {
           "type": "string",
           "format": "uri",
           "description": "Protobuf definitions on buf.build, i.e. https://buf.build/streamingfast/firehose-ethereum"
         },
-        "evmModel": {
-          "type": "string",
-          "enum": [
-            "base",
-            "extended"
-          ],
-          "description": "[optional] Block model if EVM chain, i.e. base or extended"
+        "evmExtendedModel": {
+          "type": "boolean",
+          "description": "[optional] Whether supports extended block model if EVM chain"
         }
       },
       "required": [
         "blockType",
         "bytesEncoding",
-        "bufBuildUrl"
+        "bufUrl"
       ],
       "additionalProperties": false,
       "description": "Firehose block information"
@@ -155,39 +151,113 @@
       },
       "description": "URLs for the block explorers"
     },
-    "studioSupport": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "provider": {
-            "type": "string",
-            "enum": [
-              "e&n",
-              "pinax",
-              "graphops",
-              "streamingfast",
-              "messari",
-              "semiotic"
-            ]
-          },
-          "services": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "subgraph",
-                "sps",
-                "substreams",
-                "firehose",
-                "token",
-                "dataset"
-              ]
-            }
+    "support": {
+      "type": "object",
+      "properties": {
+        "subgraphs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "provider": {
+                "type": "string",
+                "enum": [
+                  "e&n",
+                  "pinax",
+                  "graphops",
+                  "streamingfast",
+                  "messari",
+                  "semiotic"
+                ]
+              }
+            },
+            "required": [
+              "provider"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "sps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "provider": {
+                "type": "string",
+                "enum": [
+                  "e&n",
+                  "pinax",
+                  "graphops",
+                  "streamingfast",
+                  "messari",
+                  "semiotic"
+                ]
+              }
+            },
+            "required": [
+              "provider"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "firehose": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "provider": {
+                "type": "string",
+                "enum": [
+                  "e&n",
+                  "pinax",
+                  "graphops",
+                  "streamingfast",
+                  "messari",
+                  "semiotic"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "provider",
+              "url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "substreams": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "provider": {
+                "type": "string",
+                "enum": [
+                  "e&n",
+                  "pinax",
+                  "graphops",
+                  "streamingfast",
+                  "messari",
+                  "semiotic"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "provider",
+              "url"
+            ],
+            "additionalProperties": false
           }
         }
       },
-      "description": "Providers studio support for the chain"
+      "description": "Providers support for the chain by providers"
     },
     "issuanceRewards": {
       "type": "boolean",
@@ -274,7 +344,7 @@
     "shortName",
     "fullName",
     "networkType",
-    "studioSupport",
+    "support",
     "issuanceRewards"
   ],
   "additionalProperties": false,
@@ -293,17 +363,13 @@
           "firehose": {
             "type": "object",
             "properties": {
-              "evmModel": {
-                "type": "string",
-                "enum": [
-                  "base",
-                  "extended"
-                ],
-                "description": "Block model if EVM chain, required for eip155 chains"
+              "evmExtendedModel": {
+                "type": "boolean",
+                "description": "Whether supports extended block model if EVM chain"
               }
             },
             "required": [
-              "evmModel"
+              "evmExtendedModel"
             ]
           }
         }
@@ -313,7 +379,7 @@
           "firehose": {
             "type": "object",
             "properties": {
-              "evmModel": false
+              "evmExtendedModel": false
             }
           }
         }

@@ -30,15 +30,30 @@
       "kind": "etherscan"
     }
   ],
-  "studioSupport": [
-    {
-      "provider": "e&n",
-      "services": [
-        "subgraph",
-        "sps"
-      ]
-    }
-  ],
+  "support": {
+    "subgraphs": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "sps": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "arbsepolia.firehose.pinax.network:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "arbsepolia.substreams.pinax.network:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "ARB",
   "docsUrl": "https://docs.arbitrum.io",
@@ -48,8 +63,8 @@
   },
   "firehose": {
     "blockType": "sf.ethereum.type.v2.Block",
-    "evmModel": "extended",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+    "evmExtendedModel": true,
+    "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"
   }
 }

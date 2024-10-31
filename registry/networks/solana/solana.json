@@ -16,7 +16,30 @@
   ],
   "apiUrls": [],
   "networkType": "mainnet",
-  "studioSupport": [],
+  "support": {
+    "subgraphs": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "sps": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.sol.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.sol.streamingfast.io:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "SOL",
   "docsUrl": "https://solana.com/docs/",
@@ -27,7 +50,7 @@
   },
   "firehose": {
     "blockType": "sf.solana.type.v1.Block",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-solana",
+    "bufUrl": "https://buf.build/streamingfast/firehose-solana",
     "bytesEncoding": "base58"
   }
 }

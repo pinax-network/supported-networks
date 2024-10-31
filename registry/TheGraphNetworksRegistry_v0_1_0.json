@@ -2,7 +2,7 @@
   "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
   "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-10-31T00:44:57.918Z",
+  "updatedAt": "2024-10-31T23:55:44.290Z",
   "networks": [
     {
       "id": "arweave-mainnet",
@@ -23,15 +23,30 @@
       "graphNode": {
         "protocol": "arweave"
       },
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "arweave.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "arweave.substreams.pinax.network:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "AR",
       "docsUrl": "https://docs.arweave.org/developers",
@@ -42,7 +57,7 @@
       },
       "firehose": {
         "blockType": "sf.arweave.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/pinax/firehose-arweave",
+        "bufUrl": "https://buf.build/pinax/firehose-arweave",
         "bytesEncoding": "hex"
       }
     },
@@ -62,7 +77,20 @@
       ],
       "apiUrls": [],
       "networkType": "mainnet",
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "wax.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "wax.substreams.pinax.network:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "WAX",
       "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
@@ -72,7 +100,7 @@
       },
       "firehose": {
         "blockType": "sf.antelope.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
+        "bufUrl": "https://buf.build/pinax/firehose-antelope",
         "bytesEncoding": "hex"
       }
     },
@@ -98,7 +126,20 @@
           "network": "eos"
         }
       ],
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "kylin.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "kylin.substreams.pinax.network:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "EOS",
       "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
@@ -109,7 +150,7 @@
       },
       "firehose": {
         "blockType": "sf.antelope.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
+        "bufUrl": "https://buf.build/pinax/firehose-antelope",
         "bytesEncoding": "hex"
       }
     },
@@ -129,7 +170,20 @@
       ],
       "apiUrls": [],
       "networkType": "mainnet",
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "eos.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "eos.substreams.pinax.network:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "EOS",
       "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
@@ -140,7 +194,7 @@
       },
       "firehose": {
         "blockType": "sf.antelope.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
+        "bufUrl": "https://buf.build/pinax/firehose-antelope",
         "bytesEncoding": "hex"
       }
     },
@@ -160,7 +214,38 @@
       ],
       "apiUrls": [],
       "networkType": "mainnet",
-      "studioSupport": [],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "bitcoin.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.btc.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "bitcoin.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.btc.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "BTC",
       "docsUrl": "https://developer.bitcoin.org/",
@@ -171,7 +256,7 @@
       },
       "firehose": {
         "blockType": "sf.bitcoin.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-bitcoin",
+        "bufUrl": "https://buf.build/streamingfast/firehose-bitcoin",
         "bytesEncoding": "hex"
       }
     },
@@ -207,17 +292,40 @@
           "kind": "etherscan"
         }
       ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "arbone.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "arb-one.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "arbone.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "arb-one.streamingfast.io:443"
+          }
+        ]
+      },
       "networkType": "mainnet",
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
-      "issuanceRewards": false,
+      "issuanceRewards": true,
       "nativeToken": "ARB",
       "docsUrl": "https://docs.arbitrum.io",
       "indexerDocsUrls": [
@@ -233,8 +341,8 @@
       },
       "firehose": {
         "blockType": "sf.ethereum.type.v2.Block",
-        "evmModel": "extended",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "evmExtendedModel": true,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
       }
     },
@@ -270,15 +378,30 @@
           "kind": "etherscan"
         }
       ],
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "arbsepolia.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "arbsepolia.substreams.pinax.network:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "ARB",
       "docsUrl": "https://docs.arbitrum.io",
@@ -288,8 +411,8 @@
       },
       "firehose": {
         "blockType": "sf.ethereum.type.v2.Block",
-        "evmModel": "extended",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "evmExtendedModel": true,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
       }
     },
@@ -321,16 +444,39 @@
         }
       ],
       "networkType": "mainnet",
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
-      "issuanceRewards": false,
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "bsc.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "bnb.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "bsc.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "bnb.streamingfast.io:443"
+          }
+        ]
+      },
+      "issuanceRewards": true,
       "nativeToken": "ETH",
       "docsUrl": "https://docs.bnbchain.org/",
       "indexerDocsUrls": [
@@ -346,8 +492,8 @@
       },
       "firehose": {
         "blockType": "sf.ethereum.type.v2.Block",
-        "evmModel": "extended",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "evmExtendedModel": true,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
       }
     },
@@ -377,15 +523,38 @@
         "https://rpc.sepolia.dev"
       ],
       "apiUrls": [],
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "sepolia.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "sepolia.eth.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "sepolia.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "sepolia.eth.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "ETH",
       "docsUrl": "https://sepolia.dev/",
@@ -395,8 +564,8 @@
       },
       "firehose": {
         "blockType": "sf.ethereum.type.v2.Block",
-        "evmModel": "extended",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "evmExtendedModel": true,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
       }
     },
@@ -432,15 +601,38 @@
         }
       ],
       "networkType": "mainnet",
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "eth.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.eth.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "eth.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.eth.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": true,
       "nativeToken": "ETH",
       "docsUrl": "https://ethereum.org/en/developers/docs/",
@@ -451,8 +643,8 @@
       },
       "firehose": {
         "blockType": "sf.ethereum.type.v2.Block",
-        "evmModel": "extended",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "evmExtendedModel": true,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
       }
     },
@@ -482,15 +674,38 @@
         "https://holesky.drpc.org"
       ],
       "apiUrls": [],
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "holesky.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "holesky.eth.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "holesky.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "holesky.eth.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "ETH",
       "docsUrl": "https://holesky.dev/",
@@ -500,8 +715,8 @@
       },
       "firehose": {
         "blockType": "sf.ethereum.type.v2.Block",
-        "evmModel": "extended",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "evmExtendedModel": true,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
       }
     },
@@ -536,16 +751,39 @@
         }
       ],
       "networkType": "mainnet",
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
-      "issuanceRewards": false,
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "polygon.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "polygon.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "polygon.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "polygon.streamingfast.io:443"
+          }
+        ]
+      },
+      "issuanceRewards": true,
       "nativeToken": "POL",
       "docsUrl": "https://docs.polygon.technology/",
       "web3Icon": "polygon-pos",
@@ -555,8 +793,8 @@
       },
       "firehose": {
         "blockType": "sf.ethereum.type.v2.Block",
-        "evmModel": "extended",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "evmExtendedModel": true,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
       }
     },
@@ -578,7 +816,20 @@
       "graphNode": {
         "protocol": "cosmos"
       },
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.injective.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.injective.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "INJ",
       "docsUrl": "https://docs.injective.network/",
@@ -589,7 +840,7 @@
       },
       "firehose": {
         "blockType": "sf.cosmos.type.v2.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
+        "bufUrl": "https://buf.build/streamingfast/firehose-cosmos",
         "bytesEncoding": "hex"
       }
     },
@@ -616,7 +867,20 @@
           "network": "injective-mainnet"
         }
       ],
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "streamingfast",
+            "url": "testnet.injective.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "streamingfast",
+            "url": "testnet.injective.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "INJ",
       "docsUrl": "https://docs.injective.network/",
@@ -627,7 +891,7 @@
       },
       "firehose": {
         "blockType": "sf.cosmos.type.v2.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
+        "bufUrl": "https://buf.build/streamingfast/firehose-cosmos",
         "bytesEncoding": "hex"
       }
     },
@@ -647,7 +911,20 @@
       "rpcUrls": [],
       "apiUrls": [],
       "networkType": "testnet",
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "streamingfast",
+            "url": "testnet.vara.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "streamingfast",
+            "url": "testnet.vara.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "VARA",
       "docsUrl": "https://wiki.vara.network/",
@@ -657,7 +934,7 @@
       },
       "firehose": {
         "blockType": "sf.gear.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
+        "bufUrl": "https://buf.build/streamingfast/firehose-gear",
         "bytesEncoding": "hex"
       }
     },
@@ -680,7 +957,20 @@
         }
       ],
       "networkType": "mainnet",
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.vara.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.vara.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "VARA",
       "docsUrl": "https://wiki.vara.network/",
@@ -690,7 +980,7 @@
       },
       "firehose": {
         "blockType": "sf.gear.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
+        "bufUrl": "https://buf.build/streamingfast/firehose-gear",
         "bytesEncoding": "hex"
       }
     },
@@ -712,7 +1002,30 @@
       ],
       "apiUrls": [],
       "networkType": "mainnet",
-      "studioSupport": [],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.sol.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.sol.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "SOL",
       "docsUrl": "https://solana.com/docs/",
@@ -723,7 +1036,7 @@
       },
       "firehose": {
         "blockType": "sf.solana.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-solana",
+        "bufUrl": "https://buf.build/streamingfast/firehose-solana",
         "bytesEncoding": "base58"
       }
     },
@@ -750,7 +1063,38 @@
           "network": "near-mainnet"
         }
       ],
-      "studioSupport": [],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "neartest.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "testnet.near.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "neartest.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "testnet.near.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "NEAR",
       "docsUrl": "https://docs.near.org/",
@@ -761,7 +1105,7 @@
       },
       "firehose": {
         "blockType": "sf.near.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
+        "bufUrl": "https://buf.build/streamingfast/firehose-near",
         "bytesEncoding": "hex"
       }
     },
@@ -784,15 +1128,38 @@
       "graphNode": {
         "protocol": "near"
       },
-      "studioSupport": [
-        {
-          "provider": "e&n",
-          "services": [
-            "subgraph",
-            "sps"
-          ]
-        }
-      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "near.firehose.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.near.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "near.substreams.pinax.network:443"
+          },
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.near.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "NEAR",
       "docsUrl": "https://docs.near.org/",
@@ -803,7 +1170,7 @@
       },
       "firehose": {
         "blockType": "sf.near.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
+        "bufUrl": "https://buf.build/streamingfast/firehose-near",
         "bytesEncoding": "hex"
       }
     },
@@ -832,7 +1199,30 @@
       ],
       "apiUrls": [],
       "networkType": "mainnet",
-      "studioSupport": [],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "sps": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.starknet.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.starknet.streamingfast.io:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "ETH",
       "docsUrl": "https://docs.starknet.io/",
@@ -843,7 +1233,7 @@
       },
       "firehose": {
         "blockType": "sf.starknet.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/streamingfast/firehose-starknet",
+        "bufUrl": "https://buf.build/streamingfast/firehose-starknet",
         "bytesEncoding": "0xhex"
       }
     },
@@ -867,7 +1257,20 @@
           "network": "mainnet"
         }
       ],
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "eth-cl.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "eth-cl.substreams.pinax.network:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "ETH",
       "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
@@ -878,7 +1281,7 @@
       },
       "firehose": {
         "blockType": "sf.beacon.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
+        "bufUrl": "https://buf.build/pinax/firehose-beacon",
         "bytesEncoding": "0xhex"
       }
     },
@@ -904,7 +1307,20 @@
           "network": "sepolia"
         }
       ],
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "holesky-cl.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "holesky-cl.substreams.pinax.network:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "ETH",
       "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
@@ -915,7 +1331,7 @@
       },
       "firehose": {
         "blockType": "sf.beacon.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
+        "bufUrl": "https://buf.build/pinax/firehose-beacon",
         "bytesEncoding": "0xhex"
       }
     },
@@ -941,7 +1357,20 @@
           "network": "holesky"
         }
       ],
-      "studioSupport": [],
+      "support": {
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "holesky-cl.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "holesky-cl.substreams.pinax.network:443"
+          }
+        ]
+      },
       "issuanceRewards": false,
       "nativeToken": "ETH",
       "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
@@ -952,7 +1381,7 @@
       },
       "firehose": {
         "blockType": "sf.beacon.type.v1.Block",
-        "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
+        "bufUrl": "https://buf.build/pinax/firehose-beacon",
         "bytesEncoding": "0xhex"
       }
     }

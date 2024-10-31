@@ -21,7 +21,38 @@
       "network": "near-mainnet"
     }
   ],
-  "studioSupport": [],
+  "support": {
+    "subgraphs": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "sps": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "neartest.firehose.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "testnet.near.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "neartest.substreams.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "testnet.near.streamingfast.io:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "NEAR",
   "docsUrl": "https://docs.near.org/",
@@ -32,7 +63,7 @@
   },
   "firehose": {
     "blockType": "sf.near.type.v1.Block",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
+    "bufUrl": "https://buf.build/streamingfast/firehose-near",
     "bytesEncoding": "hex"
   }
 }

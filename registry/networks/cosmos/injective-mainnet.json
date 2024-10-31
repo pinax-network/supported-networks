@@ -16,7 +16,20 @@
   "graphNode": {
     "protocol": "cosmos"
   },
-  "studioSupport": [],
+  "support": {
+    "firehose": [
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.injective.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.injective.streamingfast.io:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "INJ",
   "docsUrl": "https://docs.injective.network/",
@@ -27,7 +40,7 @@
   },
   "firehose": {
     "blockType": "sf.cosmos.type.v2.Block",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-cosmos",
+    "bufUrl": "https://buf.build/streamingfast/firehose-cosmos",
     "bytesEncoding": "hex"
   }
 }

@@ -28,7 +28,7 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
    */
   caip2Id: string;
   /**
-   * [optional] List of possible aliases for the chain, i.e. ethereum, eth, mainnet, eth-mainnet
+   * [optional] List of possible aliases for the chain id, i.e. ethereum, eth, mainnet, eth-mainnet
    */
   aliases?: string[];
   /**
@@ -66,11 +66,11 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
     /**
      * Protobuf definitions on buf.build, i.e. https://buf.build/streamingfast/firehose-ethereum
      */
-    bufBuildUrl: string;
+    bufUrl: string;
     /**
-     * [optional] Block model if EVM chain, i.e. base or extended
+     * [optional] Whether supports extended block model if EVM chain
      */
-    evmModel?: "base" | "extended";
+    evmExtendedModel?: boolean;
   };
   genesis?: {
     /**
@@ -98,26 +98,49 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
    */
   explorerUrls?: string[];
   /**
-   * Providers studio support for the chain
+   * Providers support for the chain by providers
    */
-  studioSupport: {
-    provider?:
-      | "e&n"
-      | "pinax"
-      | "graphops"
-      | "streamingfast"
-      | "messari"
-      | "semiotic";
-    services?: (
-      | "subgraph"
-      | "sps"
-      | "substreams"
-      | "firehose"
-      | "token"
-      | "dataset"
-    )[];
+  support: {
+    subgraphs?: {
+      provider:
+        | "e&n"
+        | "pinax"
+        | "graphops"
+        | "streamingfast"
+        | "messari"
+        | "semiotic";
+    }[];
+    sps?: {
+      provider:
+        | "e&n"
+        | "pinax"
+        | "graphops"
+        | "streamingfast"
+        | "messari"
+        | "semiotic";
+    }[];
+    firehose?: {
+      provider:
+        | "e&n"
+        | "pinax"
+        | "graphops"
+        | "streamingfast"
+        | "messari"
+        | "semiotic";
+      url: string;
+    }[];
+    substreams?: {
+      provider:
+        | "e&n"
+        | "pinax"
+        | "graphops"
+        | "streamingfast"
+        | "messari"
+        | "semiotic";
+      url: string;
+    }[];
     [k: string]: unknown;
-  }[];
+  };
   /**
    * Issuance rewards on the Graph Network for this chain
    */

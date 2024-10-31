@@ -17,7 +17,20 @@
     }
   ],
   "networkType": "mainnet",
-  "studioSupport": [],
+  "support": {
+    "firehose": [
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.vara.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.vara.streamingfast.io:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "VARA",
   "docsUrl": "https://wiki.vara.network/",
@@ -27,7 +40,7 @@
   },
   "firehose": {
     "blockType": "sf.gear.type.v1.Block",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-gear",
+    "bufUrl": "https://buf.build/streamingfast/firehose-gear",
     "bytesEncoding": "hex"
   }
 }

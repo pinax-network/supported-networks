@@ -17,15 +17,38 @@
   "graphNode": {
     "protocol": "near"
   },
-  "studioSupport": [
-    {
-      "provider": "e&n",
-      "services": [
-        "subgraph",
-        "sps"
-      ]
-    }
-  ],
+  "support": {
+    "subgraphs": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "sps": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "near.firehose.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.near.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "near.substreams.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.near.streamingfast.io:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "NEAR",
   "docsUrl": "https://docs.near.org/",
@@ -36,7 +59,7 @@
   },
   "firehose": {
     "blockType": "sf.near.type.v1.Block",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-near",
+    "bufUrl": "https://buf.build/streamingfast/firehose-near",
     "bytesEncoding": "hex"
   }
 }

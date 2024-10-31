@@ -24,15 +24,38 @@
     "https://holesky.drpc.org"
   ],
   "apiUrls": [],
-  "studioSupport": [
-    {
-      "provider": "e&n",
-      "services": [
-        "subgraph",
-        "sps"
-      ]
-    }
-  ],
+  "support": {
+    "subgraphs": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "sps": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "holesky.firehose.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "holesky.eth.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "holesky.substreams.pinax.network:443"
+      },
+      {
+        "provider": "streamingfast",
+        "url": "holesky.eth.streamingfast.io:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://holesky.dev/",
@@ -42,8 +65,8 @@
   },
   "firehose": {
     "blockType": "sf.ethereum.type.v2.Block",
-    "evmModel": "extended",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-ethereum",
+    "evmExtendedModel": true,
+    "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
     "bytesEncoding": "hex"
   }
 }

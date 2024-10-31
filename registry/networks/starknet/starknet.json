@@ -23,7 +23,30 @@
   ],
   "apiUrls": [],
   "networkType": "mainnet",
-  "studioSupport": [],
+  "support": {
+    "subgraphs": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "sps": [
+      {
+        "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.starknet.streamingfast.io:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "streamingfast",
+        "url": "mainnet.starknet.streamingfast.io:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.starknet.io/",
@@ -34,7 +57,7 @@
   },
   "firehose": {
     "blockType": "sf.starknet.type.v1.Block",
-    "bufBuildUrl": "https://buf.build/streamingfast/firehose-starknet",
+    "bufUrl": "https://buf.build/streamingfast/firehose-starknet",
     "bytesEncoding": "0xhex"
   }
 }

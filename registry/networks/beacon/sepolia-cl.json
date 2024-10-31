@@ -20,7 +20,20 @@
       "network": "sepolia"
     }
   ],
-  "studioSupport": [],
+  "support": {
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "holesky-cl.firehose.pinax.network:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "holesky-cl.substreams.pinax.network:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
@@ -31,7 +44,7 @@
   },
   "firehose": {
     "blockType": "sf.beacon.type.v1.Block",
-    "bufBuildUrl": "https://buf.build/pinax/firehose-beacon",
+    "bufUrl": "https://buf.build/pinax/firehose-beacon",
     "bytesEncoding": "0xhex"
   }
 }

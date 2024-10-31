@@ -14,7 +14,20 @@
   ],
   "apiUrls": [],
   "networkType": "mainnet",
-  "studioSupport": [],
+  "support": {
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "wax.firehose.pinax.network:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "wax.substreams.pinax.network:443"
+      }
+    ]
+  },
   "issuanceRewards": false,
   "nativeToken": "WAX",
   "docsUrl": "https://docs.eosnetwork.com/docs/latest/quick-start/introduction",
@@ -24,7 +37,7 @@
   },
   "firehose": {
     "blockType": "sf.antelope.type.v1.Block",
-    "bufBuildUrl": "https://buf.build/pinax/firehose-antelope",
+    "bufUrl": "https://buf.build/pinax/firehose-antelope",
     "bytesEncoding": "hex"
   }
 }
