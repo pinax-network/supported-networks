@@ -138,6 +138,14 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
    * URL to the chain documentation
    */
   docsUrl?: string;
+  /**
+   * Documentation to run indexer components for the chain
+   */
+  indexerDocsUrls?: {
+    url: string;
+    kind: "rpc" | "firehose" | "other";
+    hint?: string;
+  }[];
 };
 
 /**

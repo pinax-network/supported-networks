@@ -38,6 +38,12 @@
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.bnbchain.org/",
+  "indexerDocsUrls": [
+    {
+      "url": "https://docs.infradao.com/archive-nodes-101/binance",
+      "kind": "rpc"
+    }
+  ],
   "web3Icon": "binance-smart-chain",
   "genesis": {
     "hash": "0d21840abff46b96c84b2ac9e10e4f5cdaeb5693cb665db62a2f3b02d2d57b5b",

@@ -237,6 +237,35 @@
       "type": "string",
       "format": "uri",
       "description": "URL to the chain documentation"
+    },
+    "indexerDocsUrls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "url"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "rpc",
+              "firehose",
+              "other"
+            ]
+          },
+          "hint": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url",
+          "kind"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Documentation to run indexer components for the chain"
     }
   },
   "required": [
