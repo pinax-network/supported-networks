@@ -1,9 +1,25 @@
 import fs from "fs";
 import path from "path";
-import { TheGraphNetworksRegistry } from "./types/registry";
+import { Network, TheGraphNetworksRegistry } from "./types/registry";
 import { loadNetworks } from "./utils/fs";
 import packageInfo from "../package.json";
 import { getVersionFilenames } from "./utils/versions";
+
+function generateMermaidGraph(networks: Network[]): string {
+  const relations: string[] = [];
+
+  networks.forEach((network) => {
+    const fromNode = network.id;
+    network.relations?.forEach((relation) => {
+      const toNode = relation.network;
+      const relationType = relation.kind;
+      relations.push(`${fromNode} -->|${relationType}| ${toNode}`);
+    });
+  });
+
+  return `graph TD\n  ${relations.join('\n  ')}`;
+}
+
 
 function main() {
   const [
@@ -37,6 +53,9 @@ function main() {
   process.stdout.write(
     `Generated ${filenameLatest} with ${registry.networks.length} networks`,
   );
+
+  const mermaid = generateMermaidGraph(registry.networks);
+  process.stdout.write(`\n\n${mermaid}`);
 }
 
 main();
