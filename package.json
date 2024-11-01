@@ -6,7 +6,8 @@
     "test": "bun test",
     "format": "prettier \"./**/*.+(ts|json|md)\" --write",
     "format:check": "prettier \"./**/*.+(ts|json|md)\" --check",
-    "validate:schema": "ajv validate -s schemas/network.schema.json -d 'registry/networks/**/*.json' --strict=true -c ajv-formats",
+    "validate:schema-cli": "ajv validate -s schemas/network.schema.json -d 'registry/networks/**/*.json' --strict=true -c ajv-formats",
+    "validate:schema": "bun run ./src/validate_schema.ts",
     "validate:networks": "bun run ./src/validate.ts",
     "validate:registry": "ajv validate -s schemas/registry.schema.json -r schemas/network.schema.json -d 'registry/*.json' --strict=true -c ajv-formats",
     "validate": "bun validate:schema && bun validate:networks",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@types/bun": "1",
+    "ajv": "^8.17.1",
     "ajv-cli": "^5.0.0",
     "ajv-formats": "^3.0.1",
     "json-schema-to-typescript": "^15.0.2",
