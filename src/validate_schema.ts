@@ -1,4 +1,4 @@
-import { getAllJsonFiles } from "./utils/networks";
+import { getAllJsonFiles } from "./utils/fs";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
 import fs from "fs";

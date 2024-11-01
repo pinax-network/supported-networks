@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { TheGraphNetworksRegistry } from "./types/registry";
-import { loadNetworks } from "./utils/networks";
+import { loadNetworks } from "./utils/fs";
 import packageInfo from "../package.json";
 import { getVersionFilenames } from "./utils/versions";
 

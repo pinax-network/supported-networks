@@ -56,7 +56,7 @@
   },
   "networkType": "mainnet",
   "issuanceRewards": true,
-  "nativeToken": "OP",
+  "nativeToken": "ETH",
   "docsUrl": "https://docs.optimism.io/",
   "indexerDocsUrls": [
     {

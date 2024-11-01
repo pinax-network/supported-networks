@@ -59,7 +59,7 @@
     ]
   },
   "issuanceRewards": true,
-  "nativeToken": "ETH",
+  "nativeToken": "BNB",
   "docsUrl": "https://docs.bnbchain.org/",
   "indexerDocsUrls": [
     {

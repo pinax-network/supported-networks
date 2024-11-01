@@ -64,7 +64,7 @@
   },
   "networkType": "mainnet",
   "issuanceRewards": true,
-  "nativeToken": "ARB",
+  "nativeToken": "ETH",
   "docsUrl": "https://docs.arbitrum.io",
   "indexerDocsUrls": [
     {

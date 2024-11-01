@@ -20,11 +20,7 @@ export function getAllJsonFiles(dir: string): string[] {
 
 export function loadNetworks(dir: string): Network[] {
   const files = getAllJsonFiles(dir);
-  const res: Network[] = [];
-  for (const file of files) {
-    const content = JSON.parse(fs.readFileSync(file, "utf-8")) as Network;
-    res.push(content);
-  }
-
-  return res;
+  return files.map(
+    (file) => JSON.parse(fs.readFileSync(file, "utf-8")) as Network,
+  );
 }

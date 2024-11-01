@@ -1,7 +1,8 @@
 import { Network } from "./types/registry";
-import { loadNetworks } from "./utils/networks";
+import { loadNetworks } from "./utils/fs";
 import { fetchWeb3NetworkIcons } from "./utils/web3icons";
 import { getActiveNetworks } from "./utils/graphnetwork";
+import { fetchChainIdNetworks } from "./utils/chainid";
 
 const NETWORKS: Network[] = [];
 const ERRORS: string[] = [];
@@ -190,6 +191,28 @@ async function validateGraphNetworks() {
   process.stdout.write("done\n");
 }
 
+async function validateEthereumList() {
+  process.stdout.write("Validating ethereum-list ... ");
+  const chains = await fetchChainIdNetworks();
+  const ethNetworks = NETWORKS.filter((n) => n.caip2Id.startsWith("eip155"));
+  for (const network of ethNetworks) {
+    const ourId = parseInt(network.caip2Id.split("eip155:")[1]);
+    const chain = chains.find((c) => c.chainId === ourId);
+    if (!chain) {
+      ERRORS.push(
+        `Network ${network.id} with CAIP-2 id ${network.caip2Id} does not exist in ethereum chain registry`,
+      );
+      continue;
+    }
+    if (chain.nativeCurrency.symbol !== network.nativeToken) {
+      ERRORS.push(
+        `Network ${network.id} with CAIP-2 id ${network.caip2Id} has different native token symbol in ethereum chain registry: ${chain.nativeCurrency.symbol} vs ${network.nativeToken}`,
+      );
+    }
+  }
+  process.stdout.write("done\n");
+}
+
 async function main() {
   const [, , networksPath = "registry/networks"] = process.argv;
 
@@ -207,7 +230,7 @@ async function main() {
   await validateWeb3Icons();
   await validateFirehoseBlockType();
   await validateGraphNetworks();
-  // await validateEthereumList();
+  await validateEthereumList();
 
   if (ERRORS.length > 0) {
     process.stderr.write("Validation errors:\n");
