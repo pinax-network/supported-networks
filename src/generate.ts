@@ -17,7 +17,7 @@ function generateMermaidGraph(networks: Network[]): string {
     });
   });
 
-  return `graph TD\n  ${relations.join('\n  ')}`;
+  return `graph TD\n  ${relations.join("\n  ")}\n`;
 }
 
 

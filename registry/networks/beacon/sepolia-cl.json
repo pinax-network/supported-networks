@@ -9,12 +9,8 @@
   "explorerUrls": [],
   "rpcUrls": [],
   "apiUrls": [],
-  "networkType": "testnet",
+  "networkType": "mainnet",
   "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "mainnet-cl"
-    },
     {
       "kind": "beaconOf",
       "network": "sepolia"
