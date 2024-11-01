@@ -31,6 +31,12 @@
     ]
   },
   "networkType": "mainnet",
+  "relations": [
+    {
+      "kind": "l2Of",
+      "network": "mainnet"
+    }
+  ],
   "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.scroll.io",

@@ -12,7 +12,7 @@
   },
   "relations": [
     {
-      "kind": "settlesTo",
+      "kind": "l2Of",
       "network": "mainnet"
     }
   ],

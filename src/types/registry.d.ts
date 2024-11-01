@@ -60,7 +60,8 @@ export interface Network {
       | "testnetOf"
       | "beaconOf"
       | "forkedFrom"
-      | "settlesTo"
+      | "l2Of"
+      | "shardOf"
       | "evmOf"
       | "other";
     /**

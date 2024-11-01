@@ -209,6 +209,26 @@ async function validateEthereumList() {
         `Network ${network.id} with CAIP-2 id ${network.caip2Id} has different native token symbol in ethereum chain registry: ${chain.nativeCurrency.symbol} vs ${network.nativeToken}`,
       );
     }
+    if (chain.parent?.type === "L2") {
+      const ourParent = network.relations?.find(
+        (r) => r.kind === "l2Of",
+      )?.network;
+      if (!ourParent) {
+        ERRORS.push(
+          `Network ${network.id} with CAIP-2 id ${network.caip2Id} is an L2 chain in ethereum chain registry but has no l2Of relation`,
+        );
+        continue;
+      }
+      const parentChainId = ethNetworks.find(
+        (n) => n.id === ourParent,
+      )?.caip2Id!;
+      const actualParentChainId = chain.parent.chain.replace("-", ":");
+      if (actualParentChainId !== parentChainId) {
+        ERRORS.push(
+          `Network ${network.id} has different L2 parent chain in ethereum chain registry: ${actualParentChainId} vs ${parentChainId}`,
+        );
+      }
+    }
   }
   process.stdout.write("done\n");
 }
