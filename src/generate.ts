@@ -6,20 +6,20 @@ import packageInfo from "../package.json";
 import { getVersionFilenames } from "./utils/versions";
 
 function generateMermaidGraph(networks: Network[]): string {
-  const relations: string[] = [];
-
-  networks.forEach((network) => {
-    const fromNode = network.id;
-    network.relations?.forEach((relation) => {
-      const toNode = relation.network;
-      const relationType = relation.kind;
-      relations.push(`${fromNode} -->|${relationType}| ${toNode}`);
-    });
-  });
+  const relations = networks
+    .reduce((acc: string[], network) => {
+      network.relations?.forEach((relation) => {
+        acc.push(`${network.id} -->|${relation.kind}| ${relation.network}`);
+      });
+      return acc;
+    }, [])
+    .sort(
+      (a, b) =>
+        (a.endsWith("| mainnet") ? 1 : 0) - (b.endsWith("| mainnet") ? 1 : 0),
+    );
 
   return `graph TD\n  ${relations.join("\n  ")}\n`;
 }
-
 
 function main() {
   const [
