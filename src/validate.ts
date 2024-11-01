@@ -1,9 +1,9 @@
-import { HttpsThegraphComSchemasV1NetworkSchemaJson as NetworkSchema } from "./types/registry";
+import { Network } from "./types/registry";
 import { loadNetworks } from "./utils/networks";
 import { fetchWeb3NetworkIcons } from "./utils/web3icons";
 import { getActiveNetworks } from "./utils/graphnetwork";
 
-const NETWORKS: NetworkSchema[] = [];
+const NETWORKS: Network[] = [];
 const ERRORS: string[] = [];
 
 function validateUniqueness() {
@@ -207,6 +207,7 @@ async function main() {
   await validateWeb3Icons();
   await validateFirehoseBlockType();
   await validateGraphNetworks();
+  // await validateEthereumList();
 
   if (ERRORS.length > 0) {
     process.stderr.write("Validation errors:\n");

@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { HttpsThegraphComSchemasV1NetworkSchemaJson as NetworkSchema } from "../types/registry";
+import { Network } from "../types/registry";
 
 export function getAllJsonFiles(dir: string): string[] {
   let files: string[] = [];
@@ -18,11 +18,11 @@ export function getAllJsonFiles(dir: string): string[] {
   return files;
 }
 
-export function loadNetworks(dir: string): NetworkSchema[] {
+export function loadNetworks(dir: string): Network[] {
   const files = getAllJsonFiles(dir);
-  const res: NetworkSchema[] = [];
+  const res: Network[] = [];
   for (const file of files) {
-    const content = JSON.parse(fs.readFileSync(file, "utf-8")) as NetworkSchema;
+    const content = JSON.parse(fs.readFileSync(file, "utf-8")) as Network;
     res.push(content);
   }
 

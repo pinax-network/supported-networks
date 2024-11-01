@@ -1,5 +1,5 @@
 import { getAllJsonFiles } from "./utils/networks";
-import Ajv, { JSONSchemaType } from "ajv";
+import Ajv from "ajv";
 import addFormats from "ajv-formats";
 import fs from "fs";
 
@@ -10,7 +10,7 @@ async function main() {
     ,
     ,
     networksPath = "registry/networks",
-    schemaPath = "schemas/network.schema.json",
+    schemaPath = "schemas/registry.schema.json",
   ] = process.argv;
 
   const files = getAllJsonFiles(networksPath);
@@ -22,14 +22,13 @@ async function main() {
 
   const ajv = new Ajv();
   addFormats(ajv);
-  const networkSchema = JSON.parse(fs.readFileSync(schemaPath, "utf-8"));
+  const registrySchema = JSON.parse(fs.readFileSync(schemaPath, "utf-8"));
+  ajv.addSchema(registrySchema, "registrySchema");
+  const validate = ajv.getSchema("registrySchema#/$defs/Network")!;
 
   for (const file of files) {
     try {
       const json = JSON.parse(fs.readFileSync(file, "utf-8"));
-      const validate = ajv.compile(
-        networkSchema as JSONSchemaType<typeof json>,
-      );
       if (!validate(json)) {
         ERRORS.push(
           ...validate.errors!.map(

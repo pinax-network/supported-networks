@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { HttpsThegraphComSchemasV1RegistrySchemaJson as RegistrySchema } from "./types/registry";
+import { TheGraphNetworksRegistry } from "./types/registry";
 import { loadNetworks } from "./utils/networks";
 import packageInfo from "../package.json";
 import { getVersionFilenames } from "./utils/versions";
@@ -20,7 +20,7 @@ function main() {
     filenameRegistrySchema,
   } = getVersionFilenames(packageInfo.version);
 
-  const registry: RegistrySchema = {
+  const registry: TheGraphNetworksRegistry = {
     $schema: `https://thegraph.com/schemas/${filenameRegistrySchema}`,
     version: `${packageInfo.version}`,
     description:
