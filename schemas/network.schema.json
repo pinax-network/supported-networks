@@ -156,105 +156,19 @@
       "properties": {
         "subgraphs": {
           "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "provider": {
-                "type": "string",
-                "enum": [
-                  "e&n",
-                  "pinax",
-                  "graphops",
-                  "streamingfast",
-                  "messari",
-                  "semiotic"
-                ]
-              }
-            },
-            "required": [
-              "provider"
-            ],
-            "additionalProperties": false
-          }
+          "items": { "$ref": "#/definitions/Service" }
         },
         "sps": {
           "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "provider": {
-                "type": "string",
-                "enum": [
-                  "e&n",
-                  "pinax",
-                  "graphops",
-                  "streamingfast",
-                  "messari",
-                  "semiotic"
-                ]
-              }
-            },
-            "required": [
-              "provider"
-            ],
-            "additionalProperties": false
-          }
+          "items": { "$ref": "#/definitions/Service" }
         },
         "firehose": {
           "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "provider": {
-                "type": "string",
-                "enum": [
-                  "e&n",
-                  "pinax",
-                  "graphops",
-                  "streamingfast",
-                  "messari",
-                  "semiotic"
-                ]
-              },
-              "url": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "provider",
-              "url"
-            ],
-            "additionalProperties": false
-          }
+          "items": { "$ref": "#/definitions/Service" }
         },
         "substreams": {
           "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "provider": {
-                "type": "string",
-                "enum": [
-                  "e&n",
-                  "pinax",
-                  "graphops",
-                  "streamingfast",
-                  "messari",
-                  "semiotic"
-                ]
-              },
-              "url": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "provider",
-              "url"
-            ],
-            "additionalProperties": false
-          }
+          "items": { "$ref": "#/definitions/Service" }
         }
       },
       "description": "Providers support for the chain by providers"
@@ -348,6 +262,30 @@
     "issuanceRewards"
   ],
   "additionalProperties": false,
+  "definitions": {
+    "Service": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "type": "string",
+          "enum": [
+            "e&n",
+            "pinax",
+            "graphops",
+            "streamingfast",
+            "messari",
+            "semiotic"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["provider"],
+      "additionalProperties": false
+    }
+  },
   "allOf": [
     {
       "if": {

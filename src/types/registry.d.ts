@@ -101,44 +101,10 @@ export type HttpsThegraphComSchemasV1NetworkSchemaJson = {
    * Providers support for the chain by providers
    */
   support: {
-    subgraphs?: {
-      provider:
-        | "e&n"
-        | "pinax"
-        | "graphops"
-        | "streamingfast"
-        | "messari"
-        | "semiotic";
-    }[];
-    sps?: {
-      provider:
-        | "e&n"
-        | "pinax"
-        | "graphops"
-        | "streamingfast"
-        | "messari"
-        | "semiotic";
-    }[];
-    firehose?: {
-      provider:
-        | "e&n"
-        | "pinax"
-        | "graphops"
-        | "streamingfast"
-        | "messari"
-        | "semiotic";
-      url: string;
-    }[];
-    substreams?: {
-      provider:
-        | "e&n"
-        | "pinax"
-        | "graphops"
-        | "streamingfast"
-        | "messari"
-        | "semiotic";
-      url: string;
-    }[];
+    subgraphs?: Service[];
+    sps?: Service[];
+    firehose?: Service[];
+    substreams?: Service[];
     [k: string]: unknown;
   };
   /**
@@ -195,4 +161,14 @@ export interface HttpsThegraphComSchemasV1RegistrySchemaJson {
    * List of networks
    */
   networks: HttpsThegraphComSchemasV1NetworkSchemaJson[];
+}
+export interface Service {
+  provider:
+    | "e&n"
+    | "pinax"
+    | "graphops"
+    | "streamingfast"
+    | "messari"
+    | "semiotic";
+  url?: string;
 }
