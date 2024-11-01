@@ -13,7 +13,7 @@
   "apiUrls": [],
   "networkType": "testnet",
   "graphNode": {
-    "protocol": "ethereum"
+    "protocol": "cosmos"
   },
   "relations": [
     {

@@ -5,29 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface TheGraphNetworksRegistry {
-  /**
-   * Reference to this schema file
-   */
-  $schema: string;
-  /**
-   * Description of the registry
-   */
-  description: string;
-  /**
-   * Version of the registry
-   */
-  version: string;
-  /**
-   * Date and time of the last update
-   */
-  updatedAt: string;
-  /**
-   * List of networks
-   */
-  networks: Network[];
-}
-export interface Network {
+export type Network = {
+  [k: string]: unknown;
+} & {
   /**
    * Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet
    */
@@ -153,6 +133,29 @@ export interface Network {
     kind: "rpc" | "firehose" | "other";
     hint?: string;
   }[];
+};
+
+export interface TheGraphNetworksRegistry {
+  /**
+   * Reference to this schema file
+   */
+  $schema: string;
+  /**
+   * Description of the registry
+   */
+  description: string;
+  /**
+   * Version of the registry
+   */
+  version: string;
+  /**
+   * Date and time of the last update
+   */
+  updatedAt: string;
+  /**
+   * List of networks
+   */
+  networks: Network[];
 }
 export interface Service {
   provider:
