@@ -183,10 +183,9 @@ async function validateGraphNetworks() {
     }
   }
   if (activeGraphNetworks.length !== activeRegistryNetworks.length) {
-    // TODO: uncomment when all networks are added to the registry
-    // ERRORS.push(
-    //   `Active networks count mismatch: graph=${activeGraphNetworks.length} registry=${activeRegistryNetworks.length}`,
-    // );
+    ERRORS.push(
+      `Active networks count mismatch: graph=${activeGraphNetworks.length} registry=${activeRegistryNetworks.length}`,
+    );
   }
   process.stdout.write("done\n");
 }
