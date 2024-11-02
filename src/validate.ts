@@ -11,25 +11,28 @@ function validateUniqueness() {
   process.stdout.write("Validating uniqueness ... ");
   for (const field of [
     "id",
-    "displayName",
+    "fullName",
     "caip2Id",
     "aliases",
     "genesis.hash",
+    "explorerUrls",
+    "rpcUrls",
+    "apiUrls.url",
   ]) {
     const values = NETWORKS.flatMap((n) => {
-      if (Array.isArray(n[field])) return n[field];
       if (field.includes(".")) {
         const [obj, fi] = field.split(".");
-        return n[obj]?.[fi] ? [n[obj][fi]] : [];
+        if (Array.isArray(n[obj])) {
+          return n[obj].map((item) => item[fi]);
+        }
+        return [n[obj]?.[fi]].filter(Boolean);
       }
+      if (Array.isArray(n[field])) return n[field];
       return n[field] ? [n[field]] : [];
     });
-    const uniqueValues = new Set(values);
-    if (uniqueValues.size !== values.length) {
-      const value = values.find(
-        (item, index) => values.indexOf(item) !== index,
-      );
-      ERRORS.push(`Duplicate field: "${field} = ${value}"`);
+    const duplicates = values.filter((v, i) => values.indexOf(v) !== i);
+    if (duplicates.length) {
+      ERRORS.push(`Duplicate field: "${field} = ${duplicates[0]}"`);
     }
   }
   process.stdout.write("done\n");

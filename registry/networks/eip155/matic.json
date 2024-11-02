@@ -61,6 +61,12 @@
       }
     ]
   },
+  "indexerDocsUrls": [
+    {
+      "url": "https://docs.infradao.com/archive-nodes-101/polygon",
+      "kind": "rpc"
+    }
+  ],
   "issuanceRewards": true,
   "nativeToken": "POL",
   "docsUrl": "https://docs.polygon.technology/",

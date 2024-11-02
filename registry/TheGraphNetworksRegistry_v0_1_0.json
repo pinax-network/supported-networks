@@ -2,7 +2,7 @@
   "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
   "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-02T14:58:07.691Z",
+  "updatedAt": "2024-11-02T23:57:30.499Z",
   "networks": [
     {
       "id": "arweave-mainnet",
@@ -58,6 +58,103 @@
       "firehose": {
         "blockType": "sf.arweave.type.v1.Block",
         "bufUrl": "https://buf.build/pinax/firehose-arweave",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "jungle4",
+      "shortName": "Jungle4",
+      "fullName": "EOS Jungle4 Testnet",
+      "aliases": [
+        "jungle"
+      ],
+      "caip2Id": "antelope:73e4385a2708e6d7048834fbc1079f2f",
+      "explorerUrls": [
+        "https://jungle.bloks.io/"
+      ],
+      "rpcUrls": [
+        "https://jungle4.api.eosnation.io/"
+      ],
+      "apiUrls": [],
+      "networkType": "testnet",
+      "relations": [
+        {
+          "kind": "testnetOf",
+          "network": "eos"
+        }
+      ],
+      "support": {
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "jungle4.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "jungle4.substreams.pinax.network:443"
+          }
+        ]
+      },
+      "issuanceRewards": false,
+      "nativeToken": "EOS",
+      "docsUrl": "https://jungletestnet.io",
+      "genesis": {
+        "hash": "00000002d61d836f51657f886a5bc55b18a731f7eace6565784328fbd051fc90",
+        "height": 2
+      },
+      "firehose": {
+        "blockType": "sf.antelope.type.v1.Block",
+        "bufUrl": "https://buf.build/pinax/firehose-antelope",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "telos-testnet",
+      "shortName": "Telos",
+      "fullName": "Telos Testnet",
+      "aliases": [],
+      "caip2Id": "antelope:1eaa0824707c8c16bd25145493bf062a",
+      "explorerUrls": [
+        "https://explorer-test.telos.net"
+      ],
+      "rpcUrls": [
+        "https://telostest.api.eosnation.io/"
+      ],
+      "apiUrls": [],
+      "networkType": "testnet",
+      "relations": [
+        {
+          "kind": "testnetOf",
+          "network": "telos"
+        }
+      ],
+      "support": {
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "telostest.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "telostest.substreams.pinax.network:443"
+          }
+        ]
+      },
+      "issuanceRewards": false,
+      "nativeToken": "TELOS",
+      "docsUrl": "https://docs.telos.net/",
+      "web3Icon": "telos",
+      "genesis": {
+        "hash": "0000000377dcf185dce2cd5b1ad7e70a7da0a73fc175c47283043791956c70c3",
+        "height": 3
+      },
+      "firehose": {
+        "blockType": "sf.antelope.type.v1.Block",
+        "bufUrl": "https://buf.build/pinax/firehose-antelope",
         "bytesEncoding": "hex"
       }
     },
@@ -645,7 +742,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://explorer.mode.network"
+        "https://moonbeam.moonscan.io"
       ],
       "rpcUrls": [
         "https://rpc.api.moonbeam.network",
@@ -695,6 +792,124 @@
       "firehose": {
         "blockType": "sf.ethereum.type.v2.Block",
         "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "gnosis-chiado",
+      "shortName": "Gnosis Chiado",
+      "fullName": "Gnosis Chiado Testnet",
+      "aliases": [
+        "chiado"
+      ],
+      "caip2Id": "eip155:10200",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "explorerUrls": [
+        "https://blockscout.chiadochain.net"
+      ],
+      "rpcUrls": [
+        "https://rpc.chiadochain.net"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://gnosis-chiado.blockscout.com/api",
+          "kind": "etherscan"
+        }
+      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ]
+      },
+      "networkType": "testnet",
+      "relations": [
+        {
+          "kind": "testnetOf",
+          "network": "gnosis"
+        }
+      ],
+      "issuanceRewards": false,
+      "nativeToken": "XDAI",
+      "docsUrl": "https://docs.gnosischain.com",
+      "web3Icon": "gnosis",
+      "genesis": {
+        "hash": "0xada44fd8d2ecab8b08f256af07ad3e777f17fb434f8f8e678b312f576212ba9a",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "chapel",
+      "shortName": "BNB Chapel",
+      "fullName": "BNB Smart Chain Chapel Testnet",
+      "aliases": [
+        "bnb-chapel",
+        "bnb-testnet",
+        "bsc-testnet"
+      ],
+      "caip2Id": "eip155:97",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "explorerUrls": [
+        "https://testnet.bscscan.com/"
+      ],
+      "rpcUrls": [
+        "https://data-seed-prebsc-1-s1.bnbchain.org:8545"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://bsc-testnet.abi.pinax.network/api",
+          "kind": "etherscan"
+        }
+      ],
+      "networkType": "testnet",
+      "relations": [
+        {
+          "kind": "testnetOf",
+          "network": "bsc"
+        }
+      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "chapel.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "chapel.substreams.pinax.network:443"
+          }
+        ]
+      },
+      "issuanceRewards": false,
+      "nativeToken": "tBNB",
+      "docsUrl": "https://docs.bnbchain.org/",
+      "web3Icon": "binance-smart-chain",
+      "genesis": {
+        "hash": "0x6d3c66c5357ec91d5c43af47e234a939b22557cbb552dc45bebbceeed90fbe34",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": true,
         "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
         "bytesEncoding": "hex"
       }
@@ -846,6 +1061,75 @@
       "docsUrl": "https://docs.arbitrum.io",
       "genesis": {
         "hash": "0x77194da4010e549a7028a9c3c51c3e277823be6ac7d138d0bb8a70197b5c004c",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": true,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "polygon-amoy",
+      "shortName": "Amoy",
+      "fullName": "Polygon Amoy Testnet",
+      "aliases": [
+        "amoy-testnet",
+        "amoy"
+      ],
+      "caip2Id": "eip155:80002",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "relations": [
+        {
+          "kind": "testnetOf",
+          "network": "matic"
+        },
+        {
+          "kind": "l2Of",
+          "network": "sepolia"
+        }
+      ],
+      "explorerUrls": [
+        "https://www.oklink.com/amoy"
+      ],
+      "rpcUrls": [
+        "https://rpc-amoy.polygon.technology"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://polygon-amoy.abi.pinax.network/api",
+          "kind": "etherscan"
+        }
+      ],
+      "networkType": "testnet",
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "amoy.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "amoy.substreams.pinax.network:443"
+          }
+        ]
+      },
+      "issuanceRewards": false,
+      "nativeToken": "POL",
+      "docsUrl": "https://docs.polygon.technology/",
+      "web3Icon": "polygon-pos",
+      "genesis": {
+        "hash": "0x7202b2b53c5a0836e773e319d18922cc756dd67432f9a1f65352b61f4406c697",
         "height": 0
       },
       "firehose": {
@@ -1225,6 +1509,47 @@
       }
     },
     {
+      "id": "cronos",
+      "shortName": "Cronos",
+      "fullName": "Cronos Mainnet",
+      "aliases": [
+        "evm-25",
+        "cronos-mainnet"
+      ],
+      "caip2Id": "eip155:25",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "explorerUrls": [
+        "https://explorer.cronos.org"
+      ],
+      "rpcUrls": [
+        "https://evm.cronos.org"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://explorer-api.cronos.org/mainnet/api/v1",
+          "kind": "other"
+        }
+      ],
+      "support": {},
+      "networkType": "mainnet",
+      "issuanceRewards": false,
+      "nativeToken": "CRO",
+      "docsUrl": "https://docs.cronos.org/",
+      "web3Icon": "cronos",
+      "genesis": {
+        "hash": "0xa7f4e603aa51239a15e0a3fafb15c6e4c6d6f2c39c55770330efd2fa5afc12a9",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
       "id": "aurora",
       "shortName": "Aurora",
       "fullName": "Aurora Mainnet",
@@ -1262,6 +1587,75 @@
       "web3Icon": "aurora",
       "genesis": {
         "hash": "0x8058d7fe544fdcac6836faa5f84c68291da1773594216957374708a7109a6336",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "optimism-sepolia",
+      "shortName": "Optimism Sepolia",
+      "fullName": "OP Sepolia Testnet",
+      "aliases": [
+        "op-sepolia",
+        "opsepolia"
+      ],
+      "caip2Id": "eip155:11155420",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "relations": [
+        {
+          "kind": "l2Of",
+          "network": "sepolia"
+        },
+        {
+          "kind": "testnetOf",
+          "network": "optimism"
+        }
+      ],
+      "explorerUrls": [
+        "https://optimism-sepolia.blockscout.com/"
+      ],
+      "rpcUrls": [
+        "https://sepolia.optimism.io"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://optimism-sepolia.abi.pinax.network/api",
+          "kind": "etherscan"
+        }
+      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "opsepolia.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "opsepolia.substreams.pinax.network:443"
+          }
+        ]
+      },
+      "networkType": "testnet",
+      "issuanceRewards": false,
+      "nativeToken": "ETH",
+      "docsUrl": "https://docs.optimism.io/",
+      "web3Icon": "optimistic-ethereum",
+      "genesis": {
+        "hash": "0x102de6ffb001480cc9b8b548fd05c34cd4f46ae4aa91759393db90ea0409887d",
         "height": 0
       },
       "firehose": {
@@ -1777,6 +2171,69 @@
       }
     },
     {
+      "id": "zora",
+      "shortName": "Zora",
+      "fullName": "Zora Network",
+      "aliases": [
+        "zora-mainnet"
+      ],
+      "caip2Id": "eip155:7777777",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "explorerUrls": [
+        "https://explorer.zora.energy"
+      ],
+      "rpcUrls": [
+        "https://rpc.zora.energy"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://explorer.zora.energy/api/v2",
+          "kind": "etherscan"
+        }
+      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "zora.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "zora.substreams.pinax.network:443"
+          }
+        ]
+      },
+      "networkType": "mainnet",
+      "relations": [
+        {
+          "kind": "l2Of",
+          "network": "mainnet"
+        }
+      ],
+      "issuanceRewards": false,
+      "nativeToken": "ETH",
+      "docsUrl": "https://docs.zora.co/",
+      "genesis": {
+        "hash": "0x47555a45a1af8d4728ca337a1e48375a83919b1ea16591e070a07388b7364e29",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
       "id": "blast",
       "shortName": "Blast",
       "fullName": "Blast Mainnet",
@@ -1903,6 +2360,74 @@
       }
     },
     {
+      "id": "boba-testnet",
+      "shortName": "Boba Sepolia",
+      "fullName": "Boba Sepolia Testnet",
+      "aliases": [
+        "boba-sepolia"
+      ],
+      "caip2Id": "eip155:28882",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "explorerUrls": [
+        "https://testnet.bobascan.com"
+      ],
+      "rpcUrls": [
+        "https://sepolia.boba.network"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://api.routescan.io/v2/network/testnet/evm/28882/etherscan/api",
+          "kind": "etherscan"
+        }
+      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ],
+        "firehose": [
+          {
+            "provider": "pinax",
+            "url": "bobasepolia.firehose.pinax.network:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "pinax",
+            "url": "bobasepolia.substreams.pinax.network:443"
+          }
+        ]
+      },
+      "networkType": "testnet",
+      "relations": [
+        {
+          "kind": "l2Of",
+          "network": "sepolia"
+        },
+        {
+          "kind": "testnetOf",
+          "network": "boba"
+        }
+      ],
+      "issuanceRewards": false,
+      "nativeToken": "ETH",
+      "docsUrl": "https://docs.boba.network/",
+      "web3Icon": "boba",
+      "genesis": {
+        "hash": "0x4d26ddc947c7cea924d5ef272c1a5ef40a1dce5ca2cbbaccad59d33f2505a30d",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
       "id": "astar-zkevm-mainnet",
       "shortName": "Astar zkEVM",
       "fullName": "Astar zkEVM Mainnet",
@@ -2019,6 +2544,12 @@
           }
         ]
       },
+      "indexerDocsUrls": [
+        {
+          "url": "https://docs.infradao.com/archive-nodes-101/polygon",
+          "kind": "rpc"
+        }
+      ],
       "issuanceRewards": true,
       "nativeToken": "POL",
       "docsUrl": "https://docs.polygon.technology/",
