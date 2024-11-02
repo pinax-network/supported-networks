@@ -38,12 +38,20 @@
       {
         "provider": "streamingfast",
         "url": "mainnet.starknet.streamingfast.io:443"
+      },
+      {
+        "provider": "pinax",
+        "url": "starknet.firehose.pinax.network:443"
       }
     ],
     "substreams": [
       {
         "provider": "streamingfast",
         "url": "mainnet.starknet.streamingfast.io:443"
+      },
+      {
+        "provider": "pinax",
+        "url": "starknet.substreams.pinax.network:443"
       }
     ]
   },

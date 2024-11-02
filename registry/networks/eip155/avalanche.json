@@ -39,12 +39,20 @@
       {
         "provider": "streamingfast",
         "url": "avalanche-mainnet.streamingfast.io:443"
+      },
+      {
+        "provider": "pinax",
+        "url": "avalanche.firehose.pinax.network:443"
       }
     ],
     "substreams": [
       {
         "provider": "streamingfast",
         "url": "avalanche-mainnet.streamingfast.io:443"
+      },
+      {
+        "provider": "pinax",
+        "url": "avalanche.substreams.pinax.network:443"
       }
     ]
   },

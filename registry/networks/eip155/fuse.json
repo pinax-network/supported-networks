@@ -29,6 +29,18 @@
       {
         "provider": "e&n"
       }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "fuse.firehose.pinax.network:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "fuse.substreams.pinax.network:443"
+      }
     ]
   },
   "networkType": "mainnet",

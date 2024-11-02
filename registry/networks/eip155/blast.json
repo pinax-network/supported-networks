@@ -28,6 +28,18 @@
       {
         "provider": "e&n"
       }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "blast.firehose.pinax.network:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "blast.substreams.pinax.network:443"
+      }
     ]
   },
   "networkType": "mainnet",
