@@ -41,7 +41,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^[a-z0-9-]+$",
+          "pattern": "^(?!-)[a-z0-9-]{3,}(?<!-)$",
           "description": "Established name of the chain on the Graph network, i.e. mainnet, btc, arweave-mainnet, near-testnet"
         },
         "shortName": {
