@@ -38,7 +38,7 @@
   "nativeToken": "WAX",
   "docsUrl": "https://developer.wax.io/",
   "genesis": {
-    "hash": "00000002066113f7023ed907632c404f25c5f0f02034f3b1a22f339c83d78c53",
+    "hash": "0x00000002066113f7023ed907632c404f25c5f0f02034f3b1a22f339c83d78c53",
     "height": 2
   },
   "firehose": {

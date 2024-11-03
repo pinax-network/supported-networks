@@ -38,7 +38,7 @@
   "nativeToken": "EOS",
   "docsUrl": "https://jungletestnet.io",
   "genesis": {
-    "hash": "00000002d61d836f51657f886a5bc55b18a731f7eace6565784328fbd051fc90",
+    "hash": "0x00000002d61d836f51657f886a5bc55b18a731f7eace6565784328fbd051fc90",
     "height": 2
   },
   "firehose": {

@@ -72,7 +72,7 @@
   "docsUrl": "https://docs.polygon.technology/",
   "web3Icon": "polygon-pos",
   "genesis": {
-    "hash": "a9c28ce2141b56c474f1dc504bee9b01eb1bd7d1a507580d5519d4437a97de1b",
+    "hash": "0xa9c28ce2141b56c474f1dc504bee9b01eb1bd7d1a507580d5519d4437a97de1b",
     "height": 0
   },
   "firehose": {
