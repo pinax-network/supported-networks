@@ -145,11 +145,13 @@
           "properties": {
             "hash": {
               "type": "string",
-              "description": "Hash of the genesis block"
+              "description": "Hash of the genesis block either in 0x-prefixed hex or base58",
+              "pattern": "^(0x[a-fA-F0-9]+|[1-9A-HJ-NP-Za-km-z]+)$"
             },
             "height": {
               "type": "integer",
-              "description": "Block height of the genesis block"
+              "description": "Block height of the genesis or the first available block",
+              "minimum": 0
             }
           },
           "required": [

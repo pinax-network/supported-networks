@@ -72,11 +72,11 @@ export type Network = {
   };
   genesis?: {
     /**
-     * Hash of the genesis block
+     * Hash of the genesis block either in 0x-prefixed hex or base58
      */
     hash: string;
     /**
-     * Block height of the genesis block
+     * Block height of the genesis or the first available block
      */
     height: number;
   };
