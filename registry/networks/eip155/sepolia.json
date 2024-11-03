@@ -1,7 +1,7 @@
 {
   "id": "sepolia",
   "shortName": "Ethereum Sepolia",
-  "fullName": "Ethereum Sepolia Testnet",
+  "fullName": "c",
   "aliases": [
     "evm-11155111"
   ],
@@ -21,7 +21,8 @@
     "https://sepolia.otterscan.io"
   ],
   "rpcUrls": [
-    "https://rpc.sepolia.dev"
+    "https://rpc.sepolia.org",
+    "https://sepolia.infura.io/v3/${INFURA_API_KEY}"
   ],
   "apiUrls": [],
   "support": {

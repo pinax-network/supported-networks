@@ -15,7 +15,6 @@
   ],
   "rpcUrls": [
     "https://rpc.api.moonbeam.network",
-    "wss://wss.api.moonbeam.network",
     "https://moonbeam.drpc.org"
   ],
   "apiUrls": [

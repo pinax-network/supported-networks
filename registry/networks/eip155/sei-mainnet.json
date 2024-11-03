@@ -18,7 +18,7 @@
   ],
   "apiUrls": [
     {
-      "url": "https://api.seitrace.com/api",
+      "url": "https://seitrace.com/pacific-1/api",
       "kind": "etherscan"
     }
   ],

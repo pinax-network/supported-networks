@@ -14,8 +14,7 @@
     "https://celoscan.io"
   ],
   "rpcUrls": [
-    "https://forno.celo.org",
-    "wss://forno.celo.org/ws"
+    "https://forno.celo.org"
   ],
   "apiUrls": [
     {

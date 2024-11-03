@@ -15,8 +15,7 @@
   ],
   "rpcUrls": [
     "https://rpc.ftm.tools",
-    "https://fantom.drpc.org",
-    "wss://fantom.drpc.org"
+    "https://fantom.drpc.org"
   ],
   "apiUrls": [
     {

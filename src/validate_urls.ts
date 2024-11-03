@@ -1,0 +1,74 @@
+import { Network } from "./types/registry";
+import { loadNetworks, getAllJsonFiles, readFromJsonFile } from "./utils/fs";
+import { fetchWeb3NetworkIcons } from "./utils/web3icons";
+import { getActiveNetworks } from "./utils/graphnetwork";
+import { fetchChainIdNetworks } from "./utils/chainid";
+
+const NETWORKS: Network[] = [];
+const ERRORS: string[] = [];
+
+async function testURL(url: string): Promise<void> {
+  try {
+    const parsedUrl = new URL(url);
+    await fetch(parsedUrl.origin, { method: "HEAD" });
+
+    const response = await fetch(url, { method: "HEAD" });
+    if (!response.ok) {
+      console.warn(`  URL returned an error: ${url} - ${response.status}`);
+    } else {
+      console.log(`  URL is valid and accessible: ${url}`);
+    }
+  } catch (error) {
+    // we only care about domain errors
+    console.error(`  Domain is invalid: ${url} - Error: ${error}`);
+    ERRORS.push(`Domain is not available or invalid: ${url}`);
+  }
+}
+
+async function validateUrls() {
+  process.stdout.write("Validating URLs ... ");
+  const batchSize = 30;
+  const urls = [
+    ...new Set(
+      NETWORKS.flatMap((n) => [
+        n.rpcUrls ?? [],
+        n.explorerUrls ?? [],
+        n.docsUrl ?? [],
+        (n.apiUrls ?? []).map((u) => u.url),
+      ]).flat(),
+    ),
+  ];
+
+  console.log(`Found ${urls.length} URLs`);
+  for (let i = 0; i < urls.length; i += batchSize) {
+    const batch = urls.slice(i, i + batchSize);
+    await Promise.allSettled(batch.map(testURL));
+  }
+
+  process.stdout.write("done\n");
+}
+
+async function main() {
+  const [, , networksPath = "registry/networks"] = process.argv;
+
+  NETWORKS.push(...loadNetworks(networksPath));
+  console.log(`Loaded ${NETWORKS.length} networks`);
+
+  if (NETWORKS.length === 0) {
+    ERRORS.push("No networks found");
+  }
+
+  await validateUrls();
+
+  if (ERRORS.length > 0) {
+    console.error(`${ERRORS.length} Validation errors:`);
+    for (const error of ERRORS) {
+      console.error(`  - ${error}`);
+    }
+    process.exit(1);
+  }
+
+  console.log("All networks are valid");
+}
+
+await main();

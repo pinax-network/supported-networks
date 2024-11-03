@@ -2,7 +2,7 @@
   "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
   "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-03T05:06:09.760Z",
+  "updatedAt": "2024-11-03T05:26:36.086Z",
   "networks": [
     {
       "id": "arweave-mainnet",
@@ -513,8 +513,7 @@
       ],
       "rpcUrls": [
         "https://rpc.fuse.io",
-        "https://fuse.drpc.org",
-        "wss://fuse.drpc.org"
+        "https://fuse.drpc.org"
       ],
       "apiUrls": [
         {
@@ -636,8 +635,7 @@
       ],
       "rpcUrls": [
         "https://api.avax.network/ext/bc/C/rpc",
-        "https://avalanche-c-chain-rpc.publicnode.com",
-        "wss://avalanche-c-chain-rpc.publicnode.com"
+        "https://avalanche-c-chain-rpc.publicnode.com"
       ],
       "apiUrls": [
         {
@@ -848,7 +846,6 @@
       ],
       "rpcUrls": [
         "https://rpc.api.moonbeam.network",
-        "wss://wss.api.moonbeam.network",
         "https://moonbeam.drpc.org"
       ],
       "apiUrls": [
@@ -1189,8 +1186,7 @@
       ],
       "rpcUrls": [
         "https://rpc.ftm.tools",
-        "https://fantom.drpc.org",
-        "wss://fantom.drpc.org"
+        "https://fantom.drpc.org"
       ],
       "apiUrls": [
         {
@@ -1435,8 +1431,7 @@
       ],
       "rpcUrls": [
         "https://nova.arbitrum.io/rpc",
-        "https://arbitrum-nova.publicnode.com",
-        "wss://arbitrum-nova.publicnode.com"
+        "https://arbitrum-nova.publicnode.com"
       ],
       "apiUrls": [
         {
@@ -1723,7 +1718,7 @@
       ],
       "apiUrls": [
         {
-          "url": "https://api.seitrace.com/api",
+          "url": "https://seitrace.com/pacific-1/api",
           "kind": "etherscan"
         }
       ],
@@ -1934,7 +1929,7 @@
     {
       "id": "sepolia",
       "shortName": "Ethereum Sepolia",
-      "fullName": "Ethereum Sepolia Testnet",
+      "fullName": "c",
       "aliases": [
         "evm-11155111"
       ],
@@ -1954,7 +1949,8 @@
         "https://sepolia.otterscan.io"
       ],
       "rpcUrls": [
-        "https://rpc.sepolia.dev"
+        "https://rpc.sepolia.org",
+        "https://sepolia.infura.io/v3/${INFURA_API_KEY}"
       ],
       "apiUrls": [],
       "support": {
@@ -2328,8 +2324,7 @@
       ],
       "rpcUrls": [
         "https://mainnet.optimism.io",
-        "https://optimism.drpc.org",
-        "wss://optimism.drpc.org"
+        "https://optimism.drpc.org"
       ],
       "apiUrls": [
         {
@@ -2534,8 +2529,7 @@
         "https://celoscan.io"
       ],
       "rpcUrls": [
-        "https://forno.celo.org",
-        "wss://forno.celo.org/ws"
+        "https://forno.celo.org"
       ],
       "apiUrls": [
         {
