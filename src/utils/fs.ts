@@ -2,6 +2,10 @@ import fs from "fs";
 import path from "path";
 import { Network } from "../types/registry";
 
+export function readFromJsonFile<T>(file: string): T {
+  return JSON.parse(fs.readFileSync(file, "utf-8")) as T;
+}
+
 export function getAllJsonFiles(dir: string): string[] {
   let files: string[] = [];
 

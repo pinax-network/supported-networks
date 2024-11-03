@@ -15,10 +15,10 @@ async function main() {
 
   const files = getAllJsonFiles(networksPath);
   if (files.length === 0) {
-    process.stderr.write("No JSON files found\n");
+    console.error("No JSON files found");
     process.exit(1);
   }
-  process.stdout.write(`Discovered ${files.length} JSON files\n`);
+  console.log(`Discovered ${files.length} JSON files`);
 
   const ajv = new Ajv();
   addFormats(ajv);
@@ -36,7 +36,7 @@ async function main() {
           ),
         );
       } else {
-        process.stdout.write(`  ${file} is valid\n`);
+        console.log(`  ${file} is valid`);
       }
     } catch (e) {
       ERRORS.push(`File ${file} is not a valid JSON: ${e.message}`);
@@ -44,14 +44,14 @@ async function main() {
   }
 
   if (ERRORS.length > 0) {
-    process.stderr.write("Validation errors:\n");
+    console.error("Validation errors:");
     for (const error of ERRORS) {
-      process.stderr.write(`  - ${error}\n`);
+      console.error(`  - ${error}`);
     }
     process.exit(1);
   }
 
-  process.stdout.write("All networks are valid\n");
+  console.log("All networks are valid\n");
 }
 
 await main();

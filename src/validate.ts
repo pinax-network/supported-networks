@@ -1,11 +1,23 @@
 import { Network } from "./types/registry";
-import { loadNetworks } from "./utils/fs";
+import { loadNetworks, getAllJsonFiles, readFromJsonFile } from "./utils/fs";
 import { fetchWeb3NetworkIcons } from "./utils/web3icons";
 import { getActiveNetworks } from "./utils/graphnetwork";
 import { fetchChainIdNetworks } from "./utils/chainid";
 
 const NETWORKS: Network[] = [];
 const ERRORS: string[] = [];
+
+function validateFilenames(networksPath: string) {
+  process.stdout.write("Validating filenames ... ");
+  const files = getAllJsonFiles(networksPath);
+  for (const file of files) {
+    const network = readFromJsonFile<Network>(file);
+    if (!file.endsWith(`/${network.id}.json`)) {
+      ERRORS.push(`Network ${network.id} must reside in ${network.id}.json`);
+    }
+  }
+  process.stdout.write("done\n");
+}
 
 function validateUniqueness() {
   process.stdout.write("Validating uniqueness ... ");
@@ -240,12 +252,13 @@ async function main() {
   const [, , networksPath = "registry/networks"] = process.argv;
 
   NETWORKS.push(...loadNetworks(networksPath));
-  process.stdout.write(`Loaded ${NETWORKS.length} networks\n`);
+  console.log(`Loaded ${NETWORKS.length} networks`);
 
   if (NETWORKS.length === 0) {
     ERRORS.push("No networks found");
   }
 
+  validateFilenames(networksPath);
   validateUniqueness();
   validateRelations();
   validateTestnets();
@@ -256,14 +269,14 @@ async function main() {
   await validateEthereumList();
 
   if (ERRORS.length > 0) {
-    process.stderr.write("Validation errors:\n");
+    console.error(`${ERRORS.length} Validation errors:`);
     for (const error of ERRORS) {
-      process.stderr.write(`  - ${error}\n`);
+      console.error(`  - ${error}`);
     }
     process.exit(1);
   }
 
-  process.stdout.write("All networks are valid\n");
+  console.log("All networks are valid");
 }
 
 await main();
