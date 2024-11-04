@@ -10,7 +10,6 @@ This repository contains a registry of networks supported by The Graph.
 - format with `bun format`
 - open a PR
 
-
 ### Structure of the repository
 
 - `schemas/`: Contains the schema for the registry.
@@ -22,7 +21,6 @@ This repository contains a registry of networks supported by The Graph.
 - install `bun`: https://bun.sh/
 - install dependencies `bun install --no-save`
 - get your free [Studio API key](https://thegraph.com/studio/apikeys/) and set it in the `.env` file - we will need it to run a few queries to do some network validation
-
 
 ### Scripts usage
 
@@ -41,6 +39,7 @@ This repository contains a registry of networks supported by The Graph.
 Published registry schema has a MAJOR.MINOR semantic version, i.e. `v1.2`
 
 When version needs to be bumped up:
+
 - Major version: breaking schema change, i.e. field type change, field removal
 - Minor version: backward compatible schema change, i.e. new field, new enum variant
 
@@ -49,6 +48,7 @@ When version needs to be bumped up:
 Every new published registry has a MAJOR.MINOR.PATCH semantic version, i.e. `v1.2.3` where MAJOR.MINOR corresponds to the schema version
 
 When version needs to be bumped up:
+
 - Major/minor version: schema is updated
 - Patch version: new network added, existing network entry updated
 
