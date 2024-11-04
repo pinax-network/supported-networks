@@ -4,10 +4,9 @@ import { fetchWeb3NetworkIcons } from "./utils/web3icons";
 import { getActiveNetworks } from "./utils/graphnetwork";
 import { fetchChainIdNetworks } from "./utils/chainid";
 
-const NETWORKS: Network[] = [];
 const ERRORS: string[] = [];
 
-async function testURL(url: string): Promise<void> {
+async function testURL(url: string) {
   try {
     const parsedUrl = new URL(url);
     await fetch(parsedUrl.origin, { method: "HEAD" });
@@ -25,12 +24,12 @@ async function testURL(url: string): Promise<void> {
   }
 }
 
-async function validateUrls() {
+async function validateUrls(networks: Network[]){
   process.stdout.write("Validating URLs ... ");
   const batchSize = 30;
   const urls = [
     ...new Set(
-      NETWORKS.flatMap((n) => [
+      networks.flatMap((n) => [
         n.rpcUrls ?? [],
         n.explorerUrls ?? [],
         n.docsUrl ?? [],
@@ -51,14 +50,14 @@ async function validateUrls() {
 async function main() {
   const [, , networksPath = "registry/networks"] = process.argv;
 
-  NETWORKS.push(...loadNetworks(networksPath));
-  console.log(`Loaded ${NETWORKS.length} networks`);
+  let networks = loadNetworks(networksPath);
+  console.log(`Loaded ${networks.length} networks`);
 
-  if (NETWORKS.length === 0) {
+  if (networks.length === 0) {
     ERRORS.push("No networks found");
   }
 
-  await validateUrls();
+  await validateUrls(networks);
 
   if (ERRORS.length > 0) {
     console.error(`${ERRORS.length} Validation errors:`);
