@@ -24,17 +24,19 @@ async function testURL(url: string) {
   }
 }
 
-async function validateUrls(networks: Network[]){
+async function validateUrls(networks: Network[]) {
   process.stdout.write("Validating URLs ... ");
   const batchSize = 30;
   const urls = [
     ...new Set(
-      networks.flatMap((n) => [
-        n.rpcUrls ?? [],
-        n.explorerUrls ?? [],
-        n.docsUrl ?? [],
-        (n.apiUrls ?? []).map((u) => u.url),
-      ]).flat(),
+      networks
+        .flatMap((n) => [
+          n.rpcUrls ?? [],
+          n.explorerUrls ?? [],
+          n.docsUrl ?? [],
+          (n.apiUrls ?? []).map((u) => u.url),
+        ])
+        .flat(),
     ),
   ];
 

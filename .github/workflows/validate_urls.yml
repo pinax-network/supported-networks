@@ -3,11 +3,11 @@ on:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
 
-name: Format PR
+name: Validate URLs
 
 jobs:
-  format-files:
-    name: Check JSON formatting
+  validate-urls:
+    name: Validate URLs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -21,5 +21,14 @@ jobs:
       - name: Install dependencies
         run: bun install --no-save
 
-      - name: Check formatting
-        run: bun format:check
+      - name: Validate schema
+        run: bun validate:schema
+
+      - name: Validate logic
+        run: bun validate:networks
+
+      - name: Validate URLs
+        run: bun validate:urls
+
+    env:
+      THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
