@@ -1,4 +1,5 @@
-Please fill in this template.
+When adding new chain follow the [README](./README.md).
 
-- [ ] Use a meaningful title for the pull request. Include the name of the chain being added.
-- [ ] Test the change in your own code. (See [README](./README.md))
+- [ ] Use a meaningful title for the pull request.
+- [ ] Pass validation tests
+- [ ] Format your code
