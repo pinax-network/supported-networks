@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
 
-name: Validate, Generate and Upload Registry to Cloudflare Pages
+name: Validate, generate and publish registry
 
 jobs:
   upload-registry:
@@ -22,24 +22,25 @@ jobs:
       - name: Validate schema
         run: bun validate:schema
 
-      - name: Validate logic
-        run: bun validate:networks
-
       - name: Generate registry types
         run: bun generate:types
 
+      - name: Validate logic
+        run: bun validate:networks
+
       - name: Generate registry
-        run: bun generate:upload
+        run: bun generate:public
 
       - name: Validate registry
-        run: bun validate:upload
+        run: bun validate:public
 
       - name: Publish
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy upload --project-name=graphregistry
+          command: pages deploy public --project-name=graphregistry
 
     env:
       THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
+      REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"

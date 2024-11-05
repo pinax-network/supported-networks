@@ -29,6 +29,8 @@ function main() {
     outputDir = "registry",
   ] = process.argv;
 
+  const REGISTRY_ROOT_URL = process.env.REGISTRY_ROOT_URL || (() => { throw new Error("REGISTRY_ROOT_URL is not defined"); })();
+
   const {
     filenameLatest,
     filenameLatestMinor,
@@ -37,7 +39,7 @@ function main() {
   } = getVersionFilenames(packageInfo.version);
 
   const registry: TheGraphNetworksRegistry = {
-    $schema: `https://thegraph.com/schemas/${filenameRegistrySchema}`,
+    $schema: `${REGISTRY_ROOT_URL}/${filenameRegistrySchema}`,
     version: `${packageInfo.version}`,
     description:
       "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
@@ -48,8 +50,13 @@ function main() {
   const content = JSON.stringify(registry, null, 2);
   fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(path.join(outputDir, filenameLatest), content);
-  fs.writeFileSync(`${outputDir}/${filenameLatestMinor}`, content);
-  fs.writeFileSync(`${outputDir}/${filenameLatestMajor}`, content);
+  fs.writeFileSync(path.join(outputDir, filenameLatestMinor), content);
+  fs.writeFileSync(path.join(outputDir, filenameLatestMajor), content);
+  fs.copyFileSync(
+    path.join(__dirname, "../schemas/registry.schema.json"),
+    path.join(outputDir, filenameRegistrySchema),
+  );
+
   process.stdout.write(
     `Generated ${filenameLatest} with ${registry.networks.length} networks`,
   );

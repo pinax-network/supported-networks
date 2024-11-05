@@ -13,8 +13,8 @@
     "validate": "bun validate:schema && bun validate:networks",
     "generate:types": "json2ts --input schemas/registry.schema.json --output src/types/registry.d.ts --cwd=schemas",
     "generate:registry": "bun run ./src/generate.ts",
-    "generate:upload": "bun run ./src/generate.ts registry/networks upload",
-    "validate:upload": "ajv validate -s schemas/registry.schema.json -d 'upload/*.json' --strict=true -c ajv-formats",
+    "generate:public": "bun run ./src/generate.ts registry/networks public",
+    "validate:public": "ajv validate -s schemas/registry.schema.json -d 'public/TheGraphNetworksRegistry_*.json' --strict=true -c ajv-formats",
     "all": "bun generate:types && bun validate && bun generate:registry && bun format && bun format:check"
   },
   "devDependencies": {

@@ -1,8 +1,8 @@
 {
-  "$schema": "https://thegraph.com/schemas/TheGraphNetworksRegistrySchema_v0_1.json",
+  "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_1.json",
   "version": "0.1.0",
   "description": "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-03T05:26:36.086Z",
+  "updatedAt": "2024-11-05T00:58:37.204Z",
   "networks": [
     {
       "id": "arweave-mainnet",

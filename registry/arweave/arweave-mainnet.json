@@ -9,7 +9,7 @@
   "explorerUrls": [
     "https://arscan.io/"
   ],
-  "rpcUrls": ["https://asdf.com/"],
+  "rpcUrls": [],
   "apiUrls": [],
   "networkType": "mainnet",
   "graphNode": {
