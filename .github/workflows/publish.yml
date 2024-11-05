@@ -1,7 +1,7 @@
 on:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 name: Validate, generate and publish registry
@@ -9,6 +9,7 @@ name: Validate, generate and publish registry
 jobs:
   upload-registry:
     name: Upload to Cloudflare Pages
+    if: github.actor != 'github-actions[bot]'   # don't run on release commits
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -84,7 +85,7 @@ jobs:
           URL3="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_x.json"
           URL4="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_${PATCH}.json"
 
-          RELEASE_BODY="### Networks Registry ${TAG}:\n- ${URL1}\n- ${URL2}\n- ${URL3}\n- ${URL4}"
+          RELEASE_BODY="### Networks Registry ${TAG}\n- ${URL1}\n- ${URL2}\n- ${URL3}\n- ${URL4}"
 
           # Create release with the URLs in the body
           RELEASE_URL="https://api.github.com/repos/${{ github.repository }}/releases"
