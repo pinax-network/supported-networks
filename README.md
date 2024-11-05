@@ -28,8 +28,8 @@ This repository contains a registry of networks supported by The Graph.
 - `bun generate:types` - generate types from schema if schema has changed to use for validation
 - `bun validate:schema` - validate networks JSONs against the schema
 - `bun validate:networks` - additional semantic validation of networks JSONs, i.e. uniqueness, relations, urls, ethereum chain list, graph network, icons, etc
-- `bun generate:registry` - generate resulting registry JSON
-- `bun validate:registry` - validate generated registry against the schema
+- `bun generate:registry` - generate resulting registry JSON in `./dist`
+- `bun validate:registry` - validate generated registry in `./dist` against the schema
 - `bun format` - format JSON and TS files with prettier
 - `bun all` - do it all
 
@@ -41,8 +41,8 @@ Published registry schema has a MAJOR.MINOR semantic version, i.e. `v1.2`
 
 When version needs to be bumped up:
 
-- Major version: breaking schema change, i.e. field type change, field removal
-- Minor version: backward compatible schema change, i.e. new field, new enum variant
+- Major version: breaking schema change, i.e. field type change, new mandatory field, field removal
+- Minor version: backward compatible schema change, i.e. new optional field, new enum variant
 
 ### Registry version
 

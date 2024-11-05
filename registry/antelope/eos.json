@@ -12,6 +12,7 @@
   "rpcUrls": [
     "https://eos.api.eosnation.io/"
   ],
+  "newField": "some",
   "apiUrls": [],
   "networkType": "mainnet",
   "support": {

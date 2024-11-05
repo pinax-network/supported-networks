@@ -8,7 +8,7 @@
     "format:check": "prettier \"./**/*.+(ts|json|md)\" --check",
     "validate:schema": "bun run ./src/validate_schema.ts",
     "validate:networks": "bun run ./src/validate.ts",
-    "validate:registry": "ajv validate -s schemas/registry.schema.json -d 'dist/TheGraphNetworksRegistry_*.json' --strict=true -c ajv-formats",
+    "validate:registry": "ajv validate -s schemas/registry.schema.json -d 'dist/TheGraphNetworksRegistry.json' --strict=true -c ajv-formats",
     "validate:urls": "bun run ./src/validate_urls.ts",
     "validate": "bun validate:schema && bun validate:networks",
     "generate:types": "json2ts --input schemas/registry.schema.json --output src/types/registry.d.ts --cwd=schemas",
