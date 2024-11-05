@@ -77,11 +77,29 @@ jobs:
           git tag "$TAG"
           git push origin "$TAG"
 
+          # Extract major, minor, and patch parts of the version
+          VERSION="${TAG#v}"                # Strip the "v" prefix
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+
+          # Build the URLs
+          URL1="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry.json"
+          URL2="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_x_x.json"
+          URL3="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_x.json"
+          URL4="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_${PATCH}.json"
+
+          # Prepare release body with URLs
+          RELEASE_BODY="### Networks Registry ${TAG}:
+          - ${URL1}
+          - ${URL2}
+          - ${URL3}
+          - ${URL4}"
+
+          # Create release with the URLs in the body
           RELEASE_URL="https://api.github.com/repos/${{ github.repository }}/releases"
           curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-          -H "Content-Type: application/json" \
-          -d "{\"tag_name\": \"$TAG\", \"name\": \"$TAG\", \"body\": \"${TAG}: ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v0_x_x.json\"}" \
-          "$RELEASE_URL"
+              -H "Content-Type: application/json" \
+              -d "{\"tag_name\": \"$TAG\", \"name\": \"$TAG\", \"body\": \"$RELEASE_BODY\"}" \
+              "$RELEASE_URL"
     env:
       THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
       REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"
