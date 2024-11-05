@@ -50,7 +50,7 @@ async function validateUrls(networks: Network[]) {
 }
 
 async function main() {
-  const [, , networksPath = "registry/networks"] = process.argv;
+  const [, , networksPath = "registry"] = process.argv;
 
   let networks = loadNetworks(networksPath);
   console.log(`Loaded ${networks.length} networks`);

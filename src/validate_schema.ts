@@ -9,7 +9,7 @@ async function main() {
   const [
     ,
     ,
-    networksPath = "registry/networks",
+    networksPath = "registry",
     schemaPath = "schemas/registry.schema.json",
   ] = process.argv;
 

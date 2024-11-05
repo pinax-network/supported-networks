@@ -25,11 +25,15 @@ function main() {
   const [
     ,
     ,
-    networksDir = "registry/networks",
-    outputDir = "registry",
+    networksDir = "registry",
+    outputDir = "dist",
   ] = process.argv;
 
-  const REGISTRY_ROOT_URL = process.env.REGISTRY_ROOT_URL || (() => { throw new Error("REGISTRY_ROOT_URL is not defined"); })();
+  const REGISTRY_ROOT_URL =
+    process.env.REGISTRY_ROOT_URL ||
+    (() => {
+      throw new Error("REGISTRY_ROOT_URL is not defined");
+    })();
 
   const {
     filenameLatest,

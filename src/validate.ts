@@ -249,7 +249,7 @@ async function validateEthereumList() {
 }
 
 async function main() {
-  const [, , networksPath = "registry/networks"] = process.argv;
+  const [, , networksPath = "registry"] = process.argv;
 
   NETWORKS.push(...loadNetworks(networksPath));
   console.log(`Loaded ${NETWORKS.length} networks`);

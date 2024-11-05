@@ -4,7 +4,7 @@ This repository contains a registry of networks supported by The Graph.
 
 ### Adding a chain
 
-- add a network JSON in `registry/networks` TODO: add detailed fields descriptions and best practices
+- add a network JSON in `registry` TODO: add detailed fields descriptions and best practices
 - validate it with `bun validate` this will make sure all networks JSONs are valid
 - generate combined registry with `bun generate:registry`
 - format with `bun format`
@@ -51,6 +51,8 @@ When version needs to be bumped up:
 
 - Major/minor version: schema is updated
 - Patch version: new network added, existing network entry updated
+
+### Releases
 
 ### References
 
