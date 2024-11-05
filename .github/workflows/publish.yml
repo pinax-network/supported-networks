@@ -37,6 +37,9 @@ jobs:
       - name: Validate registry
         run: bun validate:public
 
+      - name: Format
+        run: bun format
+
       - name: Get version
         id: get_version
         run: |
