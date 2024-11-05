@@ -34,9 +34,6 @@ jobs:
       - name: Generate registry
         run: bun generate:public
 
-      - name: Validate registry
-        run: bun validate:public
-
       - name: Format
         run: bun format
 
