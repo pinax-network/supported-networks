@@ -24,7 +24,5 @@ export function getAllJsonFiles(dir: string): string[] {
 
 export function loadNetworks(dir: string): Network[] {
   const files = getAllJsonFiles(dir);
-  return files.map(
-    (file) => JSON.parse(fs.readFileSync(file, "utf-8")) as Network,
-  );
+  return files.map((f) => JSON.parse(fs.readFileSync(f, "utf-8")) as Network);
 }

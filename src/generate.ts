@@ -21,6 +21,16 @@ function generateMermaidGraph(networks: Network[]): string {
   return `graph TD\n  ${relations.join("\n  ")}\n`;
 }
 
+function byCaip2Id(a: Network, b: Network) {
+  if (a.caip2Id.startsWith("eip155") && !b.caip2Id.startsWith("eip155")) {
+    return -1;
+  }
+  if (!a.caip2Id.startsWith("eip155") && b.caip2Id.startsWith("eip155")) {
+    return 1;
+  }
+  return a.caip2Id.localeCompare(b.caip2Id);
+}
+
 function main() {
   const [
     ,
@@ -50,7 +60,7 @@ function main() {
     description:
       "This registry was generated and validated. Do NOT edit it manually.",
     updatedAt: new Date().toISOString(),
-    networks: loadNetworks(networksDir),
+    networks: loadNetworks(networksDir).sort(byCaip2Id),
   };
 
   const content = JSON.stringify(registry, null, 2);
