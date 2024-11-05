@@ -1,5 +1,5 @@
 {
-  "$id": "https://thegraph.com/schemas/v1/registry.schema.json",
+  "$id": "https://thegraph.com/schemas/registry.schema.json",
   "$schema": "http://json-schema.org/schema#",
   "title": "The Graph networks registry",
   "type": "object",
