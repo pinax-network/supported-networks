@@ -11,6 +11,8 @@ jobs:
     name: Upload to Cloudflare Pages
     if: github.actor != 'github-actions[bot]'   # don't run on release commits
     runs-on: ubuntu-latest
+    permissions:
+      contents: 'write'
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
