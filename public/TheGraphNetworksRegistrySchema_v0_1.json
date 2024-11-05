@@ -10,10 +10,11 @@
       "format": "uri",
       "description": "Reference to this schema file"
     },
+    "title": {
+      "type": "string"
+    },
     "description": {
-      "type": "string",
-      "minLength": 10,
-      "description": "Description of the registry"
+      "type": "string"
     },
     "version": {
       "type": "string",
@@ -33,7 +34,14 @@
       "description": "List of networks"
     }
   },
-  "required": ["networks", "description", "updatedAt", "version", "$schema"],
+  "required": [
+    "networks",
+    "title",
+    "description",
+    "updatedAt",
+    "version",
+    "$schema"
+  ],
   "additionalProperties": false,
   "$defs": {
     "Network": {
