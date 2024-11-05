@@ -36,7 +36,14 @@ export type Network = {
     /**
      * Kind of relation
      */
-    kind: "testnetOf" | "beaconOf" | "forkedFrom" | "l2Of" | "shardOf" | "evmOf" | "other";
+    kind:
+      | "testnetOf"
+      | "beaconOf"
+      | "forkedFrom"
+      | "l2Of"
+      | "shardOf"
+      | "evmOf"
+      | "other";
     /**
      * Id of the related network, i.e. mainnet, near-mainnet
      */
@@ -151,6 +158,12 @@ export interface TheGraphNetworksRegistry {
   networks: Network[];
 }
 export interface Service {
-  provider: "e&n" | "pinax" | "graphops" | "streamingfast" | "messari" | "semiotic";
+  provider:
+    | "e&n"
+    | "pinax"
+    | "graphops"
+    | "streamingfast"
+    | "messari"
+    | "semiotic";
   url?: string;
 }
