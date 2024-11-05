@@ -20,6 +20,7 @@
     "https://polygonscan.com/"
   ],
   "rpcUrls": [
+    "https://polygon-rpc.com",
     "https://rpc.ankr.com/polygon"
   ],
   "apiUrls": [
