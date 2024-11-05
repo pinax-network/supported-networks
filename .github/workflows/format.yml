@@ -3,7 +3,7 @@ on:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
 
-name: Format PR
+name: Format on PR
 
 jobs:
   format-files:

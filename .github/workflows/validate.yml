@@ -3,7 +3,7 @@ on:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
 
-name: Validate PR
+name: Validate on PR
 
 jobs:
   validate-json:
