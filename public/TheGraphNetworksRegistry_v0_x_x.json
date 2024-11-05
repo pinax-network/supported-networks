@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_1.json",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-05T05:19:17.010Z",
+  "updatedAt": "2024-11-05T06:14:47.343Z",
   "networks": [
     {
       "id": "wax-testnet",
@@ -1370,6 +1370,58 @@
       }
     },
     {
+      "id": "rootstock",
+      "shortName": "Rootstock",
+      "fullName": "Rootstock Mainnet",
+      "aliases": [
+        "rootstock-mainnet"
+      ],
+      "caip2Id": "eip155:30",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "explorerUrls": [
+        "https://rootstock.blockscout.com"
+      ],
+      "rpcUrls": [
+        "https://public-node.rsk.co"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://rootstock.blockscout.com/api",
+          "kind": "etherscan"
+        }
+      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ]
+      },
+      "networkType": "mainnet",
+      "issuanceRewards": false,
+      "nativeToken": "RBTC",
+      "docsUrl": "https://dev.rootstock.io/",
+      "indexerDocsUrls": [
+        {
+          "url": "https://docs.infradao.com/archive-nodes-101/rootstock",
+          "kind": "rpc"
+        }
+      ],
+      "web3Icon": "rootstock",
+      "genesis": {
+        "hash": "0xf88529d4ab262c0f4d042e9d8d3f2472848eaafe1a9b7213f57617eb40a9f9e0",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
       "id": "gnosis-chiado",
       "shortName": "Gnosis Chiado",
       "fullName": "Gnosis Chiado Testnet",
@@ -1991,6 +2043,58 @@
       "web3Icon": "arbitrum-nova",
       "genesis": {
         "hash": "0x2ad24e03026118f9b3a48626f0636e38c93660e90a6812e853a99aa8c5371561",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "rootstock-testnet",
+      "shortName": "Rootstock",
+      "fullName": "Rootstock Testnet",
+      "aliases": [
+        "rootstock-testnet"
+      ],
+      "caip2Id": "eip155:31",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "explorerUrls": [
+        "https://rootstock-testnet.blockscout.com"
+      ],
+      "rpcUrls": [
+        "https://public-node.testnet.rsk.co"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://rootstock-testnet.blockscout.com/api",
+          "kind": "etherscan"
+        }
+      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ]
+      },
+      "networkType": "testnet",
+      "relations": [
+        {
+          "kind": "testnetOf",
+          "network": "rootstock"
+        }
+      ],
+      "issuanceRewards": false,
+      "nativeToken": "tRBTC",
+      "docsUrl": "https://dev.rootstock.io/",
+      "web3Icon": "rootstock",
+      "genesis": {
+        "hash": "0xcabb7fbe88cd6d922042a32ffc08ce8b1fbb37d650b9d4e7dbfe2a7469adfa42",
         "height": 0
       },
       "firehose": {
