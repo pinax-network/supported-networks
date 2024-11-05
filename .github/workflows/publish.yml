@@ -1,4 +1,7 @@
 on:
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 name: Validate, generate and publish registry
@@ -34,6 +37,21 @@ jobs:
       - name: Validate registry
         run: bun validate:public
 
+      - name: Get version
+        id: get_version
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          echo "REGISTRY_VERSION=v${VERSION}" >> $GITHUB_ENV
+
+      - name: Check if tag exists
+        id: check_tag
+        run: |
+          TAG="${{ env.REGISTRY_VERSION }}"
+          if git fetch --tags && git tag -l | grep -q "$TAG"; then
+            echo "Error: Registry $TAG already exists. Bump up the version in package.json to publish"
+            exit 1
+          fi
+
       - name: Publish
         uses: cloudflare/wrangler-action@v3
         with:
@@ -41,6 +59,28 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=graphregistry
 
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Commit all changes with a message
+          git add .
+          git commit -m "generate registry ${{ env.REGISTRY_VERSION }}" || echo "No changes to commit"
+          git push origin main
+
+      - name: Create tag and publish release
+        run: |
+          TAG="${{ env.REGISTRY_VERSION }}"
+          git tag "$TAG"
+          git push origin "$TAG"
+
+          RELEASE_URL="https://api.github.com/repos/${{ github.repository }}/releases"
+          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d "{\"tag_name\": \"$TAG\", \"name\": \"$TAG\", \"body\": \"Registry $TAG released\"}" \
+          "$RELEASE_URL \
+          ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v0_x_x.json"
     env:
       THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
       REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"
