@@ -37,6 +37,7 @@ function main() {
 
   const {
     filenameLatest,
+    filenameLatestPatch,
     filenameLatestMinor,
     filenameLatestMajor,
     filenameRegistrySchema,
@@ -45,8 +46,9 @@ function main() {
   const registry: TheGraphNetworksRegistry = {
     $schema: `${REGISTRY_ROOT_URL}/${filenameRegistrySchema}`,
     version: `${packageInfo.version}`,
+    title: "The Graph networks registry",
     description:
-      "The Graph networks registry. This file was generated and validated. Do NOT edit it manually.",
+      "This registry was generated and validated. Do NOT edit it manually.",
     updatedAt: new Date().toISOString(),
     networks: loadNetworks(networksDir),
   };
@@ -54,6 +56,7 @@ function main() {
   const content = JSON.stringify(registry, null, 2);
   fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(path.join(outputDir, filenameLatest), content);
+  fs.writeFileSync(path.join(outputDir, filenameLatestPatch), content);
   fs.writeFileSync(path.join(outputDir, filenameLatestMinor), content);
   fs.writeFileSync(path.join(outputDir, filenameLatestMajor), content);
   fs.copyFileSync(

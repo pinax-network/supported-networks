@@ -140,9 +140,7 @@ export interface TheGraphNetworksRegistry {
    * Reference to this schema file
    */
   $schema: string;
-  /**
-   * Description of the registry
-   */
+  title: string;
   description: string;
   /**
    * Version of the registry

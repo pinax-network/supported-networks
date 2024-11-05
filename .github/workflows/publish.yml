@@ -87,19 +87,14 @@ jobs:
           URL3="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_x.json"
           URL4="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_${PATCH}.json"
 
-          # Prepare release body with URLs
-          RELEASE_BODY="### Networks Registry ${TAG}:
-          - ${URL1}
-          - ${URL2}
-          - ${URL3}
-          - ${URL4}"
+          RELEASE_BODY="### Networks Registry ${TAG}:\n- ${URL1}\n- ${URL2}\n- ${URL3}\n- ${URL4}"
 
           # Create release with the URLs in the body
           RELEASE_URL="https://api.github.com/repos/${{ github.repository }}/releases"
           curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Content-Type: application/json" \
               -d "{\"tag_name\": \"$TAG\", \"name\": \"$TAG\", \"body\": \"$RELEASE_BODY\"}" \
-              "$RELEASE_URL"
+              "$RELEASE_URL" || { echo "Error: Failed to create GitHub release"; exit 1; }
     env:
       THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
       REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"
