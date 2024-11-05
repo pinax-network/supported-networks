@@ -2,27 +2,28 @@
 
 This repository contains a registry of networks supported by The Graph.
 
-### Adding a chain
+## Adding a chain
 
 - add a network JSON in `registry` TODO: add detailed fields descriptions and best practices
 - validate it with `bun validate` this will make sure all networks JSONs are valid
 - generate combined registry with `bun generate:registry`
 - format with `bun format`
+- increment patch version in `package.json`
 - open a PR
 
-### Structure of the repository
+## Structure of the repository
 
 - `schemas/`: Contains the schema for the registry.
 - `registry/`: Contains the networks JSONs and resulting registry JSON
 - `src/`: Contains Typescript scripts to validate networks JSONs and generate the resulting registry JSON
 
-### Setup
+## Setup
 
 - install `bun`: https://bun.sh/
 - install dependencies `bun install --no-save`
 - get your free [Studio API key](https://thegraph.com/studio/apikeys/) and set it in the `.env` file - we will need it to run a few queries to do some network validation
 
-### Scripts usage
+## Scripts usage
 
 - `bun generate:types` - generate types from schema if schema has changed to use for validation
 - `bun validate:schema` - validate networks JSONs against the schema
@@ -32,9 +33,9 @@ This repository contains a registry of networks supported by The Graph.
 - `bun format` - format JSON and TS files with prettier
 - `bun all` - do it all
 
-### Versioning
+## Versioning
 
-#### Schema Version
+### Schema Version
 
 Published registry schema has a MAJOR.MINOR semantic version, i.e. `v1.2`
 
@@ -43,7 +44,7 @@ When version needs to be bumped up:
 - Major version: breaking schema change, i.e. field type change, field removal
 - Minor version: backward compatible schema change, i.e. new field, new enum variant
 
-#### Registry version
+### Registry version
 
 Every new published registry has a MAJOR.MINOR.PATCH semantic version, i.e. `v1.2.3` where MAJOR.MINOR corresponds to the schema version
 
@@ -52,9 +53,16 @@ When version needs to be bumped up:
 - Major/minor version: schema is updated
 - Patch version: new network added, existing network entry updated
 
-### Releases
+## Releases
 
-### References
+New registry version is published automatically after PR merge
+4 registry JSON files with identical contents are published in addition to existing ones (assuming version v1.2.3):
+- https://graphregistry.pages.dev/TheGraphNetworksRegistry.json
+- https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_2_3.json
+- https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_2_x.json
+- https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_x_x.json
+
+## References
 
 - [Ethereum chains list](https://github.com/ethereum-lists/chains)
 - [CAIP-2 chain ids](https://chainagnostic.org/CAIPs/caip-2)
