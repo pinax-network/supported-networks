@@ -57,6 +57,7 @@ When version needs to be bumped up:
 
 New registry version is published automatically after PR merge
 4 registry JSON files with identical contents are published in addition to existing ones (assuming version v1.2.3):
+
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry.json
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_2_3.json
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_2_x.json

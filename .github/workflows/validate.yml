@@ -38,3 +38,4 @@ jobs:
 
     env:
       THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
+      REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"
