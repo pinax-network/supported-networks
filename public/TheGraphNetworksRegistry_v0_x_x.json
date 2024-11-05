@@ -1,9 +1,9 @@
 {
-  "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_1.json",
-  "version": "0.1.6",
+  "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_2.json",
+  "version": "0.2.0",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-05T06:14:47.343Z",
+  "updatedAt": "2024-11-05T15:05:34.390Z",
   "networks": [
     {
       "id": "wax-testnet",
@@ -68,6 +68,7 @@
       "rpcUrls": [
         "https://eos.api.eosnation.io/"
       ],
+      "newField": "some",
       "apiUrls": [],
       "networkType": "mainnet",
       "support": {
