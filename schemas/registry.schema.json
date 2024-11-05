@@ -65,6 +65,10 @@
           "pattern": "^[-a-z0-9]{3,8}:[-_a-zA-Z0-9]{1,32}$",
           "description": "CAIP-2 Chain ID, i.e. eip155:1, bip122:000000000019d6689c085ae165831e93"
         },
+        "newField": {
+          "type": "string",
+          "description": "dummy test field"
+        },
         "aliases": {
           "type": "array",
           "items": {

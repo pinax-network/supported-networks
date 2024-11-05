@@ -25,6 +25,10 @@ export type Network = {
    */
   caip2Id: string;
   /**
+   * dummy test field
+   */
+  newField?: string;
+  /**
    * [optional] List of possible aliases for the chain id, i.e. ethereum, eth, mainnet, eth-mainnet
    */
   aliases?: string[];
