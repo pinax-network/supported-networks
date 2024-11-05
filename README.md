@@ -1,21 +1,21 @@
 # The Graph supported networks
 
-This repository contains a registry of networks supported by The Graph.
+This repository contains a registry of networks in The Graph ecosystem.
 
 ## Adding a chain
 
 - add a network JSON in `registry` TODO: add detailed fields descriptions and best practices
-- validate it with `bun validate` this will make sure all networks JSONs are valid
-- generate combined registry with `bun generate:registry`
-- format with `bun format`
+- [optional] validate with `bun validate` (see below for setup steps)
+- [optional] format with `bun format`
 - increment patch version in `package.json`
 - open a PR
 
 ## Structure of the repository
 
-- `schemas/`: Contains the schema for the registry.
-- `registry/`: Contains the networks JSONs and resulting registry JSON
-- `src/`: Contains Typescript scripts to validate networks JSONs and generate the resulting registry JSON
+- `schemas/`: Contains the schema for the registry
+- `registry/`: Contains the networks JSONs (edit these)
+- `public`: Contains all generated registry versions (don't edit those)
+- `src/`: Contains scripts to validate networks JSONs and generate the resulting registry JSON
 
 ## Setup
 
@@ -30,6 +30,7 @@ This repository contains a registry of networks supported by The Graph.
 - `bun validate:networks` - additional semantic validation of networks JSONs, i.e. uniqueness, relations, urls, ethereum chain list, graph network, icons, etc
 - `bun generate:registry` - generate resulting registry JSON in `./dist`
 - `bun validate:registry` - validate generated registry in `./dist` against the schema
+- `bun format:check` - check format JSON and TS formatting prettier
 - `bun format` - format JSON and TS files with prettier
 - `bun all` - do it all
 
@@ -41,8 +42,8 @@ Published registry schema has a MAJOR.MINOR semantic version, i.e. `v1.2`
 
 When version needs to be bumped up:
 
-- Major version: breaking schema change, i.e. field type change, new mandatory field, field removal
-- Minor version: backward compatible schema change, i.e. new optional field, new enum variant
+- MAJOR version: breaking schema change, i.e. field type change, new mandatory field, field removal
+- MINOR version: backward compatible schema change, i.e. new optional field, new enum variant
 
 ### Registry version
 
@@ -50,13 +51,13 @@ Every new published registry has a MAJOR.MINOR.PATCH semantic version, i.e. `v1.
 
 When version needs to be bumped up:
 
-- Major/minor version: schema is updated
-- Patch version: new network added, existing network entry updated
+- MAJOR/MINOR version: when schema is updated change MAJOR and MINOR versions to reflect the schema
+- PATCH version: new network added, existing network entry updated
 
 ## Releases
 
-New registry version is published automatically after PR merge
-4 registry JSON files with identical contents are published in addition to existing ones (assuming version v1.2.3):
+Every PR merge triggers a GitHub action that generates new registry version, formats it, commits, publishes a release and deploys on Cloudflare
+4 registry JSON files with the identical contents are published in addition to existing ones (assuming version v1.2.3):
 
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry.json
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_2_3.json

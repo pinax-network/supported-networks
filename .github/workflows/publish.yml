@@ -79,16 +79,15 @@ jobs:
           VERSION="${TAG#v}"                # Strip the "v" prefix
           IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
 
-          # Build the URLs
           URL1="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry.json"
           URL2="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_x_x.json"
           URL3="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_x.json"
           URL4="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_${PATCH}.json"
+          URL_SCHEMA="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistrySchema_v${MAJOR}_${MINOR}.json"
 
-          RELEASE_BODY="### Networks Registry ${TAG}\n- ${URL1}\n- ${URL2}\n- ${URL3}\n- ${URL4}"
-
-          # Create release with the URLs in the body
+          RELEASE_BODY="### Networks Registry ${TAG}\n- ${URL1}\n- ${URL2}\n- ${URL3}\n- ${URL4}\n\n### Schema {MAJOR}.${MINOR}\n- ${URL_SCHEMA}"
           RELEASE_URL="https://api.github.com/repos/${{ github.repository }}/releases"
+
           curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Content-Type: application/json" \
               -d "{\"tag_name\": \"$TAG\", \"name\": \"$TAG\", \"body\": \"$RELEASE_BODY\"}" \
