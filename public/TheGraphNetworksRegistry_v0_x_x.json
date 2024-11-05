@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_1.json",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-05T05:02:49.279Z",
+  "updatedAt": "2024-11-05T05:19:17.010Z",
   "networks": [
     {
       "id": "wax-testnet",
