@@ -72,6 +72,7 @@ Assuming current version is v1.2.3, the following files with identical content a
 In your application you can pull one of the registry JSONs above depending on your use case - whether it's pinned to a specific registry version, whether you allow backwards compatible schema changes or you just need the latest one.
 
 Typical use cases:
+
 - Codegens and other tools for The Graph ecosystem
 - Indexer infrastructure setup validation
 - Marketing and website

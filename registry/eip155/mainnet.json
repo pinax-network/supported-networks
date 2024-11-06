@@ -60,7 +60,7 @@
   "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://ethereum.org/en/developers/docs/",
-  
+
   "indexerDocsUrls": [
     {
       "url": "https://docs.infradao.com/archive-nodes-101/ethereum",
