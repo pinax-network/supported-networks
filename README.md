@@ -1,6 +1,6 @@
 # The Graph networks registry
 
-This repository contains a registry of networks in The Graph ecosystem.
+This repository manages a registry of networks in The Graph ecosystem. Latest version of the registry can be found here: https://graphregistry.pages.dev/TheGraphNetworksRegistry.json
 
 ## Adding/updating a chain
 
@@ -74,7 +74,7 @@ In your application you can pull one of the registry JSONs above depending on yo
 Typical use cases:
 
 - Codegens and other tools for The Graph ecosystem
-- Indexer infrastructure setup validation
+- Indexer infrastructure setup/validation
 - Marketing and website
 - Docs
 
