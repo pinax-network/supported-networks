@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: 'write'
-      packages: 'write'
-      actions: 'read'
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -53,6 +51,7 @@ jobs:
       - name: Check if tag exists
         id: check_tag
         run: |
+          echo "github.actor=${{ github.actor }}"
           TAG="${{ env.REGISTRY_VERSION }}"
           if git fetch --tags && git tag -l | grep -q "$TAG"; then
             echo "Error: Registry $TAG already exists. Bump up the version in package.json to publish"
