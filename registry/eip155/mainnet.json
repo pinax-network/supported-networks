@@ -60,6 +60,13 @@
   "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://ethereum.org/en/developers/docs/",
+  
+  "indexerDocsUrls": [
+    {
+      "url": "https://docs.infradao.com/archive-nodes-101/ethereum",
+      "kind": "rpc"
+    }
+  ],
   "web3Icon": "ethereum",
   "genesis": {
     "hash": "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
