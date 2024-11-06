@@ -1,10 +1,10 @@
-# The Graph supported networks
+# The Graph networks registry
 
 This repository contains a registry of networks in The Graph ecosystem.
 
 ## Adding a chain
 
-- add a network JSON in `registry` TODO: add detailed fields descriptions and best practices
+- add a network JSON in the `registry` directory. TODO: add detailed fields descriptions and best practices
 - [optional] validate with `bun validate` (see below for setup steps)
 - [optional] format with `bun format`
 - increment patch version in `package.json`
@@ -38,26 +38,27 @@ This repository contains a registry of networks in The Graph ecosystem.
 
 ### Schema Version
 
-Published registry schema has a MAJOR.MINOR semantic version, i.e. `v1.2`
+Registry schema has a MAJOR.MINOR semantic version, i.e. `v1.2`
 
-When version needs to be bumped up:
+When version needs to be incremented:
 
 - MAJOR version: breaking schema change, i.e. field type change, new mandatory field, field removal
 - MINOR version: backward compatible schema change, i.e. new optional field, new enum variant
 
 ### Registry version
 
-Every new published registry has a MAJOR.MINOR.PATCH semantic version, i.e. `v1.2.3` where MAJOR.MINOR corresponds to the schema version
+Published registry has a MAJOR.MINOR.PATCH semantic version, i.e. `v1.2.3` where MAJOR.MINOR corresponds to the schema version
 
-When version needs to be bumped up:
+When version needs to be incremented:
 
 - MAJOR/MINOR version: when schema is updated change MAJOR and MINOR versions to reflect the schema
 - PATCH version: new network added, existing network entry updated
 
 ## Releases
 
-Every PR merge triggers a GitHub action that generates new registry version, formats it, commits, publishes a release and deploys on Cloudflare
-4 registry JSON files with the identical contents are published in addition to existing ones (assuming version v1.2.3):
+Every PR merge triggers a GitHub action that generates new registry version, formats it, commits, publishes a release and deploys
+4 registry JSON files with the identical contents are deployed in addition to existing ones.
+Assuming current version is v1.2.3, the following files with identical content are published:
 
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry.json
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_2_3.json
