@@ -2,13 +2,13 @@
 
 This repository contains a registry of networks in The Graph ecosystem.
 
-## Adding a chain
+## Adding/updating a chain
 
-- add a network JSON in the `registry` directory. TODO: add detailed fields descriptions and best practices
-- [optional] validate with `bun validate` (see below for setup steps)
+- add/update a network JSON in the `registry` directory. TODO: add detailed fields descriptions and best practices
+- [optional] validate with `bun validate` (see below for local setup steps)
 - [optional] format with `bun format`
 - increment patch version in `package.json`
-- open a PR
+- open a PR. This will trigger validation checks and will signal if there are any issues with new definitions
 
 ## Structure of the repository
 
@@ -20,8 +20,10 @@ This repository contains a registry of networks in The Graph ecosystem.
 ## Setup
 
 - install `bun`: https://bun.sh/
+- `git clone` the repository
 - install dependencies `bun install --no-save`
-- get your free [Studio API key](https://thegraph.com/studio/apikeys/) and set it in the `.env` file - we will need it to run a few queries to do some network validation
+- rename `.env.example` to `.env`
+- [optional] get your free [Studio API key](https://thegraph.com/studio/apikeys/) and set it in the `.env` file - we will need it to run a few queries to do some network validation
 
 ## Scripts usage
 
@@ -30,9 +32,9 @@ This repository contains a registry of networks in The Graph ecosystem.
 - `bun validate:networks` - additional semantic validation of networks JSONs, i.e. uniqueness, relations, urls, ethereum chain list, graph network, icons, etc
 - `bun generate:registry` - generate resulting registry JSON in `./dist`
 - `bun validate:registry` - validate generated registry in `./dist` against the schema
-- `bun format:check` - check format JSON and TS formatting prettier
 - `bun format` - format JSON and TS files with prettier
-- `bun all` - do it all
+- `bun format:check` - check JSON and TS formatting with prettier
+- `bun all` - do all of the above
 
 ## Versioning
 
@@ -64,6 +66,15 @@ Assuming current version is v1.2.3, the following files with identical content a
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_2_3.json
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_2_x.json
 - https://graphregistry.pages.dev/TheGraphNetworksRegistry_v1_x_x.json
+
+## Registry Usage
+
+In your application you can pull one of the registry JSONs above depending on your use case - whether it's pinned to a specific registry version, whether you allow backwards compatible schema changes or you just need the latest one.
+
+Typical use cases:
+- Codegens and other tools for The Graph ecosystem
+- Marketing and website
+- Indexer infrastructure setup validation
 
 ## References
 
