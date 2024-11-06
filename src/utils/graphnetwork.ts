@@ -11,7 +11,7 @@ interface GraphResponse {
 
 export async function getActiveNetworks() {
   if (!THEGRAPH_STUDIO_KEY) {
-    return [];  // just skip - we might be running in github actions where we don't have access to the key
+    return []; // just skip - we might be running in github actions where we don't have access to the key
   }
   // EBO subgraph
   const response = await fetch(
