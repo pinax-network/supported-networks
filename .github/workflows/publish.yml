@@ -50,9 +50,8 @@ jobs:
       - name: Check if tag exists
         id: check_tag
         run: |
-          TAG="v${{ env.REGISTRY_VERSION }}"
-          if git fetch --tags && git tag -l | grep -q "$TAG"; then
-            echo "Error: Registry $TAG already exists. Bump up the version in package.json to publish"
+          if git fetch --tags && git tag -l | grep -q "v${{ env.REGISTRY_VERSION }}"; then
+            echo "Error: Registry v${{ env.REGISTRY_VERSION }} already exists. Bump up the version in package.json to publish"
             exit 1
           fi
 
@@ -72,27 +71,33 @@ jobs:
           git commit -m "generate registry v${{ env.REGISTRY_VERSION }} [no ci]" || echo "No changes to commit"
           git push
 
-      - name: Create tag and publish release
+      - name: Create tag
         run: |
-          TAG="v${{ env.REGISTRY_VERSION }}"
-          git tag "$TAG"
-          git push origin "$TAG"
+          git tag "v${{ env.REGISTRY_VERSION }}"
+          git push origin "v${{ env.REGISTRY_VERSION }}"
 
           IFS='.' read -r MAJOR MINOR PATCH <<< "${{ env.REGISTRY_VERSION }}"
+          echo "MAJOR=$MAJOR" >> $GITHUB_ENV
+          echo "MINOR=$MINOR" >> $GITHUB_ENV
+          echo "PATCH=$PATCH" >> $GITHUB_ENV
 
-          URL1="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry.json"
-          URL2="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_x_x.json"
-          URL3="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_x.json"
-          URL4="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_${PATCH}.json"
-          URL_SCHEMA="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistrySchema_v${MAJOR}_${MINOR}.json"
+      - name: Create GitHub release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: "v${{ env.REGISTRY_VERSION }}"
+          release_name: "v${{ env.REGISTRY_VERSION }}"
+          body: |
+            ### Networks Registry v${{ env.REGISTRY_VERSION }}
+            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry.json
+            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_x_x.json
+            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_${{ env.MINOR }}_x.json
+            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_${{ env.MINOR }}_${{ env.PATCH }}.json
 
-          RELEASE_BODY="### Networks Registry ${TAG}\n- ${URL1}\n- ${URL2}\n- ${URL3}\n- ${URL4}\n\n### Schema v${MAJOR}.${MINOR}\n- ${URL_SCHEMA}"
-          RELEASE_URL="https://api.github.com/repos/${{ github.repository }}/releases"
+            ### Schema v${{ env.MAJOR }}.${{ env.MINOR }}
+            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistrySchema_v${{ env.MAJOR }}_${{ env.MINOR }}.json
 
-          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              -H "Content-Type: application/json" \
-              -d "{\"tag_name\": \"$TAG\", \"name\": \"$TAG\", \"body\": \"$RELEASE_BODY\"}" \
-              "$RELEASE_URL" || { echo "Error: Failed to create GitHub release"; exit 1; }
     env:
       THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
       REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"
