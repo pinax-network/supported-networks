@@ -1,6 +1,5 @@
-When adding new chain follow the [README](./README.md).
+When adding or updating a chain follow the [README](./README.md).
 
-- [ ] Use a meaningful title for the pull request.
-- [ ] Pass validation tests
-- [ ] Pass format check
+- [ ] Use a meaningful title for the pull request
 - [ ] Increment `package.json` version
+- [ ] Pass validation tests
