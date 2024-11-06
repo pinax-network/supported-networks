@@ -99,5 +99,5 @@ jobs:
             - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistrySchema_v${{ env.MAJOR }}_${{ env.MINOR }}.json
 
     env:
-      THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
+      THEGRAPH_STUDIO_KEY: ${{ vars.THEGRAPH_STUDIO_KEY }}
       REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"
