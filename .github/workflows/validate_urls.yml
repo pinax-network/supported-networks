@@ -30,5 +30,3 @@ jobs:
       - name: Validate URLs
         run: bun validate:urls
 
-    env:
-      THEGRAPH_STUDIO_KEY: ${{ vars.THEGRAPH_STUDIO_KEY }}

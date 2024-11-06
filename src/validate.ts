@@ -181,6 +181,10 @@ async function validateFirehoseBlockType() {
 async function validateGraphNetworks() {
   process.stdout.write("Validating graph networks ... ");
   const activeGraphNetworks = await getActiveNetworks();
+  if (activeGraphNetworks.length === 0) {
+    process.stdout.write("skipped\n");
+    return;
+  }
   const activeRegistryNetworks = NETWORKS.filter((n) => n.issuanceRewards);
   for (const network of activeRegistryNetworks) {
     const graphNetwork = activeGraphNetworks.find(

@@ -37,5 +37,4 @@ jobs:
         run: bun validate:registry
 
     env:
-      THEGRAPH_STUDIO_KEY: ${{ vars.THEGRAPH_STUDIO_KEY }}
       REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"
