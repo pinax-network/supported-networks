@@ -33,9 +33,9 @@ jobs:
       - name: Generate registry
         run: bun generate:registry
 
-      - name: Validate registry
+      - name: Validate resulting registry against the schema
         run: bun validate:registry
 
     env:
-      THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
+      THEGRAPH_STUDIO_KEY: ${{ vars.THEGRAPH_STUDIO_KEY }}
       REGISTRY_ROOT_URL: "https://graphregistry.pages.dev"
