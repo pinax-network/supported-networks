@@ -9,7 +9,6 @@ name: Validate, generate and publish registry
 jobs:
   upload-registry:
     name: Upload to Cloudflare Pages
-    if: github.actor != 'github-actions[bot]'   # don't run on release commits
     runs-on: ubuntu-latest
     permissions:
       contents: 'write'
@@ -46,13 +45,12 @@ jobs:
         id: get_version
         run: |
           VERSION=$(jq -r '.version' package.json)
-          echo "REGISTRY_VERSION=v${VERSION}" >> $GITHUB_ENV
+          echo "REGISTRY_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Check if tag exists
         id: check_tag
         run: |
-          echo "github.actor=${{ github.actor }}"
-          TAG="${{ env.REGISTRY_VERSION }}"
+          TAG="v${{ env.REGISTRY_VERSION }}"
           if git fetch --tags && git tag -l | grep -q "$TAG"; then
             echo "Error: Registry $TAG already exists. Bump up the version in package.json to publish"
             exit 1
@@ -71,18 +69,16 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
           git add .
-          git commit -m "generate registry ${{ env.REGISTRY_VERSION }} [no ci]" || echo "No changes to commit"
+          git commit -m "generate registry v${{ env.REGISTRY_VERSION }} [no ci]" || echo "No changes to commit"
           git push
 
       - name: Create tag and publish release
         run: |
-          TAG="${{ env.REGISTRY_VERSION }}"
+          TAG="v${{ env.REGISTRY_VERSION }}"
           git tag "$TAG"
           git push origin "$TAG"
 
-          # Extract major, minor, and patch parts of the version
-          VERSION="${TAG#v}"                # Strip the "v" prefix
-          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          IFS='.' read -r MAJOR MINOR PATCH <<< "${{ env.REGISTRY_VERSION }}"
 
           URL1="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry.json"
           URL2="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_x_x.json"
@@ -90,7 +86,7 @@ jobs:
           URL4="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${MAJOR}_${MINOR}_${PATCH}.json"
           URL_SCHEMA="${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistrySchema_v${MAJOR}_${MINOR}.json"
 
-          RELEASE_BODY="### Networks Registry ${TAG}\n- ${URL1}\n- ${URL2}\n- ${URL3}\n- ${URL4}\n\n### Schema {MAJOR}.${MINOR}\n- ${URL_SCHEMA}"
+          RELEASE_BODY="### Networks Registry ${TAG}\n- ${URL1}\n- ${URL2}\n- ${URL3}\n- ${URL4}\n\n### Schema v${MAJOR}.${MINOR}\n- ${URL_SCHEMA}"
           RELEASE_URL="https://api.github.com/repos/${{ github.repository }}/releases"
 
           curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
