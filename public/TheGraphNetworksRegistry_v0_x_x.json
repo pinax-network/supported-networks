@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_2.json",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-06T05:22:18.060Z",
+  "updatedAt": "2024-11-06T05:30:34.298Z",
   "networks": [
     {
       "id": "mainnet",
@@ -1444,6 +1444,7 @@
       ],
       "rpcUrls": [
         "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+        "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
         "https://arb1.arbitrum.io/rpc"
       ],
       "apiUrls": [
