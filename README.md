@@ -73,8 +73,9 @@ In your application you can pull one of the registry JSONs above depending on yo
 
 Typical use cases:
 - Codegens and other tools for The Graph ecosystem
-- Marketing and website
 - Indexer infrastructure setup validation
+- Marketing and website
+- Docs
 
 ## References
 
