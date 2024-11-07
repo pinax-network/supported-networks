@@ -1,10 +1,10 @@
 {
-  "id": "blast",
+  "id": "blast-mainnet",
   "shortName": "Blast",
   "fullName": "Blast Mainnet",
   "aliases": [
     "evm-81457",
-    "blast-mainnet"
+    "blast"
   ],
   "caip2Id": "eip155:81457",
   "graphNode": {
