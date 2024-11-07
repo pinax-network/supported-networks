@@ -78,7 +78,9 @@ function validateTestnets() {
       }
       const mainnet = NETWORKS.find((n) => n.id === mainnetId.network);
       if (!mainnet) {
-        ERRORS.push(`Testnet ${network.id} has unknown mainnet: ${mainnetId}`);
+        ERRORS.push(
+          `Testnet ${network.id} has unknown mainnet: ${mainnetId.network}`,
+        );
         continue;
       }
       if (
