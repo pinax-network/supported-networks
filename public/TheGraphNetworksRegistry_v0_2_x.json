@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_2.json",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-06T14:42:46.751Z",
+  "updatedAt": "2024-11-07T15:09:05.499Z",
   "networks": [
     {
       "id": "mainnet",
@@ -266,6 +266,57 @@
       "web3Icon": "gnosis",
       "genesis": {
         "hash": "0xada44fd8d2ecab8b08f256af07ad3e777f17fb434f8f8e678b312f576212ba9a",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "polygon-zkevm",
+      "shortName": "Polygon zkEVM",
+      "fullName": "Polygon zkEVM Mainnet",
+      "aliases": [],
+      "caip2Id": "eip155:1101",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "relations": [
+        {
+          "kind": "l2Of",
+          "network": "mainnet"
+        }
+      ],
+      "explorerUrls": [
+        "https://zkevm.polygonscan.com"
+      ],
+      "rpcUrls": [
+        "https://zkevm-rpc.com",
+        "https://polygon-zkevm.drpc.org"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://polygon-zkevm.abi.pinax.network/api",
+          "kind": "etherscan"
+        }
+      ],
+      "networkType": "mainnet",
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ]
+      },
+      "issuanceRewards": false,
+      "nativeToken": "ETH",
+      "docsUrl": "https://polygon.technology/polygon-zkevm",
+      "web3Icon": "polygon-zkevm",
+      "genesis": {
+        "hash": "0x81005434635456a16f74ff7023fbe0bf423abbc8a8deb093ffff455c0ad3b741",
         "height": 0
       },
       "firehose": {
@@ -1113,7 +1164,7 @@
           "network": "mainnet"
         }
       ],
-      "issuanceRewards": false,
+      "issuanceRewards": true,
       "nativeToken": "ETH",
       "docsUrl": "https://docs.boba.network/",
       "web3Icon": "boba",
@@ -1971,6 +2022,60 @@
       }
     },
     {
+      "id": "boba-bnb",
+      "shortName": "Boba BNB",
+      "fullName": "Boba BNB Mainnet",
+      "aliases": [
+        "evm-56288",
+        "boba-bsc"
+      ],
+      "caip2Id": "eip155:56288",
+      "graphNode": {
+        "protocol": "ethereum"
+      },
+      "explorerUrls": [
+        "https://bnb.bobascan.com/"
+      ],
+      "rpcUrls": [
+        "https://bnb.boba.network",
+        "https://boba-bnb.gateway.tenderly.co/"
+      ],
+      "apiUrls": [
+        {
+          "url": "https://api.routescan.io/v2/network/mainnet/evm/56288/etherscan/api",
+          "kind": "etherscan"
+        }
+      ],
+      "support": {
+        "subgraphs": [
+          {
+            "provider": "e&n"
+          }
+        ]
+      },
+      "networkType": "mainnet",
+      "relations": [
+        {
+          "kind": "l2Of",
+          "network": "bsc"
+        }
+      ],
+      "issuanceRewards": true,
+      "nativeToken": "BOBA",
+      "docsUrl": "https://docs.boba.network/",
+      "web3Icon": "boba",
+      "genesis": {
+        "hash": "0xf9aa25373a3cf1c3d3dcb1911093b56eb129221d203270bcdb002b3f01a120d9",
+        "height": 0
+      },
+      "firehose": {
+        "blockType": "sf.ethereum.type.v2.Block",
+        "evmExtendedModel": false,
+        "bufUrl": "https://buf.build/streamingfast/firehose-ethereum",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
       "id": "linea",
       "shortName": "Linea",
       "fullName": "Linea Mainnet",
@@ -2224,12 +2329,12 @@
       }
     },
     {
-      "id": "blast",
+      "id": "blast-mainnet",
       "shortName": "Blast",
       "fullName": "Blast Mainnet",
       "aliases": [
         "evm-81457",
-        "blast-mainnet"
+        "blast"
       ],
       "caip2Id": "eip155:81457",
       "graphNode": {
@@ -2274,7 +2379,7 @@
           "network": "mainnet"
         }
       ],
-      "issuanceRewards": false,
+      "issuanceRewards": true,
       "nativeToken": "ETH",
       "docsUrl": "https://docs.blast.io",
       "indexerDocsUrls": [
