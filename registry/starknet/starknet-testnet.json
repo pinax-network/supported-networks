@@ -27,8 +27,7 @@
   ],
   "apiUrls": [],
   "networkType": "testnet",
-  "support": {
-  },
+  "support": {},
   "issuanceRewards": false,
   "nativeToken": "STRK",
   "docsUrl": "https://docs.starknet.io/",

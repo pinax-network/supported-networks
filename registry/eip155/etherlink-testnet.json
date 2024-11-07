@@ -2,8 +2,7 @@
   "id": "etherlink-testnet",
   "shortName": "Etherlink",
   "fullName": "Etherlink Testnet",
-  "aliases": [
-  ],
+  "aliases": [],
   "caip2Id": "eip155:128123",
   "graphNode": {
     "protocol": "ethereum"
