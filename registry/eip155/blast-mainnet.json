@@ -49,7 +49,7 @@
       "network": "mainnet"
     }
   ],
-  "issuanceRewards": false,
+  "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.blast.io",
   "indexerDocsUrls": [
