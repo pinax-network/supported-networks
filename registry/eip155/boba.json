@@ -36,7 +36,7 @@
       "network": "mainnet"
     }
   ],
-  "issuanceRewards": false,
+  "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.boba.network/",
   "web3Icon": "boba",
