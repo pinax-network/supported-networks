@@ -1,24 +1,24 @@
 {
-  "id": "gnosis-chiado",
-  "shortName": "Gnosis Chiado",
-  "fullName": "Gnosis Chiado Testnet",
+  "id": "linea-sepolia",
+  "shortName": "Linea Sepolia",
+  "fullName": "Linea Sepolia Testnet",
   "aliases": [
-    "chiado"
+    "evm-59141",
+    "linea-testnet"
   ],
-  "caip2Id": "eip155:10200",
+  "caip2Id": "eip155:59141",
   "graphNode": {
     "protocol": "ethereum"
   },
   "explorerUrls": [
-    "https://blockscout.chiadochain.net"
+    "https://sepolia.lineascan.build/"
   ],
   "rpcUrls": [
-    "https://rpc.chiadochain.net",
-    "https://chiado.rpc.pinax.network/v1/{PINAX_API_KEY}"
+    "https://rpc.sepolia.linea.build"
   ],
   "apiUrls": [
     {
-      "url": "https://gnosis-chiado.blockscout.com/api",
+      "url": "https://linea-sepolia.abi.pinax.network/api",
       "kind": "etherscan"
     }
   ],
@@ -33,15 +33,19 @@
   "relations": [
     {
       "kind": "testnetOf",
-      "network": "gnosis"
+      "network": "linea"
+    },
+    {
+      "kind": "l2Of",
+      "network": "sepolia"
     }
   ],
   "issuanceRewards": false,
-  "nativeToken": "XDAI",
-  "docsUrl": "https://docs.gnosischain.com",
-  "web3Icon": "gnosis",
+  "nativeToken": "ETH",
+  "docsUrl": "https://docs.linea.build",
+  "web3Icon": "linea",
   "genesis": {
-    "hash": "0xada44fd8d2ecab8b08f256af07ad3e777f17fb434f8f8e678b312f576212ba9a",
+    "hash": "0x65a64c825d7c13ce1bf077801d0b6b2a89853e19e4a89a5433d7d85d2102a20b",
     "height": 0
   },
   "firehose": {

@@ -15,6 +15,7 @@
   ],
   "rpcUrls": [
     "https://rpc.ftm.tools",
+    "https://fantom.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://fantom.drpc.org"
   ],
   "apiUrls": [

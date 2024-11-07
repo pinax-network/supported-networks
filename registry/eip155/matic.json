@@ -21,6 +21,7 @@
   ],
   "rpcUrls": [
     "https://polygon-rpc.com",
+    "https://polygon.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://rpc.ankr.com/polygon"
   ],
   "apiUrls": [

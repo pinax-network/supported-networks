@@ -15,6 +15,7 @@
   ],
   "rpcUrls": [
     "https://mainnet.mode.network",
+    "https://mode.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://mode.drpc.org"
   ],
   "apiUrls": [

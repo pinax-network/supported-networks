@@ -15,6 +15,7 @@
   ],
   "rpcUrls": [
     "https://rpc.linea.build",
+    "https://linea.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://linea-mainnet.infura.io/v3/${INFURA_API_KEY}"
   ],
   "apiUrls": [

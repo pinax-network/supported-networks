@@ -1,24 +1,25 @@
 {
-  "id": "boba-testnet",
-  "shortName": "Boba Sepolia",
-  "fullName": "Boba Sepolia Testnet",
+  "id": "blast-testnet",
+  "shortName": "Blast Sepolia",
+  "fullName": "Blast Sepolia Testnet",
   "aliases": [
-    "boba-sepolia"
+    "evm-23888",
+    "blast-sepolia"
   ],
-  "caip2Id": "eip155:28882",
+  "caip2Id": "eip155:23888",
   "graphNode": {
     "protocol": "ethereum"
   },
   "explorerUrls": [
-    "https://testnet.bobascan.com"
+    "https://sepolia.blastscan.io/"
   ],
   "rpcUrls": [
-    "https://sepolia.boba.network",
-    "https://bobasepolia.rpc.pinax.network/v1/{PINAX_API_KEY}"
+    "https://sepolia.blast.io",
+    "https://blastsepolia.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
     {
-      "url": "https://api.routescan.io/v2/network/testnet/evm/28882/etherscan/api",
+      "url": "https://blast-testnet.abi.pinax.network/api",
       "kind": "etherscan"
     }
   ],
@@ -31,13 +32,13 @@
     "firehose": [
       {
         "provider": "pinax",
-        "url": "bobasepolia.firehose.pinax.network:443"
+        "url": "blastsepolia.firehose.pinax.network:443"
       }
     ],
     "substreams": [
       {
         "provider": "pinax",
-        "url": "bobasepolia.substreams.pinax.network:443"
+        "url": "blastsepolia.substreams.pinax.network:443"
       }
     ]
   },
@@ -49,15 +50,15 @@
     },
     {
       "kind": "testnetOf",
-      "network": "boba"
+      "network": "blast-mainnet"
     }
   ],
   "issuanceRewards": false,
   "nativeToken": "ETH",
-  "docsUrl": "https://docs.boba.network/",
-  "web3Icon": "boba",
+  "docsUrl": "https://docs.blast.io",
+  "web3Icon": "blast",
   "genesis": {
-    "hash": "0x4d26ddc947c7cea924d5ef272c1a5ef40a1dce5ca2cbbaccad59d33f2505a30d",
+    "hash": "0x26a1c0faad7b041f34569a1bb383f00ab74b335883a44bed53e9f41ced5fd906",
     "height": 0
   },
   "firehose": {

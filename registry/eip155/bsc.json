@@ -17,7 +17,8 @@
   ],
   "rpcUrls": [
     "https://bsc-dataseed1.binance.org/",
-    "https://bsc-dataseed1.defibit.io/"
+    "https://bsc-dataseed1.defibit.io/",
+    "https://bsc.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
     {

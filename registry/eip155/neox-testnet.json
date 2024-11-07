@@ -1,24 +1,23 @@
 {
-  "id": "gnosis-chiado",
-  "shortName": "Gnosis Chiado",
-  "fullName": "Gnosis Chiado Testnet",
+  "id": "neox-testnet",
+  "shortName": "Neo X",
+  "fullName": "Neo X Testnet",
   "aliases": [
-    "chiado"
+    "evm-12227332"
   ],
-  "caip2Id": "eip155:10200",
+  "caip2Id": "eip155:12227332",
   "graphNode": {
     "protocol": "ethereum"
   },
   "explorerUrls": [
-    "https://blockscout.chiadochain.net"
+    "https://xt4scan.ngd.network/"
   ],
   "rpcUrls": [
-    "https://rpc.chiadochain.net",
-    "https://chiado.rpc.pinax.network/v1/{PINAX_API_KEY}"
+    "https://testnet.rpc.banelabs.org"
   ],
   "apiUrls": [
     {
-      "url": "https://gnosis-chiado.blockscout.com/api",
+      "url": "https://xt4scan.ngd.network/api",
       "kind": "etherscan"
     }
   ],
@@ -33,15 +32,14 @@
   "relations": [
     {
       "kind": "testnetOf",
-      "network": "gnosis"
+      "network": "neox"
     }
   ],
   "issuanceRewards": false,
-  "nativeToken": "XDAI",
-  "docsUrl": "https://docs.gnosischain.com",
-  "web3Icon": "gnosis",
+  "nativeToken": "GAS",
+  "docsUrl": "https://xdocs.ngd.network",
   "genesis": {
-    "hash": "0xada44fd8d2ecab8b08f256af07ad3e777f17fb434f8f8e678b312f576212ba9a",
+    "hash": "0x221f7d0a47dd80fe10f476625d62303947c9cd336113e119c64d919f0e9beb71",
     "height": 0
   },
   "firehose": {

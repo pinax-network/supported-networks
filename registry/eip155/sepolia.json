@@ -1,7 +1,7 @@
 {
   "id": "sepolia",
   "shortName": "Ethereum Sepolia",
-  "fullName": "c",
+  "fullName": "Ethereum Seepolia Testnet",
   "aliases": [
     "evm-11155111"
   ],
@@ -22,9 +22,15 @@
   ],
   "rpcUrls": [
     "https://rpc.sepolia.org",
+    "https://sepolia.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://sepolia.infura.io/v3/${INFURA_API_KEY}"
   ],
-  "apiUrls": [],
+  "apiUrls": [
+    {
+      "url": "https://sepolia.abi.pinax.network/api",
+      "kind": "etherscan"
+    }
+  ],
   "support": {
     "subgraphs": [
       {

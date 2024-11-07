@@ -21,7 +21,8 @@
     "https://holesky.otterscan.io"
   ],
   "rpcUrls": [
-    "https://holesky.drpc.org"
+    "https://holesky.drpc.org",
+    "https://holesky.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [],
   "support": {

@@ -1,9 +1,9 @@
 {
-  "id": "starknet",
+  "id": "starknet-mainnet",
   "shortName": "Starknet",
   "fullName": "Starknet Mainnet",
   "aliases": [
-    "starknet-mainnet"
+    "starknet"
   ],
   "caip2Id": "starknet:SN_MAIN",
   "graphNode": {
@@ -19,7 +19,8 @@
     "https://starkscan.co/"
   ],
   "rpcUrls": [
-    "https://starknet-mainnet.public.blastapi.io"
+    "https://starknet-mainnet.public.blastapi.io",
+    "https://starknet.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [],
   "networkType": "mainnet",

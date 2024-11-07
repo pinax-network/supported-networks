@@ -15,6 +15,7 @@
   ],
   "rpcUrls": [
     "https://rpc.fuse.io",
+    "https://fuse.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://fuse.drpc.org"
   ],
   "apiUrls": [

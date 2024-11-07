@@ -1,24 +1,23 @@
 {
-  "id": "gnosis-chiado",
-  "shortName": "Gnosis Chiado",
-  "fullName": "Gnosis Chiado Testnet",
+  "id": "fantom-testnet",
+  "shortName": "Fantom",
+  "fullName": "Fantom Testnet",
   "aliases": [
-    "chiado"
+    "evm-4002"
   ],
-  "caip2Id": "eip155:10200",
+  "caip2Id": "eip155:4002",
   "graphNode": {
     "protocol": "ethereum"
   },
   "explorerUrls": [
-    "https://blockscout.chiadochain.net"
+    "https://testnet.ftmscan.com/"
   ],
   "rpcUrls": [
-    "https://rpc.chiadochain.net",
-    "https://chiado.rpc.pinax.network/v1/{PINAX_API_KEY}"
+    "https://rpc.testnet.fantom.network"
   ],
   "apiUrls": [
     {
-      "url": "https://gnosis-chiado.blockscout.com/api",
+      "url": "https://fantom-testnet.abi.pinax.network/api",
       "kind": "etherscan"
     }
   ],
@@ -33,15 +32,15 @@
   "relations": [
     {
       "kind": "testnetOf",
-      "network": "gnosis"
+      "network": "fantom"
     }
   ],
   "issuanceRewards": false,
-  "nativeToken": "XDAI",
-  "docsUrl": "https://docs.gnosischain.com",
-  "web3Icon": "gnosis",
+  "nativeToken": "FTM",
+  "docsUrl": "https://docs.fantom.foundation",
+  "web3Icon": "fantom",
   "genesis": {
-    "hash": "0xada44fd8d2ecab8b08f256af07ad3e777f17fb434f8f8e678b312f576212ba9a",
+    "hash": "0x00000000000003e8c717f00dc4306a6ff72eabc9a6ec6e4a46bf6ba044ca88d2",
     "height": 0
   },
   "firehose": {
