@@ -15,6 +15,7 @@
   ],
   "rpcUrls": [
     "https://api.avax.network/ext/bc/C/rpc",
+    "https://avalanche.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://avalanche-c-chain-rpc.publicnode.com"
   ],
   "apiUrls": [

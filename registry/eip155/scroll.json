@@ -15,6 +15,7 @@
   ],
   "rpcUrls": [
     "https://rpc.scroll.io",
+    "https://scroll.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://rpc.ankr.com/scroll"
   ],
   "apiUrls": [

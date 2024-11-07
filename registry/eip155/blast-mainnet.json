@@ -15,6 +15,7 @@
   ],
   "rpcUrls": [
     "https://rpc.blast.io",
+    "https://blast.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://rpc.ankr.com/blast"
   ],
   "apiUrls": [

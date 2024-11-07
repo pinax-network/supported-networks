@@ -13,7 +13,8 @@
     "https://testnet.bobascan.com"
   ],
   "rpcUrls": [
-    "https://sepolia.boba.network"
+    "https://sepolia.boba.network",
+    "https://bobasepolia.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
     {

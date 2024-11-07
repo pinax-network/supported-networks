@@ -25,9 +25,15 @@
     "https://explorer.evm.eosnetwork.com/"
   ],
   "rpcUrls": [
-    "https://api.evm.eosnetwork.com"
+    "https://explorer.evm.eosnetwork.com/api/eth-rpc",
+    "https://eosevm.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
-  "apiUrls": [],
+  "apiUrls": [
+    {
+      "kind": "etherscan",
+      "url": "https://explorer.evm.eosnetwork.com/api"
+    }
+  ],
   "support": {
     "firehose": [
       {

@@ -14,7 +14,8 @@
     "https://bobascan.com"
   ],
   "rpcUrls": [
-    "https://mainnet.boba.network"
+    "https://mainnet.boba.network",
+    "https://boba.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
     {
@@ -26,6 +27,18 @@
     "subgraphs": [
       {
         "provider": "e&n"
+      }
+    ],
+    "firehose": [
+      {
+        "provider": "pinax",
+        "url": "boba.firehose.pinax.network:443"
+      }
+    ],
+    "substreams": [
+      {
+        "provider": "pinax",
+        "url": "boba.substreams.pinax.network:443"
       }
     ]
   },

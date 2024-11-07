@@ -1,6 +1,6 @@
 {
   "id": "blast-testnet",
-  "shortName": "Blast",
+  "shortName": "Blast Sepolia",
   "fullName": "Blast Sepolia Testnet",
   "aliases": [
     "evm-23888",
@@ -14,7 +14,8 @@
     "https://sepolia.blastscan.io/"
   ],
   "rpcUrls": [
-    "https://sepolia.blast.io"
+    "https://sepolia.blast.io",
+    "https://blastsepolia.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
     {

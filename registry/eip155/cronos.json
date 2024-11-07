@@ -14,7 +14,8 @@
     "https://explorer.cronos.org"
   ],
   "rpcUrls": [
-    "https://evm.cronos.org"
+    "https://evm.cronos.org",
+    "https://cronos.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
     {

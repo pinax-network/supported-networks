@@ -15,6 +15,7 @@
   ],
   "rpcUrls": [
     "https://rpc.api.moonbeam.network",
+    "https://moonbeam.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://moonbeam.drpc.org"
   ],
   "apiUrls": [

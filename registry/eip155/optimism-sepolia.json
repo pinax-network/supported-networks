@@ -24,7 +24,8 @@
     "https://optimism-sepolia.blockscout.com/"
   ],
   "rpcUrls": [
-    "https://sepolia.optimism.io"
+    "https://sepolia.optimism.io",
+    "https://opsepolia.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
     {
