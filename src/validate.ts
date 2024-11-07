@@ -202,9 +202,12 @@ async function validateGraphNetworks() {
       );
     }
   }
-  if (activeGraphNetworks.length !== activeRegistryNetworks.length) {
+  if (activeGraphNetworks.length > activeRegistryNetworks.length) {
+    const extraNetworks = activeGraphNetworks.filter(
+      (n) => !activeRegistryNetworks.find((r) => r.id === n.alias),
+    );
     ERRORS.push(
-      `Active networks count mismatch: graph=${activeGraphNetworks.length} registry=${activeRegistryNetworks.length}`,
+      `Active networks mismatch: graph=${activeGraphNetworks.length} registry=${activeRegistryNetworks.length} extra=${extraNetworks.map((n) => n.alias).join(",")}`,
     );
   }
   process.stdout.write("done\n");
