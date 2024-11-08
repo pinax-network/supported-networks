@@ -47,6 +47,14 @@ function validateUniqueness() {
       ERRORS.push(`Duplicate field: "${field} = ${duplicates[0]}"`);
     }
   }
+
+  // aliases must be unique over ids
+  const aliases = new Set(NETWORKS.flatMap((n) => n.aliases ?? []));
+  for (const network of NETWORKS) {
+    if (aliases.has(network.id)) {
+      ERRORS.push(`Network id ${network.id} is used an alias elsewhere`);
+    }
+  }
   process.stdout.write("done\n");
 }
 
@@ -233,7 +241,6 @@ async function validateEthereumList() {
         `Network ${network.id} with CAIP-2 id ${network.caip2Id} has different native token symbol in ethereum chain registry: ${chain.nativeCurrency.symbol} vs ${network.nativeToken}`,
       );
     }
-    // don't rely on ethereum list - there are many issues with it
     if (chain.parent?.type === "L2") {
       const ourParent = network.relations?.find(
         (r) => r.kind === "l2Of",

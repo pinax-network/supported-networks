@@ -3,7 +3,7 @@
   "shortName": "Kylin",
   "fullName": "Kylin Testnet",
   "aliases": [
-    "kylin"
+    "eos-kylin"
   ],
   "caip2Id": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
   "explorerUrls": [

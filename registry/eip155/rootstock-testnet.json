@@ -2,9 +2,7 @@
   "id": "rootstock-testnet",
   "shortName": "Rootstock",
   "fullName": "Rootstock Testnet",
-  "aliases": [
-    "rootstock-testnet"
-  ],
+  "aliases": [],
   "caip2Id": "eip155:31",
   "graphNode": {
     "protocol": "ethereum"

@@ -3,8 +3,7 @@
   "shortName": "Fuse",
   "fullName": "Fuse Testnet",
   "aliases": [
-    "evm-12001",
-    "fuse-testnet"
+    "evm-12001"
   ],
   "caip2Id": "eip155:12001",
   "graphNode": {
