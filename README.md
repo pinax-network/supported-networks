@@ -1,6 +1,6 @@
 # The Graph networks registry
 
-This repository manages a registry of networks in The Graph ecosystem. Latest version of the registry can be found here: https://graphregistry.pages.dev/TheGraphNetworksRegistry.json
+This repository manages a registry of networks in The Graph ecosystem. See [Releases](https://github.com/pinax-network/supported-networks/releases) page for the latest version of the registry.
 
 ## Adding/updating a chain
 
