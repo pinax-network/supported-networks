@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_2.json",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-08T21:03:09.862Z",
+  "updatedAt": "2024-11-08T23:26:02.774Z",
   "networks": [
     {
       "id": "mainnet",
@@ -72,7 +72,7 @@
       },
       "issuanceRewards": true,
       "nativeToken": "ETH",
-      "docsUrl": "https://ethereum.org/en/developers/docs/",
+      "docsUrl": "https://ethereum.org/en/developers/docs",
       "indexerDocsUrls": [
         {
           "url": "https://docs.infradao.com/archive-nodes-101/ethereum",
@@ -110,7 +110,7 @@
         }
       ],
       "explorerUrls": [
-        "https://optimistic.etherscan.io/"
+        "https://optimistic.etherscan.io"
       ],
       "rpcUrls": [
         "https://mainnet.optimism.io",
@@ -149,7 +149,7 @@
       "networkType": "mainnet",
       "issuanceRewards": true,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.optimism.io/",
+      "docsUrl": "https://docs.optimism.io",
       "indexerDocsUrls": [
         {
           "url": "https://docs.infradao.com/archive-nodes-101/optimism",
@@ -337,7 +337,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://clvscan.com/"
+        "https://clvscan.com"
       ],
       "rpcUrls": [
         "https://api-para.clv.org"
@@ -358,7 +358,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "CLV",
-      "docsUrl": "https://docs.clv.org/",
+      "docsUrl": "https://docs.clv.org",
       "web3Icon": "clover",
       "genesis": {
         "hash": "0x7c11fb21c186dd7846d92e09af5c02fa4c8a08b83c99d7361b8b9fd5dc1650fb",
@@ -441,7 +441,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://sepolia.etherscan.io/",
+        "https://sepolia.etherscan.io",
         "https://sepolia.otterscan.io"
       ],
       "rpcUrls": [
@@ -489,7 +489,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://sepolia.dev/",
+      "docsUrl": "https://sepolia.dev",
       "genesis": {
         "hash": "0x25a5cc106eea7138acab33231d7160d69cb777ee0c2c553fcddf5138993e6dd9",
         "height": 0
@@ -524,7 +524,7 @@
         }
       ],
       "explorerUrls": [
-        "https://optimism-sepolia.blockscout.com/"
+        "https://optimism-sepolia.blockscout.com"
       ],
       "rpcUrls": [
         "https://sepolia.optimism.io",
@@ -558,7 +558,7 @@
       "networkType": "testnet",
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.optimism.io/",
+      "docsUrl": "https://docs.optimism.io",
       "web3Icon": "optimistic-ethereum",
       "genesis": {
         "hash": "0x102de6ffb001480cc9b8b548fd05c34cd4f46ae4aa91759393db90ea0409887d",
@@ -702,7 +702,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://xt4scan.ngd.network/"
+        "https://xt4scan.ngd.network"
       ],
       "rpcUrls": [
         "https://testnet.rpc.banelabs.org"
@@ -751,7 +751,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://testnet.explorer.etherlink.com/"
+        "https://testnet.explorer.etherlink.com"
       ],
       "rpcUrls": [
         "https://node.ghostnet.etherlink.com"
@@ -778,7 +778,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "XTZ",
-      "docsUrl": "https://docs.etherlink.com/",
+      "docsUrl": "https://docs.etherlink.com",
       "web3Icon": "etherlink",
       "genesis": {
         "hash": "0x2cf11372c813c0007ef080103fc813cf26ad9a374e88d589ef536dfc3dd1fee9",
@@ -839,7 +839,7 @@
       "networkType": "mainnet",
       "issuanceRewards": false,
       "nativeToken": "GLMR",
-      "docsUrl": "https://docs.moonbeam.network/",
+      "docsUrl": "https://docs.moonbeam.network",
       "indexerDocsUrls": [
         {
           "url": "https://docs.infradao.com/archive-nodes-101/moonbeam",
@@ -871,7 +871,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://moonriver.moonscan.io/"
+        "https://moonriver.moonscan.io"
       ],
       "rpcUrls": [
         "https://rpc.api.moonriver.moonbeam.network",
@@ -899,7 +899,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "MOVR",
-      "docsUrl": "https://docs.moonbeam.network/",
+      "docsUrl": "https://docs.moonbeam.network",
       "web3Icon": "moonriver",
       "genesis": {
         "hash": "0xce24348303f7a60c4d2d3c82adddf55ca57af89cd9e2cd4b863906ef53b89b3c",
@@ -952,7 +952,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "DEV",
-      "docsUrl": "https://docs.moonbeam.network/learn/platform/networks/moonbase/",
+      "docsUrl": "https://docs.moonbeam.network/learn/platform/networks/moonbase",
       "web3Icon": "moonbeam",
       "genesis": {
         "hash": "0x33638dde636f9264b6472b9d976d58e757fe88badac53f204f3f530ecc5aacfa",
@@ -978,7 +978,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://explorer.aurora.dev/"
+        "https://explorer.aurora.dev"
       ],
       "rpcUrls": [
         "https://mainnet.aurora.dev"
@@ -999,7 +999,7 @@
       "networkType": "mainnet",
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://doc.aurora.dev/",
+      "docsUrl": "https://doc.aurora.dev",
       "web3Icon": "aurora",
       "genesis": {
         "hash": "0x8058d7fe544fdcac6836faa5f84c68291da1773594216957374708a7109a6336",
@@ -1058,7 +1058,7 @@
       "networkType": "mainnet",
       "issuanceRewards": false,
       "nativeToken": "SEI",
-      "docsUrl": "https://docs.seitrace.com/",
+      "docsUrl": "https://docs.seitrace.com",
       "web3Icon": "sei-network",
       "genesis": {
         "hash": "0xe43c3e52a4f74dc7bb35f55cc813ed2ce97e46aafb3fcf8884056b0a757f5b75",
@@ -1114,7 +1114,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "G",
-      "docsUrl": "https://docs.gravity.xyz/",
+      "docsUrl": "https://docs.gravity.xyz",
       "web3Icon": "gravity",
       "genesis": {
         "hash": "0xdf76dabe0734fed9d517027a494bc00662576d30aee9672a6fab5184e06ee8ca",
@@ -1146,7 +1146,7 @@
         }
       ],
       "explorerUrls": [
-        "https://polygonscan.com/"
+        "https://polygonscan.com"
       ],
       "rpcUrls": [
         "https://polygon-rpc.com",
@@ -1200,7 +1200,7 @@
       ],
       "issuanceRewards": true,
       "nativeToken": "POL",
-      "docsUrl": "https://docs.polygon.technology/",
+      "docsUrl": "https://docs.polygon.technology",
       "web3Icon": "polygon-pos",
       "genesis": {
         "hash": "0xa9c28ce2141b56c474f1dc504bee9b01eb1bd7d1a507580d5519d4437a97de1b",
@@ -1237,7 +1237,7 @@
         }
       ],
       "explorerUrls": [
-        "https://explorer.testnet.evm.eosnetwork.com/"
+        "https://explorer.testnet.evm.eosnetwork.com"
       ],
       "rpcUrls": [
         "https://explorer.testnet.evm.eosnetwork.com/api/eth-rpc",
@@ -1318,7 +1318,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "G",
-      "docsUrl": "https://docs.gravity.xyz/",
+      "docsUrl": "https://docs.gravity.xyz",
       "web3Icon": "gravity",
       "genesis": {
         "hash": "0x6eb5f2e11f3e026992cb3860e4518f672f0019fdc3c595e06cd22894fb6d7c36",
@@ -1397,7 +1397,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://holesky.etherscan.io/",
+        "https://holesky.etherscan.io",
         "https://holesky.otterscan.io"
       ],
       "rpcUrls": [
@@ -1439,7 +1439,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://holesky.dev/",
+      "docsUrl": "https://holesky.dev",
       "genesis": {
         "hash": "0xb5f7f912443c940f21fd611f12828d75b534364ed9e95ca4e307729a4661bde4",
         "height": 0
@@ -1471,7 +1471,7 @@
         }
       ],
       "explorerUrls": [
-        "https://explorer.evm.eosnetwork.com/"
+        "https://explorer.evm.eosnetwork.com"
       ],
       "rpcUrls": [
         "https://explorer.evm.eosnetwork.com/api/eth-rpc",
@@ -1528,7 +1528,7 @@
         "https://www.oklink.com/xlayer-test"
       ],
       "rpcUrls": [
-        "https://testrpc.xlayer.tech/"
+        "https://testrpc.xlayer.tech"
       ],
       "apiUrls": [],
       "support": {
@@ -1579,7 +1579,7 @@
         "https://www.oklink.com/xlayer"
       ],
       "rpcUrls": [
-        "https://rpc.xlayer.tech/"
+        "https://rpc.xlayer.tech"
       ],
       "apiUrls": [],
       "support": {
@@ -1623,7 +1623,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://sepolia.blastscan.io/"
+        "https://sepolia.blastscan.io"
       ],
       "rpcUrls": [
         "https://sepolia.blast.io",
@@ -1709,7 +1709,7 @@
       "networkType": "mainnet",
       "issuanceRewards": false,
       "nativeToken": "CRO",
-      "docsUrl": "https://docs.cronos.org/",
+      "docsUrl": "https://docs.cronos.org",
       "web3Icon": "cronos",
       "genesis": {
         "hash": "0xa7f4e603aa51239a15e0a3fafb15c6e4c6d6f2c39c55770330efd2fa5afc12a9",
@@ -1830,7 +1830,7 @@
       ],
       "issuanceRewards": true,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.boba.network/",
+      "docsUrl": "https://docs.boba.network",
       "web3Icon": "boba",
       "genesis": {
         "hash": "0xdcd9e6a8f9973eaa62da2874959cb152faeb4fd6929177bd6335a1a16074ef9c",
@@ -1899,7 +1899,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.boba.network/",
+      "docsUrl": "https://docs.boba.network",
       "web3Icon": "boba",
       "genesis": {
         "hash": "0x4d26ddc947c7cea924d5ef272c1a5ef40a1dce5ca2cbbaccad59d33f2505a30d",
@@ -1945,7 +1945,7 @@
       "networkType": "mainnet",
       "issuanceRewards": false,
       "nativeToken": "RBTC",
-      "docsUrl": "https://dev.rootstock.io/",
+      "docsUrl": "https://dev.rootstock.io",
       "indexerDocsUrls": [
         {
           "url": "https://docs.infradao.com/archive-nodes-101/rootstock",
@@ -1978,7 +1978,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://sepolia.explorer.zksync.io/"
+        "https://sepolia.explorer.zksync.io"
       ],
       "rpcUrls": [
         "https://sepolia.era.zksync.dev"
@@ -2058,7 +2058,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "tRBTC",
-      "docsUrl": "https://dev.rootstock.io/",
+      "docsUrl": "https://dev.rootstock.io",
       "web3Icon": "rootstock",
       "genesis": {
         "hash": "0xcabb7fbe88cd6d922042a32ffc08ce8b1fbb37d650b9d4e7dbfe2a7469adfa42",
@@ -2176,7 +2176,7 @@
       "networkType": "mainnet",
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.mode.network/",
+      "docsUrl": "https://docs.mode.network",
       "indexerDocsUrls": [
         {
           "url": "https://docs.infradao.com/archive-nodes-101/mode",
@@ -2209,7 +2209,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://astar-zkevm.explorer.startale.com/"
+        "https://astar-zkevm.explorer.startale.com"
       ],
       "rpcUrls": [
         "https://rpc.startale.com/astar-zkevm"
@@ -2236,7 +2236,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.astar.network/docs/getting-started/",
+      "docsUrl": "https://docs.astar.network/docs/getting-started",
       "web3Icon": "astar",
       "genesis": {
         "hash": "0x5f7b9f463b7a0b690efb11446d0520e5b884e5bf0e3a3780c881a3b490592574",
@@ -2261,7 +2261,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://testnet.ftmscan.com/"
+        "https://testnet.ftmscan.com"
       ],
       "rpcUrls": [
         "https://rpc.testnet.fantom.network"
@@ -2506,7 +2506,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.arbitrum.io/",
+      "docsUrl": "https://docs.arbitrum.io",
       "web3Icon": "arbitrum-nova",
       "genesis": {
         "hash": "0x2ad24e03026118f9b3a48626f0636e38c93660e90a6812e853a99aa8c5371561",
@@ -2605,7 +2605,7 @@
       "networkType": "mainnet",
       "issuanceRewards": false,
       "nativeToken": "XTZ",
-      "docsUrl": "https://docs.etherlink.com/",
+      "docsUrl": "https://docs.etherlink.com",
       "web3Icon": "etherlink",
       "genesis": {
         "hash": "0x37628d45dcd6265c969aa5f5dc3fe8fddd21198c683b85ac7099d8e39597df50",
@@ -2758,7 +2758,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://xexplorer.neo.org/"
+        "https://xexplorer.neo.org"
       ],
       "rpcUrls": [
         "https://mainnet-1.rpc.banelabs.org"
@@ -2879,11 +2879,11 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://bscscan.com/"
+        "https://bscscan.com"
       ],
       "rpcUrls": [
-        "https://bsc-dataseed1.binance.org/",
-        "https://bsc-dataseed1.defibit.io/",
+        "https://bsc-dataseed1.binance.org",
+        "https://bsc-dataseed1.defibit.io",
         "https://bsc.rpc.pinax.network/v1/{PINAX_API_KEY}"
       ],
       "apiUrls": [
@@ -2927,7 +2927,7 @@
       },
       "issuanceRewards": true,
       "nativeToken": "BNB",
-      "docsUrl": "https://docs.bnbchain.org/",
+      "docsUrl": "https://docs.bnbchain.org",
       "indexerDocsUrls": [
         {
           "url": "https://docs.infradao.com/archive-nodes-101/binance",
@@ -2959,11 +2959,11 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://bnb.bobascan.com/"
+        "https://bnb.bobascan.com"
       ],
       "rpcUrls": [
         "https://bnb.boba.network",
-        "https://boba-bnb.gateway.tenderly.co/"
+        "https://boba-bnb.gateway.tenderly.co"
       ],
       "apiUrls": [
         {
@@ -2987,7 +2987,7 @@
       ],
       "issuanceRewards": true,
       "nativeToken": "BOBA",
-      "docsUrl": "https://docs.boba.network/",
+      "docsUrl": "https://docs.boba.network",
       "web3Icon": "boba",
       "genesis": {
         "hash": "0xf9aa25373a3cf1c3d3dcb1911093b56eb129221d203270bcdb002b3f01a120d9",
@@ -3013,7 +3013,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://sepolia.lineascan.build/"
+        "https://sepolia.lineascan.build"
       ],
       "rpcUrls": [
         "https://rpc.sepolia.linea.build"
@@ -3232,7 +3232,7 @@
       ],
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.zora.co/",
+      "docsUrl": "https://docs.zora.co",
       "genesis": {
         "hash": "0x47555a45a1af8d4728ca337a1e48375a83919b1ea16591e070a07388b7364e29",
         "height": 0
@@ -3301,7 +3301,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "POL",
-      "docsUrl": "https://docs.polygon.technology/",
+      "docsUrl": "https://docs.polygon.technology",
       "web3Icon": "polygon-pos",
       "genesis": {
         "hash": "0x7202b2b53c5a0836e773e319d18922cc756dd67432f9a1f65352b61f4406c697",
@@ -3400,7 +3400,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://kaiascan.io/"
+        "https://kaiascan.io"
       ],
       "rpcUrls": [
         "https://public-en.node.kaia.io"
@@ -3441,10 +3441,10 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://base.blockscout.com/"
+        "https://base.blockscout.com"
       ],
       "rpcUrls": [
-        "https://mainnet.base.org/",
+        "https://mainnet.base.org",
         "https://base-rpc.publicnode.com"
       ],
       "apiUrls": [
@@ -3488,7 +3488,7 @@
       "networkType": "mainnet",
       "issuanceRewards": true,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.base.org/",
+      "docsUrl": "https://docs.base.org",
       "indexerDocsUrls": [
         {
           "url": "https://docs.infradao.com/archive-nodes-101/base",
@@ -3547,7 +3547,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "CHZ",
-      "docsUrl": "https://docs.chiliz.com/",
+      "docsUrl": "https://docs.chiliz.com",
       "web3Icon": "chiliz",
       "genesis": {
         "hash": "0x9e0e07ae4ee9b0ef66a4206656677020306259d0b0b845ad3bb6b09fb91485ff",
@@ -3595,7 +3595,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "CHZ",
-      "docsUrl": "https://docs.chiliz.com/",
+      "docsUrl": "https://docs.chiliz.com",
       "web3Icon": "chiliz",
       "genesis": {
         "hash": "0xd79fa059ef8cdfcf72676df19e209ee014183a5fa1cf132b2ff9288dbbcf5042",
@@ -3622,7 +3622,7 @@
         "protocol": "ethereum"
       },
       "explorerUrls": [
-        "https://testnet.bscscan.com/"
+        "https://testnet.bscscan.com"
       ],
       "rpcUrls": [
         "https://data-seed-prebsc-1-s1.bnbchain.org:8545",
@@ -3662,7 +3662,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "tBNB",
-      "docsUrl": "https://docs.bnbchain.org/",
+      "docsUrl": "https://docs.bnbchain.org",
       "web3Icon": "binance-smart-chain",
       "genesis": {
         "hash": "0x6d3c66c5357ec91d5c43af47e234a939b22557cbb552dc45bebbceeed90fbe34",
@@ -3684,10 +3684,10 @@
       ],
       "caip2Id": "antelope:1064487b3cd1a897ce03ae5b6a865651",
       "explorerUrls": [
-        "https://wax.bloks.io/"
+        "https://wax.bloks.io"
       ],
       "rpcUrls": [
-        "https://wax.api.eosnation.io/"
+        "https://wax.api.eosnation.io"
       ],
       "apiUrls": [],
       "networkType": "mainnet",
@@ -3707,7 +3707,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "WAX",
-      "docsUrl": "https://developer.wax.io/",
+      "docsUrl": "https://developer.wax.io",
       "genesis": {
         "hash": "0x00000002c9a8761a546eeae2d5a0df4586d8d53d5e8c74da1b2f9ee44587f37d",
         "height": 2
@@ -3728,7 +3728,7 @@
         "https://explorer-test.telos.net"
       ],
       "rpcUrls": [
-        "https://telostest.api.eosnation.io/"
+        "https://telostest.api.eosnation.io"
       ],
       "apiUrls": [],
       "networkType": "testnet",
@@ -3754,7 +3754,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "TELOS",
-      "docsUrl": "https://docs.telos.net/",
+      "docsUrl": "https://docs.telos.net",
       "web3Icon": "telos",
       "genesis": {
         "hash": "0x0000000377dcf185dce2cd5b1ad7e70a7da0a73fc175c47283043791956c70c3",
@@ -3775,10 +3775,10 @@
       ],
       "caip2Id": "antelope:4667b205c6838ef70ff7988f6e8257e8",
       "explorerUrls": [
-        "https://explorer.telos.net/"
+        "https://explorer.telos.net"
       ],
       "rpcUrls": [
-        "https://telos.api.eosnation.io/"
+        "https://telos.api.eosnation.io"
       ],
       "apiUrls": [],
       "networkType": "mainnet",
@@ -3798,7 +3798,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "TELOS",
-      "docsUrl": "https://docs.telos.net/",
+      "docsUrl": "https://docs.telos.net",
       "web3Icon": "telos",
       "genesis": {
         "hash": "0x000000021d642039071f77a8a2e1eca6cfc0d90f94e7304f0d401bf28f067693",
@@ -3819,10 +3819,10 @@
       ],
       "caip2Id": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
       "explorerUrls": [
-        "https://kylin.bloks.io/"
+        "https://kylin.bloks.io"
       ],
       "rpcUrls": [
-        "https://kylin.api.eosnation.io/"
+        "https://kylin.api.eosnation.io"
       ],
       "apiUrls": [],
       "networkType": "testnet",
@@ -3869,10 +3869,10 @@
       ],
       "caip2Id": "antelope:73e4385a2708e6d7048834fbc1079f2f",
       "explorerUrls": [
-        "https://jungle.bloks.io/"
+        "https://jungle.bloks.io"
       ],
       "rpcUrls": [
-        "https://jungle4.api.eosnation.io/"
+        "https://jungle4.api.eosnation.io"
       ],
       "apiUrls": [],
       "networkType": "testnet",
@@ -3918,10 +3918,10 @@
       ],
       "caip2Id": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
       "explorerUrls": [
-        "https://bloks.io/"
+        "https://bloks.io"
       ],
       "rpcUrls": [
-        "https://eos.api.eosnation.io/"
+        "https://eos.api.eosnation.io"
       ],
       "newField": "some",
       "apiUrls": [],
@@ -3963,10 +3963,10 @@
       ],
       "caip2Id": "antelope:f16b1833c747c43682f4386fca9cbb32",
       "explorerUrls": [
-        "https://wax-test.bloks.io/"
+        "https://wax-test.bloks.io"
       ],
       "rpcUrls": [
-        "https://waxtest.api.eosnation.io/"
+        "https://waxtest.api.eosnation.io"
       ],
       "apiUrls": [],
       "networkType": "testnet",
@@ -3992,7 +3992,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "WAX",
-      "docsUrl": "https://developer.wax.io/",
+      "docsUrl": "https://developer.wax.io",
       "genesis": {
         "hash": "0x00000002066113f7023ed907632c404f25c5f0f02034f3b1a22f339c83d78c53",
         "height": 2
@@ -4012,7 +4012,7 @@
       ],
       "caip2Id": "arweave:7wIU",
       "explorerUrls": [
-        "https://arscan.io/"
+        "https://arscan.io"
       ],
       "rpcUrls": [],
       "apiUrls": [],
@@ -4094,7 +4094,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
+      "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms",
       "web3Icon": "ethereum",
       "genesis": {
         "hash": "0x4d611d5b93fdab69013a7f0a2f961caca0c853f87cfe9595fe50038163079360",
@@ -4140,7 +4140,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
+      "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms",
       "web3Icon": "ethereum",
       "genesis": {
         "hash": "0xfb9b64fe445f76696407e1e3cc390371edff147bf712db86db6197d4b31ede43",
@@ -4186,7 +4186,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms/",
+      "docsUrl": "https://ethereum.org/en/developers/docs/consensus-mechanisms",
       "web3Icon": "ethereum",
       "genesis": {
         "hash": "0xab09edd9380f8451c3ff5c809821174a36dce606fea8b5ea35ea936915dbf889",
@@ -4248,7 +4248,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "BTC",
-      "docsUrl": "https://developer.bitcoin.org/",
+      "docsUrl": "https://developer.bitcoin.org",
       "web3Icon": "bitcoin",
       "genesis": {
         "hash": "0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
@@ -4270,7 +4270,7 @@
       ],
       "caip2Id": "cosmos:injective-1",
       "explorerUrls": [
-        "https://explorer.injective.network/"
+        "https://explorer.injective.network"
       ],
       "rpcUrls": [],
       "apiUrls": [],
@@ -4294,7 +4294,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "INJ",
-      "docsUrl": "https://docs.injective.network/",
+      "docsUrl": "https://docs.injective.network",
       "web3Icon": "injective",
       "genesis": {
         "hash": "0x24c9714291a999b952859ee02ec9b233394fe743b07ea3578d432a4a2707b6af",
@@ -4315,7 +4315,7 @@
       ],
       "caip2Id": "cosmos:injective-2",
       "explorerUrls": [
-        "https://testnet.explorer.injective.network/"
+        "https://testnet.explorer.injective.network"
       ],
       "rpcUrls": [],
       "apiUrls": [],
@@ -4345,7 +4345,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "INJ",
-      "docsUrl": "https://docs.injective.network/",
+      "docsUrl": "https://docs.injective.network",
       "web3Icon": "injective",
       "genesis": {
         "hash": "0xa9effb99c7bc3ba8c18a487ffffd800c137bc2b2f47f73c350f3ca27077044a1",
@@ -4393,7 +4393,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "OM",
-      "docsUrl": "https://docs.mantrachain.io/",
+      "docsUrl": "https://docs.mantrachain.io",
       "genesis": {
         "hash": "0x0d56d4b442c9628cb5679a04dbb8085920c64a4737fe50b8574c4d3a37ab2141",
         "height": 1
@@ -4445,7 +4445,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "OM",
-      "docsUrl": "https://docs.mantrachain.io/",
+      "docsUrl": "https://docs.mantrachain.io",
       "genesis": {
         "hash": "0x2701f72ef3e2242e27244b2dfa895ad212fc07de71599a0af2fe2410d93bc7bb",
         "height": 1
@@ -4465,7 +4465,7 @@
       ],
       "caip2Id": "gear:vara-mainnet",
       "explorerUrls": [
-        "https://vara.subscan.io/"
+        "https://vara.subscan.io"
       ],
       "rpcUrls": [],
       "apiUrls": [
@@ -4491,7 +4491,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "VARA",
-      "docsUrl": "https://wiki.vara.network/",
+      "docsUrl": "https://wiki.vara.network",
       "genesis": {
         "hash": "0xfe1b4c55fd4d668101126434206571a7838a8b6b93a6d1b95d607e78e6c53763",
         "height": 0
@@ -4534,7 +4534,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "VARA",
-      "docsUrl": "https://wiki.vara.network/",
+      "docsUrl": "https://wiki.vara.network",
       "genesis": {
         "hash": "0x525639f713f397dcf839bd022cd821f367ebcf179de7b9253531f8adbe5436d6",
         "height": 0
@@ -4554,7 +4554,7 @@
       ],
       "caip2Id": "near:mainnet",
       "explorerUrls": [
-        "https://nearblocks.io/"
+        "https://nearblocks.io"
       ],
       "rpcUrls": [
         "https://rpc.mainnet.near.org"
@@ -4598,7 +4598,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "NEAR",
-      "docsUrl": "https://docs.near.org/",
+      "docsUrl": "https://docs.near.org",
       "web3Icon": "near-protocol",
       "genesis": {
         "hash": "0xa7110b9052e1be68f7fa8bb4065bf54e731205801878e708db7464ec4b9b8014",
@@ -4617,7 +4617,7 @@
       "aliases": [],
       "caip2Id": "near:testnet",
       "explorerUrls": [
-        "https://testnet.nearblocks.io/"
+        "https://testnet.nearblocks.io"
       ],
       "rpcUrls": [
         "https://rpc.testnet.near.org"
@@ -4667,7 +4667,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "NEAR",
-      "docsUrl": "https://docs.near.org/",
+      "docsUrl": "https://docs.near.org",
       "web3Icon": "near-protocol",
       "genesis": {
         "hash": "0x09d69c8ba4f319f8e78d0b701f0c1f763cc0d920551bfbd00072d5f56016d853",
@@ -4689,8 +4689,8 @@
       ],
       "caip2Id": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
       "explorerUrls": [
-        "http://explorer.solana.com/",
-        "http://solana.fm/"
+        "http://explorer.solana.com",
+        "http://solana.fm"
       ],
       "rpcUrls": [
         "https://api.mainnet-beta.solana.com"
@@ -4723,7 +4723,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "SOL",
-      "docsUrl": "https://solana.com/docs/",
+      "docsUrl": "https://solana.com/docs",
       "web3Icon": "solana",
       "genesis": {
         "hash": "4sGjMW1sUnHzSxGspuhpqLDx6wiyjNtZAMdL4VZHirAn",
@@ -4753,7 +4753,7 @@
         }
       ],
       "explorerUrls": [
-        "https://starkscan.co/"
+        "https://starkscan.co"
       ],
       "rpcUrls": [
         "https://starknet-mainnet.public.blastapi.io",
@@ -4795,7 +4795,7 @@
       },
       "issuanceRewards": false,
       "nativeToken": "ETH",
-      "docsUrl": "https://docs.starknet.io/",
+      "docsUrl": "https://docs.starknet.io",
       "web3Icon": "starknet",
       "genesis": {
         "hash": "0x47c3637b57c2b079b93c61539950c17e868a28f46cdef28f88521067f21e943",
@@ -4829,17 +4829,17 @@
         }
       ],
       "explorerUrls": [
-        "https://sepolia.starkscan.co/"
+        "https://sepolia.starkscan.co"
       ],
       "rpcUrls": [
-        "https://starknet-sepolia.public.blastapi.io/"
+        "https://starknet-sepolia.public.blastapi.io"
       ],
       "apiUrls": [],
       "networkType": "testnet",
       "support": {},
       "issuanceRewards": false,
       "nativeToken": "STRK",
-      "docsUrl": "https://docs.starknet.io/",
+      "docsUrl": "https://docs.starknet.io",
       "web3Icon": "starknet",
       "genesis": {
         "hash": "0x05c627d4aeb51280058bed93c7889bce78114d63baad1be0f0aeb32496d5f19c",
