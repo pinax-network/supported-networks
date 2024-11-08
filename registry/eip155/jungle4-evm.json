@@ -2,28 +2,14 @@
   "id": "jungle4-evm",
   "shortName": "Jungle4 EVM",
   "fullName": "EOS Jungle4 EVM Testnet",
-  "aliases": [
-    "jungle4-evm-testnet",
-    "eos-evm-testnet",
-    "evm-15557"
-  ],
+  "aliases": ["jungle4-evm-testnet", "eos-evm-testnet", "evm-15557"],
   "caip2Id": "eip155:15557",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
+  "graphNode": { "protocol": "ethereum" },
   "relations": [
-    {
-      "kind": "evmOf",
-      "network": "jungle4"
-    },
-    {
-      "kind": "testnetOf",
-      "network": "eos-evm"
-    }
+    { "kind": "evmOf", "network": "jungle4" },
+    { "kind": "testnetOf", "network": "eos-evm" }
   ],
-  "explorerUrls": [
-    "https://explorer.testnet.evm.eosnetwork.com/"
-  ],
+  "explorerUrls": ["https://explorer.testnet.evm.eosnetwork.com"],
   "rpcUrls": [
     "https://explorer.testnet.evm.eosnetwork.com/api/eth-rpc",
     "https://jungle4evm.rpc.pinax.network/v1/{PINAX_API_KEY}"
@@ -36,16 +22,10 @@
   ],
   "support": {
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "jungle4evm.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "jungle4evm.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "jungle4evm.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "jungle4evm.substreams.pinax.network:443" }
     ]
   },
   "networkType": "testnet",

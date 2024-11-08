@@ -2,66 +2,32 @@
   "id": "bsc",
   "shortName": "BNB",
   "fullName": "BNB Smart Chain Mainnet",
-  "aliases": [
-    "bnb",
-    "bnb-mainnet",
-    "bsc-mainnet",
-    "evm-56"
-  ],
+  "aliases": ["bnb", "bnb-mainnet", "bsc-mainnet", "evm-56"],
   "caip2Id": "eip155:56",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://bscscan.com/"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://bscscan.com"],
   "rpcUrls": [
-    "https://bsc-dataseed1.binance.org/",
-    "https://bsc-dataseed1.defibit.io/",
+    "https://bsc-dataseed1.binance.org",
+    "https://bsc-dataseed1.defibit.io",
     "https://bsc.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
-  "apiUrls": [
-    {
-      "url": "https://api.bscscan.com/api",
-      "kind": "etherscan"
-    }
-  ],
+  "apiUrls": [{ "url": "https://api.bscscan.com/api", "kind": "etherscan" }],
   "networkType": "mainnet",
   "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ],
-    "sps": [
-      {
-        "provider": "e&n"
-      }
-    ],
+    "subgraphs": [{ "provider": "e&n" }],
+    "sps": [{ "provider": "e&n" }],
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "bsc.firehose.pinax.network:443"
-      },
-      {
-        "provider": "streamingfast",
-        "url": "bnb.streamingfast.io:443"
-      }
+      { "provider": "pinax", "url": "bsc.firehose.pinax.network:443" },
+      { "provider": "streamingfast", "url": "bnb.streamingfast.io:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "bsc.substreams.pinax.network:443"
-      },
-      {
-        "provider": "streamingfast",
-        "url": "bnb.streamingfast.io:443"
-      }
+      { "provider": "pinax", "url": "bsc.substreams.pinax.network:443" },
+      { "provider": "streamingfast", "url": "bnb.streamingfast.io:443" }
     ]
   },
   "issuanceRewards": true,
   "nativeToken": "BNB",
-  "docsUrl": "https://docs.bnbchain.org/",
+  "docsUrl": "https://docs.bnbchain.org",
   "indexerDocsUrls": [
     {
       "url": "https://docs.infradao.com/archive-nodes-101/binance",

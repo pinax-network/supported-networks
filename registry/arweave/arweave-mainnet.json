@@ -2,41 +2,21 @@
   "id": "arweave-mainnet",
   "shortName": "Arweave",
   "fullName": "Arweave",
-  "aliases": [
-    "arweave"
-  ],
+  "aliases": ["arweave"],
   "caip2Id": "arweave:7wIU",
-  "explorerUrls": [
-    "https://arscan.io/"
-  ],
+  "explorerUrls": ["https://arscan.io"],
   "rpcUrls": [],
   "apiUrls": [],
   "networkType": "mainnet",
-  "graphNode": {
-    "protocol": "arweave"
-  },
+  "graphNode": { "protocol": "arweave" },
   "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ],
-    "sps": [
-      {
-        "provider": "e&n"
-      }
-    ],
+    "subgraphs": [{ "provider": "e&n" }],
+    "sps": [{ "provider": "e&n" }],
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "arweave.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "arweave.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "arweave.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "arweave.substreams.pinax.network:443" }
     ]
   },
   "issuanceRewards": false,

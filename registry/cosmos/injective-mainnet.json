@@ -2,20 +2,13 @@
   "id": "injective-mainnet",
   "shortName": "Injective",
   "fullName": "Injective Mainnet",
-  "aliases": [
-    "injective",
-    "injective-1"
-  ],
+  "aliases": ["injective", "injective-1"],
   "caip2Id": "cosmos:injective-1",
-  "explorerUrls": [
-    "https://explorer.injective.network/"
-  ],
+  "explorerUrls": ["https://explorer.injective.network"],
   "rpcUrls": [],
   "apiUrls": [],
   "networkType": "mainnet",
-  "graphNode": {
-    "protocol": "cosmos"
-  },
+  "graphNode": { "protocol": "cosmos" },
   "support": {
     "firehose": [
       {
@@ -32,7 +25,7 @@
   },
   "issuanceRewards": false,
   "nativeToken": "INJ",
-  "docsUrl": "https://docs.injective.network/",
+  "docsUrl": "https://docs.injective.network",
   "web3Icon": "injective",
   "genesis": {
     "hash": "0x24c9714291a999b952859ee02ec9b233394fe743b07ea3578d432a4a2707b6af",

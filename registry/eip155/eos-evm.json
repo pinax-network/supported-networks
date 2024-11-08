@@ -2,46 +2,24 @@
   "id": "eos-evm",
   "shortName": "EOS EVM",
   "fullName": "EOS EVM Network",
-  "aliases": [
-    "eosevm",
-    "eos-evm-mainnet",
-    "evm-17777"
-  ],
+  "aliases": ["eosevm", "eos-evm-mainnet", "evm-17777"],
   "caip2Id": "eip155:17777",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "relations": [
-    {
-      "kind": "evmOf",
-      "network": "eos"
-    }
-  ],
-  "explorerUrls": [
-    "https://explorer.evm.eosnetwork.com/"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "relations": [{ "kind": "evmOf", "network": "eos" }],
+  "explorerUrls": ["https://explorer.evm.eosnetwork.com"],
   "rpcUrls": [
     "https://explorer.evm.eosnetwork.com/api/eth-rpc",
     "https://eosevm.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
-    {
-      "kind": "etherscan",
-      "url": "https://explorer.evm.eosnetwork.com/api"
-    }
+    { "kind": "etherscan", "url": "https://explorer.evm.eosnetwork.com/api" }
   ],
   "support": {
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "eosevm.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "eosevm.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "eosevm.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "eosevm.substreams.pinax.network:443" }
     ]
   },
   "networkType": "mainnet",

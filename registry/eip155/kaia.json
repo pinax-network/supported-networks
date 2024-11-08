@@ -2,28 +2,13 @@
   "id": "kaia",
   "shortName": "Kaia",
   "fullName": "Kaia Mainnet",
-  "aliases": [
-    "evm-8217",
-    "kaia-mainnet"
-  ],
+  "aliases": ["evm-8217", "kaia-mainnet"],
   "caip2Id": "eip155:8217",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://kaiascan.io/"
-  ],
-  "rpcUrls": [
-    "https://public-en.node.kaia.io"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://kaiascan.io"],
+  "rpcUrls": ["https://public-en.node.kaia.io"],
   "apiUrls": [],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
   "issuanceRewards": false,
   "nativeToken": "KAIA",

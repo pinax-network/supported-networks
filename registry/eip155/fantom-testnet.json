@@ -2,39 +2,20 @@
   "id": "fantom-testnet",
   "shortName": "Fantom",
   "fullName": "Fantom Testnet",
-  "aliases": [
-    "evm-4002"
-  ],
+  "aliases": ["evm-4002"],
   "caip2Id": "eip155:4002",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://testnet.ftmscan.com/"
-  ],
-  "rpcUrls": [
-    "https://rpc.testnet.fantom.network"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://testnet.ftmscan.com"],
+  "rpcUrls": ["https://rpc.testnet.fantom.network"],
   "apiUrls": [
     {
       "url": "https://fantom-testnet.abi.pinax.network/api",
       "kind": "etherscan"
     }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "testnet",
-  "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "fantom"
-    }
-  ],
+  "relations": [{ "kind": "testnetOf", "network": "fantom" }],
   "issuanceRewards": false,
   "nativeToken": "FTM",
   "docsUrl": "https://docs.fantom.foundation",

@@ -2,35 +2,15 @@
   "id": "xlayer-mainnet",
   "shortName": "XLayer",
   "fullName": "XLayer Mainnet",
-  "aliases": [
-    "evm-196",
-    "xlayer"
-  ],
+  "aliases": ["evm-196", "xlayer"],
   "caip2Id": "eip155:196",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://www.oklink.com/xlayer"
-  ],
-  "rpcUrls": [
-    "https://rpc.xlayer.tech/"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://www.oklink.com/xlayer"],
+  "rpcUrls": ["https://rpc.xlayer.tech"],
   "apiUrls": [],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
-  "relations": [
-    {
-      "kind": "l2Of",
-      "network": "mainnet"
-    }
-  ],
+  "relations": [{ "kind": "l2Of", "network": "mainnet" }],
   "issuanceRewards": false,
   "nativeToken": "OKB",
   "docsUrl": "https://www.okx.com/xlayer",

@@ -2,43 +2,22 @@
   "id": "linea-sepolia",
   "shortName": "Linea Sepolia",
   "fullName": "Linea Sepolia Testnet",
-  "aliases": [
-    "evm-59141",
-    "linea-testnet"
-  ],
+  "aliases": ["evm-59141", "linea-testnet"],
   "caip2Id": "eip155:59141",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://sepolia.lineascan.build/"
-  ],
-  "rpcUrls": [
-    "https://rpc.sepolia.linea.build"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://sepolia.lineascan.build"],
+  "rpcUrls": ["https://rpc.sepolia.linea.build"],
   "apiUrls": [
     {
       "url": "https://linea-sepolia.abi.pinax.network/api",
       "kind": "etherscan"
     }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "testnet",
   "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "linea"
-    },
-    {
-      "kind": "l2Of",
-      "network": "sepolia"
-    }
+    { "kind": "testnetOf", "network": "linea" },
+    { "kind": "l2Of", "network": "sepolia" }
   ],
   "issuanceRewards": false,
   "nativeToken": "ETH",

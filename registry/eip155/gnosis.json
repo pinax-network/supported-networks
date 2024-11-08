@@ -2,18 +2,10 @@
   "id": "gnosis",
   "shortName": "Gnosis",
   "fullName": "Gnosis Mainnet",
-  "aliases": [
-    "evm-100",
-    "gnosis-mainnet"
-  ],
+  "aliases": ["evm-100", "gnosis-mainnet"],
   "caip2Id": "eip155:100",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://gnosisscan.io",
-    "https://gnosis.blockscout.com"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://gnosisscan.io", "https://gnosis.blockscout.com"],
   "rpcUrls": [
     "https://rpc.gnosischain.com",
     "https://gnosis.rpc.pinax.network/v1/{PINAX_API_KEY}",
@@ -21,18 +13,9 @@
     "https://rpc.ankr.com/gnosis"
   ],
   "apiUrls": [
-    {
-      "url": "https://gnosis.abi.pinax.network/api",
-      "kind": "etherscan"
-    }
+    { "url": "https://gnosis.abi.pinax.network/api", "kind": "etherscan" }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
   "issuanceRewards": true,
   "nativeToken": "XDAI",

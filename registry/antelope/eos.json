@@ -2,31 +2,19 @@
   "id": "eos",
   "shortName": "EOS",
   "fullName": "EOS Mainnet",
-  "aliases": [
-    "eos-mainnet"
-  ],
+  "aliases": ["eos-mainnet"],
   "caip2Id": "antelope:aca376f206b8fc25a6ed44dbdc66547c",
-  "explorerUrls": [
-    "https://bloks.io/"
-  ],
-  "rpcUrls": [
-    "https://eos.api.eosnation.io/"
-  ],
+  "explorerUrls": ["https://bloks.io"],
+  "rpcUrls": ["https://eos.api.eosnation.io"],
   "newField": "some",
   "apiUrls": [],
   "networkType": "mainnet",
   "support": {
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "eos.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "eos.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "eos.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "eos.substreams.pinax.network:443" }
     ]
   },
   "issuanceRewards": false,

@@ -2,36 +2,19 @@
   "id": "jungle4",
   "shortName": "Jungle4",
   "fullName": "EOS Jungle4 Testnet",
-  "aliases": [
-    "jungle"
-  ],
+  "aliases": ["jungle"],
   "caip2Id": "antelope:73e4385a2708e6d7048834fbc1079f2f",
-  "explorerUrls": [
-    "https://jungle.bloks.io/"
-  ],
-  "rpcUrls": [
-    "https://jungle4.api.eosnation.io/"
-  ],
+  "explorerUrls": ["https://jungle.bloks.io"],
+  "rpcUrls": ["https://jungle4.api.eosnation.io"],
   "apiUrls": [],
   "networkType": "testnet",
-  "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "eos"
-    }
-  ],
+  "relations": [{ "kind": "testnetOf", "network": "eos" }],
   "support": {
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "jungle4.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "jungle4.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "jungle4.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "jungle4.substreams.pinax.network:443" }
     ]
   },
   "issuanceRewards": false,

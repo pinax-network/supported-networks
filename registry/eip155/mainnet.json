@@ -4,64 +4,33 @@
   "fullName": "Ethereum Mainnet",
   "aliases": ["ethereum", "eth", "eth-mainnet", "evm-1"],
   "caip2Id": "eip155:1",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://etherscan.io"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://etherscan.io"],
   "rpcUrls": [
     "https://rpc.ankr.com/eth",
     "https://eth.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://mainnet.infura.io/v3/{INFURA_API_KEY}"
   ],
   "apiUrls": [
-    {
-      "url": "https://api.etherscan.io/api",
-      "kind": "etherscan"
-    },
-    {
-      "url": "https://eth.blockscout.com/api",
-      "kind": "blockscout"
-    }
+    { "url": "https://api.etherscan.io/api", "kind": "etherscan" },
+    { "url": "https://eth.blockscout.com/api", "kind": "blockscout" }
   ],
   "networkType": "mainnet",
   "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ],
-    "sps": [
-      {
-        "provider": "e&n"
-      }
-    ],
+    "subgraphs": [{ "provider": "e&n" }],
+    "sps": [{ "provider": "e&n" }],
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "eth.firehose.pinax.network:443"
-      },
-      {
-        "provider": "streamingfast",
-        "url": "mainnet.eth.streamingfast.io:443"
-      }
+      { "provider": "pinax", "url": "eth.firehose.pinax.network:443" },
+      { "provider": "streamingfast", "url": "mainnet.eth.streamingfast.io:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "eth.substreams.pinax.network:443"
-      },
-      {
-        "provider": "streamingfast",
-        "url": "mainnet.eth.streamingfast.io:443"
-      }
+      { "provider": "pinax", "url": "eth.substreams.pinax.network:443" },
+      { "provider": "streamingfast", "url": "mainnet.eth.streamingfast.io:443" }
     ]
   },
   "issuanceRewards": true,
   "nativeToken": "ETH",
-  "docsUrl": "https://ethereum.org/en/developers/docs/",
-
+  "docsUrl": "https://ethereum.org/en/developers/docs",
   "indexerDocsUrls": [
     {
       "url": "https://docs.infradao.com/archive-nodes-101/ethereum",

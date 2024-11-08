@@ -4,22 +4,10 @@
   "fullName": "Polygon zkEVM Mainnet",
   "aliases": [],
   "caip2Id": "eip155:1101",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "relations": [
-    {
-      "kind": "l2Of",
-      "network": "mainnet"
-    }
-  ],
-  "explorerUrls": [
-    "https://zkevm.polygonscan.com"
-  ],
-  "rpcUrls": [
-    "https://zkevm-rpc.com",
-    "https://polygon-zkevm.drpc.org"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "relations": [{ "kind": "l2Of", "network": "mainnet" }],
+  "explorerUrls": ["https://zkevm.polygonscan.com"],
+  "rpcUrls": ["https://zkevm-rpc.com", "https://polygon-zkevm.drpc.org"],
   "apiUrls": [
     {
       "url": "https://polygon-zkevm.abi.pinax.network/api",
@@ -27,13 +15,7 @@
     }
   ],
   "networkType": "mainnet",
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://polygon.technology/polygon-zkevm",

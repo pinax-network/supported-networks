@@ -2,40 +2,20 @@
   "id": "zksync-era",
   "shortName": "zkSync",
   "fullName": "zkSync Mainnet",
-  "aliases": [
-    "evm-324",
-    "zksync"
-  ],
+  "aliases": ["evm-324", "zksync"],
   "caip2Id": "eip155:324",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://explorer.zksync.io"
-  ],
-  "rpcUrls": [
-    "https://mainnet.era.zksync.io"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://explorer.zksync.io"],
+  "rpcUrls": ["https://mainnet.era.zksync.io"],
   "apiUrls": [
     {
       "url": "https://block-explorer-api.mainnet.zksync.io/api",
       "kind": "etherscan"
     }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
-  "relations": [
-    {
-      "kind": "l2Of",
-      "network": "mainnet"
-    }
-  ],
+  "relations": [{ "kind": "l2Of", "network": "mainnet" }],
   "issuanceRewards": false,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.zksync.io",

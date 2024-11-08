@@ -2,33 +2,13 @@
   "id": "iotex",
   "shortName": "IoTeX",
   "fullName": "IoTeX Mainnet",
-  "aliases": [
-    "evm-4689",
-    "iotex-mainnet"
-  ],
+  "aliases": ["evm-4689", "iotex-mainnet"],
   "caip2Id": "eip155:4689",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://iotexscan.io"
-  ],
-  "rpcUrls": [
-    "https://babel-api.mainnet.iotex.io"
-  ],
-  "apiUrls": [
-    {
-      "url": "https://iotexscan.io/api",
-      "kind": "etherscan"
-    }
-  ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://iotexscan.io"],
+  "rpcUrls": ["https://babel-api.mainnet.iotex.io"],
+  "apiUrls": [{ "url": "https://iotexscan.io/api", "kind": "etherscan" }],
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
   "issuanceRewards": false,
   "nativeToken": "IOTX",

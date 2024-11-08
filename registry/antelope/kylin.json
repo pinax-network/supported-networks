@@ -2,36 +2,19 @@
   "id": "kylin",
   "shortName": "Kylin",
   "fullName": "Kylin Testnet",
-  "aliases": [
-    "eos-kylin"
-  ],
+  "aliases": ["eos-kylin"],
   "caip2Id": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
-  "explorerUrls": [
-    "https://kylin.bloks.io/"
-  ],
-  "rpcUrls": [
-    "https://kylin.api.eosnation.io/"
-  ],
+  "explorerUrls": ["https://kylin.bloks.io"],
+  "rpcUrls": ["https://kylin.api.eosnation.io"],
   "apiUrls": [],
   "networkType": "testnet",
-  "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "eos"
-    }
-  ],
+  "relations": [{ "kind": "testnetOf", "network": "eos" }],
   "support": {
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "kylin.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "kylin.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "kylin.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "kylin.substreams.pinax.network:443" }
     ]
   },
   "issuanceRewards": false,

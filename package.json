@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "test": "bun test",
-    "format": "prettier \"./**/*.+(ts|json|md)\" --write",
-    "format:check": "prettier \"./**/*.+(ts|json|md)\" --check",
+    "format": "prettier ./registry/**/*.json ./src/**/*.ts ./**/*.md --write",
+    "format:check": "prettier ./registry/**/*.json ./src/**/*.ts ./**/*.md --check",
     "validate:schema": "bun run ./src/validate_schema.ts",
     "validate:networks": "bun run ./src/validate.ts",
     "validate:registry": "ajv validate -s schemas/registry.schema.json -d 'dist/TheGraphNetworksRegistry.json' --strict=true -c ajv-formats",
@@ -23,7 +23,6 @@
     "ajv-formats": "^3.0.1",
     "json-schema-to-typescript": "^15.0.2",
     "prettier": "^3.3.3",
-    "prettier-plugin-multiline-arrays": "^3.0.6",
     "wrangler": "3.81.0"
   }
 }

@@ -1,3 +1,5 @@
 module.exports = {
-  plugins: ["prettier-plugin-multiline-arrays"],
+  plugins: [
+    require.resolve("./src/prettier/plugin-no-trailing-slash.cjs"),
+  ],
 };

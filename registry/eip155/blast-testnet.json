@@ -2,17 +2,10 @@
   "id": "blast-testnet",
   "shortName": "Blast Sepolia",
   "fullName": "Blast Sepolia Testnet",
-  "aliases": [
-    "evm-23888",
-    "blast-sepolia"
-  ],
+  "aliases": ["evm-23888", "blast-sepolia"],
   "caip2Id": "eip155:23888",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://sepolia.blastscan.io/"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://sepolia.blastscan.io"],
   "rpcUrls": [
     "https://sepolia.blast.io",
     "https://blastsepolia.rpc.pinax.network/v1/{PINAX_API_KEY}"
@@ -24,16 +17,9 @@
     }
   ],
   "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ],
+    "subgraphs": [{ "provider": "e&n" }],
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "blastsepolia.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "blastsepolia.firehose.pinax.network:443" }
     ],
     "substreams": [
       {
@@ -44,14 +30,8 @@
   },
   "networkType": "testnet",
   "relations": [
-    {
-      "kind": "l2Of",
-      "network": "sepolia"
-    },
-    {
-      "kind": "testnetOf",
-      "network": "blast-mainnet"
-    }
+    { "kind": "l2Of", "network": "sepolia" },
+    { "kind": "testnetOf", "network": "blast-mainnet" }
   ],
   "issuanceRewards": false,
   "nativeToken": "ETH",

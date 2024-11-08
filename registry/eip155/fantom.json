@@ -2,35 +2,19 @@
   "id": "fantom",
   "shortName": "Fantom",
   "fullName": "Fantom Mainnet",
-  "aliases": [
-    "evm-250",
-    "fantom-mainnet"
-  ],
+  "aliases": ["evm-250", "fantom-mainnet"],
   "caip2Id": "eip155:250",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://ftmscan.com"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://ftmscan.com"],
   "rpcUrls": [
     "https://rpc.ftm.tools",
     "https://fantom.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://fantom.drpc.org"
   ],
   "apiUrls": [
-    {
-      "url": "https://fantom.abi.pinax.network/api",
-      "kind": "etherscan"
-    }
+    { "url": "https://fantom.abi.pinax.network/api", "kind": "etherscan" }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
   "issuanceRewards": true,
   "nativeToken": "FTM",

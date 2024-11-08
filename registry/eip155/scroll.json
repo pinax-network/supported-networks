@@ -2,54 +2,27 @@
   "id": "scroll",
   "shortName": "Scroll",
   "fullName": "Scroll Mainnet",
-  "aliases": [
-    "evm-534352",
-    "scroll-mainnet"
-  ],
+  "aliases": ["evm-534352", "scroll-mainnet"],
   "caip2Id": "eip155:534352",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://scrollscan.com"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://scrollscan.com"],
   "rpcUrls": [
     "https://rpc.scroll.io",
     "https://scroll.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://rpc.ankr.com/scroll"
   ],
-  "apiUrls": [
-    {
-      "url": "https://api.scrollscan.com/api",
-      "kind": "etherscan"
-    }
-  ],
+  "apiUrls": [{ "url": "https://api.scrollscan.com/api", "kind": "etherscan" }],
   "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ],
+    "subgraphs": [{ "provider": "e&n" }],
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "scroll.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "scroll.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "scroll.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "scroll.substreams.pinax.network:443" }
     ]
   },
   "networkType": "mainnet",
-  "relations": [
-    {
-      "kind": "l2Of",
-      "network": "mainnet"
-    }
-  ],
+  "relations": [{ "kind": "l2Of", "network": "mainnet" }],
   "issuanceRewards": true,
   "nativeToken": "ETH",
   "docsUrl": "https://docs.scroll.io",

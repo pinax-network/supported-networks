@@ -2,37 +2,17 @@
   "id": "xlayer-testnet",
   "shortName": "XLayer",
   "fullName": "XLayer Testnet",
-  "aliases": [
-    "evm-195"
-  ],
+  "aliases": ["evm-195"],
   "caip2Id": "eip155:195",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://www.oklink.com/xlayer-test"
-  ],
-  "rpcUrls": [
-    "https://testrpc.xlayer.tech/"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://www.oklink.com/xlayer-test"],
+  "rpcUrls": ["https://testrpc.xlayer.tech"],
   "apiUrls": [],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "testnet",
   "relations": [
-    {
-      "kind": "l2Of",
-      "network": "sepolia"
-    },
-    {
-      "kind": "testnetOf",
-      "network": "xlayer-mainnet"
-    }
+    { "kind": "l2Of", "network": "sepolia" },
+    { "kind": "testnetOf", "network": "xlayer-mainnet" }
   ],
   "issuanceRewards": false,
   "nativeToken": "OKB",

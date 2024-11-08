@@ -2,33 +2,13 @@
   "id": "neox",
   "shortName": "Neo X",
   "fullName": "Neo X Mainnet",
-  "aliases": [
-    "evm-47763",
-    "neox-mainnet"
-  ],
+  "aliases": ["evm-47763", "neox-mainnet"],
   "caip2Id": "eip155:47763",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://xexplorer.neo.org/"
-  ],
-  "rpcUrls": [
-    "https://mainnet-1.rpc.banelabs.org"
-  ],
-  "apiUrls": [
-    {
-      "url": "https://xexplorer.neo.org/api",
-      "kind": "etherscan"
-    }
-  ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://xexplorer.neo.org"],
+  "rpcUrls": ["https://mainnet-1.rpc.banelabs.org"],
+  "apiUrls": [{ "url": "https://xexplorer.neo.org/api", "kind": "etherscan" }],
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
   "issuanceRewards": false,
   "nativeToken": "GAS",

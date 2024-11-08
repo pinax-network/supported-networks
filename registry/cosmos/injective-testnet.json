@@ -2,25 +2,14 @@
   "id": "injective-testnet",
   "shortName": "Injective",
   "fullName": "Injective Testnet",
-  "aliases": [
-    "injective-2"
-  ],
+  "aliases": ["injective-2"],
   "caip2Id": "cosmos:injective-2",
-  "explorerUrls": [
-    "https://testnet.explorer.injective.network/"
-  ],
+  "explorerUrls": ["https://testnet.explorer.injective.network"],
   "rpcUrls": [],
   "apiUrls": [],
   "networkType": "testnet",
-  "graphNode": {
-    "protocol": "cosmos"
-  },
-  "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "injective-mainnet"
-    }
-  ],
+  "graphNode": { "protocol": "cosmos" },
+  "relations": [{ "kind": "testnetOf", "network": "injective-mainnet" }],
   "support": {
     "firehose": [
       {
@@ -37,7 +26,7 @@
   },
   "issuanceRewards": false,
   "nativeToken": "INJ",
-  "docsUrl": "https://docs.injective.network/",
+  "docsUrl": "https://docs.injective.network",
   "web3Icon": "injective",
   "genesis": {
     "hash": "0xa9effb99c7bc3ba8c18a487ffffd800c137bc2b2f47f73c350f3ca27077044a1",

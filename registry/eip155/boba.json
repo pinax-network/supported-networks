@@ -2,17 +2,10 @@
   "id": "boba",
   "shortName": "Boba",
   "fullName": "Boba Network",
-  "aliases": [
-    "evm-288",
-    "boba-mainnet"
-  ],
+  "aliases": ["evm-288", "boba-mainnet"],
   "caip2Id": "eip155:288",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://bobascan.com"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://bobascan.com"],
   "rpcUrls": [
     "https://mainnet.boba.network",
     "https://boba.rpc.pinax.network/v1/{PINAX_API_KEY}"
@@ -24,34 +17,19 @@
     }
   ],
   "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ],
+    "subgraphs": [{ "provider": "e&n" }],
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "boba.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "boba.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "boba.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "boba.substreams.pinax.network:443" }
     ]
   },
   "networkType": "mainnet",
-  "relations": [
-    {
-      "kind": "l2Of",
-      "network": "mainnet"
-    }
-  ],
+  "relations": [{ "kind": "l2Of", "network": "mainnet" }],
   "issuanceRewards": true,
   "nativeToken": "ETH",
-  "docsUrl": "https://docs.boba.network/",
+  "docsUrl": "https://docs.boba.network",
   "web3Icon": "boba",
   "genesis": {
     "hash": "0xdcd9e6a8f9973eaa62da2874959cb152faeb4fd6929177bd6335a1a16074ef9c",

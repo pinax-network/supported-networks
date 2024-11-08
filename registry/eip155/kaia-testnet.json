@@ -2,34 +2,15 @@
   "id": "kaia-testnet",
   "shortName": "Kaia",
   "fullName": "Kaia Testnet Kairos",
-  "aliases": [
-    "evm-1001"
-  ],
+  "aliases": ["evm-1001"],
   "caip2Id": "eip155:1001",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://kairos.kaiascan.io"
-  ],
-  "rpcUrls": [
-    "https://public-en.kairos.node.kaia.io"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://kairos.kaiascan.io"],
+  "rpcUrls": ["https://public-en.kairos.node.kaia.io"],
   "apiUrls": [],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "testnet",
-  "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "kaia"
-    }
-  ],
+  "relations": [{ "kind": "testnetOf", "network": "kaia" }],
   "issuanceRewards": false,
   "nativeToken": "KAIA",
   "docsUrl": "https://docs.kaia.io",

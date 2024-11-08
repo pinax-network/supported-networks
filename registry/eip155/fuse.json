@@ -2,45 +2,23 @@
   "id": "fuse",
   "shortName": "Fuse",
   "fullName": "Fuse Mainnet",
-  "aliases": [
-    "evm-122",
-    "fuse-mainnet"
-  ],
+  "aliases": ["evm-122", "fuse-mainnet"],
   "caip2Id": "eip155:122",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://explorer.fuse.io"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://explorer.fuse.io"],
   "rpcUrls": [
     "https://rpc.fuse.io",
     "https://fuse.rpc.pinax.network/v1/{PINAX_API_KEY}",
     "https://fuse.drpc.org"
   ],
-  "apiUrls": [
-    {
-      "url": "https://explorer.fuse.io/api",
-      "kind": "blockscout"
-    }
-  ],
+  "apiUrls": [{ "url": "https://explorer.fuse.io/api", "kind": "blockscout" }],
   "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ],
+    "subgraphs": [{ "provider": "e&n" }],
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "fuse.firehose.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "fuse.firehose.pinax.network:443" }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "fuse.substreams.pinax.network:443"
-      }
+      { "provider": "pinax", "url": "fuse.substreams.pinax.network:443" }
     ]
   },
   "networkType": "mainnet",
@@ -48,10 +26,7 @@
   "nativeToken": "FUSE",
   "docsUrl": "https://docs.fuse.io",
   "indexerDocsUrls": [
-    {
-      "url": "https://docs.infradao.com/archive-nodes-101/fuse",
-      "kind": "rpc"
-    }
+    { "url": "https://docs.infradao.com/archive-nodes-101/fuse", "kind": "rpc" }
   ],
   "web3Icon": "fuse",
   "genesis": {

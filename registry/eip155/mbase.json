@@ -2,43 +2,20 @@
   "id": "mbase",
   "shortName": "Moonbase Alpha",
   "fullName": "Moonbase Alpha Testnet",
-  "aliases": [
-    "evm-1287",
-    "moonbase"
-  ],
+  "aliases": ["evm-1287", "moonbase"],
   "caip2Id": "eip155:1287",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://moonbase.moonscan.io"
-  ],
-  "rpcUrls": [
-    "https://rpc.moonbase.moonbeam.network"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://moonbase.moonscan.io"],
+  "rpcUrls": ["https://rpc.moonbase.moonbeam.network"],
   "apiUrls": [
-    {
-      "url": "https://moonbase.abi.pinax.network/api",
-      "kind": "etherscan"
-    }
+    { "url": "https://moonbase.abi.pinax.network/api", "kind": "etherscan" }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "testnet",
-  "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "moonbeam"
-    }
-  ],
+  "relations": [{ "kind": "testnetOf", "network": "moonbeam" }],
   "issuanceRewards": false,
   "nativeToken": "DEV",
-  "docsUrl": "https://docs.moonbeam.network/learn/platform/networks/moonbase/",
+  "docsUrl": "https://docs.moonbeam.network/learn/platform/networks/moonbase",
   "web3Icon": "moonbeam",
   "genesis": {
     "hash": "0x33638dde636f9264b6472b9d976d58e757fe88badac53f204f3f530ecc5aacfa",

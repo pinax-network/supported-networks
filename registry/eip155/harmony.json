@@ -2,33 +2,15 @@
   "id": "harmony",
   "shortName": "Harmony",
   "fullName": "Harmony Mainnet Shard 0",
-  "aliases": [
-    "evm-1666600000",
-    "harmony-mainnet"
-  ],
+  "aliases": ["evm-1666600000", "harmony-mainnet"],
   "caip2Id": "eip155:1666600000",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://explorer.harmony.one/?shard=0"
-  ],
-  "rpcUrls": [
-    "https://api.harmony.one/?shard=0"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://explorer.harmony.one/?shard=0"],
+  "rpcUrls": ["https://api.harmony.one/?shard=0"],
   "apiUrls": [
-    {
-      "url": "https://explorer.harmony.one/api?shard=0",
-      "kind": "etherscan"
-    }
+    { "url": "https://explorer.harmony.one/api?shard=0", "kind": "etherscan" }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
   "issuanceRewards": false,
   "nativeToken": "ONE",

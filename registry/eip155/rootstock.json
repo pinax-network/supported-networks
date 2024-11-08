@@ -2,36 +2,19 @@
   "id": "rootstock",
   "shortName": "Rootstock",
   "fullName": "Rootstock Mainnet",
-  "aliases": [
-    "rootstock-mainnet"
-  ],
+  "aliases": ["rootstock-mainnet"],
   "caip2Id": "eip155:30",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://rootstock.blockscout.com"
-  ],
-  "rpcUrls": [
-    "https://public-node.rsk.co"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://rootstock.blockscout.com"],
+  "rpcUrls": ["https://public-node.rsk.co"],
   "apiUrls": [
-    {
-      "url": "https://rootstock.blockscout.com/api",
-      "kind": "etherscan"
-    }
+    { "url": "https://rootstock.blockscout.com/api", "kind": "etherscan" }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
   "issuanceRewards": false,
   "nativeToken": "RBTC",
-  "docsUrl": "https://dev.rootstock.io/",
+  "docsUrl": "https://dev.rootstock.io",
   "indexerDocsUrls": [
     {
       "url": "https://docs.infradao.com/archive-nodes-101/rootstock",

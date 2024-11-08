@@ -2,53 +2,26 @@
   "id": "base",
   "shortName": "Base",
   "fullName": "Base Mainnet",
-  "aliases": [
-    "evm-8453",
-    "base-mainnet"
-  ],
+  "aliases": ["evm-8453", "base-mainnet"],
   "caip2Id": "eip155:8453",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://base.blockscout.com/"
-  ],
-  "rpcUrls": [
-    "https://mainnet.base.org/",
-    "https://base-rpc.publicnode.com"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://base.blockscout.com"],
+  "rpcUrls": ["https://mainnet.base.org", "https://base-rpc.publicnode.com"],
   "apiUrls": [
-    {
-      "url": "https://base.abi.pinax.network/api",
-      "kind": "etherscan"
-    }
+    { "url": "https://base.abi.pinax.network/api", "kind": "etherscan" }
   ],
   "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ],
-    "sps": [
-      {
-        "provider": "e&n"
-      }
-    ],
+    "subgraphs": [{ "provider": "e&n" }],
+    "sps": [{ "provider": "e&n" }],
     "firehose": [
-      {
-        "provider": "pinax",
-        "url": "base.firehose.pinax.network:443"
-      },
+      { "provider": "pinax", "url": "base.firehose.pinax.network:443" },
       {
         "provider": "streamingfast",
         "url": "base-mainnet.streamingfast.io:443"
       }
     ],
     "substreams": [
-      {
-        "provider": "pinax",
-        "url": "base.substreams.pinax.network:443"
-      },
+      { "provider": "pinax", "url": "base.substreams.pinax.network:443" },
       {
         "provider": "streamingfast",
         "url": "base-mainnet.streamingfast.io:443"
@@ -58,12 +31,9 @@
   "networkType": "mainnet",
   "issuanceRewards": true,
   "nativeToken": "ETH",
-  "docsUrl": "https://docs.base.org/",
+  "docsUrl": "https://docs.base.org",
   "indexerDocsUrls": [
-    {
-      "url": "https://docs.infradao.com/archive-nodes-101/base",
-      "kind": "rpc"
-    }
+    { "url": "https://docs.infradao.com/archive-nodes-101/base", "kind": "rpc" }
   ],
   "web3Icon": "base",
   "genesis": {

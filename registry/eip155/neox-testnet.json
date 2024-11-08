@@ -2,39 +2,17 @@
   "id": "neox-testnet",
   "shortName": "Neo X",
   "fullName": "Neo X Testnet",
-  "aliases": [
-    "evm-12227332"
-  ],
+  "aliases": ["evm-12227332"],
   "caip2Id": "eip155:12227332",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://xt4scan.ngd.network/"
-  ],
-  "rpcUrls": [
-    "https://testnet.rpc.banelabs.org"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://xt4scan.ngd.network"],
+  "rpcUrls": ["https://testnet.rpc.banelabs.org"],
   "apiUrls": [
-    {
-      "url": "https://xt4scan.ngd.network/api",
-      "kind": "etherscan"
-    }
+    { "url": "https://xt4scan.ngd.network/api", "kind": "etherscan" }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "testnet",
-  "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "neox"
-    }
-  ],
+  "relations": [{ "kind": "testnetOf", "network": "neox" }],
   "issuanceRewards": false,
   "nativeToken": "GAS",
   "docsUrl": "https://xdocs.ngd.network",

@@ -2,20 +2,11 @@
   "id": "vara-mainnet",
   "shortName": "Vara",
   "fullName": "Vara Mainnet",
-  "aliases": [
-    "vara"
-  ],
+  "aliases": ["vara"],
   "caip2Id": "gear:vara-mainnet",
-  "explorerUrls": [
-    "https://vara.subscan.io/"
-  ],
+  "explorerUrls": ["https://vara.subscan.io"],
   "rpcUrls": [],
-  "apiUrls": [
-    {
-      "url": "https://vara.api.subscan.io/api",
-      "kind": "subscan"
-    }
-  ],
+  "apiUrls": [{ "url": "https://vara.api.subscan.io/api", "kind": "subscan" }],
   "networkType": "mainnet",
   "support": {
     "firehose": [
@@ -33,7 +24,7 @@
   },
   "issuanceRewards": false,
   "nativeToken": "VARA",
-  "docsUrl": "https://wiki.vara.network/",
+  "docsUrl": "https://wiki.vara.network",
   "genesis": {
     "hash": "0xfe1b4c55fd4d668101126434206571a7838a8b6b93a6d1b95d607e78e6c53763",
     "height": 0

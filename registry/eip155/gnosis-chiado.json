@@ -2,40 +2,20 @@
   "id": "gnosis-chiado",
   "shortName": "Gnosis Chiado",
   "fullName": "Gnosis Chiado Testnet",
-  "aliases": [
-    "chiado"
-  ],
+  "aliases": ["chiado"],
   "caip2Id": "eip155:10200",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://blockscout.chiadochain.net"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://blockscout.chiadochain.net"],
   "rpcUrls": [
     "https://rpc.chiadochain.net",
     "https://chiado.rpc.pinax.network/v1/{PINAX_API_KEY}"
   ],
   "apiUrls": [
-    {
-      "url": "https://gnosis-chiado.blockscout.com/api",
-      "kind": "etherscan"
-    }
+    { "url": "https://gnosis-chiado.blockscout.com/api", "kind": "etherscan" }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "testnet",
-  "relations": [
-    {
-      "kind": "testnetOf",
-      "network": "gnosis"
-    }
-  ],
+  "relations": [{ "kind": "testnetOf", "network": "gnosis" }],
   "issuanceRewards": false,
   "nativeToken": "XDAI",
   "docsUrl": "https://docs.gnosischain.com",

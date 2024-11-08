@@ -2,42 +2,21 @@
   "id": "celo",
   "shortName": "Celo",
   "fullName": "Celo Mainnet",
-  "aliases": [
-    "evm-42220",
-    "celo-mainnet"
-  ],
+  "aliases": ["evm-42220", "celo-mainnet"],
   "caip2Id": "eip155:42220",
-  "graphNode": {
-    "protocol": "ethereum"
-  },
-  "explorerUrls": [
-    "https://celoscan.io"
-  ],
-  "rpcUrls": [
-    "https://forno.celo.org"
-  ],
+  "graphNode": { "protocol": "ethereum" },
+  "explorerUrls": ["https://celoscan.io"],
+  "rpcUrls": ["https://forno.celo.org"],
   "apiUrls": [
-    {
-      "url": "https://celo.abi.pinax.network/api",
-      "kind": "etherscan"
-    }
+    { "url": "https://celo.abi.pinax.network/api", "kind": "etherscan" }
   ],
-  "support": {
-    "subgraphs": [
-      {
-        "provider": "e&n"
-      }
-    ]
-  },
+  "support": { "subgraphs": [{ "provider": "e&n" }] },
   "networkType": "mainnet",
   "issuanceRewards": true,
   "nativeToken": "CELO",
   "docsUrl": "https://docs.celo.org",
   "indexerDocsUrls": [
-    {
-      "url": "https://docs.infradao.com/archive-nodes-101/celo",
-      "kind": "rpc"
-    }
+    { "url": "https://docs.infradao.com/archive-nodes-101/celo", "kind": "rpc" }
   ],
   "web3Icon": "celo",
   "genesis": {
