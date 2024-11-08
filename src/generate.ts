@@ -32,12 +32,7 @@ function byCaip2Id(a: Network, b: Network) {
 }
 
 function main() {
-  const [
-    ,
-    ,
-    networksDir = "registry",
-    outputDir = "dist",
-  ] = process.argv;
+  const [, , networksDir = "registry", outputDir = "dist"] = process.argv;
 
   const REGISTRY_ROOT_URL =
     process.env.REGISTRY_ROOT_URL ||
@@ -63,7 +58,7 @@ function main() {
     networks: loadNetworks(networksDir).sort(byCaip2Id),
   };
 
-  const content = JSON.stringify(registry, null, 2);
+  const content = JSON.stringify(registry, null, 2) + "\n";
   fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(path.join(outputDir, filenameLatest), content);
   fs.writeFileSync(path.join(outputDir, filenameLatestPatch), content);
