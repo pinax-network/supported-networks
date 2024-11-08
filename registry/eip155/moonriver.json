@@ -31,6 +31,12 @@
     ]
   },
   "networkType": "mainnet",
+  "relations": [
+    {
+      "kind": "other",
+      "network": "moonbeam"
+    }
+  ],
   "issuanceRewards": false,
   "nativeToken": "MOVR",
   "docsUrl": "https://docs.moonbeam.network/",

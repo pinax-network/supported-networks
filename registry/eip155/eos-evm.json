@@ -13,10 +13,6 @@
   },
   "relations": [
     {
-      "kind": "l2Of",
-      "network": "mainnet"
-    },
-    {
       "kind": "evmOf",
       "network": "eos"
     }
