@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_2.json",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-07T22:16:56.893Z",
+  "updatedAt": "2024-11-08T21:03:09.862Z",
   "networks": [
     {
       "id": "mainnet",
@@ -576,8 +576,7 @@
       "shortName": "Fuse",
       "fullName": "Fuse Testnet",
       "aliases": [
-        "evm-12001",
-        "fuse-testnet"
+        "evm-12001"
       ],
       "caip2Id": "eip155:12001",
       "graphNode": {
@@ -892,6 +891,12 @@
         ]
       },
       "networkType": "mainnet",
+      "relations": [
+        {
+          "kind": "other",
+          "network": "moonbeam"
+        }
+      ],
       "issuanceRewards": false,
       "nativeToken": "MOVR",
       "docsUrl": "https://docs.moonbeam.network/",
@@ -1213,7 +1218,7 @@
       "shortName": "Jungle4 EVM",
       "fullName": "EOS Jungle4 EVM Testnet",
       "aliases": [
-        "jungle4-evm",
+        "jungle4-evm-testnet",
         "eos-evm-testnet",
         "evm-15557"
       ],
@@ -1460,10 +1465,6 @@
         "protocol": "ethereum"
       },
       "relations": [
-        {
-          "kind": "l2Of",
-          "network": "mainnet"
-        },
         {
           "kind": "evmOf",
           "network": "eos"
@@ -2024,9 +2025,7 @@
       "id": "rootstock-testnet",
       "shortName": "Rootstock",
       "fullName": "Rootstock Testnet",
-      "aliases": [
-        "rootstock-testnet"
-      ],
+      "aliases": [],
       "caip2Id": "eip155:31",
       "graphNode": {
         "protocol": "ethereum"
@@ -3816,7 +3815,7 @@
       "shortName": "Kylin",
       "fullName": "Kylin Testnet",
       "aliases": [
-        "kylin"
+        "eos-kylin"
       ],
       "caip2Id": "antelope:5fff1dae8dc8e2fc4d5b23b2c7665c97",
       "explorerUrls": [
@@ -4351,6 +4350,105 @@
       "genesis": {
         "hash": "0xa9effb99c7bc3ba8c18a487ffffd800c137bc2b2f47f73c350f3ca27077044a1",
         "height": 37368800
+      },
+      "firehose": {
+        "blockType": "sf.cosmos.type.v2.Block",
+        "bufUrl": "https://buf.build/streamingfast/firehose-cosmos",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "mantra-mainnet",
+      "shortName": "Mantra",
+      "fullName": "Mantra Mainnet",
+      "aliases": [
+        "mantra-1",
+        "mantra"
+      ],
+      "caip2Id": "cosmos:mantra-1",
+      "explorerUrls": [
+        "https://explorer.mantrachain.io/MANTRA-1"
+      ],
+      "rpcUrls": [
+        "https://mantra-rpc.publicnode.com"
+      ],
+      "apiUrls": [],
+      "networkType": "mainnet",
+      "graphNode": {
+        "protocol": "cosmos"
+      },
+      "support": {
+        "firehose": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.mantra.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "streamingfast",
+            "url": "mainnet.mantra.streamingfast.io:443"
+          }
+        ]
+      },
+      "issuanceRewards": false,
+      "nativeToken": "OM",
+      "docsUrl": "https://docs.mantrachain.io/",
+      "genesis": {
+        "hash": "0x0d56d4b442c9628cb5679a04dbb8085920c64a4737fe50b8574c4d3a37ab2141",
+        "height": 1
+      },
+      "firehose": {
+        "blockType": "sf.cosmos.type.v2.Block",
+        "bufUrl": "https://buf.build/streamingfast/firehose-cosmos",
+        "bytesEncoding": "hex"
+      }
+    },
+    {
+      "id": "mantra-testnet",
+      "shortName": "Mantra",
+      "fullName": "Mantra Testnet",
+      "aliases": [
+        "mantra-dukong"
+      ],
+      "caip2Id": "cosmos:mantra-dukong",
+      "explorerUrls": [
+        "https://explorer.mantrachain.io/MANTRA-Dukong"
+      ],
+      "rpcUrls": [
+        "https://mantra-testnet-rpc.publicnode.com:443"
+      ],
+      "apiUrls": [],
+      "networkType": "testnet",
+      "relations": [
+        {
+          "kind": "testnetOf",
+          "network": "mantra-mainnet"
+        }
+      ],
+      "graphNode": {
+        "protocol": "cosmos"
+      },
+      "support": {
+        "firehose": [
+          {
+            "provider": "streamingfast",
+            "url": "testnet.mantra.streamingfast.io:443"
+          }
+        ],
+        "substreams": [
+          {
+            "provider": "streamingfast",
+            "url": "testnet.mantra.streamingfast.io:443"
+          }
+        ]
+      },
+      "issuanceRewards": false,
+      "nativeToken": "OM",
+      "docsUrl": "https://docs.mantrachain.io/",
+      "genesis": {
+        "hash": "0x2701f72ef3e2242e27244b2dfa895ad212fc07de71599a0af2fe2410d93bc7bb",
+        "height": 1
       },
       "firehose": {
         "blockType": "sf.cosmos.type.v2.Block",

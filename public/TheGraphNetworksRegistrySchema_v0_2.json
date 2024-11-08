@@ -73,7 +73,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^[a-z0-9-]+$"
+            "pattern": "^(?!-)[a-z0-9-]{3,}(?<!-)$"
           },
           "description": "[optional] List of possible aliases for the chain id, i.e. ethereum, eth, mainnet, eth-mainnet"
         },
