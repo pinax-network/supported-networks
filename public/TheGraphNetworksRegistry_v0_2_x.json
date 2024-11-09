@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_2.json",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-09T03:30:34.073Z",
+  "updatedAt": "2024-11-09T03:47:19.316Z",
   "networks": [
     {
       "id": "mainnet",
@@ -187,7 +187,6 @@
       "rpcUrls": [
         "https://rpc.gnosischain.com",
         "https://gnosis.rpc.pinax.network/v1/{PINAX_API_KEY}",
-        "https://rpc.gnosis.gateway.fm",
         "https://rpc.ankr.com/gnosis"
       ],
       "apiUrls": [
