@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_2.json",
-  "version": "0.2.20",
+  "version": "0.2.21",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-09T04:40:19.846Z",
+  "updatedAt": "2024-11-09T05:03:50.758Z",
   "networks": [
     {
       "id": "mainnet",
@@ -24,6 +24,7 @@
       ],
       "rpcUrls": [
         "https://rpc.ankr.com/eth",
+        "https://cloudflare-eth.com",
         "https://eth.rpc.pinax.network/v1/{PINAX_API_KEY}",
         "https://mainnet.infura.io/v3/{INFURA_API_KEY}"
       ],
