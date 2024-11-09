@@ -74,7 +74,20 @@ jobs:
 
           git add .
           git commit -m "generate registry v${{ env.REGISTRY_VERSION }} [no ci]" || echo "No changes to commit"
-          git push
+          git pushs
+
+      - name: Get commit log
+        id: get_commits
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          if [ -z "$PREV_TAG" ]; then
+            CHANGELOG=$(git log --pretty=format:"- %s (%an)" --no-merges)
+          else
+            CHANGELOG=$(git log --pretty=format:"- %s (%an)" --no-merges ${PREV_TAG}..HEAD)
+          fi
+          echo "CHANGELOG<<EOF" >> $GITHUB_ENV
+          echo "$CHANGELOG" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Create tag
         run: |
@@ -95,13 +108,16 @@ jobs:
           release_name: "v${{ env.REGISTRY_VERSION }}"
           body: |
             ### Networks Registry v${{ env.REGISTRY_VERSION }}
-            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry.json
-            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_x_x.json
-            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_${{ env.MINOR }}_x.json
-            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_${{ env.MINOR }}_${{ env.PATCH }}.json
+            - {{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry.json
+            - {{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_x_x.json
+            - {{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_${{ env.MINOR }}_x.json
+            - {{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistry_v${{ env.MAJOR }}_${{ env.MINOR }}_${{ env.PATCH }}.json
 
             ### Schema v${{ env.MAJOR }}.${{ env.MINOR }}
-            - ${{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistrySchema_v${{ env.MAJOR }}_${{ env.MINOR }}.json
+            - {{ env.REGISTRY_ROOT_URL }}/TheGraphNetworksRegistrySchema_v${{ env.MAJOR }}_${{ env.MINOR }}.json
+
+            ### Changes
+            ${{ env.CHANGELOG }}
 
     env:
       THEGRAPH_STUDIO_KEY: ${{ secrets.THEGRAPH_STUDIO_KEY }}
