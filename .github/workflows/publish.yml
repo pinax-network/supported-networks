@@ -69,7 +69,7 @@ jobs:
 
       - name: Get commit log
         run: |
-          PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
           if [ -z "$PREV_TAG" ]; then
             CHANGELOG=$(git log --pretty=format:"- %s (@%an) [%h](https://github.com/$GITHUB_REPOSITORY/commit/%H)" --no-merges)
           else
