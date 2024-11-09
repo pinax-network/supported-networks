@@ -1,9 +1,9 @@
 {
   "$schema": "https://graphregistry.pages.dev/TheGraphNetworksRegistrySchema_v0_2.json",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "title": "The Graph networks registry",
   "description": "This registry was generated and validated. Do NOT edit it manually.",
-  "updatedAt": "2024-11-09T03:47:19.316Z",
+  "updatedAt": "2024-11-09T04:40:19.846Z",
   "networks": [
     {
       "id": "mainnet",
@@ -1738,7 +1738,8 @@
       ],
       "rpcUrls": [
         "https://rpc.ftm.tools",
-        "https://fantom.rpc.pinax.network/v1/{PINAX_API_KEY}"
+        "https://fantom.rpc.pinax.network/v1/{PINAX_API_KEY}",
+        "https://fantom.drpc.org"
       ],
       "apiUrls": [
         {
