@@ -8,7 +8,8 @@
   "explorerUrls": ["https://ftmscan.com"],
   "rpcUrls": [
     "https://rpc.ftm.tools",
-    "https://fantom.rpc.pinax.network/v1/{PINAX_API_KEY}"
+    "https://fantom.rpc.pinax.network/v1/{PINAX_API_KEY}",
+    "https://fantom.drpc.org"
   ],
   "apiUrls": [
     { "url": "https://fantom.abi.pinax.network/api", "kind": "etherscan" }
