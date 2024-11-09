@@ -74,16 +74,15 @@ jobs:
 
           git add .
           git commit -m "generate registry v${{ env.REGISTRY_VERSION }} [no ci]" || echo "No changes to commit"
-          git pushs
+          git push
 
       - name: Get commit log
-        id: get_commits
         run: |
           PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
           if [ -z "$PREV_TAG" ]; then
-            CHANGELOG=$(git log --pretty=format:"- %s (%an)" --no-merges)
+            CHANGELOG=$(git log --pretty=format:"- %s (@%an) [%h](https://github.com/$GITHUB_REPOSITORY/commit/%H)" --no-merges)
           else
-            CHANGELOG=$(git log --pretty=format:"- %s (%an)" --no-merges ${PREV_TAG}..HEAD)
+            CHANGELOG=$(git log --pretty=format:"- %s (@%an) [%h](https://github.com/$GITHUB_REPOSITORY/commit/%H)" --no-merges ${PREV_TAG}..HEAD)
           fi
           echo "CHANGELOG<<EOF" >> $GITHUB_ENV
           echo "$CHANGELOG" >> $GITHUB_ENV
