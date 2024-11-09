@@ -75,9 +75,10 @@ jobs:
           else
             CHANGELOG=$(git log --pretty=format:"- %s (@%an) [%h](https://github.com/$GITHUB_REPOSITORY/commit/%H)" --no-merges ${PREV_TAG}..HEAD)
           fi
-          echo "CHANGELOG<<EOF" >> $GITHUB_ENV
-          echo "$CHANGELOG" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          CHANGELOG="${CHANGELOG//'%'/'%25'}"
+          CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
+          CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
+          echo "CHANGELOG=$CHANGELOG" >> $GITHUB_ENV
 
       - name: Commit and Push Changes
         run: |
